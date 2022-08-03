@@ -50,34 +50,34 @@ author:
 # Add links to the sidebar.
 menu:
   # tisory > error,java,js,css,jquery,jsp,spring,db,server,aws,docker,network,react,vuejs,python,ide,etc,project,carrer
-  - title:             🚀Java
-    url:               /Dev/
-  - title:             🔮Spring
-    url:               /example/
-  - title:             📋Database
-    url:               /example/
-  - title:             💻Server
-    url:               /example/
-  - title:             🎆Frontend
-    url:               /example/
-  - title:             🎃AWS
-    url:               /example/
-  - title:             🔌Docker
-    url:               /example/
-  - title:             📧Network
-    url:               /example/
-  - title:             ✨Python
-    url:               /example/
-  - title:             💎IDE
-    url:               /example/
-  - title:             🔥Error
-    url:               /example/
-  - title:             👑Etc
-    url:               /example/
-  - title:             🧭Project
-    url:               /example/
-  - title:             💯Carrer
-    url:               /example/
+  - title:             🚀 Java
+    url:               /Java/
+  - title:             🔮 Spring
+    url:               /Spring/
+  - title:             📋 Database
+    url:               /Database/
+  - title:             💻 Server
+    url:               /Server/
+  - title:             🎆 Frontend
+    url:               /Frontend/
+  - title:             🎃 AWS
+    url:               /AWS/
+  - title:             🔌 Docker
+    url:               /Docker/
+  - title:             📧 Network
+    url:               /Network/
+  - title:             ✨ Python
+    url:               /Python/
+  - title:             💎 IDE
+    url:               /IDE/
+  - title:             🔥 Error
+    url:               /Error/
+  - title:             👑 Etc
+    url:               /Etc/
+  - title:             🧭 Project
+    url:               /Proejct/
+  - title:             💯 Carrer
+    url:               /Carrer/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
