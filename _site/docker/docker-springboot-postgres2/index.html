@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -254,10 +254,10 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
   <li><a href="#spring-boot--jsp" id="markdown-toc-spring-boot--jsp">Spring Boot + JSP</a></li>
   <li><a href="#postgresql-docker" id="markdown-toc-postgresql-docker">Postgresql Docker</a></li>
   <li><a href="#docker-composeyml-변환-작업-진행" id="markdown-toc-docker-composeyml-변환-작업-진행">Docker-compose.yml 변환 작업 진행</a></li>
-  <li><a href="#docker-network--미리-생성된-네트워크-이름을-지정" id="markdown-toc-docker-network--미리-생성된-네트워크-이름을-지정">Docker Network : 미리 생성된 네트워크 이름을 지정</a></li>
 </ul>
 
 <p>개선사항 진행</p>
+
 <ol>
   <li>
     <p>볼륨 마운트에서 디렉토리 마운트로 변경</p>
@@ -268,11 +268,13 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ol>
 
 <h2 id="spring-boot--jsp">Spring Boot + JSP</h2>
+
 <ol>
   <li>spring boot jar 배포 환경에서 jsp 경로 문제 때문에 war배포로 임시 수정 (해결방법 찾을때 까지만)</li>
 </ol>
 
 <p>Dockerfile</p>
+
 <div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> adoptopenjdk/openjdk8</span>
 <span class="k">EXPOSE</span><span class="s"> 8080:8080</span>
 <span class="k">ARG</span><span class="s"> WAR_FILE=build/libs/boot-sample-0.0.1-SNAPSHOT.war</span>
@@ -281,80 +283,86 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </code></pre></div></div>
 
 <p>Build 후 run command</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d -p 8080:8080 --network boot-sample-network --name Boot-Sample boot-sample
 </code></pre></div></div>
 
 <h2 id="postgresql-docker">Postgresql Docker</h2>
+
 <ol>
   <li>
     <p>볼륨 바인딩에서 경로 바인딩으로 변경.</p>
   </li>
   <li>
     <p>바인딩 된 폴더를 깃으로 공유하고 있었는데, 공유 시 특정 파일 또는 경로를 무시하는 현상 발생. 지정된 바인딩 경로는 압축하여 공유하는 형태로 변경하여 러닝함.</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d -p 5432:5432 -e POSTGRES_PASSWORD='${password}' -w ${bind경로} -v ${bind경로}:/var/lib/postgresql/data --platform linux/amd64 --network boot-sample-network --name Postgresql postgres:12.9-alpine
-</code></pre></div>    </div>
-    <p>( 윈도우에서는 해당 스크립트를 power shell 에서 실행. ‘ 를 “ 로 변경, 경로 문제 발생 시 원하는 경로 위치하여 ${pwd} 변수 사용 )</p>
   </li>
 </ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d -p 5432:5432 -e POSTGRES_PASSWORD='${password}' -w ${bind경로} -v ${bind경로}:/var/lib/postgresql/data --platform linux/amd64 --network boot-sample-network --name Postgresql postgres:12.9-alpine
+</code></pre></div></div>
+
+<p>( 윈도우에서는 해당 스크립트를 power shell 에서 실행. ‘ 를 “ 로 변경, 경로 문제 발생 시 원하는 경로 위치하여 ${pwd} 변수 사용 )</p>
 
 <p>위 러닝 스크립트로 동일 Docker Network 상에서 실행 시 부트 프로젝트에서 데이터 바인딩까지 가능한 것을 확인.</p>
 
 <h2 id="docker-composeyml-변환-작업-진행">Docker-compose.yml 변환 작업 진행</h2>
+
 <ol>
-  <li>Postgresql 과 Spring Boot를 서비스로 묶어서 실행하기.
-```dockerfile
-version: “3.7”</li>
+  <li>Postgresql 과 Spring Boot를 서비스로 묶어서 실행하기.</li>
 </ol>
 
-<p>services:
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: "3.7"
+
+services:
   app:
     # Dockerfile - FROM
     image: adoptopenjdk/openjdk8
-    # Dockerfile - EXPOSE
+    <span class="c"># Dockerfile - EXPOSE</span>
     ports:
       - 8080:8080
-    # image build dir
+    <span class="c"># image build dir</span>
     build:
       context: .
       # Dockerfile - ARG
       args:
         WAR-FILE: build/libs/boot-sample-0.0.1-SNAPSHOT.war
-    # Dockerfile - ENTRYPOINT
-    entrypoint: 
+    <span class="c"># Dockerfile - ENTRYPOINT</span>
+    entrypoint:
       - java
-      - ‘-jar’
+      - '-jar'
       - /app.war
-    # Dockerfile - COPY command
-    command: ‘COPY ${WAR_FILE} app.war’
+    <span class="c"># Dockerfile - COPY command</span>
+    command: 'COPY ${WAR_FILE} app.war'
     # link : 참조할 다른 컨테이너 연결 - application.yml 내 DB 연결 네이밍 참고.
     links:
       - db:Postgresql
-    # 종속성 정의. 여기에선 db 실행 후에 app 실행함을 의미.
+    <span class="c"># 종속성 정의. 여기에선 db 실행 후에 app 실행함을 의미.</span>
     depends_on:
       - db
   db:
     # DB 이미지
     image: postgres:12.9-alpine
-    # 포트 지정
+    <span class="c"># 포트 지정</span>
     ports:
       - 5432:5432
-    # -e 환경 변수 : docker run 명령 참고
+    <span class="c"># -e 환경 변수 : docker run 명령 참고</span>
     environment:
       - POSTGRES_PASSWORD=${password}
     # 볼륨 지정 : 디렉토리 마운팅
     volumes:
-      - ${bind-dir}:/var/lib/postgresql/data</p>
+      - ${bind-dir}:/var/lib/postgresql/data
 
-<h1 id="docker-network--미리-생성된-네트워크-이름을-지정">Docker Network : 미리 생성된 네트워크 이름을 지정</h1>
-<p>networks:
+<span class="c"># Docker Network : 미리 생성된 네트워크 이름을 지정</span>
+networks:
   default:
     external:
-      name: boot-sample-network</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-이후 Docker Compose 실행
+      name: boot-sample-network
 </code></pre></div></div>
-<p>docker-compose up -d
-```</p>
+
+<p>이후 Docker Compose 실행</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up -d
+</code></pre></div></div>
 
 <p>확인작업 - 러닝 OK</p>
 
@@ -560,7 +568,7 @@ version: “3.7”</li>
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

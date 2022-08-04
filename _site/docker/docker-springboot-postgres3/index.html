@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -259,6 +259,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ul>
 
 <p>개선사항 진행</p>
+
 <ol>
   <li>
     <p>Docker Compose 환경 별로 구분하기.</p>
@@ -269,6 +270,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ol>
 
 <h2 id="docker-compose-구분하기">Docker Compose 구분하기</h2>
+
 <p>단일 docker-compose.yml 을 multi-compose.yml 로 분할.</p>
 
 <blockquote>
@@ -286,10 +288,11 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>추가적으로, 각 환경마다 다른 변수 또는 값 때문에 .env 파일을 만들어 환경변수 형태로 각 환경 별 맞는 값을 제공하여 개발/운영 환경의 구분을 하기로 한다.</p>
 
 <h1 id="1-docker-composeyml---base-file">1. docker-compose.yml - base file</h1>
+
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># docker-compose (base)</span>
 <span class="c1"># base file</span>
 <span class="c1"># 기본적으로 실행될 코드들을 정의한다.</span>
-<span class="c1"># docker-compose -f docker-compose.yml -f docker-compose.{env}.yml up 으로 </span>
+<span class="c1"># docker-compose -f docker-compose.yml -f docker-compose.{env}.yml up 으로</span>
 <span class="c1"># 오버라이딩 할 파일을 선택하여 실행한다.</span>
 
 <span class="na">version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">3.7"</span>
@@ -303,7 +306,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
       <span class="pi">-</span> <span class="s">8080:8080</span>
     <span class="c1"># network 추가</span>
     <span class="na">networks</span><span class="pi">:</span>
-<span class="c1">#      - default</span>
+      <span class="c1">#      - default</span>
       <span class="pi">-</span> <span class="s">boot-network</span>
     <span class="c1"># image build dir</span>
     <span class="na">build</span><span class="pi">:</span>
@@ -312,9 +315,9 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
     <span class="c1">#  args:</span>
     <span class="c1">#    WAR-FILE: ${DEV_WAR_FILE}</span>
     <span class="c1"># Dockerfile - ENTRYPOINT</span>
-    <span class="na">entrypoint</span><span class="pi">:</span> 
+    <span class="na">entrypoint</span><span class="pi">:</span>
       <span class="pi">-</span> <span class="s">java</span>
-      <span class="pi">-</span> <span class="s1">'</span><span class="s">-jar'</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">-jar"</span>
       <span class="pi">-</span> <span class="s">/app.war</span>
     <span class="c1"># Dockerfile - COPY command</span>
 <span class="c1">#    command: "COPY ${WAR_FILE} app.war"</span>
@@ -349,6 +352,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </code></pre></div></div>
 
 <h1 id="2-docker-composedevyml---개발-환경-정의-시-사용">2. docker-compose.dev.yml - 개발 환경 정의 시 사용</h1>
+
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># docker-compose.dev</span>
 <span class="c1"># 개발 환경 정의</span>
 <span class="c1"># 개발인 경우, postgresql docker 이미지를 띄워 사용한다.</span>
@@ -370,7 +374,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
     <span class="na">image</span><span class="pi">:</span> <span class="s">postgres:12.9-alpine</span>
     <span class="c1"># network 추가</span>
     <span class="na">networks</span><span class="pi">:</span>
-<span class="c1">#      - default</span>
+      <span class="c1">#      - default</span>
       <span class="pi">-</span> <span class="s">boot-network</span>
     <span class="c1"># 포트 지정</span>
     <span class="na">ports</span><span class="pi">:</span>
@@ -384,6 +388,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </code></pre></div></div>
 
 <h1 id="3-env-파일---환경변수가-정의되어있다">3. .env 파일 - 환경변수가 정의되어있다.</h1>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># docker-compose 파일에 변수 할당하기 위한 설정 파일
 # 각 환경 별로 사용할 변수 및 내용을 정의
 
@@ -412,6 +417,7 @@ PROD_POSTGRES_PASSWORD=
 <p>.env에 지정된 환경 변수들로 각 옵션에 맞게 넣어주게 되면 따로 구동 시에 환경변수를 재지정하거나 넣어줄 필요가 없다.</p>
 
 <h1 id="docker-network-in-docker-compose">Docker Network in Docker-compose</h1>
+
 <p>docker network 에 대해서는 아래의 링크를 참고.</p>
 
 <ul>
@@ -445,6 +451,7 @@ PROD_POSTGRES_PASSWORD=
 <p><img src="/assets/img/Docker/dockerboot3-3.png" alt="dockerboot3-3" /></p>
 
 <p>네트워크 생성은 아래 라인을 참고한다.</p>
+
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Docker Network : boot-network 란 이름의 bridge 네트워크 추가</span>
 <span class="c1"># {projectName}_{networkName} 으로 생성됨.</span>
 <span class="c1"># 없으면, default 네트워크로 연결</span>
@@ -639,7 +646,7 @@ PROD_POSTGRES_PASSWORD=
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

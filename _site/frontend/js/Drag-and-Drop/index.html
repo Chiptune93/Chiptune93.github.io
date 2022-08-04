@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -271,8 +271,10 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>간단하게 구현한 예제입니다.</p>
 
 <h2 id="1-드래그-기능이-시작하는-요소--a태그--에-아래와-같은-속성-부여">1. 드래그 기능이 시작하는 요소 ( a태그 ) 에 아래와 같은 속성 부여</h2>
+
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">""</span> <span class="na">draggable=</span><span class="s">'true'</span> <span class="na">ondragend=</span><span class="s">"{functionName}"</span><span class="err">;"</span><span class="nt">&gt;</span>드래그할 항목명<span class="nt">&lt;/a&gt;</span>
 </code></pre></div></div>
+
 <ul>
   <li>
     <p>draggable : 드래그가 가능하도록 설정하겠다는 속성</p>
@@ -283,13 +285,12 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ul>
 
 <h2 id="2-드래그한-요소를-받을-영역에-아래와-같은-속성-부여">2. 드래그한 요소를 받을 영역에 아래와 같은 속성 부여</h2>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">""</span> <span class="na">ondragover=</span><span class="s">'onDragOver(event);'</span><span class="nt">&gt;</span>
-...
-<span class="nt">&lt;/div&gt;</span>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">""</span> <span class="na">ondragover=</span><span class="s">"onDragOver(event);"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;script&gt;</span>
-<span class="kd">function</span> <span class="nx">onDragOver</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
-<span class="p">}</span>
+  <span class="kd">function</span> <span class="nx">onDragOver</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+  <span class="p">}</span>
 <span class="nt">&lt;/script&gt;</span>
 </code></pre></div></div>
 
@@ -497,7 +498,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

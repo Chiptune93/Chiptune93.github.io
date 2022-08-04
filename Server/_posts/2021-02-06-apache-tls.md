@@ -2,7 +2,7 @@
 layout: post
 title: Apache - TLS 1.2 설정하기
 description: >
-    [Apache] TLS 1.2 설정하기
+  [Apache] TLS 1.2 설정하기
 sitemap: false
 hide_last_modified: true
 categories: [Server]
@@ -12,10 +12,10 @@ tags: [apache, tls]
 - Table of Contents
 {:toc .large-only}
 
-
 apache httpd.conf 또는 ssl 설정 구문에 다음 내용을 추가
 
 - 권장 알고리즘
+
 ```conf
 SSLProtocol -All +TLSv1.2
 SSLCipherSuite ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHERSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-
@@ -23,6 +23,7 @@ SHA384
 ```
 
 - 범용 알고리즘
+
 ```conf
 SSLProtocol -All +TLSv1.2
 SSLCipherSuite ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHEECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCMSHA384:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHEECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-
@@ -34,4 +35,3 @@ SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-
 위 구문은 SSL 프로토콜 방식을 모든 프로토콜 제외 후, TLSv1.2 만 추가하여 사용하므로, 기타 필요한
 
 프로토콜은 +{프로토콜} 방식으로 뒤에 추가해야함.
-

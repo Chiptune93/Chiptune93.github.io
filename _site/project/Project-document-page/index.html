@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -286,9 +286,10 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ul>
 
 <h1 id="1-개요">1. 개요</h1>
+
 <h2 id="1-필요성">1. 필요성</h2>
 
-<p>함수나, 기타 정리가 필요한 부분이 생겼을 때, 보통 문서나 스프레드 시트에 저장하는 것이 보통이었는데 이렇다 보니 체계적으로 정리가 되지 않을 뿐더러, 찾기가 힘들고 평소에 어떤 내용이 담겨져 있는지 확인이 불가능 하였다. 개인적인 용도나 혹은 사내에 공유하기 위한  API Developer Document 처럼 정리할 수 있는 서비스가 있으면 좋겠다고 생각하였다.</p>
+<p>함수나, 기타 정리가 필요한 부분이 생겼을 때, 보통 문서나 스프레드 시트에 저장하는 것이 보통이었는데 이렇다 보니 체계적으로 정리가 되지 않을 뿐더러, 찾기가 힘들고 평소에 어떤 내용이 담겨져 있는지 확인이 불가능 하였다. 개인적인 용도나 혹은 사내에 공유하기 위한 API Developer Document 처럼 정리할 수 있는 서비스가 있으면 좋겠다고 생각하였다.</p>
 
 <h2 id="2-목적">2. 목적</h2>
 
@@ -321,6 +322,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>위 개념을 가지고 접근해볼 생각이며, 화면설계 부터 차근차근 진행해볼 예정이다.</p>
 
 <h1 id="2-간단한-화면-설계">2. 간단한 화면 설계</h1>
+
 <p>간단하게 생각났던 아이디어 및 화면 내용을 간단하게 파워포인트로 설계해보았다.</p>
 
 <p>추후 진행 또는 한번 더 보면서 수정해 나갈 예정이다.</p>
@@ -346,6 +348,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p><img src="/assets/img/Project/1-11.png" alt="1-11" /></p>
 
 <h1 id="3-spring-boot-기반-프로젝트-진행">3. Spring Boot 기반 프로젝트 진행</h1>
+
 <p>프로젝트에 DB를 연동해야 해서, 고민을 해본 결과 …</p>
 
 <p>저장될 데이터가 많지 않고, 테이블도 많이 필요한게 아니라서 No SQL 쪽을 알아보았는데 사실상 요금문제가 있어서 어느정도 테스트와 간단한 구현 느낌으로 진행하는데에는 적합하지 않은 것 같아 RDB를 그냥 연동하기로 하였다.</p>
@@ -364,11 +367,12 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>DB 환경은 HikariCP를 이용하여 Oracle 과 Connection 을 맺고, log4j 를 통해 DB 로그를 출력하는 것으로 하였다. 그리고, DB mapper 연동은 MyBatis 를 통해 진행한다.</p>
 
 <h2 id="1-필요-dependency-추가">1. 필요 Dependency 추가.</h2>
+
 <div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter</span>
 <span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.mybatis.spring.boot'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'mybatis-spring-boot-starter'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'2.1.4'</span>
-	
+
 <span class="c1">// log4j2</span>
-<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.bgee.log4jdbc-log4j2'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'log4jdbc-log4j2-jdbc4.1'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'1.16'</span>   
+<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.bgee.log4jdbc-log4j2'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'log4jdbc-log4j2-jdbc4.1'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'1.16'</span>
 
 <span class="c1">// https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc8</span>
 <span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'com.oracle.database.jdbc'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'ojdbc8'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'21.1.0.0'</span>
@@ -381,18 +385,19 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>보통 프로젝트 생성 후에는 application.properties 로 되어있지만, 편의를 위해 yml 파일로 바꾸었다. 그대로 properties 로 진행해도 상관 없으나, 표기법이 다르다.</p>
 
 <h1 id="resourceapplicationyml">/resource/application.yml</h1>
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">spring</span><span class="pi">:</span>
-    <span class="na">application</span><span class="pi">:</span>
-        <span class="na">name</span><span class="pi">:</span> <span class="s">springboot-project-name</span>
 
-    <span class="c1"># DB Connection </span>
-    <span class="na">datasource</span><span class="pi">:</span>
-        <span class="na">hikari</span><span class="pi">:</span>
-            <span class="na">jdbc-url</span><span class="pi">:</span> <span class="s">jdbc:log4jdbc:oracle:thin:@{oracle-db-url}</span> <span class="c1"># ex ) localhost:3306:utf8</span>
-            <span class="na">driver-class-name</span><span class="pi">:</span> <span class="s">net.sf.log4jdbc.sql.jdbcapi.DriverSpy</span>
-            <span class="na">username</span><span class="pi">:</span> <span class="pi">{</span><span class="nv">user-name</span><span class="pi">}</span>
-            <span class="na">password</span><span class="pi">:</span> <span class="pi">{</span><span class="nv">user-password</span><span class="pi">}</span>
-            <span class="na">maximum-pool-size</span><span class="pi">:</span> <span class="pi">{</span><span class="nv">connection-pool-size</span><span class="pi">}</span>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">spring</span><span class="pi">:</span>
+  <span class="na">application</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">springboot-project-name</span>
+
+  <span class="c1"># DB Connection</span>
+  <span class="na">datasource</span><span class="pi">:</span>
+    <span class="na">hikari</span><span class="pi">:</span>
+      <span class="na">jdbc-url</span><span class="pi">:</span> <span class="s">jdbc:log4jdbc:oracle:thin:@{oracle-db-url}</span> <span class="c1"># ex ) localhost:3306:utf8</span>
+      <span class="na">driver-class-name</span><span class="pi">:</span> <span class="s">net.sf.log4jdbc.sql.jdbcapi.DriverSpy</span>
+      <span class="na">username</span><span class="pi">:</span> <span class="pi">{</span> <span class="nv">user-name</span> <span class="pi">}</span>
+      <span class="na">password</span><span class="pi">:</span> <span class="pi">{</span> <span class="nv">user-password</span> <span class="pi">}</span>
+      <span class="na">maximum-pool-size</span><span class="pi">:</span> <span class="pi">{</span> <span class="nv">connection-pool-size</span> <span class="pi">}</span>
 </code></pre></div></div>
 
 <p>DB연결 정보를 작성한다.</p>
@@ -402,6 +407,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>log4j 프로퍼티를 작성한다. 자세한 건 모르겠으나, 보통 이렇게 세팅하고 써서 그대로 가져왔다.</p>
 
 <h1 id="resourcelog4j-log4jdbclog4j2propertiesyml">/resource/log4j. log4jdbc.log4j2.properties.yml</h1>
+
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">log4jdbc.spylogdelegator.name = net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator</span>
 <span class="s">log4jdbc.dump.sql.maxlinelength = </span><span class="m">0</span>
 
@@ -414,6 +420,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>로그를 어떤 형식으로 어떻게 출력할 것이며, 로그 레벨을 지정한다.</p>
 
 <h1 id="resourcelogback-springxml">/resource/logback-spring.xml</h1>
+
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;configuration&gt;</span>
 	<span class="nt">&lt;appender</span> <span class="na">name=</span><span class="s">"STDOUT"</span> <span class="na">class=</span><span class="s">"ch.qos.logback.core.ConsoleAppender"</span><span class="nt">&gt;</span>
@@ -448,6 +455,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>Mybatis 설정을 작성한다. 필요한 옵션만 검색하여 작성하였다.</p>
 
 <h1 id="resourcemybatismybatis-configxml">/resource/mybatis/mybatis-config.xml</h1>
+
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="cp">&lt;!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd"&gt;</span>
 <span class="nt">&lt;configuration&gt;</span>
@@ -468,6 +476,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>mapper 와 설정 파일 경로를 지정하여 불러오고 찾을 수 있도록 한다.</p>
 
 <h1 id="package-dirconfigdbconfigjava">{package-dir}/config/DBconfig.java</h1>
+
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">javax.sql.DataSource</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">com.zaxxer.hikari.HikariDataSource</span><span class="o">;</span>
@@ -523,6 +532,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>https://github.com/Chiptune93/Library/tree/main/Spring/QuickStart/SpringBoot/JDK11/Mybatis%2BHikariCP%2BOracle</p>
 
 <h1 id="4-프로젝트-완성-및-운영환경-결정">4. 프로젝트 완성 및 운영환경 결정</h1>
+
 <p>프로젝트 기능 구성을 끝내고, 퍼블 작업을 부탁했다. 생각보다 심플하게 나와서 화면 설계 만큼 복잡하게 구성하지 않아도 되었고</p>
 
 <p>로그인 같은 기능도 빼고 대신 관리 기능의 변환을 키보드 입력을 통해 하기로 했다.</p>
@@ -548,15 +558,15 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ol>
 
 <ul>
-  <li>Dockerfile
-    <div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> adoptopenjdk/openjdk11</span>
+  <li>Dockerfile</li>
+</ul>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> adoptopenjdk/openjdk11</span>
 <span class="k">EXPOSE</span><span class="s"> 8080:8080</span>
 <span class="k">ARG</span><span class="s"> WAR_FILE=build/libs/api.war</span>
 <span class="k">COPY</span><span class="s"> ${WAR_FILE} api.war</span>
 <span class="k">ENTRYPOINT</span><span class="s"> [ "java", "-jar", "/api.war" ]</span>
-</code></pre></div>    </div>
-  </li>
-</ul>
+</code></pre></div></div>
 
 <p>단순하게 war로 말린 이미지를 run 하는 것이다.</p>
 
@@ -565,19 +575,25 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ul>
 
 <ol>
-  <li>build
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build -t api:1.0 .
-</code></pre></div>    </div>
-  </li>
-  <li>docker run
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d -p 8080:8080 --name syworks-api api:1.0
-</code></pre></div>    </div>
-  </li>
-  <li>docker push
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker push api:1.0
-</code></pre></div>    </div>
-  </li>
+  <li>build</li>
 </ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build -t api:1.0 .
+</code></pre></div></div>
+
+<ol>
+  <li>docker run</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d -p 8080:8080 --name syworks-api api:1.0
+</code></pre></div></div>
+
+<ol>
+  <li>docker push</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker push api:1.0
+</code></pre></div></div>
 
 <p>이로써 뭔가 빠르게 빠르게 첫 Spring Boot + Vuejs 프로젝트는 Docker기반으로 운영하기로 하는 바람에 생각보다 금방 끝나게 되었다.</p>
 
@@ -772,7 +788,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

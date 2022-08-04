@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -255,9 +255,11 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ul>
 
 <h2 id="application-context">Application Context</h2>
+
 <p>어플리케이션 구성에 대한 접근을 가능케 하는 인터페이스 (설명)</p>
 
 <p>Spring Boot 에서는 ApplicationContextAware 가 사용되며, 해당 인터페이스는 ApplicationContext에 대한 정보를 받고자 하는 개체에 의해 구현된다. 지금 살펴보고자 하는 것은, Beans에 액세스 하여 특정 Bean을 get 또는 set 하기 위한 방법이다.</p>
+
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">helloworld</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">org.springframework.beans.BeansException</span><span class="o">;</span>
@@ -272,11 +274,11 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <span class="nd">@Component</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Beans</span> <span class="kd">implements</span> <span class="nc">ApplicationContextAware</span> <span class="o">{</span>
 	<span class="kd">private</span> <span class="kd">static</span> <span class="nc">ApplicationContext</span> <span class="n">applicationContext</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-    
+
 	<span class="kd">public</span> <span class="kd">static</span> <span class="nc">ApplicationContext</span> <span class="nf">getApplicationContext</span><span class="o">()</span> <span class="o">{</span>
 		<span class="k">return</span> <span class="n">applicationContext</span><span class="o">;</span>
 	<span class="o">}</span>
-    
+
 	<span class="kd">public</span> <span class="kd">static</span> <span class="nc">GenericApplicationContext</span> <span class="nf">getGenericContext</span><span class="o">()</span> <span class="o">{</span>
 		<span class="k">return</span> <span class="o">(</span><span class="nc">GenericXmlApplicationContext</span><span class="o">)</span> <span class="n">applicationContext</span><span class="o">;</span>
 	<span class="o">}</span>
@@ -479,7 +481,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

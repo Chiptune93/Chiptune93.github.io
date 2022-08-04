@@ -2,7 +2,7 @@
 layout: post
 title: MYSQL - CSV 파일에서 데이터 가져오기 시, 설정
 description: >
-    MYSQL CSV 파일에서 데이터 가져오기 시, 설정
+  MYSQL CSV 파일에서 데이터 가져오기 시, 설정
 sitemap: false
 hide_last_modified: true
 categories: [Database]
@@ -21,4 +21,4 @@ heidsql 에서, 가져오기 할 때
 - 벗어나는 구분자 "
 - 줄 종결자 \n
 
-설정 후 data import  사용.
+설정 후 data import 사용.

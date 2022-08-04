@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -256,9 +256,11 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ul>
 
 <h2 id="문제">문제</h2>
+
 <p>AWS CLI 2.0 버전에서 aws ecr get-login-password 사용 시, 인증 구간에서 401 권한 없음 에러 발생.</p>
 
 <h2 id="해결">해결</h2>
+
 <p>AWS CLI 계정이 MFA 인증 ( 구글 인증기 등 ) 을 사용 중이라면, 해당 인증 토큰 세션이 있어야 권한 에러가 발생하지 않음.</p>
 
 <blockquote>
@@ -266,12 +268,15 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </blockquote>
 
 <p>cli 에서 다음과 같이 명령 실행.</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws sts get-session-token <span class="nt">--serial-number</span> <span class="o">{</span>AWS 계정<span class="o">}</span> <span class="nt">--token-code</span> <span class="o">{</span>인증기 발급 코드<span class="o">}</span>
 </code></pre></div></div>
+
 <p>실행하면 Access Key / Secret Access Key / Session Token 이 발급된다.
 해당 토큰은 12시간동안 유효하며 위 값을 가지고 aws credential profile 을 생성한다.</p>
 
 <p>credential 파일 ( C:\Users{user명}.aws 내) 을 편집기로 열어 다음을 추가한다.</p>
+
 <pre><code class="language-credential">[default]
 ...
 
@@ -280,6 +285,7 @@ AWS_ACCESS_KEY_ID = {발급받은 액세스 키 값}
 AWS_SECRET_ACCESS_KEY = {발급받은 시크릿 액세스 키 값}
 AWS_SESSION_TOKEN = {발급받은 세션 토큰 값}
 </code></pre>
+
 <p>해당 profile 추가 후 명령을 실행한다.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws ecr get-login-password <span class="nt">--profile</span> <span class="o">{</span>입력한 profile명<span class="o">}</span> <span class="nt">--region</span> <span class="o">{</span>리전명<span class="o">}</span> | docker login <span class="nt">--username</span> <span class="o">{</span>AWS계정<span class="o">}</span> <span class="nt">--password-stdin</span> <span class="o">{</span>AWS패스워드<span class="o">}</span>
@@ -468,7 +474,7 @@ AWS_SESSION_TOKEN = {발급받은 세션 토큰 값}
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

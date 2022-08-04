@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -256,6 +256,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ul>
 
 <h2 id="api-에러-처리">API 에러 처리</h2>
+
 <p>에러가 발생할 수 있는 상황부터 정의해보자</p>
 
 <p>서비스 로직 내에서 Exception 이 발생하는 경우.
@@ -263,6 +264,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 위 두가지 케이스에서 에러가 발생하더라도, 동일한 포맷으로 나가게끔 유도하려고 한다.</p>
 
 <p>우선, 기본적으로 정의한 폼은 다음과 같습니다.</p>
+
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
  </span><span class="nl">"result_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
  </span><span class="nl">"result_code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -293,7 +295,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
     <span class="kd">private</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">Object</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">Object</span><span class="o">&gt;();</span>
 
     <span class="cm">/* 결과 예시 */</span>
-    <span class="cm">/* 
+    <span class="cm">/*
     {
         "result_status": "success",
         "result_code": 200,
@@ -301,7 +303,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
         "result": {
             ...
         }
-    } 
+    }
     */</span>
 
     <span class="kd">public</span> <span class="nf">ApiResFormat</span><span class="o">()</span> <span class="o">{</span>
@@ -348,7 +350,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>실패의 경우에는 실패에 맞게 바꿔 줄 생각이다. 이제 1번 케이스의 경우에는 어떻게 처리할 것인가에 대한 내용입니다.</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@RestControllerAdvice</span><span class="o">,</span> <span class="nd">@ExceptionHandler</span>
-<span class="nc">RestControllerAdvice</span> <span class="n">는</span> <span class="n">컨트롤러</span> <span class="n">단의</span> <span class="n">설정들을</span> <span class="n">할</span> <span class="n">수</span> <span class="n">있게</span> <span class="n">해주는</span> <span class="nc">ControllerAdvice</span> <span class="n">의</span> <span class="n">확장</span> <span class="n">버전으로</span> <span class="n">응답</span> <span class="n">객체를</span> <span class="n">리턴할</span> <span class="n">수</span> <span class="n">있는</span> <span class="n">것이</span> <span class="n">특징이고</span><span class="o">,</span> <span class="nc">ExceptionHandler</span> <span class="n">는</span> <span class="nc">Controller</span> <span class="n">단에서</span> <span class="n">발생하는</span> <span class="nc">Exception을</span> <span class="n">핸들링</span> <span class="n">할</span> <span class="n">수</span> <span class="n">있도록</span> <span class="n">합니다</span><span class="o">.</span> 
+<span class="nc">RestControllerAdvice</span> <span class="n">는</span> <span class="n">컨트롤러</span> <span class="n">단의</span> <span class="n">설정들을</span> <span class="n">할</span> <span class="n">수</span> <span class="n">있게</span> <span class="n">해주는</span> <span class="nc">ControllerAdvice</span> <span class="n">의</span> <span class="n">확장</span> <span class="n">버전으로</span> <span class="n">응답</span> <span class="n">객체를</span> <span class="n">리턴할</span> <span class="n">수</span> <span class="n">있는</span> <span class="n">것이</span> <span class="n">특징이고</span><span class="o">,</span> <span class="nc">ExceptionHandler</span> <span class="n">는</span> <span class="nc">Controller</span> <span class="n">단에서</span> <span class="n">발생하는</span> <span class="nc">Exception을</span> <span class="n">핸들링</span> <span class="n">할</span> <span class="n">수</span> <span class="n">있도록</span> <span class="n">합니다</span><span class="o">.</span>
 
 <span class="n">따라서</span><span class="o">,</span> <span class="n">엔드포인트</span> <span class="n">컨트롤러</span> <span class="n">단에서</span> <span class="n">발생하는</span> <span class="nc">Exception을</span> <span class="n">캐치하여</span> <span class="n">원하는</span> <span class="n">포맷으로</span> <span class="n">리턴하기</span> <span class="n">위해</span> <span class="n">아래와</span> <span class="n">같이</span> <span class="n">설정</span> <span class="n">했습니다</span><span class="o">.</span>
 
@@ -614,7 +616,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

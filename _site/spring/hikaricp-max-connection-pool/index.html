@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -261,20 +261,22 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <h2 id="try1---설정만-추가">try#1 - 설정만 추가</h2>
 
 <p>application.yml</p>
+
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">datasource</span><span class="pi">:</span>
-    <span class="na">url</span><span class="pi">:</span> <span class="s">jdbc:log4jdbc:url</span>
-    <span class="na">driver-class-name</span><span class="pi">:</span> <span class="s">net.sf.log4jdbc.sql.jdbcapi.DriverSpy</span>
-    <span class="na">username</span><span class="pi">:</span> <span class="s">username</span>
-    <span class="na">password</span><span class="pi">:</span> <span class="s">password</span>
-    <span class="c1"># DB Connection Pool for local</span>
-    <span class="na">hikari</span><span class="pi">:</span>
-      <span class="na">connectionTimeout </span><span class="pi">:</span> <span class="m">30000</span>
-      <span class="na">maximumPoolSize </span><span class="pi">:</span> <span class="m">2</span>
-      <span class="c1">#maxLifetime : 1800000</span>
-      <span class="c1">#poolName : HikariCP</span>
-      <span class="c1">#readOnly : false</span>
-      <span class="c1">#connectionTestQuery : SELECT 1</span>
+  <span class="na">url</span><span class="pi">:</span> <span class="s">jdbc:log4jdbc:url</span>
+  <span class="na">driver-class-name</span><span class="pi">:</span> <span class="s">net.sf.log4jdbc.sql.jdbcapi.DriverSpy</span>
+  <span class="na">username</span><span class="pi">:</span> <span class="s">username</span>
+  <span class="na">password</span><span class="pi">:</span> <span class="s">password</span>
+  <span class="c1"># DB Connection Pool for local</span>
+  <span class="na">hikari</span><span class="pi">:</span>
+    <span class="na">connectionTimeout</span><span class="pi">:</span> <span class="m">30000</span>
+    <span class="na">maximumPoolSize</span><span class="pi">:</span> <span class="m">2</span>
+    <span class="c1">#maxLifetime : 1800000</span>
+    <span class="c1">#poolName : HikariCP</span>
+    <span class="c1">#readOnly : false</span>
+    <span class="c1">#connectionTestQuery : SELECT 1</span>
 </code></pre></div></div>
+
 <p>DataSource Bean 따로 존재하지 않음.</p>
 
 <blockquote>
@@ -290,14 +292,16 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <h2 id="try2---설정-추가-후-ds-bean-등록">try#2 - 설정 추가 후, ds Bean 등록.</h2>
 
 <p>application.yml</p>
+
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">datasource</span><span class="pi">:</span>
-   <span class="na">hikari</span><span class="pi">:</span>
+  <span class="na">hikari</span><span class="pi">:</span>
     <span class="na">jdbc-url</span><span class="pi">:</span> <span class="s">jdbc:log4jdbc:url</span>
     <span class="na">driver-class-name</span><span class="pi">:</span> <span class="s">net.sf.log4jdbc.sql.jdbcapi.DriverSpy</span>
     <span class="na">username</span><span class="pi">:</span> <span class="s">username</span>
     <span class="na">password</span><span class="pi">:</span> <span class="s">password</span>
-    <span class="na">maximumPoolSize </span><span class="pi">:</span> <span class="m">2</span>
+    <span class="na">maximumPoolSize</span><span class="pi">:</span> <span class="m">2</span>
 </code></pre></div></div>
+
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dbConfig</span><span class="o">.</span><span class="na">java</span>
 <span class="nd">@Bean</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"dataSource"</span><span class="o">)</span>
   <span class="nd">@ConfigurationProperties</span><span class="o">(</span><span class="n">prefix</span> <span class="o">=</span> <span class="s">"spring.datasource.hikari"</span><span class="o">)</span>
@@ -307,6 +311,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
   <span class="o">}</span>
 <span class="nd">@ConfigurationProperties</span> <span class="n">어노테이션을</span> <span class="n">통해</span><span class="o">,</span> <span class="n">프로퍼티의</span> <span class="n">spring</span><span class="o">.</span><span class="na">datasource</span><span class="o">.</span><span class="na">hikari</span> <span class="n">밑의</span> <span class="n">설정을</span> <span class="n">참조하도록</span> <span class="n">변경</span><span class="o">.</span>
 </code></pre></div></div>
+
 <blockquote>
   <p>해당 설정이 동작하지 않음.</p>
 </blockquote>
@@ -322,6 +327,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>참고 : https://dotheright.tistory.com/188</p>
 
 <p>dbConfig.java</p>
+
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
    * hikari cp config 명시 conf prop -&gt; application.yml
    */</span>
@@ -340,6 +346,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
     <span class="k">return</span> <span class="n">dataSource</span><span class="o">;</span>
   <span class="o">}</span>
 </code></pre></div></div>
+
 <blockquote>
   <p>실제로 동작하는 것으로 확인!</p>
 </blockquote>
@@ -527,7 +534,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -261,9 +261,10 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>구글링을 하면서 다음과 같은 글을 참고하여 작성하였다.</p>
 
 <p>https://taes-k.github.io/2020/03/11/sprinig-master-slave-dynamic-routing-datasource/
-https://mudchobo.github.io/posts/spring-boot-jpa-master-slave﻿</p>
+https://mudchobo.github.io/posts/spring-boot-jpa-master-slave</p>
 
 <h2 id="1-sqlconfigjava">1. SQLConfig.java</h2>
+
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.test</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
@@ -362,6 +363,7 @@ https://mudchobo.github.io/posts/spring-boot-jpa-master-slave﻿</p>
 </ul>
 
 <h2 id="2-routingdatasourcejava">2. RoutingDataSource.java</h2>
+
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.test.config</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource</span><span class="o">;</span>
@@ -389,9 +391,11 @@ https://mudchobo.github.io/posts/spring-boot-jpa-master-slave﻿</p>
 </code></pre></div></div>
 
 <h2 id="3-applicationyml">3. application.yml</h2>
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">...</span>
-<span class="na">datasource</span><span class="pi">:</span> 
-   <span class="na">hikari</span><span class="pi">:</span>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nn">---</span>
+<span class="na">datasource</span><span class="pi">:</span>
+  <span class="na">hikari</span><span class="pi">:</span>
     <span class="na">master</span><span class="pi">:</span>
       <span class="na">jdbc-url</span><span class="pi">:</span> <span class="s">jdbc:log4jdbc:postgresql://{url}</span>
       <span class="na">driver-class-name</span><span class="pi">:</span> <span class="s">net.sf.log4jdbc.sql.jdbcapi.DriverSpy</span>
@@ -402,14 +406,15 @@ https://mudchobo.github.io/posts/spring-boot-jpa-master-slave﻿</p>
       <span class="na">driver-class-name</span><span class="pi">:</span> <span class="s">net.sf.log4jdbc.sql.jdbcapi.DriverSpy</span>
       <span class="na">username</span><span class="pi">:</span> <span class="s">slave</span>
       <span class="na">password</span><span class="pi">:</span> <span class="s">slave</span>
-<span class="nn">...</span>
 </code></pre></div></div>
 
 <p>간단하게 설명하자면, Service 에 선언된 @Transactional 태그에 readOnly 가 true 냐 false 냐 에 따라 적용되는 ds가 달라지는 형태이다.</p>
+
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Transactional</span>
-<span class="n">or</span> 
+<span class="n">or</span>
 <span class="nd">@Transactional</span><span class="o">(</span><span class="n">readOnly</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
 </code></pre></div></div>
+
 <p>미리 생성된 master 와 slave ds 객체를 맵 형태로 가지고 있다가, 호출 시 readOnly 여부를 판단하여 적절한 ds 를 리턴하여 sqlSession을 구성하게 된다.</p>
 
 <ul>
@@ -599,7 +604,7 @@ https://mudchobo.github.io/posts/spring-boot-jpa-master-slave﻿</p>
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

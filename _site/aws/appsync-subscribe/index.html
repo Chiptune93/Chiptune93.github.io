@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -267,19 +267,26 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p><a href="https://docs.amplify.aws/start/q/integration/js/">* Amplify 실습링크</a></p>
 
 <h2 id="1-amplify-cli-다운로드-및-설치-링크">1. Amplify CLI 다운로드 및 설치 <a href="https://docs.amplify.aws/cli/start/install/">링크</a></h2>
+
 <p>window 기준, cmd 혹은 powershell 에서 아래 링크를 실행.</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-sL</span> https://aws-amplify.github.io/amplify-cli/install-win <span class="nt">-o</span> install.cmd <span class="o">&amp;&amp;</span> install.cmd
 </code></pre></div></div>
+
 <h2 id="2-프로젝트에-세팅하기">2. 프로젝트에 세팅하기</h2>
+
 <ul>
   <li>작업이 Spring Boot 프레임워크에서 이루어졌기 때문에 경로는 Boot 기준입니다.</li>
 </ul>
 
 <p>프로젝트 세팅
 cmd 혹은 powershell로 프로젝트 루트에 접근 후 아래 명령 실행</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>amplify init
 </code></pre></div></div>
+
 <p>이후 나오는 선택은 아래와 같이 진행하였으며, 다른 경우 상황에 맞게 선택합니다.</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Note: It is recommended to run this <span class="nb">command </span>from the root of your app directory
 ? Enter a name <span class="k">for </span>the project acaasweb
 The following configuration will be applied:
@@ -304,19 +311,24 @@ Please tell us about your project
 Using default provider  awscloudformation
 ? Select the authentication method you want to use: AWS profile
 </span></code></pre></div></div>
+
 <p>저의 경우, AWS profile은 따로 C:\Users{userName}.aws 에 credential 파일로 저장되어 있습니다.</p>
 
 <h2 id="3-app-sync-에-생성된-api-연결하기">3. App Sync 에 생성된 API 연결하기</h2>
+
 <p>AppSync에 접속하여 연결하고자 하는 API를 조회하면 다음과 같은 화면이 있습니다.</p>
 
 <p><img src="/assets/img/AWS/appsyncsub1.png" alt="appsyncsub1" /></p>
 
 <p>내용 중, codegen 부터 실행합니다.</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>amplify add codegen <span class="nt">--apiId</span> <span class="o">{</span>API_KEY<span class="o">}</span>
 </code></pre></div></div>
+
 <p>이 명령을 실행하면, 해당 API에서 사용하는 쿼리들을 선언한 변수들을 가지는 js 파일을 생성합니다.</p>
 
 <p>아래는 파일을 생성할 경로를 지정하는 옵션이다. 위 명령을 실행하면 나옵니다.</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>√ Getting API details
 Successfully added API ACaaS_AppSync_Service_Dev to your Amplify project
 ? Choose the code generation language target javascript
@@ -326,7 +338,9 @@ Successfully added API ACaaS_AppSync_Service_Dev to your Amplify project
 √ Downloaded the schema
 √ Generated GraphQL operations successfully and saved at src<span class="se">\m</span>ain<span class="se">\r</span>esources<span class="se">\s</span>tatic<span class="se">\j</span>s<span class="se">\g</span>raphql
 </code></pre></div></div>
+
 <p>codegen 설정이 잘못된 경우, 아래 명령을 이용해 수정이 가능합니다.</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>amplify configure codegen
 ? Choose the code generation language target javascript
 ? Enter the file name pattern of graphql queries, mutations and subscriptions src/main/resources/static/js/graphQL/<span class="k">*</span>.js
@@ -338,13 +352,19 @@ Successfully added API ACaaS_AppSync_Service_Dev to your Amplify project
 <p><img src="/assets/img/AWS/appsyncsub2.png" alt="appsyncsub2" /></p>
 
 <h2 id="4-데이터-가져오기">4. 데이터 가져오기</h2>
+
 <p>데이터 가져오는 방식은 Graph QL을 사용하는 것이며 다음 링크에서 관련 문서를 확인할 수 있습니다.</p>
 
 <h3 id="1-amplifyjs-추가">1. Amplify.js 추가</h3>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text/javascript</span><span class="dl">"</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://cdnjs.cloudflare.com/ajax/libs/aws-amplify/4.3.15-unstable.1/aws-amplify.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">script</span>
+  <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text/javascript</span><span class="dl">"</span>
+  <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://cdnjs.cloudflare.com/ajax/libs/aws-amplify/4.3.15-unstable.1/aws-amplify.js</span><span class="dl">"</span>
+<span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
 </span></code></pre></div></div>
 
 <h3 id="2-소스-작성--js파일에-작성-후-html-에서-import-함-">2. 소스 작성 ( js파일에 작성 후, html 에서 import 함 )</h3>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">awsconfig</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./aws-exports.js</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">queries</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./queries.js</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">mutations</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./mutations.js</span><span class="dl">'</span><span class="p">;</span>
@@ -353,7 +373,7 @@ Successfully added API ACaaS_AppSync_Service_Dev to your Amplify project
 <span class="kd">const</span> <span class="nx">Amplify</span> <span class="o">=</span> <span class="nx">aws_amplify</span><span class="p">.</span><span class="nx">API</span><span class="p">;</span>
 <span class="kd">const</span> <span class="nx">graphqlOperation</span> <span class="o">=</span> <span class="nx">aws_amplify</span><span class="p">.</span><span class="nx">graphqlOperation</span><span class="p">;</span>
 
-<span class="c1">// Considering you have an existing aws-exports.js configuration file </span>
+<span class="c1">// Considering you have an existing aws-exports.js configuration file</span>
 <span class="nx">Amplify</span><span class="p">.</span><span class="nx">configure</span><span class="p">(</span><span class="nx">awsconfig</span><span class="p">);</span>
 
 <span class="cm">/* 데이터 가져오기 */</span>
@@ -583,7 +603,7 @@ console.log("♥♥♥♥♥ Dynamo Data create data (manual) ♥♥♥♥♥");
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

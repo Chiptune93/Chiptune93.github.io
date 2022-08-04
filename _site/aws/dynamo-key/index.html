@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -253,7 +253,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
     
 <p>MYSQL 이나 ORACLE 과는 다른 개념을 갖는 다이나모 DB 에 대한 개인적인 정리.</p>
 
-<p>[참고] https://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html﻿</p>
+<p>[참고] https://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html</p>
 
 <ul>
   <li>
@@ -273,12 +273,12 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>일반적으로 RDB에서 질의하던 select * from .. 이 기본적으로 사용되지 않으며, 기본조회 시 파티션 키와 정렬 키를 가지고 조회한다.</p>
 
 <ol>
-  <li>정렬 키 :  파티션키와 함께 사용되는 조건으로 범위 또는 크기 비교 등의 간단한 조건을 가지고 조회할 수 있다.
+  <li>정렬 키 : 파티션키와 함께 사용되는 조건으로 범위 또는 크기 비교 등의 간단한 조건을 가지고 조회할 수 있다.
 다이나모에서는 파티션키와 정렬키로 지정된 항목이 동일한 데이터가 존재하려고 하는 경우, 같은 데이터로 취급한다.</li>
 </ol>
 
 <p>예를 들어 파티션키가 id, 정렬키가 timestamp 인 경우
-다이나모에 id가  1 , timestamp 가 210923 100312 인 데이터가 있는데
+다이나모에 id가 1 , timestamp 가 210923 100312 인 데이터가 있는데
 이후 해당 항목이 동일한 데이터를 갖는 행이 들어오면 데이터가 추가되는 것이 아닌 기존에 있던 데이터를 업데이트 하게된다. (해당 항목 외 다른 항목 값이 다르더라도)</p>
 
 <ol>
@@ -470,7 +470,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

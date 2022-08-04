@@ -24,7 +24,8 @@ tags: [Java, YouTube, YouTube API]
 [developers.google.com/youtube/v3/docs/search/list?hl=ko](developers.google.com/youtube/v3/docs/search/list?hl=ko)
 
 ## Source Cocde
-~~~java
+
+```java
 package src.lib.youtubeSearchApi;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -121,7 +122,7 @@ public class youtubeSearchApi {
 		}
 		return result;
 	}
-	
+
 }
 
-~~~
+```

@@ -2,7 +2,7 @@
 layout: post
 title: SpringBoot 2.7+ CORS 이슈 및 해결방법
 description: >
-    SpringBoot 2.7+ CORS 이슈 및 해결방법
+  SpringBoot 2.7+ CORS 이슈 및 해결방법
 sitemap: false
 hide_last_modified: true
 categories: [Error]
@@ -20,51 +20,48 @@ tags: [springboot, cors]
 - localhost:8090/index.html - API서버로 요청을 보내는 스크립트가 있는 html 페이지
 
 ## index.html
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
 
-</head>
-
-<body>
-    <div id="app">
-        {{ message }}
-    </div>
+  <body>
+    <div id="app">{{ message }}</div>
     <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                message: '안녕하세요 Vue!'
-            },
-            created: function () {
-                var vm = this;
-                vm.test();
-            },
-            methods: {
-                test: function () {
-                    axios.post('http://localhost:8080/users', {
-                        params: ''
-                    })
-                        .then(function (response) {
-                            console.log(response);
-                        })
-                        .catch(function (error) {
-                            console.log(error);
-                        });
-                }
-            }
-        })
+      var app = new Vue({
+        el: "#app",
+        data: {
+          message: "안녕하세요 Vue!",
+        },
+        created: function () {
+          var vm = this;
+          vm.test();
+        },
+        methods: {
+          test: function () {
+            axios
+              .post("http://localhost:8080/users", {
+                params: "",
+              })
+              .then(function (response) {
+                console.log(response);
+              })
+              .catch(function (error) {
+                console.log(error);
+              });
+          },
+        },
+      });
     </script>
-</body>
-
+  </body>
 </html>
 ```
 
@@ -83,11 +80,12 @@ COPY . /usr/share/nginx/html
 
 제일 간단하게 내 화면에서만 안나오게 하고싶다!
 
-[https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=ko ](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=ko )
+[https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=ko ](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=ko)
 
 해당 확장프로그램을 깔면 알아서 해당 이슈가 안나오도록 설정해준다. 내 환경에서만 오류를 안나게 하고 싶다면 이렇게 해도 상관 없다.(물론 크롬 한정)
 
 ## SpringBoot에서 AllowOrigin 하는 방법
+
 첫번째는 Spring Boot 에서 WebMvcConfigurer를 사용하여 허용해주는 것이다.
 해당 방식은 Config 외에도 @CrossOrigin 이라는 어노테이션으로 컨트롤러 마다 설정이 가능하다.
 
@@ -131,6 +129,7 @@ public class WebConfig implements WebMvcConfigurer {
 ## CORS Filter를 이용한 방법
 
 ### corsFilter.java
+
 ```java
 package rest.api.sample.config;
 
@@ -197,4 +196,3 @@ public class CorsFilter implements Filter {
 
 따라서 필터 쪽에서 Response의 응답 헤더에 해당 값을 세팅해 줌으로써 크롬에서도 해당 이슈를 잡지 않도록 설정하는 것이 가능 했다.
 해당 필터는 하나쯤 세팅해두고 on/off 또는 주석 처리를 통해 세팅하는 것을 가지고 있는 것이 좋겠다.
-

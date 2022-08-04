@@ -13,6 +13,7 @@ tags: [spring, springboot, cors]
 {:toc .large-only}
 
 ## 1. Global WebConfig
+
 ```java
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -38,11 +39,13 @@ public class WebConfig implements WebMvcConfigurer {
 }
 ```
 
-## 2. Annotation 
+## 2. Annotation
+
 동일한 방식으로 컨트롤러 전체 혹은 메소드에 적용 가능.
+
 ```java
 @RequestMapping("/")
-@CrossOrigin(origins = "*", allowedHeaders = "*") 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class SampleController {
 
     @RequestMapping("/getData", method = RequestMethod.POST)
@@ -54,4 +57,3 @@ public class SampleController {
 ```
 
 참고 가이드 : https://spring.io/guides/gs/rest-service-cors/
-

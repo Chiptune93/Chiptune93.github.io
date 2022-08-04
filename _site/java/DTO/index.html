@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -568,19 +568,23 @@ typecast DB에러가 나서 살펴보니 map에 int로 담긴게 아닌 String�
 
 <p>결론은 상황에 따라 어떤 타입을 쓸 지 결정이 되어야 하는 것으로 생각한다. 그 상황은 다음과 같이 나눌 수 있다</p>
 
-<p>1) 개발 시, 요구사항의 변경이 많고 유지보수 성이 짙은 프로젝트이다.
-2) 데이터를 조회할 때 복잡한 조인이나 서브쿼리 등으로 인해 정의된 테이블 외의 정보들을 많이 조회한다.
-<br /> (화면에 표현할 정보들이 많고, 복잡하다)
-3) 데이터 요청 시, 넘어오는 파라미터가 많으며 입력 값에 대한 검증 작업과 추가 작업이 많다.</p>
+<ol>
+  <li>개발 시, 요구사항의 변경이 많고 유지보수 성이 짙은 프로젝트이다.</li>
+  <li>데이터를 조회할 때 복잡한 조인이나 서브쿼리 등으로 인해 정의된 테이블 외의 정보들을 많이 조회한다.
+<br /> (화면에 표현할 정보들이 많고, 복잡하다)</li>
+  <li>데이터 요청 시, 넘어오는 파라미터가 많으며 입력 값에 대한 검증 작업과 추가 작업이 많다.</li>
+</ol>
 
 <blockquote>
   <p>Map을 사용하는 것이 낫다!</p>
 </blockquote>
 
-<p>1) 개발 시, 이미 Fix된 항목이 많으며 한 번 개발하면 변경이 적은 프로젝트이다.
-2) 데이터를 조회할 때 지정된 항목들을 가져오는 것이 일반적이다. 
-<br />(화면에 표현할 정보들이 정해져있고, 단순하다)
-3) 데이터 요청 시, 넘어올 파라미터가 정해져 있으며 범위가 지정되어 있고 해당 파라미터를 그대로 사용하는 작업이 많다.</p>
+<ol>
+  <li>개발 시, 이미 Fix된 항목이 많으며 한 번 개발하면 변경이 적은 프로젝트이다.</li>
+  <li>데이터를 조회할 때 지정된 항목들을 가져오는 것이 일반적이다.
+<br />(화면에 표현할 정보들이 정해져있고, 단순하다)</li>
+  <li>데이터 요청 시, 넘어올 파라미터가 정해져 있으며 범위가 지정되어 있고 해당 파라미터를 그대로 사용하는 작업이 많다.</li>
+</ol>
 
 <blockquote>
   <p>DTO 클래스를 사용하는 것이 낫다!</p>
@@ -784,7 +788,7 @@ typecast DB에러가 나서 살펴보니 map에 int로 담긴게 아닌 String�
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

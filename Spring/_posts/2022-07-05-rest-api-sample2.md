@@ -2,17 +2,18 @@
 layout: post
 title: SpringBoot - Rest Api Sample 만들기 #2
 description: >
-    [SpringBoot] Rest Api Sample 만들기 #2
+  [SpringBoot] Rest Api Sample 만들기 #2
 sitemap: false
 hide_last_modified: true
 categories: [Spring]
-tags: [springboot,rest api, api, h2database]
+tags: [springboot, rest api, api, h2database]
 ---
 
 - Table of Contents
 {:toc .large-only}
 
 ## API 에러 처리
+
 에러가 발생할 수 있는 상황부터 정의해보자
 
 서비스 로직 내에서 Exception 이 발생하는 경우.
@@ -20,6 +21,7 @@ tags: [springboot,rest api, api, h2database]
 위 두가지 케이스에서 에러가 발생하더라도, 동일한 포맷으로 나가게끔 유도하려고 한다.
 
 우선, 기본적으로 정의한 폼은 다음과 같습니다.
+
 ```json
 {
  "result_status": "success",
@@ -29,8 +31,7 @@ tags: [springboot,rest api, api, h2database]
 }
 ```
 
-
-그리고 해당 포맷을 위한 응답 객체를 생성합니다. 해당 객체를 통해 컨트롤러에서 응답을 리턴할 때는 ```return new ResponseEntity<ApiResFormat>(new ApiResFormat(),HttpStatus.OK);``` 과 같이 리턴할 예정입니다.
+그리고 해당 포맷을 위한 응답 객체를 생성합니다. 해당 객체를 통해 컨트롤러에서 응답을 리턴할 때는 `return new ResponseEntity<ApiResFormat>(new ApiResFormat(),HttpStatus.OK);` 과 같이 리턴할 예정입니다.
 
 ```java
 package rest.api.sample.response;
@@ -53,7 +54,7 @@ public class ApiResFormat {
     private HashMap<String, Object> result = new HashMap<String, Object>();
 
     /* 결과 예시 */
-    /* 
+    /*
     {
         "result_status": "success",
         "result_code": 200,
@@ -61,7 +62,7 @@ public class ApiResFormat {
         "result": {
             ...
         }
-    } 
+    }
     */
 
     public ApiResFormat() {
@@ -109,7 +110,7 @@ public class ApiResFormat {
 
 ```java
 @RestControllerAdvice, @ExceptionHandler
-RestControllerAdvice 는 컨트롤러 단의 설정들을 할 수 있게 해주는 ControllerAdvice 의 확장 버전으로 응답 객체를 리턴할 수 있는 것이 특징이고, ExceptionHandler 는 Controller 단에서 발생하는 Exception을 핸들링 할 수 있도록 합니다. 
+RestControllerAdvice 는 컨트롤러 단의 설정들을 할 수 있게 해주는 ControllerAdvice 의 확장 버전으로 응답 객체를 리턴할 수 있는 것이 특징이고, ExceptionHandler 는 Controller 단에서 발생하는 Exception을 핸들링 할 수 있도록 합니다.
 
 따라서, 엔드포인트 컨트롤러 단에서 발생하는 Exception을 캐치하여 원하는 포맷으로 리턴하기 위해 아래와 같이 설정 했습니다.
 
@@ -188,7 +189,6 @@ public class RestResponseEntityExceptionHandler extends DefaultErrorAttributes {
 ```
 
 따라서, 위 클래스를 통해 필요한 항목은 추가하고 보여줄 필요가 없는 trace 항목이나 다른 항목들은 제외를 시켜 에러 발생시 response 형태를 최대한 통일 시키도록 작성하였습니다.
-
 
 에러 발생 시 리턴 객체
 

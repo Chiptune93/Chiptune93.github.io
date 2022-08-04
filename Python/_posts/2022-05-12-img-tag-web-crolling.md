@@ -2,29 +2,26 @@
 layout: post
 title: Python - 구글 이미지 검색 크롤링하는 소스
 description: >
-    구글 이미지 검색 크롤링하는 소스
+  구글 이미지 검색 크롤링하는 소스
 sitemap: false
 hide_last_modified: true
 categories: [Python]
-tags: [Python,Google Crolling, Crolling]
+tags: [Python, Google Crolling, Crolling]
 ---
 
 - Table of Contents
 {:toc .large-only}
 
-
 이전에 진행한 특정 사이트에서 이미지 다운로드 시켜주는 예제 진행 후,
 
 구글 검색도 가능하다고 하여 찾아서 작성해보았다.
-
 
 파이썬은 처음 접해보는데, 라이브러리가 되게 잘되어있어서 기본적인 문법만 알면
 
 얼마든지 응용, 작성할 수 있을 것 같다.
 
-
-
 이 언어로 도대체 어디까지 가능한지 계속 찾아볼 계획이다.
+
 ```py
 import os
 import sys
@@ -60,7 +57,7 @@ keyword = input('검색어를 입력하세요 ▶ ')
 # 최대 개수 입력 받기
 imageCount = input('몇 개까지 가져오시겠습니까? (최대 1000장) ▶ ')
 # 개수 예외 처리
-if imageCount < 0 and imageCount > 1000 : 
+if imageCount < 0 and imageCount > 1000 :
     imageCount = 1000
 
 # 구글 접속

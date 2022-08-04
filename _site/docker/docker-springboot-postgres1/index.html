@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -258,46 +258,64 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ul>
 
 <h2 id="docker-명령-참고">Docker 명령 참고</h2>
+
 <ul>
-  <li>조회
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps -a
--a : 정지 중 포함
-</code></pre></div>    </div>
-  </li>
-  <li>중지
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker stop &lt;container-id/container-name&gt;
-</code></pre></div>    </div>
-  </li>
-  <li>시작
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker start &lt;container-id/container-name&gt;
-</code></pre></div>    </div>
-  </li>
-  <li>재시작
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker restart &lt;container-id/container-name&gt;
-</code></pre></div>    </div>
-  </li>
-  <li>접속
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker attach &lt;container-id/container-name&gt;
-</code></pre></div>    </div>
-  </li>
+  <li>조회</li>
 </ul>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps -a
+-a : 정지 중 포함
+</code></pre></div></div>
+
+<ul>
+  <li>중지</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker stop &lt;container-id/container-name&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>시작</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker start &lt;container-id/container-name&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>재시작</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker restart &lt;container-id/container-name&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>접속</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker attach &lt;container-id/container-name&gt;
+</code></pre></div></div>
+
 <h2 id="postgrelsql-129-alpine-docker-run">Postgrelsql 12.9-alpine Docker run</h2>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=&lt;password&gt; --name Postgresql postgres:12.9-alpine
 </code></pre></div></div>
 
 <ul>
-  <li>Postsql Volume 생성 및 탑재 후 러닝
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker create volume postgresql-sample
-</code></pre></div>    </div>
-  </li>
-  <li>/var/lib/postgresql/data 에 데이터가 저장되기 때문에 해당 경로를 지정 및 캡쳐
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d -p 5432:5432 -e POSTGRES_PASSWORD="{password}" -v postgresql-sample:/var/lib/postgresql/data --network boot-sample-network --name Postgresql postgres:12.9-alpine
-</code></pre></div>    </div>
-  </li>
+  <li>Postsql Volume 생성 및 탑재 후 러닝</li>
 </ul>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker create volume postgresql-sample
+</code></pre></div></div>
+
+<ul>
+  <li>/var/lib/postgresql/data 에 데이터가 저장되기 때문에 해당 경로를 지정 및 캡쳐</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d -p 5432:5432 -e POSTGRES_PASSWORD="{password}" -v postgresql-sample:/var/lib/postgresql/data --network boot-sample-network --name Postgresql postgres:12.9-alpine
+</code></pre></div></div>
+
 <p>이후 localhost:5432 로 postgresql 접속.</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-- 사용자 조회
 select * from pg_user;
 
@@ -312,6 +330,7 @@ select datname from pg_database;
 </code></pre></div></div>
 
 <p>테스트용 테이블 생성</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-- Drop table
 
 -- DROP TABLE public.test_table;
@@ -324,6 +343,7 @@ COMMENT ON TABLE public.test_table IS 'test_table';
 </code></pre></div></div>
 
 <p>테스트용 데이터 삽입</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>INSERT INTO public.test_table ("name",value) VALUES
 	 ('1','TEST_VALUE1'),
 	 ('2','TEST_VALUE2'),
@@ -351,92 +371,97 @@ INSERT INTO public.test_table ("name",value) VALUES
 <p>DB준비 완료</p>
 
 <h2 id="spring-boot-262--jstl">Spring Boot 2.6.2 + jstl</h2>
+
 <ul>
-  <li>build.gradle 설정
-```gradle
-plugins {
-  id ‘org.springframework.boot’ version ‘2.6.2’
-  id ‘io.spring.dependency-management’ version ‘1.0.11.RELEASE’
-  id ‘java’
-}</li>
+  <li>build.gradle 설정</li>
 </ul>
 
-<p>group = ‘com.docker’
-version = ‘0.0.1-SNAPSHOT’
-sourceCompatibility = ‘8’</p>
+<div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plugins</span> <span class="o">{</span>
+	<span class="n">id</span> <span class="s1">'org.springframework.boot'</span> <span class="n">version</span> <span class="s1">'2.6.2'</span>
+	<span class="n">id</span> <span class="s1">'io.spring.dependency-management'</span> <span class="n">version</span> <span class="s1">'1.0.11.RELEASE'</span>
+	<span class="n">id</span> <span class="s1">'java'</span>
+<span class="o">}</span>
 
-<p>repositories {
-	mavenCentral()
-}</p>
+<span class="n">group</span> <span class="o">=</span> <span class="s1">'com.docker'</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">'0.0.1-SNAPSHOT'</span>
+<span class="n">sourceCompatibility</span> <span class="o">=</span> <span class="s1">'8'</span>
 
-<p>dependencies {
-	implementation ‘org.springframework.boot:spring-boot-starter-web’
-	testImplementation ‘org.springframework.boot:spring-boot-starter-test’</p>
+<span class="k">repositories</span> <span class="o">{</span>
+	<span class="n">mavenCentral</span><span class="o">()</span>
+<span class="o">}</span>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 사용자 추가
+<span class="k">dependencies</span> <span class="o">{</span>
+	<span class="n">implementation</span> <span class="s1">'org.springframework.boot:spring-boot-starter-web'</span>
+	<span class="n">testImplementation</span> <span class="s1">'org.springframework.boot:spring-boot-starter-test'</span>
 
-// dev tool ( 정적 리소스 재시작없이 적용 )
-implementation group: 'org.springframework.boot', name: 'spring-boot-devtools'
+	<span class="c1">// 사용자 추가</span>
 
-// mybatis-spring-boot
-implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.1.4'
-// log4j2
-implementation group: 'org.bgee.log4jdbc-log4j2', name: 'log4jdbc-log4j2-jdbc4.1', version: '1.16'   
-// jdbc ( postgresql - jdbc driver )
-implementation group: 'org.postgresql', name: 'postgresql', version: '42.3.1'
+	<span class="c1">// dev tool ( 정적 리소스 재시작없이 적용 )</span>
+	<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.springframework.boot'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'spring-boot-devtools'</span>
+
+	<span class="c1">// mybatis-spring-boot</span>
+	<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.mybatis.spring.boot'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'mybatis-spring-boot-starter'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'2.1.4'</span>
+	<span class="c1">// log4j2</span>
+	<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.bgee.log4jdbc-log4j2'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'log4jdbc-log4j2-jdbc4.1'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'1.16'</span>
+	<span class="c1">// jdbc ( postgresql - jdbc driver )</span>
+	<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.postgresql'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'postgresql'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'42.3.1'</span>
 
 
-// 스프링 부트는 기본적으로 내장 톰캣을 가지고 있지만 
-// jsp 엔진이 존재하지 않아, jasper 와 jstl 의존성을 추가해주어야 한다.
+	<span class="c1">// 스프링 부트는 기본적으로 내장 톰캣을 가지고 있지만</span>
+	<span class="c1">// jsp 엔진이 존재하지 않아, jasper 와 jstl 의존성을 추가해주어야 한다.</span>
 
-// jstl 
-implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
+	<span class="c1">// jstl</span>
+	<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'javax.servlet'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'jstl'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'1.2'</span>
 
-// jasper
-implementation group: 'org.apache.tomcat', name: 'tomcat-jasper', version: '9.0.56'
+	<span class="c1">// jasper</span>
+	<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.apache.tomcat'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'tomcat-jasper'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'9.0.56'</span>
+
+
+
+<span class="o">}</span>
+
+<span class="n">test</span> <span class="o">{</span>
+	<span class="n">useJUnitPlatform</span><span class="o">()</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
-<p>}</p>
+<ul>
+  <li>application.yml 설정</li>
+</ul>
 
-<p>test {
-	useJUnitPlatform()
-}</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-- application.yml 설정
-```yml
-spring:
-    application:
-        name: springboot-docker-sample
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">spring</span><span class="pi">:</span>
+  <span class="na">application</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">springboot-docker-sample</span>
 
-    # DB Connection ( localhost:5432 --&gt; Docker Postgresql 5432 )
-    datasource:
-        hikari:
-            # connect to host port
-            #jdbc-url: jdbc:log4jdbc:postgresql://localhost:5432/test
-            # connect to container port
-            jdbc-url: jdbc:log4jdbc:postgresql://Postgresql/test
-            driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-            username: test
-            password: test
-            maximum-pool-size: 5
-    
-    # mvc config 
-    # 뷰 경로 지정 및 확장자 설정
+  <span class="c1"># DB Connection ( localhost:5432 --&gt; Docker Postgresql 5432 )</span>
+  <span class="na">datasource</span><span class="pi">:</span>
+    <span class="na">hikari</span><span class="pi">:</span>
+      <span class="c1"># connect to host port</span>
+      <span class="c1">#jdbc-url: jdbc:log4jdbc:postgresql://localhost:5432/test</span>
+      <span class="c1"># connect to container port</span>
+      <span class="na">jdbc-url</span><span class="pi">:</span> <span class="s">jdbc:log4jdbc:postgresql://Postgresql/test</span>
+      <span class="na">driver-class-name</span><span class="pi">:</span> <span class="s">net.sf.log4jdbc.sql.jdbcapi.DriverSpy</span>
+      <span class="na">username</span><span class="pi">:</span> <span class="s">test</span>
+      <span class="na">password</span><span class="pi">:</span> <span class="s">test</span>
+      <span class="na">maximum-pool-size</span><span class="pi">:</span> <span class="m">5</span>
 
-    # jar 파일로 압축하는 경우, jsp 지원 안하므로 기본 경로가
-    # META-INF/resources/WEB-INF/view 가 된다.
+  <span class="c1"># mvc config</span>
+  <span class="c1"># 뷰 경로 지정 및 확장자 설정</span>
 
-    # develop 필요 ... 
-    mvc:
-        view:
-            prefix: /WEB-INF/views/
-            suffix: .jsp
+  <span class="c1"># jar 파일로 압축하는 경우, jsp 지원 안하므로 기본 경로가</span>
+  <span class="c1"># META-INF/resources/WEB-INF/view 가 된다.</span>
 
-    # devtool config
-    # 정적 리소스 수정에도 재시작 없이 변경사항 적용
-    devtools: 
-        livereload:
-            enabled: true
+  <span class="c1"># develop 필요 ...</span>
+  <span class="na">mvc</span><span class="pi">:</span>
+    <span class="na">view</span><span class="pi">:</span>
+      <span class="na">prefix</span><span class="pi">:</span> <span class="s">/WEB-INF/views/</span>
+      <span class="na">suffix</span><span class="pi">:</span> <span class="s">.jsp</span>
+
+  <span class="c1"># devtool config</span>
+  <span class="c1"># 정적 리소스 수정에도 재시작 없이 변경사항 적용</span>
+  <span class="na">devtools</span><span class="pi">:</span>
+    <span class="na">livereload</span><span class="pi">:</span>
+      <span class="na">enabled</span><span class="pi">:</span> <span class="no">true</span>
 </code></pre></div></div>
 
 <p>** 동일 docker network 상에 컨테이너가 존재하는 경우 컨테이너의 Name 값이 {ip}:{port} 값과 대치되어 사용이 가능하다.</p>
@@ -450,19 +475,27 @@ spring:
 <p>sample 프로젝트</p>
 
 <h2 id="docker-network-생성">Docker Network 생성</h2>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker create network boot-sample-network
 </code></pre></div></div>
 
 <p>최종 Docker 이미지 실행 명령</p>
+
 <ul>
-  <li>postgresql ( M1 MAC 에서는 “ 를 ‘ 로 변경 )
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d -p 5432:5432 -e POSTGRES_PASSWORD="{password}" -v postgresql-sample:/var/lib/postgresql/data --network boot-sample-network --name Postgresql postgres:12.9-alpine
-</code></pre></div>    </div>
-  </li>
-  <li>spring boot
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d -p 8080:8080 --network boot-sample-network --name Boot-Sample boot-sample
-</code></pre></div>    </div>
-  </li>
+  <li>postgresql ( M1 MAC 에서는 “ 를 ‘ 로 변경 )</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d -p 5432:5432 -e POSTGRES_PASSWORD="{password}" -v postgresql-sample:/var/lib/postgresql/data --network boot-sample-network --name Postgresql postgres:12.9-alpine
+</code></pre></div></div>
+
+<ul>
+  <li>spring boot</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d -p 8080:8080 --network boot-sample-network --name Boot-Sample boot-sample
+</code></pre></div></div>
+
+<ul>
   <li>postgresql volume file</li>
 </ul>
 
@@ -479,6 +512,7 @@ spring:
 </ul>
 
 <p>참고</p>
+
 <ul>
   <li>postgresql yml 설정</li>
 </ul>
@@ -518,13 +552,14 @@ spring:
 <p>https://stackoverflow.com/questions/28725635/spring-boot-configure-it-to-find-the-webapp-folder</p>
 
 <ul>
-  <li>docker volume 윈도우 경로
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes
-</code></pre></div>    </div>
-  </li>
+  <li>docker volume 윈도우 경로</li>
 </ul>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes
+</code></pre></div></div>
+
 <p>개선사항</p>
+
 <ul>
   <li>
     <p>데이터 공유는 volume 형태가 아닌 파일(디렉토리) 공유 형태로 변경 &gt; 쉽게 옮길 수 있다.</p>
@@ -717,7 +752,7 @@ spring:
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

@@ -49,7 +49,8 @@ FileUpload / Download 서비스는 다음을 전제로 개발하기로 한다.
 
 프로젝트는 vs code에서 initailize gradle project를 이용해 생성했고 아래와 같은 내용을 추가 했다.
 
-- build.gradle
+>build.gradle
+
 ```gradle
 plugins {
 	id 'org.springframework.boot' version '2.6.4'
@@ -86,7 +87,8 @@ tasks.named('test') {
 }
 ```
 
-- application.yml
+>application.yml
+
 ```yml
 spring:
     application:
@@ -100,7 +102,8 @@ spring:
             suffix: .jsp
 ```
 
-- indexController.java
+>indexController.java
+
 ```java
 package com.file.example.controller;
 
@@ -124,10 +127,11 @@ public class IndexController {
     }
 
 }
+```
 
+>FileUploadController.java
 
-- FileUploadController.java
-
+```java
 package com.file.example.controller;
 
 import com.file.example.service.FileUploadService;
@@ -151,7 +155,8 @@ public class FileUploadController {
 }
 ```
 
-- FileUploadService.java - FileStorageService 상속.
+>FileUploadService.java - FileStorageService 상속.
+
 ```java
 package com.file.example.service;
 
@@ -210,7 +215,8 @@ public class FileUploadService implements FileStorageService {
 }
 ```
 
-- FileStorageService.java
+>FileStorageService.java
+
 ```java
 package com.file.example.ifc;
 

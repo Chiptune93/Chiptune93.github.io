@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -268,173 +268,172 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
   </li>
 </ol>
 
-<ul>
-  <li>FIleUtil.java
-```java
-package com.file.example.util;</li>
-</ul>
+<blockquote>
+  <p>FIleUtil.java</p>
+</blockquote>
 
-<p>import java.io.File;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
-import java.util.Base64;
-import java.util.HashMap;</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.file.example.util</span><span class="o">;</span>
 
-<p>import com.file.example.repository.FileUploadRepository;</p>
+<span class="kn">import</span> <span class="nn">java.io.File</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.InputStream</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.file.Files</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.file.Path</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.file.Paths</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.file.StandardCopyOption</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.time.LocalDate</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.time.format.DateTimeFormatter</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Base64</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
 
-<p>import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-import org.springframework.web.multipart.MultipartFile;</p>
+<span class="kn">import</span> <span class="nn">com.file.example.repository.FileUploadRepository</span><span class="o">;</span>
 
-<p>/**</p>
-<ul>
-  <li>
-    <p>파일 유틸 클래스
- */
-@Component
-public class FileUtil {
- // 서버 업로드 경로
- @Value(“${spring.servlet.multipart.location}”)
- private String uploadPath;</p>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Value</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Component</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.multipart.MultipartFile</span><span class="o">;</span>
 
-    <p>// 최대 파일 크기
- private long MAX_SIZE = 52428800;</p>
+<span class="cm">/**
+ * 파일 유틸 클래스
+ */</span>
+<span class="nd">@Component</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FileUtil</span> <span class="o">{</span>
+    <span class="c1">// 서버 업로드 경로</span>
+    <span class="nd">@Value</span><span class="o">(</span><span class="s">"${spring.servlet.multipart.location}"</span><span class="o">)</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">uploadPath</span><span class="o">;</span>
 
-    <p>// 파일 정보 저장 시, 레파지토리
- @Autowired
- FileUploadRepository rpt;</p>
+    <span class="c1">// 최대 파일 크기</span>
+    <span class="kd">private</span> <span class="kt">long</span> <span class="no">MAX_SIZE</span> <span class="o">=</span> <span class="mi">52428800</span><span class="o">;</span>
 
-    <p>/**</p>
-    <ul>
-      <li>업로드 경로 구하기</li>
-      <li></li>
-      <li>@param type</li>
-      <li>@return
-  */
- public Path getUploadPath(String type) {
- // 파일은 기본적으로 날짜 기준 (yyyymmdd) 으로 폴더를 구분
- LocalDate ld = LocalDate.now();
- String date = ld.format(DateTimeFormatter.ofPattern(“yyyyMMdd”));
- String typeFolder = “”;
- // 타입에 따라 날짜 내부에 폴더 구분
- if (type.equals(“image”)) {
-     typeFolder = “image”;
- } else if (type.equals(“document”)) {
-     typeFolder = “document”;
- } else {
-     typeFolder = “”;
- }
- // 업로드 경로를 조합
- uploadPath += File.separator + date + File.separator + typeFolder;
- // 조합된 경로 체크
- Path dir = Paths.get(uploadPath);
- // 해당 경로 존재하는지 체크
- if (!Files.exists(dir)) {
-     try {
-         // 경로가 없다면 생성
-         Files.createDirectories(dir);
-     } catch (Exception e) {
-         e.printStackTrace();
-         return null;
-     }
- }
- return dir;
- }</li>
-    </ul>
+    <span class="c1">// 파일 정보 저장 시, 레파지토리</span>
+    <span class="nd">@Autowired</span>
+    <span class="nc">FileUploadRepository</span> <span class="n">rpt</span><span class="o">;</span>
 
-    <p>/**</p>
-    <ul>
-      <li>업로드 하기</li>
-      <li></li>
-      <li>@param file</li>
-      <li>
-        <p>@param path
-  */
- public HashMap&lt;String, String&gt; upload(MultipartFile file, Path path) {
- HashMap&lt;String, String&gt; result = new HashMap&lt;String, String&gt;();
- // 파일 정보
- String fileName = file.getOriginalFilename();
- String fileSize = Long.toString(file.getSize());
- String fileExt = fileName.substring(fileName.lastIndexOf(“.”) + 1);
- String fileType = file.getContentType();
- String filePath = “”;
- // 결과 정보
- String status = “”;
- String message = “”;
- // 예외처리 하기</p>
+    <span class="cm">/**
+     * 업로드 경로 구하기
+     * 
+     * @param type
+     * @return
+     */</span>
+    <span class="kd">public</span> <span class="nc">Path</span> <span class="nf">getUploadPath</span><span class="o">(</span><span class="nc">String</span> <span class="n">type</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// 파일은 기본적으로 날짜 기준 (yyyymmdd) 으로 폴더를 구분</span>
+        <span class="nc">LocalDate</span> <span class="n">ld</span> <span class="o">=</span> <span class="nc">LocalDate</span><span class="o">.</span><span class="na">now</span><span class="o">();</span>
+        <span class="nc">String</span> <span class="n">date</span> <span class="o">=</span> <span class="n">ld</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="nc">DateTimeFormatter</span><span class="o">.</span><span class="na">ofPattern</span><span class="o">(</span><span class="s">"yyyyMMdd"</span><span class="o">));</span>
+        <span class="nc">String</span> <span class="n">typeFolder</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+        <span class="c1">// 타입에 따라 날짜 내부에 폴더 구분</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">type</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"image"</span><span class="o">))</span> <span class="o">{</span>
+            <span class="n">typeFolder</span> <span class="o">=</span> <span class="s">"image"</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">type</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"document"</span><span class="o">))</span> <span class="o">{</span>
+            <span class="n">typeFolder</span> <span class="o">=</span> <span class="s">"document"</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="n">typeFolder</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="c1">// 업로드 경로를 조합</span>
+        <span class="n">uploadPath</span> <span class="o">+=</span> <span class="nc">File</span><span class="o">.</span><span class="na">separator</span> <span class="o">+</span> <span class="n">date</span> <span class="o">+</span> <span class="nc">File</span><span class="o">.</span><span class="na">separator</span> <span class="o">+</span> <span class="n">typeFolder</span><span class="o">;</span>
+        <span class="c1">// 조합된 경로 체크</span>
+        <span class="nc">Path</span> <span class="n">dir</span> <span class="o">=</span> <span class="nc">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">uploadPath</span><span class="o">);</span>
+        <span class="c1">// 해당 경로 존재하는지 체크</span>
+        <span class="k">if</span> <span class="o">(!</span><span class="nc">Files</span><span class="o">.</span><span class="na">exists</span><span class="o">(</span><span class="n">dir</span><span class="o">))</span> <span class="o">{</span>
+            <span class="k">try</span> <span class="o">{</span>
+                <span class="c1">// 경로가 없다면 생성</span>
+                <span class="nc">Files</span><span class="o">.</span><span class="na">createDirectories</span><span class="o">(</span><span class="n">dir</span><span class="o">);</span>
+            <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+                <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">dir</span><span class="o">;</span>
+    <span class="o">}</span>
 
-        <p>// 1. 파일 사이즈
- if (file.getSize() &gt; MAX_SIZE) {
-     status = “fail”;
-     message = “file over max upload size”;
-     result.put(“status”, status);
-     result.put(“message”, message);
-     return result;
- }</p>
+    <span class="cm">/**
+     * 업로드 하기
+     * 
+     * @param file
+     * @param path
+     */</span>
+    <span class="kd">public</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="nf">upload</span><span class="o">(</span><span class="nc">MultipartFile</span> <span class="n">file</span><span class="o">,</span> <span class="nc">Path</span> <span class="n">path</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;();</span>
+        <span class="c1">// 파일 정보</span>
+        <span class="nc">String</span> <span class="n">fileName</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="na">getOriginalFilename</span><span class="o">();</span>
+        <span class="nc">String</span> <span class="n">fileSize</span> <span class="o">=</span> <span class="nc">Long</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">getSize</span><span class="o">());</span>
+        <span class="nc">String</span> <span class="n">fileExt</span> <span class="o">=</span> <span class="n">fileName</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">fileName</span><span class="o">.</span><span class="na">lastIndexOf</span><span class="o">(</span><span class="s">"."</span><span class="o">)</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span>
+        <span class="nc">String</span> <span class="n">fileType</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="na">getContentType</span><span class="o">();</span>
+        <span class="nc">String</span> <span class="n">filePath</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+        <span class="c1">// 결과 정보</span>
+        <span class="nc">String</span> <span class="n">status</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+        <span class="nc">String</span> <span class="n">message</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+        <span class="c1">// 예외처리 하기</span>
 
-        <p>// 2. 파일 확장자
- // 화이트 리스트 방식으로 파일 확장자 체크
- if (!Arrays.asList(“jpg”, “png”, “gif”, “jpeg”, “bmp”, “xlsx”, “ppt”, “pptx”, “txt”, “hwp”)
-         .contains(fileType.toLowerCase())) {
-     status = “fail”;
-     message = “file type is not allowed”;
-     result.put(“status”, status);
-     result.put(“message”, message);
-     return result;
- }</p>
+        <span class="c1">// 1. 파일 사이즈</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">getSize</span><span class="o">()</span> <span class="o">&gt;</span> <span class="no">MAX_SIZE</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="s">"fail"</span><span class="o">;</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="s">"file over max upload size"</span><span class="o">;</span>
+            <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="n">status</span><span class="o">);</span>
+            <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"message"</span><span class="o">,</span> <span class="n">message</span><span class="o">);</span>
+            <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+        <span class="o">}</span>
 
-        <p>// 3. 저장 파일 이름 랜덤화
- String tempName = fileName.substring(0, fileName.lastIndexOf(“.”));
- String encFileName = Base64.getEncoder().encodeToString(tempName.getBytes());
- // 암호화된 경로로 패스 설정
- filePath = path.toString() + File.separator + encFileName + “.” + fileExt;</p>
+        <span class="c1">// 2. 파일 확장자</span>
+        <span class="c1">// 화이트 리스트 방식으로 파일 확장자 체크</span>
+        <span class="k">if</span> <span class="o">(!</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"jpg"</span><span class="o">,</span> <span class="s">"png"</span><span class="o">,</span> <span class="s">"gif"</span><span class="o">,</span> <span class="s">"jpeg"</span><span class="o">,</span> <span class="s">"bmp"</span><span class="o">,</span> <span class="s">"xlsx"</span><span class="o">,</span> <span class="s">"ppt"</span><span class="o">,</span> <span class="s">"pptx"</span><span class="o">,</span> <span class="s">"txt"</span><span class="o">,</span> <span class="s">"hwp"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">fileType</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">()))</span> <span class="o">{</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="s">"fail"</span><span class="o">;</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="s">"file type is not allowed"</span><span class="o">;</span>
+            <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="n">status</span><span class="o">);</span>
+            <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"message"</span><span class="o">,</span> <span class="n">message</span><span class="o">);</span>
+            <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+        <span class="o">}</span>
 
-        <p>// 4. 파일정보 맵에 담기.
- HashMap&lt;String, String&gt; fileInfo = new HashMap&lt;String, String&gt;();</p>
+        <span class="c1">// 3. 저장 파일 이름 랜덤화</span>
+        <span class="nc">String</span> <span class="n">tempName</span> <span class="o">=</span> <span class="n">fileName</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">fileName</span><span class="o">.</span><span class="na">lastIndexOf</span><span class="o">(</span><span class="s">"."</span><span class="o">));</span>
+        <span class="nc">String</span> <span class="n">encFileName</span> <span class="o">=</span> <span class="nc">Base64</span><span class="o">.</span><span class="na">getEncoder</span><span class="o">().</span><span class="na">encodeToString</span><span class="o">(</span><span class="n">tempName</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
+        <span class="c1">// 암호화된 경로로 패스 설정</span>
+        <span class="n">filePath</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="na">toString</span><span class="o">()</span> <span class="o">+</span> <span class="nc">File</span><span class="o">.</span><span class="na">separator</span> <span class="o">+</span> <span class="n">encFileName</span> <span class="o">+</span> <span class="s">"."</span> <span class="o">+</span> <span class="n">fileExt</span><span class="o">;</span>
 
-        <p>fileInfo.put(“fileName”, fileName);
- fileInfo.put(“encFileName”, encFileName);
- fileInfo.put(“fileSize”, fileSize);
- fileInfo.put(“fileExt”, fileExt);
- fileInfo.put(“fileType”, fileType);
- fileInfo.put(“filePath”, filePath);</p>
+        <span class="c1">// 4. 파일정보 맵에 담기.</span>
+        <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">fileInfo</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;();</span>
 
-        <p>try {
-     InputStream is = file.getInputStream();
-     Files.copy(is, path.resolve(encFileName + “.” + fileExt), StandardCopyOption.REPLACE_EXISTING);</p>
+        <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileName"</span><span class="o">,</span> <span class="n">fileName</span><span class="o">);</span>
+        <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"encFileName"</span><span class="o">,</span> <span class="n">encFileName</span><span class="o">);</span>
+        <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileSize"</span><span class="o">,</span> <span class="n">fileSize</span><span class="o">);</span>
+        <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileExt"</span><span class="o">,</span> <span class="n">fileExt</span><span class="o">);</span>
+        <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileType"</span><span class="o">,</span> <span class="n">fileType</span><span class="o">);</span>
+        <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"filePath"</span><span class="o">,</span> <span class="n">filePath</span><span class="o">);</span>
+        
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="nc">InputStream</span> <span class="n">is</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="na">getInputStream</span><span class="o">();</span>
+            <span class="nc">Files</span><span class="o">.</span><span class="na">copy</span><span class="o">(</span><span class="n">is</span><span class="o">,</span> <span class="n">path</span><span class="o">.</span><span class="na">resolve</span><span class="o">(</span><span class="n">encFileName</span> <span class="o">+</span> <span class="s">"."</span> <span class="o">+</span> <span class="n">fileExt</span><span class="o">),</span> <span class="nc">StandardCopyOption</span><span class="o">.</span><span class="na">REPLACE_EXISTING</span><span class="o">);</span>
 
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> // 파일 저장에 성공하면 DB에 저장하기
- int seq = rpt.insertFile(fileInfo);
+            <span class="c1">// 파일 저장에 성공하면 DB에 저장하기</span>
+            <span class="kt">int</span> <span class="n">seq</span> <span class="o">=</span> <span class="n">rpt</span><span class="o">.</span><span class="na">insertFile</span><span class="o">(</span><span class="n">fileInfo</span><span class="o">);</span>
 
- status = "success";
- message = "upload complete";  } catch (Exception e) {
- e.printStackTrace();
- status = "fail";
- message = "upload fail";  }  result.put("status", status);  result.put("message", message);  return result;  } } ```
-</code></pre></div>        </div>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>FileUploadService.java</p>
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="nf">save3</span><span class="o">(</span><span class="nc">MultipartRequest</span> <span class="n">req</span><span class="o">)</span> <span class="o">{</span>
-      <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;();</span>
-      <span class="nc">MultipartFile</span> <span class="n">file</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="na">getFile</span><span class="o">(</span><span class="s">"singleFile3"</span><span class="o">);</span>
-      <span class="nc">Path</span> <span class="n">uploadPath</span> <span class="o">=</span> <span class="n">fu</span><span class="o">.</span><span class="na">getUploadPath</span><span class="o">(</span><span class="s">"image"</span><span class="o">);</span>
-      <span class="n">result</span> <span class="o">=</span> <span class="n">fu</span><span class="o">.</span><span class="na">upload</span><span class="o">(</span><span class="n">file</span><span class="o">,</span> <span class="n">uploadPath</span><span class="o">);</span>
-      <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
-  <span class="o">}</span>
-</code></pre></div>    </div>
-  </li>
-</ul>
+            <span class="n">status</span> <span class="o">=</span> <span class="s">"success"</span><span class="o">;</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="s">"upload complete"</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="s">"fail"</span><span class="o">;</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="s">"upload fail"</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="n">status</span><span class="o">);</span>
+        <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"message"</span><span class="o">,</span> <span class="n">message</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>FileUploadService.java</p>
+</blockquote>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="nf">save3</span><span class="o">(</span><span class="nc">MultipartRequest</span> <span class="n">req</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;();</span>
+        <span class="nc">MultipartFile</span> <span class="n">file</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="na">getFile</span><span class="o">(</span><span class="s">"singleFile3"</span><span class="o">);</span>
+        <span class="nc">Path</span> <span class="n">uploadPath</span> <span class="o">=</span> <span class="n">fu</span><span class="o">.</span><span class="na">getUploadPath</span><span class="o">(</span><span class="s">"image"</span><span class="o">);</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">fu</span><span class="o">.</span><span class="na">upload</span><span class="o">(</span><span class="n">file</span><span class="o">,</span> <span class="n">uploadPath</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+    <span class="o">}</span>
+</code></pre></div></div>
 
 <p>위 기능들을 추가하면서 파일 업로드가 점점 그럴듯해보이는데, 아직 할 일은 많다.</p>
 
@@ -645,7 +644,7 @@ public class FileUtil {
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

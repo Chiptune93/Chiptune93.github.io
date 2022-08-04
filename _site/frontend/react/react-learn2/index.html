@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -267,18 +267,29 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 <h2 id="task">Task</h2>
 
-<p>1) 각 컴포넌트 별로 src 경로 아래에 작성. 이후 html &gt; js &gt; css 순으로 import 되어 구조를 이룸.</p>
+<ol>
+  <li>
+    <p>각 컴포넌트 별로 src 경로 아래에 작성. 이후 html &gt; js &gt; css 순으로 import 되어 구조를 이룸.</p>
+  </li>
+  <li>
+    <p>빌드 및 배포</p>
+  </li>
+  <li>
+    <p>npm run build : 빌드 명령 &gt; 소스들을 압축하여 build 라는 폴더로 리턴해줌.</p>
+  </li>
+  <li>
+    <p>로컬 상황에서 배포하기 ( serve 라는 로컬 서버 )</p>
 
-<p>2) 빌드 및 배포</p>
-
-<p>3) npm run build : 빌드 명령 &gt; 소스들을 압축하여 build 라는 폴더로 리턴해줌.</p>
-
-<p>4) 로컬 상황에서 배포하기 ( serve 라는 로컬 서버 )</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- react-project 경로) npm(npx) install -g serve : serve 설치.
-
-- react-project 경로) npx serve -s build : serve 설치 및 기동 , build 폴더를 root 디렉토리로 지정후 실행.
-</code></pre></div></div>
+    <ul>
+      <li>
+        <p>react-project 경로) npm(npx) install -g serve : serve 설치.</p>
+      </li>
+      <li>
+        <p>react-project 경로) npx serve -s build : serve 설치 및 기동 , build 폴더를 root 디렉토리로 지정후 실행.</p>
+      </li>
+    </ul>
+  </li>
+</ol>
 
 <blockquote>
   <p>로컬 주소를 리턴 &gt; 접속하면 배포된 것 확인 가능.</p>
@@ -473,7 +484,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

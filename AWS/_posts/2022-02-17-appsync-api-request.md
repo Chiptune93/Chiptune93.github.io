@@ -2,11 +2,11 @@
 layout: post
 title: App Sync - Java 에서 AppSync Api Request 보내는 예제.
 description: >
-    [App Sync] Java 에서 AppSync Api Request 보내는 예제.
+  [App Sync] Java 에서 AppSync Api Request 보내는 예제.
 sitemap: false
 hide_last_modified: true
 categories: [AWS]
-tags: [AWS,AppSync,api request]
+tags: [AWS, AppSync, api request]
 ---
 
 - Table of Contents
@@ -17,7 +17,7 @@ tags: [AWS,AppSync,api request]
 https://github.com/Chiptune93/Library/blob/main/AWS/AppSync/Java/AppSync.java
 
 참고
-https://www.baeldung.com/aws-appsync-spring﻿
+https://www.baeldung.com/aws-appsync-spring
 
 ## 소스 내용
 
@@ -44,7 +44,7 @@ public class AppSyncTest {
     String apiKey = "{your api key}";
 
     /**
-     * 
+     *
      * @param id   아이디
      * @param name 이름
      * @return response string

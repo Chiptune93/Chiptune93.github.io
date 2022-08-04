@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -269,6 +269,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>따라서, 복사 붙여넣기로 이미지를 가져오는 부분은 유지하되, 파일을 업로드하여 URL을 BLOB데이터가 아닌 download링크로 변경하여 업로드된 파일을 가져오는 기능으로 대체하고자 했다.</p>
 
 <p>1차로 paste 이벤트를 감지하여 파일을 업로드 하는 스크립트를 작성했다.</p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">#editor</span><span class="dl">"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">paste</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">clipboardData</span> <span class="o">||</span> <span class="nx">e</span><span class="p">.</span><span class="nx">originalEvent</span><span class="p">.</span><span class="nx">clipboardData</span><span class="p">).</span><span class="nx">items</span><span class="p">;</span>
   <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="k">of</span> <span class="nx">items</span><span class="p">)</span> <span class="p">{</span>
@@ -321,61 +322,61 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>해당 파일에서 이미지 핸들링을 하는 부분은 addDefaultImageBlobHook 이라는 함수였다.</p>
 
 <ul>
-  <li>기존 소스 : 17600 라인 근처
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">addDefaultImageBlobHook</span><span class="p">(</span><span class="nx">eventEmitter</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">eventEmitter</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="dl">'</span><span class="s1">addImageBlobHook</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">blob</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
-      <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span>
-      <span class="nx">reader</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">_a</span><span class="p">)</span> <span class="p">{</span>
-          <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="nx">_a</span><span class="p">.</span><span class="nx">target</span><span class="p">;</span>
-          <span class="k">return</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">target</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
-      <span class="p">};</span>
-        
-      <span class="nx">reader</span><span class="p">.</span><span class="nx">readAsDataURL</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
+  <li>기존 소스 : 17600 라인 근처</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">addDefaultImageBlobHook</span><span class="p">(</span><span class="nx">eventEmitter</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">eventEmitter</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="dl">"</span><span class="s2">addImageBlobHook</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">blob</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span>
+    <span class="nx">reader</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">_a</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="nx">_a</span><span class="p">.</span><span class="nx">target</span><span class="p">;</span>
+      <span class="k">return</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">target</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+    <span class="p">};</span>
+
+    <span class="nx">reader</span><span class="p">.</span><span class="nx">readAsDataURL</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
   <span class="p">});</span>
 <span class="p">}</span>
-</code></pre></div>    </div>
-  </li>
-</ul>
+</code></pre></div></div>
 
 <p>위에 해당 하는 부분을 파일 업로드하고, URL로 변경 리턴 하는 것으로 바꾸었다.</p>
 
 <ul>
-  <li>변경 소스
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">addDefaultImageBlobHook</span><span class="p">(</span><span class="nx">eventEmitter</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">eventEmitter</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="dl">'</span><span class="s1">addImageBlobHook</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">blob</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
-      <span class="kd">var</span> <span class="nx">formData</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FormData</span><span class="p">();</span>
-      <span class="nx">formData</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">file</span><span class="dl">"</span><span class="p">,</span> <span class="nx">blob</span><span class="p">);</span>
-      <span class="nx">comm</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span>
-        <span class="p">{</span>
-          <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">/file/upload.do</span><span class="dl">"</span><span class="p">,</span>
-          <span class="na">processData</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-          <span class="na">contentType</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-          <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
-            <span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">multipart/form-data</span><span class="dl">"</span><span class="p">,</span>
-          <span class="p">},</span>
-          <span class="na">params</span><span class="p">:</span> <span class="nx">formData</span><span class="p">,</span>
+  <li>변경 소스</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">addDefaultImageBlobHook</span><span class="p">(</span><span class="nx">eventEmitter</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">eventEmitter</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="dl">"</span><span class="s2">addImageBlobHook</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">blob</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">formData</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FormData</span><span class="p">();</span>
+    <span class="nx">formData</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">file</span><span class="dl">"</span><span class="p">,</span> <span class="nx">blob</span><span class="p">);</span>
+    <span class="nx">comm</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span>
+      <span class="p">{</span>
+        <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">/file/upload.do</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">processData</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="na">contentType</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+          <span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">multipart/form-data</span><span class="dl">"</span><span class="p">,</span>
         <span class="p">},</span>
-        <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-          <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">result</span><span class="p">.</span><span class="nx">status</span> <span class="o">!=</span> <span class="dl">"</span><span class="s2">success</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-          <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">/file/download.do?seq=</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">result</span><span class="p">.</span><span class="nx">fileSeq</span><span class="p">;</span>
-            <span class="k">return</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
-          <span class="p">}</span>
+        <span class="na">params</span><span class="p">:</span> <span class="nx">formData</span><span class="p">,</span>
+      <span class="p">},</span>
+      <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">result</span><span class="p">.</span><span class="nx">status</span> <span class="o">!=</span> <span class="dl">"</span><span class="s2">success</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">/file/download.do?seq=</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">result</span><span class="p">.</span><span class="nx">fileSeq</span><span class="p">;</span>
+          <span class="k">return</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
         <span class="p">}</span>
-      <span class="p">);</span>
-      <span class="cm">/* var reader = new FileReader();
-      reader.onload = function (_a) {
-          var target = _a.target;
-          return callback(target.result);
-      };
+      <span class="p">}</span>
+    <span class="p">);</span>
+    <span class="cm">/* var reader = new FileReader();
+        reader.onload = function (_a) {
+            var target = _a.target;
+            return callback(target.result);
+        };
         
-      reader.readAsDataURL(blob); */</span>
+        reader.readAsDataURL(blob); */</span>
   <span class="p">});</span>
 <span class="p">}</span>
-</code></pre></div>    </div>
-  </li>
-</ul>
+</code></pre></div></div>
 
 <p>이렇게 하면, 에디터에 작성 시, 이미지를 붙여넣을 때 BLOB데이터 전체가 들어가는 것이 아닌, 파일 다운로드 링크로 들어가도록 변경된다.</p>
 
@@ -564,7 +565,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

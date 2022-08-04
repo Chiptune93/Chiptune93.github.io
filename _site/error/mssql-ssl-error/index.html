@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -256,6 +256,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ul>
 
 <h2 id="문제">문제</h2>
+
 <p>JDK 11 버전 이상 사용하는 프로젝트에서 MSSQL 연결 시도 시 아래의 메세지 출력.</p>
 
 <blockquote>
@@ -270,9 +271,9 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>따라서, SQL서버와 통신 시 암호화를 false로 주는 옵션을 통해 연결 시도를 해야 한다.</p>
 
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">datasource</span><span class="pi">:</span>
-    <span class="na">hikari</span><span class="pi">:</span>
-      <span class="na">jdbc-url</span><span class="pi">:</span> <span class="s">jdbc:sqlserver://{url:port};DatabaseName={dbName};encrypt=false</span>
-      <span class="na">driver-class-name</span><span class="pi">:</span> <span class="s">com.microsoft.sqlserver.jdbc.SQLServerDriver</span>
+  <span class="na">hikari</span><span class="pi">:</span>
+    <span class="na">jdbc-url</span><span class="pi">:</span> <span class="s">jdbc:sqlserver://{url:port};DatabaseName={dbName};encrypt=false</span>
+    <span class="na">driver-class-name</span><span class="pi">:</span> <span class="s">com.microsoft.sqlserver.jdbc.SQLServerDriver</span>
 </code></pre></div></div>
 
 <p>방법은 위와 같이 뒤에 인수로 “encrypt=false” 를 준다.</p>
@@ -460,7 +461,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

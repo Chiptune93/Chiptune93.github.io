@@ -2,7 +2,7 @@
 layout: post
 title: jQuery - 실시간 요소 변경 탐지하기
 description: >
-    [jQuery] 실시간 요소 변경 탐지하기
+  [jQuery] 실시간 요소 변경 탐지하기
 sitemap: false
 hide_last_modified: true
 categories: [Frontend]
@@ -13,6 +13,7 @@ tags: [Element Change, jQuery, event handler]
 {:toc .large-only}
 
 ## input 요소에 대한 실시간 변경을 탐지하여 원하는 내용을 실행하도록 하는 함수
+
 ```js
 $(document).ready( function () {
 	// 비교를 위한 현재 값 저장
@@ -29,4 +30,5 @@ $(document).ready( function () {
     });
 }
 ```
+
 > propertychange 의 경우, disable이나 readonly 시킨 요소에 대해 개발자도구나 기타 방법을 통해 속성 변경이 일어날 경우 감지하여 값을 저장하는 것을 막는다던가 하는 방법도 있어 유용할 것 같다.

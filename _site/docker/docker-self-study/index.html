@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -264,12 +264,13 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ul>
 
 <h1 id="1부--시작">1부 : 시작</h1>
+
 <blockquote>
   <p>컨테이너?</p>
 </blockquote>
 
 <p>컨테이너는 앱을 빌드하고 실행하기 위한 플랫폼을 제공하지만 전체 운영 체제의 전체 크기와 오버헤드가 없는 VM(가상 머신)과 같은 소규모 가상화 환경입니다.
-간단히 말하면  컨테이너는 호스트 머신의 다른 모든 프로세스로부터 격리된, 사용자 머신의 또 다른 프로세스입니다.</p>
+간단히 말하면 컨테이너는 호스트 머신의 다른 모든 프로세스로부터 격리된, 사용자 머신의 또 다른 프로세스입니다.</p>
 
 <blockquote>
   <p>컨테이너 이미지?</p>
@@ -279,15 +280,18 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 <blockquote>
   <p>docker 실행명령</p>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d -p 80:80 docker/getting-started
-</code></pre></div>  </div>
-  <ul>
-    <li>-d : 백그라운드에서 분리 모드로 컨테이너를 실행.</li>
-    <li>-p : 호스트의 포트 80을 컨테이너 포트 80에 연결</li>
-  </ul>
 </blockquote>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d -p 80:80 docker/getting-started
+</code></pre></div></div>
+
+<ul>
+  <li>-d : 백그라운드에서 분리 모드로 컨테이너를 실행.</li>
+  <li>-p : 호스트의 포트 80을 컨테이너 포트 80에 연결</li>
+</ul>
+
 <h1 id="2부--애플리케이션">2부 : 애플리케이션</h1>
+
 <p>앱 컨테이너 이미지 빌드, 빌드를 위해선 Dockerfile 이란게 필요하다.</p>
 
 <blockquote>
@@ -295,6 +299,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </blockquote>
 
 <p>Dockerfile은 컨테이너 이미지를 만드는 데 사용되는 텍스트 기반 명령 스크립트</p>
+
 <div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> node:12-alpine</span>
 <span class="k">WORKDIR</span><span class="s"> /app</span>
 <span class="k">COPY</span><span class="s"> . .</span>
@@ -303,59 +308,68 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </code></pre></div></div>
 
 <ul>
-  <li>Apple M1 환경에서는 python 문제가 있어 아래 내용으로 빌드하였다.
-    <div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> node:12-alpine</span>
+  <li>Apple M1 환경에서는 python 문제가 있어 아래 내용으로 빌드하였다.</li>
+</ul>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> node:12-alpine</span>
 <span class="k">RUN </span>apk add <span class="nt">--no-cache</span> python2 g++ make
 <span class="k">WORKDIR</span><span class="s"> /app</span>
 <span class="k">COPY</span><span class="s"> . .</span>
 <span class="k">RUN </span>apk <span class="nt">--no-cache</span> <span class="nt">--virtual</span> build-dependencies add <span class="se">\
-</span>python2 <span class="se">\
-</span>make <span class="se">\
-</span>g++
+</span>  python2 <span class="se">\
+</span>  make <span class="se">\
+</span>  g++
 <span class="k">RUN </span>yarn <span class="nb">install</span> <span class="nt">--production</span>
 <span class="k">CMD</span><span class="s"> ["node", "src/index.js"]</span>
-</code></pre></div>    </div>
-  </li>
-</ul>
+</code></pre></div></div>
 
 <blockquote>
   <p>Docker Image 빌드 명령</p>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build -t getting-started .
-</code></pre></div>  </div>
-  <p>-t : 태그 네임 지정, 사람이 읽을 수 있도록 하는 최종 이미지 이름을 지정한다.</p>
 </blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build -t getting-started .
+</code></pre></div></div>
+
+<p>-t : 태그 네임 지정, 사람이 읽을 수 있도록 하는 최종 이미지 이름을 지정한다.</p>
 
 <blockquote>
   <p>Docker Image Run 명령</p>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -dp 3000:3000 getting-started
-</code></pre></div>  </div>
 </blockquote>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -dp 3000:3000 getting-started
+</code></pre></div></div>
+
 <h1 id="3부--앱-업데이트">3부 : 앱 업데이트</h1>
+
 <p>CLI를 사용한 컨테이너 제거</p>
 
 <blockquote>
   <p>Docker 조회</p>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps
-</code></pre></div>  </div>
 </blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps
+</code></pre></div></div>
 
 <blockquote>
   <p>Docker Stop</p>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Swap out &lt;the-container-id&gt; with the ID from docker ps
-docker stop &lt;the-container-id&gt;
-</code></pre></div>  </div>
 </blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Swap out &lt;the-container-id&gt; with the ID from docker ps
+docker stop &lt;the-container-id&gt;
+</code></pre></div></div>
 
 <blockquote>
   <p>Docker 제거</p>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker rm &lt;the-container-id&gt;
-</code></pre></div>  </div>
-  <p>docker rm 명령에 “force” 플래그를 추가하면 단일 명령으로 컨테이너를 중지하고 제거할 수 있습니다.
-예: docker rm -f <the-container-id></the-container-id></p>
 </blockquote>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker rm &lt;the-container-id&gt;
+</code></pre></div></div>
+
+<p>docker rm 명령에 “force” 플래그를 추가하면 단일 명령으로 컨테이너를 중지하고 제거할 수 있습니다.
+예: docker rm -f <the-container-id></the-container-id></p>
+
 <h1 id="4부--앱-공유">4부 : 앱 공유</h1>
+
 <blockquote>
   <p>이미지 푸시 - Docker Hub</p>
 </blockquote>
@@ -363,29 +377,34 @@ docker stop &lt;the-container-id&gt;
 <p>Docker Hub 에 Docker 계정으로 로그인하여 레파지토리 생성.</p>
 
 <p>빈 상태의 레파지토리가 만들어지며, 이 곳에 이미지를 푸시 할 수 있음.</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker push docker/getting-started
 The push refers to repository [docker.io/docker/getting-started]
 An image does not exist locally with the tag: docker/getting-started
 </code></pre></div></div>
+
 <p>첫 이미지를 푸시하게 되면, 다음과 같은 문구가 뜨는데 이는 이미지에 이름이 지정되지 않아 발생하는 문제. 따라서 빌드한 이미지를 레파지토리에 올리기 위해서는 레파지토리와 동일하게 네이밍을 해주어야 한다.</p>
 
 <blockquote>
   <p>CLI - Docker Login</p>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker login -u &lt;username&gt;
-</code></pre></div>  </div>
 </blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker login -u &lt;username&gt;
+</code></pre></div></div>
 
 <blockquote>
   <p>Image Name 지정하기</p>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker tag getting-started &lt;username&gt;/getting-started:&lt;tagname&gt;
-</code></pre></div>  </div>
 </blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker tag getting-started &lt;username&gt;/getting-started:&lt;tagname&gt;
+</code></pre></div></div>
 
 <blockquote>
   <p>Image Push</p>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker push &lt;username&gt;/getting-started:&lt;tagname&gt;
-</code></pre></div>  </div>
 </blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker push &lt;username&gt;/getting-started:&lt;tagname&gt;
+</code></pre></div></div>
 
 <p>tagname은 지정하지 않으면 latest 로 올라간다.</p>
 
@@ -403,6 +422,7 @@ An image does not exist locally with the tag: docker/getting-started
 ** Apple M1 칩을 사용하는 모델의 경우 Docker 이미지 빌드 시, 해당 호스트의 환경인 linux/arm64/v8 로 빌드되게 된다. 따라서 위 사이트에서 이미지를 구동하기 위해서는 Docker build 명령 시 “–platform linux/amd64” 키워드를 추가하여 빌드하면 해당 환경으로 빌드된다.</p>
 
 <h1 id="5부--데이터-유지">5부 : 데이터 유지</h1>
+
 <blockquote>
   <p>컨테이너 파일 시스템</p>
 </blockquote>
@@ -425,15 +445,17 @@ Docker에서 디스크 상의 실제 위치를 유지 관리하므로 볼륨 이
 
 <blockquote>
   <p>볼륨 생성</p>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume create &lt;volume-name&gt;
-</code></pre></div>  </div>
 </blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume create &lt;volume-name&gt;
+</code></pre></div></div>
 
 <blockquote>
   <p>컨테이너 시작 시, 볼륨 탑재</p>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -dp 3000:3000 -v &lt;volume-name&gt;:&lt;탑재할 데이터 경로&gt; &lt;image-name&gt;
-</code></pre></div>  </div>
 </blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -dp 3000:3000 -v &lt;volume-name&gt;:&lt;탑재할 데이터 경로&gt; &lt;image-name&gt;
+</code></pre></div></div>
 
 <p>이런 식으로, 볼륨을 사용하여 컨테이너가 종료되어도 데이터가 유지되게끔 설정할 수 있습니다.</p>
 
@@ -443,20 +465,24 @@ Docker에서 디스크 상의 실제 위치를 유지 관리하므로 볼륨 이
 
 <blockquote>
   <p>볼륨 확인하기</p>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume inspect &lt;volume-name&gt;
-</code></pre></div>  </div>
 </blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume inspect &lt;volume-name&gt;
+</code></pre></div></div>
 
 <p>Mountpoint가 디스크에서 데이터가 저장되는 실제 위치입니다.</p>
 
 <p>** Docker Desktop에서 실행되는 동안 Docker Desktop의 볼륨 데이터에 직접 액세스 하는 Docker 명령은 실제로 머신의 작은 VM 내에서 실행됩니다. Mountpoint 디렉터리의 실제 내용을 확인하려면 먼저 VM 내부에 액세스해야 합니다. WSL 2에서는 WSL 2 배포판 내에 있으며, 파일 탐색기를 통해 액세스할 수 있습니다.</p>
 
 <h1 id="6부--바인드-탑재-사용">6부 : 바인드 탑재 사용</h1>
+
 <p>바인드 탑재 를 사용하면 호스트의 탑재 지점을 정확하게 제어할 수 있습니다. 이 유형은 데이터 유지뿐 아니라 컨테이너에 추가 데이터를 제공하는 데에도 사용됩니다. 애플리케이션 작업 시 바인드 탑재를 사용하여 소스 코드를 컨테이너에 탑재하면 변경 내용을 즉시 확인할 수 있으며, 컨테이너가 코드 변경을 확인하고 응답하게 할 수 있습니다.</p>
 
 <p>예시로 확인.</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -dp 3000:3000 -w /app -v ${PWD}:/app node:12-alpine sh -c "apk add --no-cache python2 g++ make &amp;&amp; apk --no-cache --virtual build-dependencies add python2 make g++ &amp;&amp; yarn install &amp;&amp; yarn run dev"
 </code></pre></div></div>
+
 <ul>
   <li>-w /app - 컨테이너 내의 작업 디렉터리</li>
   <li>-v ${PWD}:/app” - 컨테이너에 있는 호스트의 현재 디렉터리를 /app 디렉터리로 바인드 탑재합니다.
@@ -473,7 +499,7 @@ Docker에서 디스크 상의 실제 위치를 유지 관리하므로 볼륨 이
 ( 외부 리소스를 추가하여 바로 확인이 가능 )</p>
   </li>
   <li>
-    <p>볼륨의 경우, 호스트의 디렉터리를 도커의 볼륨 영역으로 가지고 와 볼륨을 생성하여 해당 볼륨을 컨테이너에 마운트한다. 
+    <p>볼륨의 경우, 호스트의 디렉터리를 도커의 볼륨 영역으로 가지고 와 볼륨을 생성하여 해당 볼륨을 컨테이너에 마운트한다.
 ( 도커의 볼륨 영역에서 제어가 되기 때문에 외부에서 바로 추가할 수 없다 )
 –&gt; 그러면 추가해야 하는 경우에는 어떻게?</p>
   </li>
@@ -505,6 +531,7 @@ Docker에서 디스크 상의 실제 위치를 유지 관리하므로 볼륨 이
 </ol>
 
 <h1 id="7부--다중-컨테이너-앱">7부 : 다중 컨테이너 앱</h1>
+
 <blockquote>
   <p>컨테이너 네트워킹</p>
 </blockquote>
@@ -516,28 +543,33 @@ Docker에서 디스크 상의 실제 위치를 유지 관리하므로 볼륨 이
 </blockquote>
 
 <p>Docker Network 생성</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker network create &lt;network-name&gt;
 </code></pre></div></div>
 
 <blockquote>
   <p>MySQL 컨테이너 실행 및 Network 연결</p>
-  <div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run --platform linux/x86_64 -d \
+</blockquote>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run --platform linux/x86_64 -d \
 --network &lt;network-name&gt; --network-alias mysql \
 -v todo-mysql-data:/var/lib/mysql \
 -e MYSQL_ROOT_PASSWORD=secret \
 -e MYSQL_DATABASE=todos \
-</code></pre></div>  </div>
-  <p>mysql:5.7</p>
-  <ul>
-    <li>여기서는 todo-mysql-data라는 볼륨 이름을 사용하고, MySQL에서 데이터를 저장하는 위치인 /var/lib/mysql에 볼륨을 탑재합니다. 그러나 docker volume create 명령을 실행한 적은 없습니다. Docker에서 명명된 볼륨을 사용하려는 의도를 인식하고 자동으로 볼륨을 만듭니다.</li>
-  </ul>
-</blockquote>
+</code></pre></div></div>
+
+<p>mysql:5.7</p>
+
+<ul>
+  <li>여기서는 todo-mysql-data라는 볼륨 이름을 사용하고, MySQL에서 데이터를 저장하는 위치인 /var/lib/mysql에 볼륨을 탑재합니다. 그러나 docker volume create 명령을 실행한 적은 없습니다. Docker에서 명명된 볼륨을 사용하려는 의도를 인식하고 자동으로 볼륨을 만듭니다.</li>
+</ul>
 
 <blockquote>
   <p>MySQL 컨테이너 상태 확인</p>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker exec -it &lt;mysql-container-id&gt; mysql -p
-</code></pre></div>  </div>
 </blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker exec -it &lt;mysql-container-id&gt; mysql -p
+</code></pre></div></div>
 
 <blockquote>
   <p>실행 중인 컨테이너와 MySQL에 연결하기</p>
@@ -546,15 +578,18 @@ Docker에서 디스크 상의 실제 위치를 유지 관리하므로 볼륨 이
 <p>네트워킹 문제 해결 또는 디버그에 유용한 ‘많은’ 도구가 포함된 nicolaka/netshoot 컨테이너를 사용</p>
 
 <p>netshoot 컨테이너 실행</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -it --network todo-app nicolaka/netshoot
 </code></pre></div></div>
 
 <blockquote>
   <p>MySQL 컨테이너 주소 확인</p>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dig mysql
-</code></pre></div>  </div>
-  <p>“ANSWER SECTION”에서 mysql에 대해 A 레코드가 표시되며, 172.23.0.2로 확인됩니다(사용자 IP 주소는 다른 값일 가능성이 높음). mysql는 일반적으로 유효한 호스트 이름이 아니지만, Docker에서 해당 네트워크 별칭을 가진 컨테이너의 IP 주소로 확인할 수 있었습니다(앞에서 사용한 –network-alias 플래그 참조).</p>
 </blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dig mysql
+</code></pre></div></div>
+
+<p>“ANSWER SECTION”에서 mysql에 대해 A 레코드가 표시되며, 172.23.0.2로 확인됩니다(사용자 IP 주소는 다른 값일 가능성이 높음). mysql는 일반적으로 유효한 호스트 이름이 아니지만, Docker에서 해당 네트워크 별칭을 가진 컨테이너의 IP 주소로 확인할 수 있었습니다(앞에서 사용한 –network-alias 플래그 참조).</p>
 
 <p>따라서 앱이 mysql이라는 호스트에 연결하기만 하면 데이터베이스와 통신할 수 있습니다.</p>
 
@@ -563,6 +598,7 @@ Docker에서 디스크 상의 실제 위치를 유지 관리하므로 볼륨 이
 </blockquote>
 
 <p>해당 정보를 바탕으로 환경변수에 MySQL 정보를 지정하여 연결 실행</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-dp</span> 3000:3000 <span class="se">\</span>
   <span class="nt">-w</span> /app <span class="nt">-v</span> <span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>:/app <span class="se">\</span>
   <span class="nt">--network</span> todo-app <span class="se">\</span>
@@ -577,16 +613,17 @@ Docker에서 디스크 상의 실제 위치를 유지 관리하므로 볼륨 이
 <p>앱 러닝 후, 접속하여 몇개의 아이템을 저장합니다. 이후, 다시 MySQL을 실행하여 데이터 베이스를 확인하면 todo에서 입력한 데이터들이 저장되는 것을 확인할 수 있습니다.</p>
 
 <h1 id="8부--docker-compose-사용">8부 : Docker Compose 사용</h1>
+
 <p>Docker Compose는 다중 컨테이너 애플리케이션을 정의하고 공유할 수 있도록 개발된 도구입니다. Compose에서 서비스를 정의하는 YAML 파일을 만들고, 단일 명령을 사용하여 모두 실행하거나 모두 종료할 수 있습니다.</p>
 
 <p>Compose를 사용할 경우의 ‘중요한’ 이점은 파일에서 애플리케이션 스택을 정의하고 프로젝트 리포지토리 루트에 파일을 저장하여(이제 버전 제어 사용) 다른 사용자가 프로젝트에 참여하기 쉽게 만들 수 있다는 것입니다.</p>
 
 <ul>
-  <li>mac용 docker desktop을 설치하였다면, 별도로 설치할 필요가 없다.
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose version
-</code></pre></div>    </div>
-  </li>
+  <li>mac용 docker desktop을 설치하였다면, 별도로 설치할 필요가 없다.</li>
 </ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose version
+</code></pre></div></div>
 
 <p>위 명령어를 실행하여 버전이 보인다면 설치가 되어 있는 것이다.</p>
 
@@ -595,14 +632,15 @@ Docker에서 디스크 상의 실제 위치를 유지 관리하므로 볼륨 이
 </blockquote>
 
 <p>프로젝트 루트에 docker-compose.yml 이라는 파일 생성하여 다음과 같이 지정</p>
+
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 스키마 버전 정의. 최신을 사용하는 것이 가장 좋다.</span>
-<span class="na">version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">3.7"</span> 
+<span class="na">version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">3.7"</span>
 
 <span class="c1"># 서비스 목록 정의</span>
 <span class="na">services</span><span class="pi">:</span>
   <span class="c1"># 앱 서비스 정의</span>
   <span class="na">app</span><span class="pi">:</span>
-    <span class="c1"># 컨테이너 이미지 이름 정의 </span>
+    <span class="c1"># 컨테이너 이미지 이름 정의</span>
     <span class="na">image</span><span class="pi">:</span> <span class="s">node:12-alpine</span>
     <span class="c1"># 실행하고자 하는 명령어</span>
     <span class="na">command</span><span class="pi">:</span> <span class="s">sh -c "apk add --no-cache python2 g++ make &amp;&amp; apk --no-cache --virtual build-dependencies add python2 make g++ &amp;&amp; yarn install &amp;&amp; yarn run dev"</span>
@@ -620,17 +658,17 @@ Docker에서 디스크 상의 실제 위치를 유지 관리하므로 볼륨 이
       <span class="na">MYSQL_USER</span><span class="pi">:</span> <span class="s">root</span>
       <span class="na">MYSQL_PASSWORD</span><span class="pi">:</span> <span class="s">secret</span>
       <span class="na">MYSQL_DB</span><span class="pi">:</span> <span class="s">todos</span>
-  <span class="c1"># MySQL 서비스 정의 </span>
+  <span class="c1"># MySQL 서비스 정의</span>
   <span class="na">mysql</span><span class="pi">:</span>
     <span class="c1"># 이미지 이름 정의</span>
-    <span class="na">image </span><span class="pi">:</span> <span class="s">mysql:5.7</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">mysql:5.7</span>
     <span class="c1"># docker run 으로 실행할 때는 자동으로 volume 이 설정되었지만</span>
-    <span class="c1"># 여기서는 자동이 아니므로 경로를 지정해준다. </span>
+    <span class="c1"># 여기서는 자동이 아니므로 경로를 지정해준다.</span>
     <span class="c1"># 이름 : 경로 로 지정해주며, 여기서 지정된 이름을 바깥 volumes 에서 탑재하여 사용한다.</span>
     <span class="na">volumes</span><span class="pi">:</span>
       <span class="pi">-</span> <span class="s">todo-mysql-data:/var/lib/mysql</span>
     <span class="c1"># 환경변수 지정</span>
-    <span class="na">environment</span><span class="pi">:</span> 
+    <span class="na">environment</span><span class="pi">:</span>
       <span class="na">MYSQL_ROOT_PASSWORD</span><span class="pi">:</span> <span class="s">secret</span>
       <span class="na">MYSQL_DATABASE</span><span class="pi">:</span> <span class="s">todos</span>
 <span class="na">volumes</span><span class="pi">:</span>
@@ -644,10 +682,12 @@ Docker에서 디스크 상의 실제 위치를 유지 관리하므로 볼륨 이
 <p>위와 같이 설정을 끝냈으면, 이제 실행을 하면 된다.</p>
 
 <p>docker-compose.yml 파일이 있는 경로에서 실행.</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up -d
 </code></pre></div></div>
 
 <p>아래와 같은 내용이 뜨면 성공한 것이다.</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Creating network "app_default" with the default driver
 Creating volume "app_todo-mysql-data" with default driver
 Creating app_app_1 ... done
@@ -655,10 +695,12 @@ Creating app_mysql_1 ... done
 </code></pre></div></div>
 
 <p>해당 러닝 로그를 아래 명령어로 확인.</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose logs -f
 </code></pre></div></div>
 
 <p>아래와 같이 표기가 된다면 러닝에 성공한 것이다.</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql_1  | 2019-10-03T03:07:16.083639Z 0 [Note] mysqld: ready for connections.
 mysql_1  | Version: '5.7.27'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
 app_1    | Connected to mysql db at host mysql
@@ -683,9 +725,10 @@ app_1    | Listening on port 3000
 
 <blockquote>
   <p>이미지 계층 확인</p>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker image history &lt;image-name&gt;
-</code></pre></div>  </div>
 </blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker image history &lt;image-name&gt;
+</code></pre></div></div>
 
 <p>이미지에 쓰인 계층들을 확인할 수 있다. 맨 위가 최신 계층 이며 이를 통해 각 계층의 용량 등을 쉽게 파악 할 수 있다.</p>
 
@@ -696,6 +739,7 @@ app_1    | Listening on port 3000
 <p>Dockerfile의 각 명령이 계층이 되는것 임을 확인 했으니, 계층이 변경 될 때 마다 종속성을 다시 설치하는 것은 비효율 적이므로, 이를 줄이기 위한 방법을 적용해야 함.</p>
 
 <p>예제에서는 node에서 종속성을 갖는 package.json 파일을 복사하여 설치 한 후, 나머지를 그 이후에 복사하여 package.json만 변경 점이 있을 때 다시 설치하도록 변경함.</p>
+
 <div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> node:12-alpine</span>
 <span class="k">RUN </span>apk add <span class="nt">--no-cache</span> python2 g++ make
 <span class="k">WORKDIR</span><span class="s"> /app</span>
@@ -719,19 +763,21 @@ app_1    | Listening on port 3000
 앱을 실행하는 데 필요한 ‘항목’만 제공하여 전체 이미지 크기 축소</p>
 
 <p>Maven/Tomcat 예제</p>
+
 <div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 첫번째 단계. 빌드단계에서만 JDK 필요, 여기서 수행.</span>
 <span class="k">FROM</span><span class="s"> maven AS build</span>
 <span class="k">WORKDIR</span><span class="s"> /app</span>
 <span class="k">COPY</span><span class="s"> . .</span>
 <span class="k">RUN </span>mvn package
 
-<span class="c"># 두번째 단계. 빌드된 결과물을 톰캣 디렉터리로 복사. </span>
+<span class="c"># 두번째 단계. 빌드된 결과물을 톰캣 디렉터리로 복사.</span>
 <span class="c"># 이 단계가 마지막이므로, 최종 빌드되는 이미지는 이 단계의 결과물임.</span>
 <span class="k">FROM</span><span class="s"> tomcat</span>
 <span class="k">COPY</span><span class="s"> --from=build /app/target/file.war /usr/local/tomcat/webapps</span>
 </code></pre></div></div>
 
 <p>React 예제</p>
+
 <div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 첫번째 단계. 이 단계에서 빌드 수행</span>
 <span class="k">FROM</span><span class="s"> node:12 AS build</span>
 <span class="k">WORKDIR</span><span class="s"> /app</span>
@@ -749,10 +795,12 @@ app_1    | Listening on port 3000
 <p>즉, 빌드 단계에만 필요한 도구들을 전부 이미지에 포함시키지 않고, 빌드 수행 후 이미지에는 포함 시키지 않아 이미지의 용량을 크게 줄일 수 있다. 위 두가지 예제로 보면, 빌드 후의 결과물만 WAS에 옮기고 이미지를 생성하여 이미지 크기를 크게 줄인 것을 알 수 있다.</p>
 
 <h1 id="10부--클라우드에-배포">10부 : 클라우드에 배포</h1>
+
 <p>클라우드에 배포하기 위해서는 클라우드 컨텍스트가 필요. 현재까지 사용한 것은 기본 docker 컨텍스트임.</p>
 
 <p>예제에서는 Azure(애저) 를 사용하며, 계정을 이용하여 애저 컨텍스트를 추가 할 수 있음.
 해당 컨텍스트를 추가하게 되면 다음의 명령어로 해당 컨텍스트에서 이미지를 실행할 수 있음.</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker context use myacicontext
 docker run  -dp 3000:3000 &lt;username&gt;/getting-started
 </code></pre></div></div>
@@ -942,7 +990,7 @@ docker run  -dp 3000:3000 &lt;username&gt;/getting-started
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

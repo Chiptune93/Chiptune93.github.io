@@ -2,7 +2,7 @@
 layout: post
 title: VS Code - code snippet $ escape ( dollar sign )
 description: >
-    [VS Code] code snippet $ escape ( dollar sign )
+  [VS Code] code snippet $ escape ( dollar sign )
 sitemap: false
 hide_last_modified: true
 categories: [IDE]
@@ -15,6 +15,7 @@ tags: [vscode, snippet, escape]
 VS Code snippet 에서 $ 표시가 필요할 때.
 
 from
+
 ```
 "mySnippet": {
 	"prefix" : [
@@ -29,6 +30,7 @@ from
 ```
 
 To
+
 ```
 "mySnippet": {
 	"prefix" : [

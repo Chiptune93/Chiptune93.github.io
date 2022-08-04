@@ -16,9 +16,8 @@ tags: [fileupload, springboot, springboot fileupload]
 
 해당 파일 업로드 기능을 다른 Boot 프로젝트에서 가져다 사용했는데, 해당 서비스에서는 파일 업로드 후 업로드한 파일 리스트를 리턴하여, 정보를 표현해주어야 했기에 이번 다중 파일 업로드 함수에서는 파일 정보들을 리턴하도록 작성하였다.
 
-
-
 - FileUploadController.java
+
 ```java
 @PostMapping("/upload4.do")
     public HashMap upload4(@RequestParam MultipartFile[] files) {
@@ -29,9 +28,8 @@ tags: [fileupload, springboot, springboot fileupload]
 
 기존 MultipartRequest 를 받던 것과는 달리, Multipart 파일 배열을 @RequestParam을 통해 전달받는다.
 
-
-
 - FIleUploadService.java
+
 ```java
 @Override
     public HashMap save4(MultipartFile[] files) {
@@ -56,9 +54,8 @@ tags: [fileupload, springboot, springboot fileupload]
 
 서비스에서는 파일 배열을 받아, 개수 만큼 반복하며 파일을 업로드 하고, 각 파일을 업로드 함으로써 리턴되는 파일 정보들을 객체에 담아 리턴하게끔 한다.
 
-
-
 - FIleUtil.java
+
 ```java
 public HashMap<String, String> multipleUpload(MultipartFile file, Path path, int masterSeq) {
         HashMap result = new HashMap();
@@ -140,16 +137,6 @@ public HashMap<String, String> multipleUpload(MultipartFile file, Path path, int
 
 이렇게하면 사용자가 파일업로드를 할때 일반적인 게시판이라고 한다면, 게시판에서 여러 개 혹은 단일 파일업로드 시 발생한 master_seq 를 가지고 있으면 해당 게시글 작성 시, 업로드 된 모든 파일 정보를 조회할 수 있다.
 
-
-
 해당 프로젝트는 아래에서 다운로드가 가능하다.
 
 https://github.com/Chiptune93/spring-example/tree/main/FileUpload
-
-
-
-
-
-
-
-

@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -258,12 +258,15 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ul>
 
 <h2 id="1-buildgradle-추가">1. build.gradle 추가</h2>
+
 <div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// tiles</span>
 <span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.apache.tiles'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'tiles-jsp'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'3.0.5'</span>
 </code></pre></div></div>
 
 <h2 id="2-tilesxml-설정-파일-추가">2. tiles.xml 설정 파일 추가</h2>
+
 <p>webapp/WEB-INF/tiles/ 에 tiles.xml 설정파일 만들기.</p>
+
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="cp">&lt;!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd"&gt;</span>
 <span class="nt">&lt;tiles-definitions&gt;</span>
@@ -278,6 +281,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
     <span class="nt">&lt;/definition&gt;</span>
 <span class="nt">&lt;/tiles-definitions&gt;</span>
 </code></pre></div></div>
+
 <p>main이라는 정의를 만들고, 그 안에 헤더/네비게이션/푸터의 속성을 만들고 파일을 지정했다.</p>
 
 <p>하위에는 *.main.jsp 라는 요청에 대해 처리할 컨텐츠 속성을 지정했으며 main에서 확장된 정의이다.</p>
@@ -287,9 +291,11 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>이를 이용하여 정의에 /comm/member/*.main.jsp 속성을 지정할 경우, 차례로 {1}/{2}/{3}.main.jsp가 된다.</p>
 
 <h2 id="3-레이아웃-만들기">3. 레이아웃 만들기</h2>
+
 <p>views/layout 폴더 밑에 해당 파일들을 생성한다.</p>
 
 <h2 id="4-추가하기">4. 추가하기</h2>
+
 <div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;%@ page </span><span class="na">language=</span><span class="s">"java"</span><span class="na"> contentType=</span><span class="s">"text/html; charset=UTF-8"</span><span class="na"> pageEncoding=</span><span class="s">"UTF-8"</span> <span class="nt">%&gt;</span>
 <span class="nt">&lt;%@ taglib </span><span class="na">prefix=</span><span class="s">"tiles"</span><span class="na"> uri=</span><span class="s">"http://tiles.apache.org/tags-tiles"</span> <span class="nt">%&gt;</span>
 <span class="cp">&lt;!DOCTYPE html&gt;</span>
@@ -317,6 +323,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
     <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
 </code></pre></div></div>
+
 <p>layout.jsp에 위와 같이 속성들을 매핑하여 위치시킨다.</p>
 
   
@@ -502,7 +509,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

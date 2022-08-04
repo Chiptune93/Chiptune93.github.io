@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -254,21 +254,24 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>apache httpd.conf 또는 ssl 설정 구문에 다음 내용을 추가</p>
 
 <ul>
-  <li>권장 알고리즘
-    <div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">SSLProtocol</span> -<span class="n">All</span> +<span class="n">TLSv1</span>.<span class="m">2</span>
+  <li>권장 알고리즘</li>
+</ul>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">SSLProtocol</span> -<span class="n">All</span> +<span class="n">TLSv1</span>.<span class="m">2</span>
 <span class="n">SSLCipherSuite</span> <span class="n">ECDHE</span>-<span class="n">RSA</span>-<span class="n">AES128</span>-<span class="n">GCM</span>-<span class="n">SHA256</span>:<span class="n">ECDHE</span>-<span class="n">RSA</span>-<span class="n">AES256</span>-<span class="n">GCM</span>-<span class="n">SHA384</span>:<span class="n">ECDHERSA</span>-<span class="n">AES128</span>-<span class="n">SHA</span>:<span class="n">ECDHE</span>-<span class="n">RSA</span>-<span class="n">AES256</span>-<span class="n">SHA</span>:<span class="n">ECDHE</span>-<span class="n">RSA</span>-<span class="n">AES128</span>-<span class="n">SHA256</span>:<span class="n">ECDHE</span>-<span class="n">RSA</span>-<span class="n">AES256</span>-
 <span class="n">SHA384</span>
-</code></pre></div>    </div>
-  </li>
-  <li>범용 알고리즘
-    <div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">SSLProtocol</span> -<span class="n">All</span> +<span class="n">TLSv1</span>.<span class="m">2</span>
+</code></pre></div></div>
+
+<ul>
+  <li>범용 알고리즘</li>
+</ul>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">SSLProtocol</span> -<span class="n">All</span> +<span class="n">TLSv1</span>.<span class="m">2</span>
 <span class="n">SSLCipherSuite</span> <span class="n">ECDHE</span>-<span class="n">RSA</span>-<span class="n">AES256</span>-<span class="n">GCM</span>-<span class="n">SHA384</span>:<span class="n">ECDHE</span>-<span class="n">RSA</span>-<span class="n">AES128</span>-<span class="n">GCM</span>-<span class="n">SHA256</span>:<span class="n">ECDHEECDSA</span>-<span class="n">AES128</span>-<span class="n">GCM</span>-<span class="n">SHA256</span>:<span class="n">ECDHE</span>-<span class="n">RSA</span>-<span class="n">AES256</span>-<span class="n">GCM</span>-<span class="n">SHA384</span>:<span class="n">ECDHE</span>-<span class="n">ECDSA</span>-<span class="n">AES256</span>-<span class="n">GCMSHA384</span>:<span class="n">DHE</span>-<span class="n">DSS</span>-<span class="n">AES128</span>-<span class="n">GCM</span>-<span class="n">SHA256</span>:<span class="n">kEDH</span>+<span class="n">AESGCM</span>:<span class="n">ECDHE</span>-<span class="n">RSA</span>-<span class="n">AES128</span>-<span class="n">SHA256</span>:<span class="n">ECDHEECDSA</span>-<span class="n">AES128</span>-<span class="n">SHA256</span>:<span class="n">ECDHE</span>-<span class="n">RSA</span>-<span class="n">AES128</span>-<span class="n">SHA</span>:<span class="n">ECDHE</span>-<span class="n">ECDSA</span>-<span class="n">AES128</span>-<span class="n">SHA</span>:<span class="n">ECDHE</span>-<span class="n">RSA</span>-<span class="n">AES256</span>-
 <span class="n">SHA384</span>:<span class="n">ECDHE</span>-<span class="n">ECDSA</span>-<span class="n">AES256</span>-<span class="n">SHA384</span>:<span class="n">ECDHE</span>-<span class="n">RSA</span>-<span class="n">AES256</span>-<span class="n">SHA</span>:<span class="n">ECDHE</span>-<span class="n">ECDSA</span>-<span class="n">AES256</span>-<span class="n">SHA</span>:<span class="n">DHEDSS</span>-<span class="n">AES128</span>-<span class="n">SHA256</span>:<span class="n">DHE</span>-<span class="n">DSS</span>-<span class="n">AES256</span>-<span class="n">SHA</span>:<span class="n">AES128</span>-<span class="n">GCM</span>-<span class="n">SHA256</span>:<span class="n">AES256</span>-<span class="n">GCM</span>-<span class="n">SHA384</span>:<span class="n">AES128</span>-
 <span class="n">SHA</span>:<span class="n">AES256</span>-<span class="n">SHA</span>:<span class="n">AES</span>:<span class="n">CAMELLIA</span>:!<span class="n">DES</span>-<span class="n">CBC3</span>-
 <span class="n">SHA</span>:!<span class="n">aNULL</span>:!<span class="n">eNULL</span>:!<span class="n">EXPORT</span>:!<span class="n">DES</span>:!<span class="n">RC4</span>:!<span class="n">MD5</span>:!<span class="n">PSK</span>:!<span class="n">aECDH</span>:!<span class="n">EDH</span>-<span class="n">DSS</span>-<span class="n">DES</span>-<span class="n">CBC3</span>-<span class="n">SHA</span>:!<span class="n">EDH</span>-<span class="n">RSADES</span>-<span class="n">CBC3</span>-<span class="n">SHA</span>:!<span class="n">KRB5</span>-<span class="n">DES</span>-<span class="n">CBC3</span>-<span class="n">SHA</span>:!<span class="n">DHE</span>-<span class="n">RSA</span>-<span class="n">AES128</span>-<span class="n">GCM</span>-<span class="n">SHA256</span>:!<span class="n">DHE</span>-<span class="n">RSA</span>-<span class="n">AES256</span>-<span class="n">GCMSHA384</span>:!<span class="n">DHE</span>-<span class="n">RSA</span>-<span class="n">AES128</span>-<span class="n">SHA256</span>:!<span class="n">DHE</span>-<span class="n">RSA</span>-<span class="n">AES256</span>-<span class="n">SHA</span>:!<span class="n">DHE</span>-<span class="n">RSA</span>-<span class="n">AES128</span>-<span class="n">SHA</span>:!<span class="n">DHE</span>-<span class="n">RSAAES256</span>-<span class="n">SHA256</span>:!<span class="n">DHE</span>-<span class="n">RSA</span>-<span class="n">CAMELLIA128</span>-<span class="n">SHA</span>:!<span class="n">DHE</span>-<span class="n">RSA</span>-<span class="n">CAMELLIA256</span>-<span class="n">SHA</span>:!<span class="n">DHE</span>-<span class="n">RSA</span>-<span class="m">3</span><span class="n">DES</span>
-</code></pre></div>    </div>
-  </li>
-</ul>
+</code></pre></div></div>
 
 <p>위 구문은 SSL 프로토콜 방식을 모든 프로토콜 제외 후, TLSv1.2 만 추가하여 사용하므로, 기타 필요한</p>
 
@@ -457,7 +460,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

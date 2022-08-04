@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -259,12 +259,15 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ul>
 
 <h2 id="1-mysql-community-server-zip-파일-다운로드">1. MYSQL COMMUNITY SERVER ZIP 파일 다운로드</h2>
+
 <p><a href="dev.mysql.com/downloads/mysql/">dev.mysql.com/downloads/mysql/</a></p>
 
 <h2 id="2-다운받은-파일을-적당한-경로에-압축-해제--이하-경로-">2. 다운받은 파일을 적당한 경로에 압축 해제 ( 이하 “경로” )</h2>
+
 <p><img src="/assets/img/Database/mysqlzip1.png" alt="mysqlzip1" /></p>
 
 <h2 id="3-cmd-창을-관리자-권한-실행-후-설치-실행">3. cmd 창을 관리자 권한 실행 후, 설치 실행</h2>
+
 <p><img src="/assets/img/Database/mysqlzip2.png" alt="mysqlzip2" /></p>
 
 <p>실행 후 “경로” 내 bin 폴더로 이동 ( 위 이미지 참고 ) 후</p>
@@ -284,6 +287,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p><img src="/assets/img/Database/mysqlzip3.png" alt="mysqlzip3" /></p>
 
 <h2 id="4-mysql-서비스-실행-후-root-접속-및-비밀번호-변경">4. mysql 서비스 실행 후, root 접속 및 비밀번호 변경</h2>
+
 <p>임시비밀번호는 말그대로 임시이기 때문에 접속 후, root 패스워드를 변경해야 함.</p>
 
 <ul>
@@ -297,6 +301,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>를 통해 비밀번호 변경.</p>
 
 <h2 id="5-서비스-시작-및-종료-배치파일-생성">5. 서비스 시작 및 종료 배치파일 생성</h2>
+
 <p>아래는 내 환경 기준의 배치파일 명령어.</p>
 
 <p>관리자 권한으로 실행해야 함.</p>
@@ -304,21 +309,24 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>( 버전마다 다른건 지, 서비스 시작 할때 net start 명령어로 하여야 했음 )</p>
 
 <ul>
-  <li>start
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@echo off
+  <li>start</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@echo off
 D:
 <span class="nb">cd </span>mysql-8.0.23-winx64<span class="se">\b</span><span class="k">in
 </span>net start mysql
-</code></pre></div>    </div>
-  </li>
-  <li>stop
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@echo off
+</code></pre></div></div>
+
+<ul>
+  <li>stop</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@echo off
 D:
 <span class="nb">cd </span>mysql-8.0.23-winx64<span class="se">\b</span><span class="k">in
 </span>net stop mysql
-</code></pre></div>    </div>
-  </li>
-</ul>
+</code></pre></div></div>
 
   
 </article>
@@ -503,7 +511,7 @@ D:
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

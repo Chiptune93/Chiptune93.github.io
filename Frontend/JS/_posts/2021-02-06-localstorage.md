@@ -12,7 +12,7 @@ tags: [localstorage, Javascript]
 - Table of Contents
 {:toc .large-only}
 
-```localstorage. ```으로 사용
+`localstorage. `으로 사용
 
 | 이름                | 구분   | 기능                                        |
 | ------------------- | ------ | ------------------------------------------- |

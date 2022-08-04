@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -278,66 +278,81 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>참고 : https://programmer.help/blogs/export-excel-using-js-xlsx-pure-front-end.html</p>
 
 <h2 id="1-xlsx-js-style-에서-xlsxbundlejs-파일-import">1. xlsx-js-style 에서 “xlsx.bundle.js” 파일 import</h2>
+
 <p>https://github.com/gitbrent/xlsx-js-style</p>
 
 <p>dist 폴더 내에서 해당 파일을 가져온다.</p>
 
 <h2 id="2-xlsxextendscriptjs-파일-import">2. “xlsx.extendscript.js” 파일 import</h2>
+
 <p>https://www.cdnpkg.com/xlsx/file/xlsx.extendscript.js/?id=78603</p>
 
 <p>해당 파일은 XLSX 모듈을 확장하여 사용 가능하게 해준다.</p>
 
 <h2 id="3-해당-페이지에-import">3. 해당 페이지에 import</h2>
+
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"/content/02comm/js/xlsx.bundle.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"/content/02comm/js/xlsx.extendscript.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script
+  </span><span class="na">type=</span><span class="s">"text/javascript"</span>
+  <span class="na">src=</span><span class="s">"/content/02comm/js/xlsx.extendscript.js"</span>
+<span class="nt">&gt;&lt;/script&gt;</span>
 </code></pre></div></div>
+
 <p>xlsx-js 를 이용하여 엑셀 파일로 만드는 방식에는 JSON / ARRAY 등 여러 방식이 있으나 여기서는 HTML 요소인 table 태그를 사용하는 방법을 공유하고자 한다.</p>
 
 <hr />
+
 <h2 id="4-소스-작업">4. 소스 작업</h2>
+
 <h3 id="1-가장-기본적인-테이블---엑셀-생성">1. 가장 기본적인 테이블 -&gt; 엑셀 생성</h3>
+
 <ul>
-  <li>html
-```HTML
-<a href="#" class="btn01 col04" title="엑셀 다운로드" onclick="test1();">
-  <span>엑셀 다운로드1</span>
-</a></li>
+  <li>html</li>
 </ul>
-<div class="table_wrap pc_view">
-	<table class="table t_list" id="test">
-		<thead>
-			<tr>
-				<th>항목1</th>
-				<th>항목2</th>
-				<th>항목3</th>
-				<th>항목4</th>
-				<th>항목5</th>
-			</tr>
-		</thead>
-		<tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-			<td>4</td>
-			<td>5</td>
-		</tr>
-		<tbody>
-		</tbody>
-	</table>
-</div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- js
-```js
-function test1() {
-		// workBook Create
-		var wb = XLSX.utils.book_new();
-		// workSheet Create
-		var ws = XLSX.utils.table_to_sheet( document.getElementById( 'test' ));
-		// Sheet Append With Title
-		XLSX.utils.book_append_sheet( wb ,ws ,'sheet title' );
-		// Create Excel File With File Name
-		XLSX.writeFile( wb ,( '파일명.xlsx' ) );
-	}
+
+<pre><code class="language-HTML">&lt;a href="#" class="btn01 col04" title="엑셀 다운로드" onclick="test1();"&gt;
+	&lt;span&gt;엑셀 다운로드1&lt;/span&gt;
+&lt;/a&gt;
+&lt;div class="table_wrap pc_view"&gt;
+	&lt;table class="table t_list" id="test"&gt;
+		&lt;thead&gt;
+			&lt;tr&gt;
+				&lt;th&gt;항목1&lt;/th&gt;
+				&lt;th&gt;항목2&lt;/th&gt;
+				&lt;th&gt;항목3&lt;/th&gt;
+				&lt;th&gt;항목4&lt;/th&gt;
+				&lt;th&gt;항목5&lt;/th&gt;
+			&lt;/tr&gt;
+		&lt;/thead&gt;
+		&lt;tr&gt;
+			&lt;td&gt;1&lt;/td&gt;
+			&lt;td&gt;2&lt;/td&gt;
+			&lt;td&gt;3&lt;/td&gt;
+			&lt;td&gt;4&lt;/td&gt;
+			&lt;td&gt;5&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tbody&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+&lt;/div&gt;
+</code></pre>
+
+<ul>
+  <li>js</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">test1</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// workBook Create</span>
+  <span class="kd">var</span> <span class="nx">wb</span> <span class="o">=</span> <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">book_new</span><span class="p">();</span>
+  <span class="c1">// workSheet Create</span>
+  <span class="kd">var</span> <span class="nx">ws</span> <span class="o">=</span> <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">table_to_sheet</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">test</span><span class="dl">"</span><span class="p">));</span>
+  <span class="c1">// Sheet Append With Title</span>
+  <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">book_append_sheet</span><span class="p">(</span><span class="nx">wb</span><span class="p">,</span> <span class="nx">ws</span><span class="p">,</span> <span class="dl">"</span><span class="s2">sheet title</span><span class="dl">"</span><span class="p">);</span>
+  <span class="c1">// Create Excel File With File Name</span>
+  <span class="nx">XLSX</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="nx">wb</span><span class="p">,</span> <span class="dl">"</span><span class="s2">파일명.xlsx</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div></div>
+
 <ul>
   <li>결과</li>
 </ul>
@@ -345,78 +360,82 @@ function test1() {
 <p><img src="/assets/img/Frontend/JS/xlsx1.png" alt="xlsx-js" /></p>
 
 <hr />
+
 <h3 id="2-테이블에-스타일-추가하기">2. 테이블에 스타일 추가하기</h3>
 
 <p>여기서부터는 함수 내용만 변경됩니다.</p>
 
 <ul>
-  <li>js
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">test2</span><span class="p">()</span> <span class="p">{</span>
-      <span class="c1">// workBook Create</span>
-      <span class="kd">var</span> <span class="nx">wb</span> <span class="o">=</span> <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">book_new</span><span class="p">();</span>
-      <span class="c1">// workSheet Create</span>
-      <span class="kd">var</span> <span class="nx">ws</span> <span class="o">=</span> <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">table_to_sheet</span><span class="p">(</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span> <span class="dl">'</span><span class="s1">test</span><span class="dl">'</span> <span class="p">));</span>
-      <span class="c1">// for in Cells add style</span>
-      <span class="k">for</span> <span class="p">(</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">ws</span> <span class="p">)</span> <span class="p">{</span>
-          <span class="k">if</span> <span class="p">(</span> <span class="k">typeof</span> <span class="p">(</span> <span class="nx">ws</span><span class="p">[</span> <span class="nx">i</span> <span class="p">]</span> <span class="p">)</span> <span class="o">!=</span> <span class="dl">"</span><span class="s2">object</span><span class="dl">"</span> <span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
-          <span class="kd">let</span> <span class="nx">cell</span> <span class="o">=</span> <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">decode_cell</span><span class="p">(</span> <span class="nx">i</span> <span class="p">);</span>
-          <span class="c1">// add Style to All Cells</span>
-          <span class="nx">ws</span><span class="p">[</span> <span class="nx">i</span> <span class="p">].</span><span class="nx">s</span> <span class="o">=</span> <span class="p">{</span>
-              <span class="na">font</span> <span class="p">:</span> <span class="p">{</span>
-                  <span class="na">name</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">arial</span><span class="dl">"</span>
-              <span class="p">}</span> <span class="p">,</span>
-              <span class="na">alignment</span> <span class="p">:</span> <span class="p">{</span>
-                  <span class="na">vertical</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span> <span class="p">,</span>
-                  <span class="na">horizontal</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span> <span class="p">,</span>
-                  <span class="na">wrapText</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">1</span><span class="dl">'</span> <span class="p">,</span>
-              <span class="p">}</span> <span class="p">,</span>
-              <span class="na">border</span> <span class="p">:</span> <span class="p">{</span>
-                  <span class="na">right</span> <span class="p">:</span> <span class="p">{</span>
-                      <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
-                      <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
-                  <span class="p">}</span> <span class="p">,</span>
-                  <span class="na">left</span> <span class="p">:</span> <span class="p">{</span>
-                      <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
-                      <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
-                  <span class="p">}</span> <span class="p">,</span>
-                  <span class="na">top</span> <span class="p">:</span> <span class="p">{</span>
-                      <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
-                      <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
-                  <span class="p">}</span> <span class="p">,</span>
-                  <span class="na">bottom</span> <span class="p">:</span> <span class="p">{</span>
-                      <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
-                      <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
-                  <span class="p">}</span> <span class="p">,</span>
-              <span class="p">}</span>
-          <span class="p">};</span>
-          <span class="c1">// Cell format change</span>
-          <span class="cm">/* if ( cell.c == 0 ) { // first column
-              ws[ i ].s.numFmt = "DD/MM/YYYY HH:MM"; // for dates
-              ws[ i ].z = "DD/MM/YYYY HH:MM";
-          } else {
-              ws[ i ].s.numFmt = "00.00"; // other numbers
-          } */</span>
+  <li>js</li>
+</ul>
 
-          <span class="c1">// First row is filled gray bg</span>
-          <span class="k">if</span> <span class="p">(</span> <span class="nx">cell</span><span class="p">.</span><span class="nx">r</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
-              <span class="nx">ws</span><span class="p">[</span> <span class="nx">i</span> <span class="p">].</span><span class="nx">s</span><span class="p">.</span><span class="nx">fill</span> <span class="o">=</span> <span class="p">{</span>
-                  <span class="na">patternType</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">solid</span><span class="dl">"</span> <span class="p">,</span>
-                  <span class="na">fgColor</span> <span class="p">:</span> <span class="p">{</span>
-                      <span class="na">rgb</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">b2b2b2</span><span class="dl">"</span>
-                  <span class="p">}</span> <span class="p">,</span>
-                  <span class="na">bgColor</span> <span class="p">:</span> <span class="p">{</span>
-                      <span class="na">rgb</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">b2b2b2</span><span class="dl">"</span>
-                  <span class="p">}</span>
-              <span class="p">};</span>
-          <span class="p">}</span>
-      <span class="p">}</span>
-      <span class="c1">// Sheet Append With Title</span>
-      <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">book_append_sheet</span><span class="p">(</span> <span class="nx">wb</span> <span class="p">,</span><span class="nx">ws</span> <span class="p">,</span><span class="dl">'</span><span class="s1">sheet title</span><span class="dl">'</span> <span class="p">);</span>
-      <span class="c1">// Create Excel File With File Name</span>
-      <span class="nx">XLSX</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span> <span class="nx">wb</span> <span class="p">,(</span> <span class="dl">'</span><span class="s1">파일명.xlsx</span><span class="dl">'</span> <span class="p">)</span> <span class="p">);</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">test2</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// workBook Create</span>
+  <span class="kd">var</span> <span class="nx">wb</span> <span class="o">=</span> <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">book_new</span><span class="p">();</span>
+  <span class="c1">// workSheet Create</span>
+  <span class="kd">var</span> <span class="nx">ws</span> <span class="o">=</span> <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">table_to_sheet</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">test</span><span class="dl">"</span><span class="p">));</span>
+  <span class="c1">// for in Cells add style</span>
+  <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="k">in</span> <span class="nx">ws</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">ws</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">!=</span> <span class="dl">"</span><span class="s2">object</span><span class="dl">"</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">cell</span> <span class="o">=</span> <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">decode_cell</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+    <span class="c1">// add Style to All Cells</span>
+    <span class="nx">ws</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">s</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">font</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">arial</span><span class="dl">"</span><span class="p">,</span>
+      <span class="p">},</span>
+      <span class="na">alignment</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">vertical</span><span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">horizontal</span><span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">wrapText</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1</span><span class="dl">"</span><span class="p">,</span>
+      <span class="p">},</span>
+      <span class="na">border</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">right</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">style</span><span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span><span class="p">,</span>
+          <span class="na">color</span><span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="na">left</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">style</span><span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span><span class="p">,</span>
+          <span class="na">color</span><span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="na">top</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">style</span><span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span><span class="p">,</span>
+          <span class="na">color</span><span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="na">bottom</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">style</span><span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span><span class="p">,</span>
+          <span class="na">color</span><span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span><span class="p">,</span>
+        <span class="p">},</span>
+      <span class="p">},</span>
+    <span class="p">};</span>
+    <span class="c1">// Cell format change</span>
+    <span class="cm">/* if ( cell.c == 0 ) { // first column
+				ws[ i ].s.numFmt = "DD/MM/YYYY HH:MM"; // for dates
+				ws[ i ].z = "DD/MM/YYYY HH:MM";
+			} else {
+				ws[ i ].s.numFmt = "00.00"; // other numbers
+			} */</span>
+
+    <span class="c1">// First row is filled gray bg</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">cell</span><span class="p">.</span><span class="nx">r</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">ws</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">s</span><span class="p">.</span><span class="nx">fill</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="na">patternType</span><span class="p">:</span> <span class="dl">"</span><span class="s2">solid</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">fgColor</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">rgb</span><span class="p">:</span> <span class="dl">"</span><span class="s2">b2b2b2</span><span class="dl">"</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="na">bgColor</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">rgb</span><span class="p">:</span> <span class="dl">"</span><span class="s2">b2b2b2</span><span class="dl">"</span><span class="p">,</span>
+        <span class="p">},</span>
+      <span class="p">};</span>
+    <span class="p">}</span>
   <span class="p">}</span>
-</code></pre></div>    </div>
-  </li>
+  <span class="c1">// Sheet Append With Title</span>
+  <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">book_append_sheet</span><span class="p">(</span><span class="nx">wb</span><span class="p">,</span> <span class="nx">ws</span><span class="p">,</span> <span class="dl">"</span><span class="s2">sheet title</span><span class="dl">"</span><span class="p">);</span>
+  <span class="c1">// Create Excel File With File Name</span>
+  <span class="nx">XLSX</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="nx">wb</span><span class="p">,</span> <span class="dl">"</span><span class="s2">파일명.xlsx</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
   <li>결과</li>
 </ul>
 
@@ -463,137 +482,143 @@ function test1() {
 <p>이후, 파싱하는 과정에서 XLSX2 변수를 통해 사용해주면 됩니다.</p>
 
 <ul>
-  <li>js
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">test3</span> <span class="p">()</span> <span class="p">{</span>
-      <span class="c1">// Create WorkBook</span>
-      <span class="kd">var</span> <span class="nx">wb</span> <span class="o">=</span> <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">book_new</span><span class="p">();</span>
-      <span class="c1">// Define Option</span>
-      <span class="kd">var</span> <span class="nx">opt</span> <span class="o">=</span> <span class="p">{</span>
-          <span class="c1">// new row except table element</span>
-          <span class="na">rowIndex</span> <span class="p">:</span> <span class="mi">1</span> <span class="p">,</span>
-          <span class="c1">// merge option ( if you have to merge new row )</span>
-          <span class="na">merges</span> <span class="p">:</span> <span class="p">[</span> <span class="p">{</span>
-              <span class="c1">// start</span>
-              <span class="na">s</span> <span class="p">:</span> <span class="p">{</span>
-                  <span class="na">c</span> <span class="p">:</span> <span class="mi">0</span> <span class="p">,</span> <span class="c1">// col</span>
-                  <span class="na">r</span> <span class="p">:</span> <span class="mi">0</span>	<span class="c1">// row</span>
-              <span class="p">}</span> <span class="p">,</span>
-              <span class="c1">// end</span>
-              <span class="na">e</span> <span class="p">:</span> <span class="p">{</span>
-                  <span class="na">c</span> <span class="p">:</span> <span class="nx">$</span><span class="p">(</span> <span class="dl">"</span><span class="s2">#test</span><span class="dl">"</span> <span class="p">).</span><span class="nx">find</span><span class="p">(</span> <span class="dl">"</span><span class="s2">th</span><span class="dl">"</span> <span class="p">).</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">,</span> <span class="c1">// col ( this means : merge as table column counts )</span>
-                  <span class="na">r</span> <span class="p">:</span> <span class="mi">0</span> <span class="c1">// row</span>
-              <span class="p">}</span>
-          <span class="p">}</span> <span class="p">]</span> <span class="p">,</span>
-      <span class="p">};</span>
-      <span class="c1">// WorkSheet</span>
-      <span class="kd">var</span> <span class="nx">ws</span> <span class="o">=</span> <span class="nx">XLSX2</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">table_to_sheet</span><span class="p">(</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span> <span class="dl">'</span><span class="s1">test</span><span class="dl">'</span> <span class="p">)</span> <span class="p">,</span><span class="nx">opt</span> <span class="p">);</span>
-      <span class="c1">// new row --&gt; Title</span>
-      <span class="nx">ws</span><span class="p">[</span> <span class="dl">"</span><span class="s2">A1</span><span class="dl">"</span> <span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-          <span class="na">t</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">s</span><span class="dl">"</span> <span class="p">,</span>
-          <span class="na">v</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">CUSTOM TITLE</span><span class="dl">"</span>
-      <span class="p">};</span>
-      <span class="c1">// new row --&gt; style</span>
-      <span class="nx">ws</span><span class="p">[</span> <span class="dl">"</span><span class="s2">A1</span><span class="dl">"</span> <span class="p">].</span><span class="nx">s</span> <span class="o">=</span> <span class="p">{</span>
-          <span class="na">font</span> <span class="p">:</span> <span class="p">{</span>
-              <span class="na">name</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">arial</span><span class="dl">"</span> <span class="p">,</span>
-              <span class="na">bold</span> <span class="p">:</span> <span class="kc">true</span> <span class="p">,</span>
-          <span class="p">}</span> <span class="p">,</span>
-          <span class="na">alignment</span> <span class="p">:</span> <span class="p">{</span>
-              <span class="na">vertical</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span> <span class="p">,</span>
-              <span class="na">horizontal</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span> <span class="p">,</span>
-              <span class="na">wrapText</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">1</span><span class="dl">'</span> <span class="p">,</span> <span class="c1">// any truthy value here</span>
-          <span class="p">}</span> <span class="p">,</span>
-          <span class="na">border</span> <span class="p">:</span> <span class="p">{</span>
-              <span class="na">right</span> <span class="p">:</span> <span class="p">{</span>
-                  <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
-                  <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
-              <span class="p">}</span> <span class="p">,</span>
-              <span class="na">left</span> <span class="p">:</span> <span class="p">{</span>
-                  <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
-                  <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
-              <span class="p">}</span> <span class="p">,</span>
-              <span class="na">top</span> <span class="p">:</span> <span class="p">{</span>
-                  <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
-                  <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
-              <span class="p">}</span> <span class="p">,</span>
-          <span class="p">}</span> <span class="p">,</span>
-      <span class="p">};</span>
-      <span class="c1">// cell style</span>
-      <span class="k">for</span> <span class="p">(</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">ws</span> <span class="p">)</span> <span class="p">{</span>
-          <span class="k">if</span> <span class="p">(</span> <span class="k">typeof</span> <span class="p">(</span> <span class="nx">ws</span><span class="p">[</span> <span class="nx">i</span> <span class="p">]</span> <span class="p">)</span> <span class="o">!=</span> <span class="dl">"</span><span class="s2">object</span><span class="dl">"</span> <span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
-          <span class="kd">let</span> <span class="nx">cell</span> <span class="o">=</span> <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">decode_cell</span><span class="p">(</span> <span class="nx">i</span> <span class="p">);</span>
-          <span class="c1">// cell style</span>
-          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cell</span><span class="p">)</span>
-          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
-          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ws</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+  <li>js</li>
+</ul>
 
-          <span class="nx">ws</span><span class="p">[</span> <span class="nx">i</span> <span class="p">].</span><span class="nx">s</span> <span class="o">=</span> <span class="p">{</span>
-              <span class="na">font</span> <span class="p">:</span> <span class="p">{</span>
-                  <span class="na">name</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">arial</span><span class="dl">"</span>
-              <span class="p">}</span> <span class="p">,</span>
-              <span class="na">alignment</span> <span class="p">:</span> <span class="p">{</span>
-                  <span class="na">vertical</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span> <span class="p">,</span>
-                  <span class="na">horizontal</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span> <span class="p">,</span>
-                  <span class="na">wrapText</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">1</span><span class="dl">'</span> <span class="p">,</span>
-              <span class="p">}</span> <span class="p">,</span>
-              <span class="na">border</span> <span class="p">:</span> <span class="p">{</span>
-                  <span class="na">right</span> <span class="p">:</span> <span class="p">{</span>
-                      <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
-                      <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
-                  <span class="p">}</span> <span class="p">,</span>
-                  <span class="na">left</span> <span class="p">:</span> <span class="p">{</span>
-                      <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
-                      <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
-                  <span class="p">}</span> <span class="p">,</span>
-                  <span class="na">top</span> <span class="p">:</span> <span class="p">{</span>
-                      <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
-                      <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
-                  <span class="p">}</span> <span class="p">,</span>
-                  <span class="na">bottom</span> <span class="p">:</span> <span class="p">{</span>
-                      <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
-                      <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
-                  <span class="p">}</span> <span class="p">,</span>
-              <span class="p">}</span>
-          <span class="p">};</span>
-          <span class="c1">// new row &amp; first row ( table th ) style</span>
-          <span class="k">if</span> <span class="p">(</span> <span class="nx">cell</span><span class="p">.</span><span class="nx">r</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">cell</span><span class="p">.</span><span class="nx">r</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">{</span>
-              <span class="nx">ws</span><span class="p">[</span> <span class="nx">i</span> <span class="p">].</span><span class="nx">s</span><span class="p">.</span><span class="nx">fill</span> <span class="o">=</span> <span class="p">{</span>
-                  <span class="na">patternType</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">solid</span><span class="dl">"</span> <span class="p">,</span>
-                  <span class="na">fgColor</span> <span class="p">:</span> <span class="p">{</span>
-                      <span class="na">rgb</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">b2b2b2</span><span class="dl">"</span>
-                  <span class="p">}</span> <span class="p">,</span>
-                  <span class="na">bgColor</span> <span class="p">:</span> <span class="p">{</span>
-                      <span class="na">rgb</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">b2b2b2</span><span class="dl">"</span>
-                  <span class="p">}</span>
-              <span class="p">};</span>
-          <span class="p">}</span>
-          <span class="c1">// if you merge other rows use this</span>
-          <span class="cm">/* if ( i == "!merges" ) {
-              ws[ "!merges" ].push( {
-                  s : {
-                      c : 0 ,
-                      r : 0
-                  } ,
-                  e : {
-                      c : 0 ,
-                      r : 0
-                  }
-              } );
-          } */</span>
-      <span class="p">}</span>
-      <span class="c1">// Sheet Append With Title</span>
-      <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">book_append_sheet</span><span class="p">(</span> <span class="nx">wb</span> <span class="p">,</span><span class="nx">ws</span> <span class="p">,</span><span class="dl">'</span><span class="s1">sheet title</span><span class="dl">'</span> <span class="p">);</span>
-      <span class="c1">// Create Excel File With File Name</span>
-      <span class="nx">XLSX</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span> <span class="nx">wb</span> <span class="p">,(</span> <span class="dl">'</span><span class="s1">파일명.xlsx</span><span class="dl">'</span> <span class="p">)</span> <span class="p">);</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">test3</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Create WorkBook</span>
+  <span class="kd">var</span> <span class="nx">wb</span> <span class="o">=</span> <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">book_new</span><span class="p">();</span>
+  <span class="c1">// Define Option</span>
+  <span class="kd">var</span> <span class="nx">opt</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1">// new row except table element</span>
+    <span class="na">rowIndex</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="c1">// merge option ( if you have to merge new row )</span>
+    <span class="na">merges</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="c1">// start</span>
+        <span class="na">s</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">c</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// col</span>
+          <span class="na">r</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// row</span>
+        <span class="p">},</span>
+        <span class="c1">// end</span>
+        <span class="na">e</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">c</span><span class="p">:</span> <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#test</span><span class="dl">"</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="dl">"</span><span class="s2">th</span><span class="dl">"</span><span class="p">).</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// col ( this means : merge as table column counts )</span>
+          <span class="na">r</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// row</span>
+        <span class="p">},</span>
+      <span class="p">},</span>
+    <span class="p">],</span>
+  <span class="p">};</span>
+  <span class="c1">// WorkSheet</span>
+  <span class="kd">var</span> <span class="nx">ws</span> <span class="o">=</span> <span class="nx">XLSX2</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">table_to_sheet</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">test</span><span class="dl">"</span><span class="p">),</span> <span class="nx">opt</span><span class="p">);</span>
+  <span class="c1">// new row --&gt; Title</span>
+  <span class="nx">ws</span><span class="p">[</span><span class="dl">"</span><span class="s2">A1</span><span class="dl">"</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">t</span><span class="p">:</span> <span class="dl">"</span><span class="s2">s</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">v</span><span class="p">:</span> <span class="dl">"</span><span class="s2">CUSTOM TITLE</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">};</span>
+  <span class="c1">// new row --&gt; style</span>
+  <span class="nx">ws</span><span class="p">[</span><span class="dl">"</span><span class="s2">A1</span><span class="dl">"</span><span class="p">].</span><span class="nx">s</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">font</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">arial</span><span class="dl">"</span><span class="p">,</span>
+      <span class="na">bold</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="na">alignment</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">vertical</span><span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span><span class="p">,</span>
+      <span class="na">horizontal</span><span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span><span class="p">,</span>
+      <span class="na">wrapText</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// any truthy value here</span>
+    <span class="p">},</span>
+    <span class="na">border</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">right</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">style</span><span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">color</span><span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span><span class="p">,</span>
+      <span class="p">},</span>
+      <span class="na">left</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">style</span><span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">color</span><span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span><span class="p">,</span>
+      <span class="p">},</span>
+      <span class="na">top</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">style</span><span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">color</span><span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span><span class="p">,</span>
+      <span class="p">},</span>
+    <span class="p">},</span>
+  <span class="p">};</span>
+  <span class="c1">// cell style</span>
+  <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="k">in</span> <span class="nx">ws</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">ws</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">!=</span> <span class="dl">"</span><span class="s2">object</span><span class="dl">"</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">cell</span> <span class="o">=</span> <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">decode_cell</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+    <span class="c1">// cell style</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cell</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ws</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+
+    <span class="nx">ws</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">s</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">font</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">arial</span><span class="dl">"</span><span class="p">,</span>
+      <span class="p">},</span>
+      <span class="na">alignment</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">vertical</span><span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">horizontal</span><span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">wrapText</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1</span><span class="dl">"</span><span class="p">,</span>
+      <span class="p">},</span>
+      <span class="na">border</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">right</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">style</span><span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span><span class="p">,</span>
+          <span class="na">color</span><span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="na">left</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">style</span><span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span><span class="p">,</span>
+          <span class="na">color</span><span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="na">top</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">style</span><span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span><span class="p">,</span>
+          <span class="na">color</span><span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="na">bottom</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">style</span><span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span><span class="p">,</span>
+          <span class="na">color</span><span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span><span class="p">,</span>
+        <span class="p">},</span>
+      <span class="p">},</span>
+    <span class="p">};</span>
+    <span class="c1">// new row &amp; first row ( table th ) style</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">cell</span><span class="p">.</span><span class="nx">r</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">cell</span><span class="p">.</span><span class="nx">r</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">ws</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">s</span><span class="p">.</span><span class="nx">fill</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="na">patternType</span><span class="p">:</span> <span class="dl">"</span><span class="s2">solid</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">fgColor</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">rgb</span><span class="p">:</span> <span class="dl">"</span><span class="s2">b2b2b2</span><span class="dl">"</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="na">bgColor</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">rgb</span><span class="p">:</span> <span class="dl">"</span><span class="s2">b2b2b2</span><span class="dl">"</span><span class="p">,</span>
+        <span class="p">},</span>
+      <span class="p">};</span>
+    <span class="p">}</span>
+    <span class="c1">// if you merge other rows use this</span>
+    <span class="cm">/* if ( i == "!merges" ) {
+				ws[ "!merges" ].push( {
+					s : {
+						c : 0 ,
+						r : 0
+					} ,
+					e : {
+						c : 0 ,
+						r : 0
+					}
+				} );
+			} */</span>
   <span class="p">}</span>
-</code></pre></div>    </div>
-  </li>
+  <span class="c1">// Sheet Append With Title</span>
+  <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">book_append_sheet</span><span class="p">(</span><span class="nx">wb</span><span class="p">,</span> <span class="nx">ws</span><span class="p">,</span> <span class="dl">"</span><span class="s2">sheet title</span><span class="dl">"</span><span class="p">);</span>
+  <span class="c1">// Create Excel File With File Name</span>
+  <span class="nx">XLSX</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="nx">wb</span><span class="p">,</span> <span class="dl">"</span><span class="s2">파일명.xlsx</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
   <li>결과</li>
 </ul>
 
 <p><img src="/assets/img/Frontend/JS/xlsx6.png" alt="xlsx6" /></p>
 
 <hr />
+
 <p>셀 형식 변경이나 기타 다른 옵션도 많으니 더 자세한 부분은 해당 라이브러리 검색하여 추가해보시면서 하면 빠르게 하실 수 있을 것 같습니다 !</p>
 
 <p>이상 입니다. :D</p>
@@ -781,7 +806,7 @@ function test1() {
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

@@ -2,7 +2,7 @@
 layout: post
 title: In plugin 'com.google.cloud.tools.jib' type 'com.google.cloud.tools.jib.gradle.BuildImageTask' property 'jib.allowInsecureRegistries' of type boolean shouldn't be annotated with @Optional.
 description: >
-    In plugin 'com.google.cloud.tools.jib' type 'com.google.cloud.tools.jib.gradle.BuildImageTask' property 'jib.allowInsecureRegistries' of type boolean shouldn't be annotated with @Optional.
+  In plugin 'com.google.cloud.tools.jib' type 'com.google.cloud.tools.jib.gradle.BuildImageTask' property 'jib.allowInsecureRegistries' of type boolean shouldn't be annotated with @Optional.
 sitemap: false
 hide_last_modified: true
 categories: [Error]
@@ -13,6 +13,7 @@ tags: [google cloud error, jib error, jib]
 {:toc .large-only}
 
 ## 문제
+
 ```bash
 > Task :project_name:jib FAILED
 :project_name:jib (Thread[Execution worker for ':' Thread 3,5,main]) completed. Took 0.001 secs.
@@ -50,7 +51,9 @@ BUILD FAILED in 2s
 ```
 
 ## 현상
+
 jib 플러그인을 통한 이미지 업로드 실행 중 발생한 에러
 
 ## 해결
+
 jib 버전을 1.4.0 에서 1.8.0 으로 업그레이드. gradle 6.9 였을 때는 문제 없었는데, 7버전 대로 올라오면서 버전 호환이 안맞는 듯 하다.

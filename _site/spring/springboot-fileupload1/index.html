@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -303,186 +303,192 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 <p>프로젝트는 vs code에서 initailize gradle project를 이용해 생성했고 아래와 같은 내용을 추가 했다.</p>
 
-<ul>
-  <li>build.gradle
-```gradle
-plugins {
-  id ‘org.springframework.boot’ version ‘2.6.4’
-  id ‘io.spring.dependency-management’ version ‘1.0.11.RELEASE’
-  id ‘java’
-  id ‘war’
-}</li>
-</ul>
+<blockquote>
+  <p>build.gradle</p>
+</blockquote>
 
-<p>group = ‘com.file’
-version = ‘0.0.1-SNAPSHOT’
-sourceCompatibility = ‘11’</p>
+<div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plugins</span> <span class="o">{</span>
+	<span class="n">id</span> <span class="s1">'org.springframework.boot'</span> <span class="n">version</span> <span class="s1">'2.6.4'</span>
+	<span class="n">id</span> <span class="s1">'io.spring.dependency-management'</span> <span class="n">version</span> <span class="s1">'1.0.11.RELEASE'</span>
+	<span class="n">id</span> <span class="s1">'java'</span>
+	<span class="n">id</span> <span class="s1">'war'</span>
+<span class="o">}</span>
 
-<p>repositories {
-	mavenCentral()
-}</p>
+<span class="n">group</span> <span class="o">=</span> <span class="s1">'com.file'</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">'0.0.1-SNAPSHOT'</span>
+<span class="n">sourceCompatibility</span> <span class="o">=</span> <span class="s1">'11'</span>
 
-<p>dependencies {
-	implementation ‘org.springframework.boot:spring-boot-starter-web’
-	providedRuntime ‘org.springframework.boot:spring-boot-starter-tomcat’
-	testImplementation ‘org.springframework.boot:spring-boot-starter-test’</p>
+<span class="k">repositories</span> <span class="o">{</span>
+	<span class="n">mavenCentral</span><span class="o">()</span>
+<span class="o">}</span>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// dev tool ( 정적 리소스 재시작없이 적용 )
-implementation group: 'org.springframework.boot', name: 'spring-boot-devtools'
+<span class="k">dependencies</span> <span class="o">{</span>
+	<span class="n">implementation</span> <span class="s1">'org.springframework.boot:spring-boot-starter-web'</span>
+	<span class="n">providedRuntime</span> <span class="s1">'org.springframework.boot:spring-boot-starter-tomcat'</span>
+	<span class="n">testImplementation</span> <span class="s1">'org.springframework.boot:spring-boot-starter-test'</span>
+	
+	<span class="c1">// dev tool ( 정적 리소스 재시작없이 적용 )</span>
+	<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.springframework.boot'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'spring-boot-devtools'</span>
 
-// jstl 
-implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
+	<span class="c1">// jstl </span>
+	<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'javax.servlet'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'jstl'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'1.2'</span>
 
-// jasper
-implementation group: 'org.apache.tomcat', name: 'tomcat-jasper', version: '9.0.56' }
+	<span class="c1">// jasper</span>
+	<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.apache.tomcat'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'tomcat-jasper'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'9.0.56'</span>
+<span class="o">}</span>
+
+<span class="n">tasks</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s1">'test'</span><span class="o">)</span> <span class="o">{</span>
+	<span class="n">useJUnitPlatform</span><span class="o">()</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
-<p>tasks.named(‘test’) {
-	useJUnitPlatform()
-}</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-- application.yml
-```yml
-spring:
-    application:
-        name: file-upload-test
-    servlet:
-        multipart:
-            location: /Users/dk/Documents/GitHub/Library/Spring/FileUpload/SpringBoot/example/src/main/resources/upload
-    mvc:
-        view:
-            prefix: /WEB-INF/views/
-            suffix: .jsp
+<blockquote>
+  <p>application.yml</p>
+</blockquote>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">spring</span><span class="pi">:</span>
+    <span class="na">application</span><span class="pi">:</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">file-upload-test</span>
+    <span class="na">servlet</span><span class="pi">:</span>
+        <span class="na">multipart</span><span class="pi">:</span>
+            <span class="na">location</span><span class="pi">:</span> <span class="s">/Users/dk/Documents/GitHub/Library/Spring/FileUpload/SpringBoot/example/src/main/resources/upload</span>
+    <span class="na">mvc</span><span class="pi">:</span>
+        <span class="na">view</span><span class="pi">:</span>
+            <span class="na">prefix</span><span class="pi">:</span> <span class="s">/WEB-INF/views/</span>
+            <span class="na">suffix</span><span class="pi">:</span> <span class="s">.jsp</span>
 </code></pre></div></div>
 
-<ul>
-  <li>indexController.java
-```java
-package com.file.example.controller;</li>
-</ul>
+<blockquote>
+  <p>indexController.java</p>
+</blockquote>
 
-<p>import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.file.example.controller</span><span class="o">;</span>
 
-<p>@RestController
-public class IndexController {</p>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.GetMapping</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RestController</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.servlet.ModelAndView</span><span class="o">;</span>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/*
- * @GetMapping("/")
- * public ModelAndView index() {
- * return new ModelAndView("/index.html");
- * }
- */
+<span class="nd">@RestController</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">IndexController</span> <span class="o">{</span>
 
-@GetMapping("/")
-public ModelAndView index2() {
-    return new ModelAndView("/index");
-}
+    <span class="cm">/*
+     * @GetMapping("/")
+     * public ModelAndView index() {
+     * return new ModelAndView("/index.html");
+     * }
+     */</span>
+
+    <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">ModelAndView</span> <span class="nf">index2</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">ModelAndView</span><span class="o">(</span><span class="s">"/index"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
 </code></pre></div></div>
 
-<p>}</p>
+<blockquote>
+  <p>FileUploadController.java</p>
+</blockquote>
 
-<ul>
-  <li>FileUploadController.java</li>
-</ul>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.file.example.controller</span><span class="o">;</span>
 
-<p>package com.file.example.controller;</p>
+<span class="kn">import</span> <span class="nn">com.file.example.service.FileUploadService</span><span class="o">;</span>
 
-<p>import com.file.example.service.FileUploadService;</p>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.PostMapping</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RestController</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.multipart.MultipartRequest</span><span class="o">;</span>
 
-<p>import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartRequest;</p>
+<span class="nd">@RestController</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FileUploadController</span> <span class="o">{</span>
 
-<p>@RestController
-public class FileUploadController {</p>
+    <span class="nd">@Autowired</span>
+    <span class="nc">FileUploadService</span> <span class="n">fsvc</span><span class="o">;</span>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Autowired
-FileUploadService fsvc;
-
-@PostMapping("/upload.do")
-public void upload(MultipartRequest req) {
-    System.out.println("＃＃＃＃＃＃＃＃＃＃＃ [LOG] : " + req + "＃＃＃＃＃＃＃＃＃＃＃");
-    fsvc.save(req);
-} } ```
+    <span class="nd">@PostMapping</span><span class="o">(</span><span class="s">"/upload.do"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">upload</span><span class="o">(</span><span class="nc">MultipartRequest</span> <span class="n">req</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"＃＃＃＃＃＃＃＃＃＃＃ [LOG] : "</span> <span class="o">+</span> <span class="n">req</span> <span class="o">+</span> <span class="s">"＃＃＃＃＃＃＃＃＃＃＃"</span><span class="o">);</span>
+        <span class="n">fsvc</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">req</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
-<ul>
-  <li>FileUploadService.java - FileStorageService 상속.
-```java
-package com.file.example.service;</li>
-</ul>
+<blockquote>
+  <p>FileUploadService.java - FileStorageService 상속.</p>
+</blockquote>
 
-<p>import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.file.example.service</span><span class="o">;</span>
 
-<p>import com.file.example.ifc.FileStorageService;</p>
+<span class="kn">import</span> <span class="nn">java.io.InputStream</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.file.Files</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.file.Path</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.file.Paths</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.file.StandardCopyOption</span><span class="o">;</span>
 
-<p>import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartRequest;</p>
+<span class="kn">import</span> <span class="nn">com.file.example.ifc.FileStorageService</span><span class="o">;</span>
 
-<p>@Service
-public class FileUploadService implements FileStorageService {</p>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Value</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Service</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.multipart.MultipartFile</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.multipart.MultipartRequest</span><span class="o">;</span>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Value("${spring.servlet.multipart.location}")
-private String uploadPath;
+<span class="nd">@Service</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FileUploadService</span> <span class="kd">implements</span> <span class="nc">FileStorageService</span> <span class="o">{</span>
 
-@Override
-public void init() {
+    <span class="nd">@Value</span><span class="o">(</span><span class="s">"${spring.servlet.multipart.location}"</span><span class="o">)</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">uploadPath</span><span class="o">;</span>
 
-}
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">()</span> <span class="o">{</span>
 
-@Override
-public void save(MultipartRequest req) {
-    MultipartFile file = req.getFile("singleFile");
-    try {
-        if (file.isEmpty()) {
-            throw new Exception("ERROR : file is empty");
-        }
-        Path root = Paths.get(uploadPath);
-        System.out.println("＃＃＃＃＃＃＃＃＃＃＃ [LOG] : " + root + "＃＃＃＃＃＃＃＃＃＃＃");
-        System.out.println("＃＃＃＃＃＃＃＃＃＃＃ [LOG] : " + uploadPath + "＃＃＃＃＃＃＃＃＃＃＃");
-        if (!Files.exists(root)) {
-            try {
-                Files.createDirectories(Paths.get(uploadPath));
-            } catch (Exception e) {
-                throw new Exception("ERROR : can't makr dir");
-            }
-        }
-        try {
-            InputStream is = file.getInputStream();
-            Files.copy(is, root.resolve(file.getOriginalFilename()), StandardCopyOption.REPLACE_EXISTING);
-        } catch (Exception e) {
-            throw new Exception("ERROR : can't makr dir");
-        }
-    } catch (Exception e) {
-        throw new RuntimeException("ERROR : can't save file !");
-    }
-}
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="nc">MultipartRequest</span> <span class="n">req</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">MultipartFile</span> <span class="n">file</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="na">getFile</span><span class="o">(</span><span class="s">"singleFile"</span><span class="o">);</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+                <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="o">(</span><span class="s">"ERROR : file is empty"</span><span class="o">);</span>
+            <span class="o">}</span>
+            <span class="nc">Path</span> <span class="n">root</span> <span class="o">=</span> <span class="nc">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">uploadPath</span><span class="o">);</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"＃＃＃＃＃＃＃＃＃＃＃ [LOG] : "</span> <span class="o">+</span> <span class="n">root</span> <span class="o">+</span> <span class="s">"＃＃＃＃＃＃＃＃＃＃＃"</span><span class="o">);</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"＃＃＃＃＃＃＃＃＃＃＃ [LOG] : "</span> <span class="o">+</span> <span class="n">uploadPath</span> <span class="o">+</span> <span class="s">"＃＃＃＃＃＃＃＃＃＃＃"</span><span class="o">);</span>
+            <span class="k">if</span> <span class="o">(!</span><span class="nc">Files</span><span class="o">.</span><span class="na">exists</span><span class="o">(</span><span class="n">root</span><span class="o">))</span> <span class="o">{</span>
+                <span class="k">try</span> <span class="o">{</span>
+                    <span class="nc">Files</span><span class="o">.</span><span class="na">createDirectories</span><span class="o">(</span><span class="nc">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">uploadPath</span><span class="o">));</span>
+                <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="o">(</span><span class="s">"ERROR : can't makr dir"</span><span class="o">);</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+            <span class="k">try</span> <span class="o">{</span>
+                <span class="nc">InputStream</span> <span class="n">is</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="na">getInputStream</span><span class="o">();</span>
+                <span class="nc">Files</span><span class="o">.</span><span class="na">copy</span><span class="o">(</span><span class="n">is</span><span class="o">,</span> <span class="n">root</span><span class="o">.</span><span class="na">resolve</span><span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">getOriginalFilename</span><span class="o">()),</span> <span class="nc">StandardCopyOption</span><span class="o">.</span><span class="na">REPLACE_EXISTING</span><span class="o">);</span>
+            <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+                <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="o">(</span><span class="s">"ERROR : can't makr dir"</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="s">"ERROR : can't save file !"</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
 </code></pre></div></div>
 
-<p>}</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-- FileStorageService.java
-```java
-package com.file.example.ifc;
+<blockquote>
+  <p>FileStorageService.java</p>
+</blockquote>
 
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartRequest;
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.file.example.ifc</span><span class="o">;</span>
 
-public interface FileStorageService {
-    void init();
+<span class="kn">import</span> <span class="nn">org.springframework.web.multipart.MultipartFile</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.multipart.MultipartRequest</span><span class="o">;</span>
 
-    void save(MultipartRequest req);
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">FileStorageService</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">init</span><span class="o">();</span>
 
-}
+    <span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="nc">MultipartRequest</span> <span class="n">req</span><span class="o">);</span>
+
+<span class="o">}</span>
 </code></pre></div></div>
 
 <p>우선 이 정도까지만 작성하고 테스트 해보았을 때는, 정상적으로 동작했다. application.yml 의 경로는 해당 프로젝트 내부 경로로 임시로 잡았다. 만약 해당 환경이 운영으로 넘어간다면, 업로드 하고자 하는 곳의 경로를 절대경로로 삽입하면 될 것이다.</p>
@@ -672,7 +678,7 @@ public interface FileStorageService {
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

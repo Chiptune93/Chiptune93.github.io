@@ -2,11 +2,11 @@
 layout: post
 title: SpringBoot - Rest Api Sample 만들기 #1
 description: >
-    [SpringBoot] Rest Api Sample 만들기 #1
+  [SpringBoot] Rest Api Sample 만들기 #1
 sitemap: false
 hide_last_modified: true
 categories: [Spring]
-tags: [springboot,rest api, api, h2database]
+tags: [springboot, rest api, api, h2database]
 ---
 
 - Table of Contents
@@ -16,10 +16,12 @@ tags: [springboot,rest api, api, h2database]
 기본적인 버전 정보는 다음과 같다.
 
 ## 1. 기본 프로젝트 세팅
+
 JDK11
 Spring Boot 2.7.1
 Gradle 7.4.1 (Project Initialize > VS Code Spring Extension > Create a Gradle Project)
 그리고 Build.gradle 에 추가한 dependency 는 아래와 같다.
+
 ```gradle
 implementation 'org.springframework.boot:spring-boot-starter-web'
 compileOnly 'org.projectlombok:lombok'
@@ -52,7 +54,9 @@ https://dololak.tistory.com/285
 실제 서비스에서는 MyBatis를 사용하는 만큼 샘플 프로젝트에서도 연동해보았다.
 
 ## 2. h2 Database + MyBatis 연계 설정
+
 우선 build.gradle에 아래의 라이브러리가 필요하다.
+
 ```gradle
  build.gradle
 // https://mvnrepository.com/artifact/com.h2database/h2
@@ -68,6 +72,7 @@ implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-star
 설정 파일을 아래와 같이 세팅한다.
 
 application.yml
+
 ```yml
 spring:
   application:
@@ -94,6 +99,7 @@ h2-test라는 DB명은 마음대로, username/password는 위와 같이 설정�
 그리고 난 후 간단한 test 클래스를 작성하여 어플리케이션을 구동하여 DB가 올라오는지 확인 할 수 있다.
 
 testRunner.java
+
 ```java
 package rest.api.sample;
 
@@ -124,7 +130,7 @@ public class TestRunner implements ApplicationRunner {
 
 ![restapi1](/assets/img/Spring/restapi1.png)
 
-이렇게 로그가 정상적으로 찍힌다면 문제없이 구동된 것이고, 콘솔로도 확인이 가능하다. 
+이렇게 로그가 정상적으로 찍힌다면 문제없이 구동된 것이고, 콘솔로도 확인이 가능하다.
 내가 겪은 문제로는 Spring Boot 의 Auto Configuration이 제대로 동작하지 않아서 No Bean for datasouce 에러가 뜨긴 했는데, 새로고침과 재로딩을 통해 문제를 해결했다.
 
 이제 MyBatis를 추가해보자.
@@ -132,6 +138,7 @@ public class TestRunner implements ApplicationRunner {
 build.gradle에는 아까 추가를 했으니, application.yml에 아래의 설정을 추가한다.
 
 application.yml
+
 ```yml
 mybatis:
   # mapper파일 위치 설정
@@ -150,26 +157,29 @@ mybatis:
 각 폴더에 맞게 작성한 모습
 
 ## 3. Boot Running 시, h2 database에 샘플 데이터 추가하기.
+
 기본적으로 h2 database를 사용하게 되면, schema와 데이터를 어플리케이션 구동 시, 자동으로 찾아서 실행해준다.
 따라서, 해당 sql 파일을 작성하여 적절하게 놔두면 어플리케이션 구동 시, 알아서 읽어서 실행을 시켜준다.
 
 경로는 resouces 폴더 아래이며, 아래와 같이 작성했다.
 
 schema.sql
+
 ```sql
 CREATE TABLE IF NOT EXISTS members
 (
     user_id         VARCHAR(50)     NOT NULL,
     user_name       VARCHAR(50)     NOT NULL,
-    user_email      VARCHAR(50)     NOT NULL,    
-    user_age        VARCHAR(50)     NOT NULL,    
-    user_address    VARCHAR(50)     NOT NULL,    
+    user_email      VARCHAR(50)     NOT NULL,
+    user_age        VARCHAR(50)     NOT NULL,
+    user_address    VARCHAR(50)     NOT NULL,
     user_enter_date VARCHAR(50)     NOT NULL,
     PRIMARY KEY (user_id)
 );
 ```
 
 data.sql
+
 ```sql
 INSERT INTO members (user_id,user_name,user_email,user_age,user_address,user_enter_date) VALUES ('user1','유저1','user1@user.net','1','서울시 유저구 유저동 1길','2022-07-01');
 INSERT INTO members (user_id,user_name,user_email,user_age,user_address,user_enter_date) VALUES ('user2','유저2','user2@user.net','2','서울시 유저구 유저동 2길','2022-07-01');

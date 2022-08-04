@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -257,12 +257,15 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ul>
 
 <h2 id="1-taglibrary-buildgradle-추가">1. TagLibrary build.gradle 추가</h2>
+
 <div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// taglibs</span>
 <span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.apache.taglibs'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'taglibs-standard-impl'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'1.2.5'</span>
 </code></pre></div></div>
 
 <h2 id="2-tld-설정-파일-추가">2. tld 설정 파일 추가</h2>
+
 <p>WEB-INF/tlds 폴더에 사용할 커스텀 태그 라이브러리 파일 생성</p>
+
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;taglib</span> <span class="na">version=</span><span class="s">"2.1"</span> <span class="na">xmlns=</span><span class="s">"http://java.sun.com/xml/ns/javaee"</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:schemaLocation=</span><span class="s">"http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"</span><span class="nt">&gt;</span>
 
@@ -282,7 +285,9 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </code></pre></div></div>
 
 <h2 id="3-사용예시">3. 사용예시</h2>
+
 <p>사용하고자 하는 jsp 파일 내부 상단에 선언하여 사용</p>
+
 <div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;%@ taglib </span><span class="na">prefix=</span><span class="s">"test"</span><span class="na"> uri=</span><span class="s">"/WEB-INF/tlds/test.tld"</span><span class="nt">%&gt;</span>
 ...
 ${test:getString()} // usage
@@ -471,7 +476,7 @@ ${test:getString()} // usage
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

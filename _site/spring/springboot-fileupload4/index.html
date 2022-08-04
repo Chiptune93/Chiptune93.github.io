@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -256,124 +256,124 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>해당 파일 업로드 기능을 다른 Boot 프로젝트에서 가져다 사용했는데, 해당 서비스에서는 파일 업로드 후 업로드한 파일 리스트를 리턴하여, 정보를 표현해주어야 했기에 이번 다중 파일 업로드 함수에서는 파일 정보들을 리턴하도록 작성하였다.</p>
 
 <ul>
-  <li>FileUploadController.java
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@PostMapping</span><span class="o">(</span><span class="s">"/upload4.do"</span><span class="o">)</span>
-  <span class="kd">public</span> <span class="nc">HashMap</span> <span class="nf">upload4</span><span class="o">(</span><span class="nd">@RequestParam</span> <span class="nc">MultipartFile</span><span class="o">[]</span> <span class="n">files</span><span class="o">)</span> <span class="o">{</span>
-      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"＃＃＃＃＃＃＃＃＃＃＃ [LOG] : "</span> <span class="o">+</span> <span class="n">files</span> <span class="o">+</span> <span class="s">"＃＃＃＃＃＃＃＃＃＃＃"</span><span class="o">);</span>
-      <span class="k">return</span> <span class="n">fsvc</span><span class="o">.</span><span class="na">save4</span><span class="o">(</span><span class="n">files</span><span class="o">);</span>
-  <span class="o">}</span>
-</code></pre></div>    </div>
-  </li>
+  <li>FileUploadController.java</li>
 </ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@PostMapping</span><span class="o">(</span><span class="s">"/upload4.do"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">HashMap</span> <span class="nf">upload4</span><span class="o">(</span><span class="nd">@RequestParam</span> <span class="nc">MultipartFile</span><span class="o">[]</span> <span class="n">files</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"＃＃＃＃＃＃＃＃＃＃＃ [LOG] : "</span> <span class="o">+</span> <span class="n">files</span> <span class="o">+</span> <span class="s">"＃＃＃＃＃＃＃＃＃＃＃"</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">fsvc</span><span class="o">.</span><span class="na">save4</span><span class="o">(</span><span class="n">files</span><span class="o">);</span>
+    <span class="o">}</span>
+</code></pre></div></div>
 
 <p>기존 MultipartRequest 를 받던 것과는 달리, Multipart 파일 배열을 @RequestParam을 통해 전달받는다.</p>
 
 <ul>
-  <li>FIleUploadService.java
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="nc">HashMap</span> <span class="nf">save4</span><span class="o">(</span><span class="nc">MultipartFile</span><span class="o">[]</span> <span class="n">files</span><span class="o">)</span> <span class="o">{</span>
-      <span class="c1">// 최종 결과 담을 맵 객체</span>
-      <span class="nc">HashMap</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">();</span>
-      <span class="c1">// 업로드된 파일 리스트 객체</span>
-      <span class="nc">List</span><span class="o">&lt;</span><span class="nc">HashMap</span><span class="o">&gt;</span> <span class="n">uploadFileList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">HashMap</span><span class="o">&gt;();</span>
-      <span class="c1">// 업로드 경로 설정</span>
-      <span class="nc">Path</span> <span class="n">uploadPath</span> <span class="o">=</span> <span class="n">fu</span><span class="o">.</span><span class="na">getUploadPath</span><span class="o">(</span><span class="s">"image"</span><span class="o">);</span>
-      <span class="c1">// 다중 파일 업로드 관리를 위한 master file seq</span>
-      <span class="kt">int</span> <span class="n">masterSeq</span> <span class="o">=</span> <span class="n">fu</span><span class="o">.</span><span class="na">getMasterSeq</span><span class="o">();</span>
-      <span class="c1">// Array 반복 하여 파일 업로드 실행</span>
-      <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">files</span><span class="o">).</span><span class="na">stream</span><span class="o">().</span><span class="na">forEach</span><span class="o">(</span><span class="n">file</span> <span class="o">-&gt;</span> <span class="o">{</span>
-          <span class="n">uploadFileList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">fu</span><span class="o">.</span><span class="na">multipleUpload</span><span class="o">(</span><span class="n">file</span><span class="o">,</span> <span class="n">uploadPath</span><span class="o">,</span> <span class="n">masterSeq</span><span class="o">));</span>
-      <span class="o">});</span>
-      <span class="c1">// 결과를 담아 result 리턴.</span>
-      <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileMasterSeq"</span><span class="o">,</span> <span class="n">masterSeq</span><span class="o">);</span>
-      <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"uploadFileList"</span><span class="o">,</span> <span class="n">uploadFileList</span><span class="o">);</span>
-      <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
-  <span class="o">}</span>
-</code></pre></div>    </div>
-  </li>
+  <li>FIleUploadService.java</li>
 </ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">HashMap</span> <span class="nf">save4</span><span class="o">(</span><span class="nc">MultipartFile</span><span class="o">[]</span> <span class="n">files</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// 최종 결과 담을 맵 객체</span>
+        <span class="nc">HashMap</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">();</span>
+        <span class="c1">// 업로드된 파일 리스트 객체</span>
+        <span class="nc">List</span><span class="o">&lt;</span><span class="nc">HashMap</span><span class="o">&gt;</span> <span class="n">uploadFileList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">HashMap</span><span class="o">&gt;();</span>
+        <span class="c1">// 업로드 경로 설정</span>
+        <span class="nc">Path</span> <span class="n">uploadPath</span> <span class="o">=</span> <span class="n">fu</span><span class="o">.</span><span class="na">getUploadPath</span><span class="o">(</span><span class="s">"image"</span><span class="o">);</span>
+        <span class="c1">// 다중 파일 업로드 관리를 위한 master file seq</span>
+        <span class="kt">int</span> <span class="n">masterSeq</span> <span class="o">=</span> <span class="n">fu</span><span class="o">.</span><span class="na">getMasterSeq</span><span class="o">();</span>
+        <span class="c1">// Array 반복 하여 파일 업로드 실행</span>
+        <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">files</span><span class="o">).</span><span class="na">stream</span><span class="o">().</span><span class="na">forEach</span><span class="o">(</span><span class="n">file</span> <span class="o">-&gt;</span> <span class="o">{</span>
+            <span class="n">uploadFileList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">fu</span><span class="o">.</span><span class="na">multipleUpload</span><span class="o">(</span><span class="n">file</span><span class="o">,</span> <span class="n">uploadPath</span><span class="o">,</span> <span class="n">masterSeq</span><span class="o">));</span>
+        <span class="o">});</span>
+        <span class="c1">// 결과를 담아 result 리턴.</span>
+        <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileMasterSeq"</span><span class="o">,</span> <span class="n">masterSeq</span><span class="o">);</span>
+        <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"uploadFileList"</span><span class="o">,</span> <span class="n">uploadFileList</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+    <span class="o">}</span>
+</code></pre></div></div>
 
 <p>서비스에서는 파일 배열을 받아, 개수 만큼 반복하며 파일을 업로드 하고, 각 파일을 업로드 함으로써 리턴되는 파일 정보들을 객체에 담아 리턴하게끔 한다.</p>
 
 <ul>
-  <li>FIleUtil.java
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="nf">multipleUpload</span><span class="o">(</span><span class="nc">MultipartFile</span> <span class="n">file</span><span class="o">,</span> <span class="nc">Path</span> <span class="n">path</span><span class="o">,</span> <span class="kt">int</span> <span class="n">masterSeq</span><span class="o">)</span> <span class="o">{</span>
-      <span class="nc">HashMap</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">();</span>
-      <span class="c1">// 파일 정보</span>
-      <span class="nc">String</span> <span class="n">fileName</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="na">getOriginalFilename</span><span class="o">();</span>
-      <span class="nc">String</span> <span class="n">fileSize</span> <span class="o">=</span> <span class="nc">Long</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">getSize</span><span class="o">());</span>
-      <span class="nc">String</span> <span class="n">fileExt</span> <span class="o">=</span> <span class="n">fileName</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">fileName</span><span class="o">.</span><span class="na">lastIndexOf</span><span class="o">(</span><span class="s">"."</span><span class="o">)</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span>
-      <span class="nc">String</span> <span class="n">fileType</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="na">getContentType</span><span class="o">();</span>
-      <span class="nc">String</span> <span class="n">filePath</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
-      <span class="c1">// 결과 정보</span>
-      <span class="nc">String</span> <span class="n">status</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
-      <span class="nc">String</span> <span class="n">message</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
-      <span class="nc">String</span> <span class="n">fileSeq</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
-      <span class="c1">// 예외처리 하기</span>
-
-      <span class="c1">// 1. 파일 사이즈</span>
-      <span class="k">if</span> <span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">getSize</span><span class="o">()</span> <span class="o">&gt;</span> <span class="no">MAX_SIZE</span><span class="o">)</span> <span class="o">{</span>
-          <span class="n">status</span> <span class="o">=</span> <span class="s">"fail"</span><span class="o">;</span>
-          <span class="n">message</span> <span class="o">=</span> <span class="s">"file over max upload size"</span><span class="o">;</span>
-          <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="n">status</span><span class="o">);</span>
-          <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"message"</span><span class="o">,</span> <span class="n">message</span><span class="o">);</span>
-          <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
-      <span class="o">}</span>
-
-      <span class="c1">// 2. 파일 확장자</span>
-      <span class="c1">// 화이트 리스트 방식으로 파일 확장자 체크</span>
-      <span class="k">if</span> <span class="o">(!</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"jpg"</span><span class="o">,</span> <span class="s">"png"</span><span class="o">,</span> <span class="s">"gif"</span><span class="o">,</span> <span class="s">"jpeg"</span><span class="o">,</span> <span class="s">"bmp"</span><span class="o">,</span> <span class="s">"xlsx"</span><span class="o">,</span> <span class="s">"ppt"</span><span class="o">,</span> <span class="s">"pptx"</span><span class="o">,</span> <span class="s">"txt"</span><span class="o">,</span> <span class="s">"hwp"</span><span class="o">)</span>
-              <span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">fileExt</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">()))</span> <span class="o">{</span>
-          <span class="n">status</span> <span class="o">=</span> <span class="s">"fail"</span><span class="o">;</span>
-          <span class="n">message</span> <span class="o">=</span> <span class="s">"file type is not allowed"</span><span class="o">;</span>
-          <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="n">status</span><span class="o">);</span>
-          <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"message"</span><span class="o">,</span> <span class="n">message</span><span class="o">);</span>
-          <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
-      <span class="o">}</span>
-
-      <span class="c1">// 3. 저장 파일 이름 랜덤화</span>
-      <span class="nc">String</span> <span class="n">tempName</span> <span class="o">=</span> <span class="n">fileName</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">fileName</span><span class="o">.</span><span class="na">lastIndexOf</span><span class="o">(</span><span class="s">"."</span><span class="o">));</span>
-      <span class="nc">String</span> <span class="n">encFileName</span> <span class="o">=</span> <span class="nc">Base64</span><span class="o">.</span><span class="na">getEncoder</span><span class="o">().</span><span class="na">encodeToString</span><span class="o">(</span><span class="n">tempName</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
-      <span class="c1">// 암호화된 경로로 패스 설정</span>
-      <span class="n">filePath</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="na">toString</span><span class="o">()</span> <span class="o">+</span> <span class="nc">File</span><span class="o">.</span><span class="na">separator</span> <span class="o">+</span> <span class="n">encFileName</span> <span class="o">+</span> <span class="s">"."</span> <span class="o">+</span> <span class="n">fileExt</span><span class="o">;</span>
-
-      <span class="c1">// 4. 파일정보 맵에 담기.</span>
-      <span class="nc">HashMap</span> <span class="n">fileInfo</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;();</span>
-      <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">uploadedFileInfo</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;();</span>
-
-      <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileName"</span><span class="o">,</span> <span class="n">fileName</span><span class="o">);</span>
-      <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"encFileName"</span><span class="o">,</span> <span class="n">encFileName</span><span class="o">);</span>
-      <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileSize"</span><span class="o">,</span> <span class="n">fileSize</span><span class="o">);</span>
-      <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileExt"</span><span class="o">,</span> <span class="n">fileExt</span><span class="o">);</span>
-      <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileType"</span><span class="o">,</span> <span class="n">fileType</span><span class="o">);</span>
-      <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"filePath"</span><span class="o">,</span> <span class="n">filePath</span><span class="o">);</span>
-      <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileMasterSeq"</span><span class="o">,</span> <span class="n">masterSeq</span><span class="o">);</span>
-
-      <span class="k">try</span> <span class="o">{</span>
-          <span class="nc">InputStream</span> <span class="n">is</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="na">getInputStream</span><span class="o">();</span>
-          <span class="nc">Files</span><span class="o">.</span><span class="na">copy</span><span class="o">(</span><span class="n">is</span><span class="o">,</span> <span class="n">path</span><span class="o">.</span><span class="na">resolve</span><span class="o">(</span><span class="n">encFileName</span> <span class="o">+</span> <span class="s">"."</span> <span class="o">+</span> <span class="n">fileExt</span><span class="o">),</span> <span class="nc">StandardCopyOption</span><span class="o">.</span><span class="na">REPLACE_EXISTING</span><span class="o">);</span>
-
-          <span class="c1">// 파일 저장에 성공하면 DB에 저장하기</span>
-          <span class="n">fileSeq</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">rpt</span><span class="o">.</span><span class="na">insertFile</span><span class="o">(</span><span class="n">fileInfo</span><span class="o">));</span>
-          <span class="n">uploadedFileInfo</span> <span class="o">=</span> <span class="n">rpt</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">fileSeq</span><span class="o">));</span>
-
-          <span class="n">status</span> <span class="o">=</span> <span class="s">"success"</span><span class="o">;</span>
-          <span class="n">message</span> <span class="o">=</span> <span class="s">"upload complete"</span><span class="o">;</span>
-
-      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-          <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-          <span class="n">status</span> <span class="o">=</span> <span class="s">"fail"</span><span class="o">;</span>
-          <span class="n">message</span> <span class="o">=</span> <span class="s">"upload fail"</span><span class="o">;</span>
-      <span class="o">}</span>
-      <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="n">status</span><span class="o">);</span>
-      <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"message"</span><span class="o">,</span> <span class="n">message</span><span class="o">);</span>
-      <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileMasterSeq"</span><span class="o">,</span> <span class="n">masterSeq</span><span class="o">);</span>
-      <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileInfo"</span><span class="o">,</span> <span class="n">uploadedFileInfo</span><span class="o">);</span>
-      <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
-  <span class="o">}</span>
-</code></pre></div>    </div>
-  </li>
+  <li>FIleUtil.java</li>
 </ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="nf">multipleUpload</span><span class="o">(</span><span class="nc">MultipartFile</span> <span class="n">file</span><span class="o">,</span> <span class="nc">Path</span> <span class="n">path</span><span class="o">,</span> <span class="kt">int</span> <span class="n">masterSeq</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">HashMap</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">();</span>
+        <span class="c1">// 파일 정보</span>
+        <span class="nc">String</span> <span class="n">fileName</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="na">getOriginalFilename</span><span class="o">();</span>
+        <span class="nc">String</span> <span class="n">fileSize</span> <span class="o">=</span> <span class="nc">Long</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">getSize</span><span class="o">());</span>
+        <span class="nc">String</span> <span class="n">fileExt</span> <span class="o">=</span> <span class="n">fileName</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">fileName</span><span class="o">.</span><span class="na">lastIndexOf</span><span class="o">(</span><span class="s">"."</span><span class="o">)</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span>
+        <span class="nc">String</span> <span class="n">fileType</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="na">getContentType</span><span class="o">();</span>
+        <span class="nc">String</span> <span class="n">filePath</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+        <span class="c1">// 결과 정보</span>
+        <span class="nc">String</span> <span class="n">status</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+        <span class="nc">String</span> <span class="n">message</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+        <span class="nc">String</span> <span class="n">fileSeq</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+        <span class="c1">// 예외처리 하기</span>
+
+        <span class="c1">// 1. 파일 사이즈</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">getSize</span><span class="o">()</span> <span class="o">&gt;</span> <span class="no">MAX_SIZE</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="s">"fail"</span><span class="o">;</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="s">"file over max upload size"</span><span class="o">;</span>
+            <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="n">status</span><span class="o">);</span>
+            <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"message"</span><span class="o">,</span> <span class="n">message</span><span class="o">);</span>
+            <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="c1">// 2. 파일 확장자</span>
+        <span class="c1">// 화이트 리스트 방식으로 파일 확장자 체크</span>
+        <span class="k">if</span> <span class="o">(!</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"jpg"</span><span class="o">,</span> <span class="s">"png"</span><span class="o">,</span> <span class="s">"gif"</span><span class="o">,</span> <span class="s">"jpeg"</span><span class="o">,</span> <span class="s">"bmp"</span><span class="o">,</span> <span class="s">"xlsx"</span><span class="o">,</span> <span class="s">"ppt"</span><span class="o">,</span> <span class="s">"pptx"</span><span class="o">,</span> <span class="s">"txt"</span><span class="o">,</span> <span class="s">"hwp"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">fileExt</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">()))</span> <span class="o">{</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="s">"fail"</span><span class="o">;</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="s">"file type is not allowed"</span><span class="o">;</span>
+            <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="n">status</span><span class="o">);</span>
+            <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"message"</span><span class="o">,</span> <span class="n">message</span><span class="o">);</span>
+            <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="c1">// 3. 저장 파일 이름 랜덤화</span>
+        <span class="nc">String</span> <span class="n">tempName</span> <span class="o">=</span> <span class="n">fileName</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">fileName</span><span class="o">.</span><span class="na">lastIndexOf</span><span class="o">(</span><span class="s">"."</span><span class="o">));</span>
+        <span class="nc">String</span> <span class="n">encFileName</span> <span class="o">=</span> <span class="nc">Base64</span><span class="o">.</span><span class="na">getEncoder</span><span class="o">().</span><span class="na">encodeToString</span><span class="o">(</span><span class="n">tempName</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
+        <span class="c1">// 암호화된 경로로 패스 설정</span>
+        <span class="n">filePath</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="na">toString</span><span class="o">()</span> <span class="o">+</span> <span class="nc">File</span><span class="o">.</span><span class="na">separator</span> <span class="o">+</span> <span class="n">encFileName</span> <span class="o">+</span> <span class="s">"."</span> <span class="o">+</span> <span class="n">fileExt</span><span class="o">;</span>
+
+        <span class="c1">// 4. 파일정보 맵에 담기.</span>
+        <span class="nc">HashMap</span> <span class="n">fileInfo</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;();</span>
+        <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">uploadedFileInfo</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;();</span>
+
+        <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileName"</span><span class="o">,</span> <span class="n">fileName</span><span class="o">);</span>
+        <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"encFileName"</span><span class="o">,</span> <span class="n">encFileName</span><span class="o">);</span>
+        <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileSize"</span><span class="o">,</span> <span class="n">fileSize</span><span class="o">);</span>
+        <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileExt"</span><span class="o">,</span> <span class="n">fileExt</span><span class="o">);</span>
+        <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileType"</span><span class="o">,</span> <span class="n">fileType</span><span class="o">);</span>
+        <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"filePath"</span><span class="o">,</span> <span class="n">filePath</span><span class="o">);</span>
+        <span class="n">fileInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileMasterSeq"</span><span class="o">,</span> <span class="n">masterSeq</span><span class="o">);</span>
+
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="nc">InputStream</span> <span class="n">is</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="na">getInputStream</span><span class="o">();</span>
+            <span class="nc">Files</span><span class="o">.</span><span class="na">copy</span><span class="o">(</span><span class="n">is</span><span class="o">,</span> <span class="n">path</span><span class="o">.</span><span class="na">resolve</span><span class="o">(</span><span class="n">encFileName</span> <span class="o">+</span> <span class="s">"."</span> <span class="o">+</span> <span class="n">fileExt</span><span class="o">),</span> <span class="nc">StandardCopyOption</span><span class="o">.</span><span class="na">REPLACE_EXISTING</span><span class="o">);</span>
+
+            <span class="c1">// 파일 저장에 성공하면 DB에 저장하기</span>
+            <span class="n">fileSeq</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">rpt</span><span class="o">.</span><span class="na">insertFile</span><span class="o">(</span><span class="n">fileInfo</span><span class="o">));</span>
+            <span class="n">uploadedFileInfo</span> <span class="o">=</span> <span class="n">rpt</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">fileSeq</span><span class="o">));</span>
+
+            <span class="n">status</span> <span class="o">=</span> <span class="s">"success"</span><span class="o">;</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="s">"upload complete"</span><span class="o">;</span>
+
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="s">"fail"</span><span class="o">;</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="s">"upload fail"</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="n">status</span><span class="o">);</span>
+        <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"message"</span><span class="o">,</span> <span class="n">message</span><span class="o">);</span>
+        <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileMasterSeq"</span><span class="o">,</span> <span class="n">masterSeq</span><span class="o">);</span>
+        <span class="n">result</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"fileInfo"</span><span class="o">,</span> <span class="n">uploadedFileInfo</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+    <span class="o">}</span>
+</code></pre></div></div>
 
 <p>실제 업로드 하는 함수이다. 기존과 다른 점은, 여러개의 파일을 한 요청에 의해 올린것을 표시 및 다른 데이터와 연동시에 그룹으로 찾기 쉽도록 file_master 테이블을 추가하고, master_seq 를 가지도록 하여 파일간 그룹을 구분 했다는 것이다.</p>
 
@@ -566,7 +566,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

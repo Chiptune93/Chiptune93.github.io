@@ -2,18 +2,17 @@
 layout: post
 title: Python - 웹 사이트 IMG 태그 소스 파일 가져오기
 description: >
-    웹 사이트 IMG 태그 소스 파일 가져오기
+  웹 사이트 IMG 태그 소스 파일 가져오기
 sitemap: false
 hide_last_modified: true
 categories: [Python]
-tags: [python,img,web img,crolling]
+tags: [python, img, web img, crolling]
 ---
 
 - Table of Contents
 {:toc .large-only}
 
-
-실습 겸, 테스트로 특정 웹 페이지 내에 특정 영역을 입력받아 
+실습 겸, 테스트로 특정 웹 페이지 내에 특정 영역을 입력받아
 
 해당 영역 내에 있는 img 또는 video 요소의 src 파일을 가져오는 코드를 작성해서 테스트 해보았다.
 
@@ -79,7 +78,7 @@ if len(imgs) > 0:
         except urllib.error.HTTPError:
             print('에러')
             sys.exit(0)
-        
+
 # 요소만큼 반복
 if len(vids) > 0:
     for vid in vids:

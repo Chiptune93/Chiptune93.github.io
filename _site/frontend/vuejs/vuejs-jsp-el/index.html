@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -263,6 +263,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>JSP 페이지 내에서 Vue.js 컴포넌트를 사용하던 중, 이벤트 전달이 안되는 현상이 발생했다.</p>
 
 <p>jsp 페이지 내 vue.js 선언 부분</p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
 	<span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#content</span><span class="dl">'</span><span class="p">,</span>
 	<span class="na">components</span><span class="p">:</span> <span class="p">{},</span>
@@ -299,7 +300,13 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </code></pre></div></div>
 
 <p>컴포넌트 부분</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;paging</span> <span class="na">v-bind:total-count=</span><span class="s">"pageInfo.totalCount"</span> <span class="na">v-bind:page-no=</span><span class="s">"pageInfo.pageNo"</span> <span class="na">v-bind:opts=</span><span class="s">"pageInfo"</span> <span class="err">@</span><span class="na">update:page=</span><span class="s">"goPage"</span><span class="nt">&gt;&lt;/paging&gt;</span>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;paging</span>
+  <span class="na">v-bind:total-count=</span><span class="s">"pageInfo.totalCount"</span>
+  <span class="na">v-bind:page-no=</span><span class="s">"pageInfo.pageNo"</span>
+  <span class="na">v-bind:opts=</span><span class="s">"pageInfo"</span>
+  <span class="err">@</span><span class="na">update:page=</span><span class="s">"goPage"</span>
+<span class="nt">&gt;&lt;/paging&gt;</span>
 </code></pre></div></div>
 
 <p>pageInfo 값을 가져와서 페이징을 그리는 컴포넌트이다.</p>
@@ -333,6 +340,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>즉, Create 시점에서는 $el 을 사용할 수 없다는 얘기이다. 아무리 create 시점에서 변수에 el 값을 바인딩 해봤자 Vue 에서 해당 값이 변경됨을 감지하지 못하는 것이다.</p>
 
 <p>따라서 아래와 같이 mount 부분에서 수정을 해줌으로써 문제를 해결했다.</p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">mounted</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
 	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">mounted p</span><span class="dl">'</span><span class="p">);</span>
 	<span class="kd">let</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
@@ -526,7 +534,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

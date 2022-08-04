@@ -18,7 +18,8 @@ tags: [fileupload, springboot, springboot fileupload]
 별다른 로직은 없고 단순 정보를 가져와 DB에 저장한다.
 
 
-- build.gradle : DB관련 라이브러리 추가 (DB는 Docker 베이스의 Postgres 사용)
+> build.gradle : DB관련 라이브러리 추가 (DB는 Docker 베이스의 Postgres 사용)
+
 ```gradle
 plugins {
 	id 'org.springframework.boot' version '2.6.4'
@@ -65,7 +66,8 @@ tasks.named('test') {
 }
 ```
 
-- application.yml : DB설정 추가
+>application.yml : DB설정 추가
+
 ```yml
 spring:
     application:
@@ -87,7 +89,8 @@ spring:
             maximum-pool-size: 5
 ```
 
-- FileUploadController.java
+>FileUploadController.java
+
 ```java
 package com.file.example.controller;
 
@@ -128,7 +131,8 @@ public class FileUploadController {
 }
 ```
 
-- FileUploadService.java
+>FileUploadService.java
+
 ```java
 package com.file.example.service;
 
@@ -239,7 +243,8 @@ public class FileUploadService implements FileStorageService {
 }
 ```
 
-- FileUploadRepository.xml (Repository는 인터페이스로 잡아서 생략)
+>FileUploadRepository.xml (Repository는 인터페이스로 잡아서 생략)
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
@@ -262,7 +267,8 @@ public class FileUploadService implements FileStorageService {
 </mapper>
 ```
 
-- FileStorageService.java
+>FileStorageService.java
+
 ```java
 package com.file.example.ifc;
 

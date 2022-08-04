@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -256,19 +256,21 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ul>
 
 <h2 id="1-현재-시간-구하기">1. 현재 시간 구하기</h2>
+
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// format 객체로 원하는 형태로 형식 정의</span>
 <span class="nc">SimpleDateFormat</span> <span class="n">format1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleDateFormat</span> <span class="o">(</span> <span class="s">"yyyy-MM-dd HH:mm:ss"</span><span class="o">);</span>
 
 <span class="c1">// date 객체 또는 Calendar 객체 사용 가능.</span>
 <span class="nc">Date</span> <span class="n">dt</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="o">();</span>
 <span class="c1">// Calendar c = Calendar.getInstance();</span>
-		
+
 <span class="nc">String</span> <span class="n">dt</span> <span class="o">=</span> <span class="n">format1</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">dt</span><span class="o">);</span>
-		
+
 <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">time1</span><span class="o">);</span>
 </code></pre></div></div>
 
 <h2 id="2-년월일-따로-구하기">2. 년/월/일 따로 구하기</h2>
+
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Calendar</span> <span class="n">cal</span> <span class="o">=</span> <span class="nc">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
 
 <span class="c1">// 년</span>
@@ -472,7 +474,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

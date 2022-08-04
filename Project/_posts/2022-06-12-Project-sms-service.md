@@ -6,7 +6,7 @@ description: >
 sitemap: false
 hide_last_modified: true
 categories: [Project]
-tags: [docker,springboot,Personal Project]
+tags: [docker, springboot, Personal Project]
 ---
 
 - Table of Contents

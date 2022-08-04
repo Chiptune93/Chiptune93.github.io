@@ -12,7 +12,6 @@ tags: [Java, User-Agent]
 - Table of Contents
 {:toc .large-only}
 
-
 ## 유저 에이전트 체크하기
 
 ### SourceCode

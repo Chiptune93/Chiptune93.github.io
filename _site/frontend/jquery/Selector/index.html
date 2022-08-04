@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -271,7 +271,9 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </ul>
 
 <h2 id="1-attribute-contains-prefix-selector-namevalue">1. Attribute Contains Prefix Selector [name|=”value”]</h2>
+
 <p>value 문자와 일치하되 연속된 글로 연결되지 않은 문자를 찾을 때</p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">input[name|=</span><span class="dl">"</span><span class="nx">chiptune</span><span class="dl">"</span><span class="s2">]</span><span class="dl">"</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="dl">"</span><span class="s2">123</span><span class="dl">"</span><span class="p">);</span>
 
 <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">chiptune</span><span class="dl">"</span> <span class="nx">value</span><span class="o">=</span><span class="dl">""</span> <span class="o">/&gt;</span> <span class="c1">// OK</span>
@@ -280,7 +282,9 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </code></pre></div></div>
 
 <h2 id="2-attribute-contains-selector-namevalue">2. Attribute Contains Selector [name*=”value”]</h2>
+
 <p>value에 해당하는 문자가 앞,뒤,중간 중 어디에 있어도 상관없이 찾을 때</p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">input[name*=</span><span class="dl">"</span><span class="nx">chiptune</span><span class="dl">"</span><span class="s2">]</span><span class="dl">"</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="dl">"</span><span class="s2">123</span><span class="dl">"</span><span class="p">);</span>
 
 <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">chiptune</span><span class="dl">"</span> <span class="nx">value</span><span class="o">=</span><span class="dl">""</span> <span class="o">/&gt;</span> <span class="c1">// OK</span>
@@ -290,7 +294,9 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </code></pre></div></div>
 
 <h2 id="3-attribute-contains-word-selector-namevalue">3. Attribute Contains Word Selector [name~=”value”]</h2>
+
 <p>value에 해당하는 문자가 뒤(끝)에 존재하는 것을 찾을 때 (공백 뒤에)</p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">input[name~=</span><span class="dl">"</span><span class="nx">chiptune</span><span class="dl">"</span><span class="s2">]</span><span class="dl">"</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="dl">"</span><span class="s2">123</span><span class="dl">"</span><span class="p">);</span>
 
 <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">chiptune</span><span class="dl">"</span> <span class="nx">value</span><span class="o">=</span><span class="dl">""</span> <span class="o">/&gt;</span> <span class="c1">// NOT OK</span>
@@ -300,7 +306,9 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </code></pre></div></div>
 
 <h2 id="4-attribute-ends-with-selector-namevalue">4. Attribute Ends With Selector [name$=”value”]</h2>
+
 <p>value에 해당하는 문자가 뒤(끝)에 존재하는 것을 찾을 때</p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">input[name$=</span><span class="dl">"</span><span class="nx">chiptune</span><span class="dl">"</span><span class="s2">]</span><span class="dl">"</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="dl">"</span><span class="s2">123</span><span class="dl">"</span><span class="p">);</span>
 
 <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">chiptune</span><span class="dl">"</span> <span class="nx">value</span><span class="o">=</span><span class="dl">""</span> <span class="o">/&gt;</span> <span class="c1">// NOT OK</span>
@@ -310,7 +318,9 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 </code></pre></div></div>
 
 <h2 id="5-attribute-equals-selector-namevalue">5. Attribute Equals Selector [name=”value”]</h2>
+
 <p>value에 해당하는 문자 일치하는 것을 찾을 때</p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">input[name=</span><span class="dl">"</span><span class="nx">chiptune</span><span class="dl">"</span><span class="s2">]</span><span class="dl">"</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="dl">"</span><span class="s2">123</span><span class="dl">"</span><span class="p">);</span>
 
 <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">chiptune</span><span class="dl">"</span> <span class="nx">value</span><span class="o">=</span><span class="dl">""</span> <span class="o">/&gt;</span> <span class="c1">// OK</span>
@@ -318,8 +328,11 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">Test2chiptune</span><span class="dl">"</span> <span class="nx">value</span><span class="o">=</span><span class="dl">""</span> <span class="o">/&gt;</span> <span class="c1">// NOT OK</span>
 <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">Testchiptune</span><span class="dl">"</span> <span class="nx">value</span><span class="o">=</span><span class="dl">""</span> <span class="o">/&gt;</span> <span class="c1">// NOT OK</span>
 </code></pre></div></div>
+
 <h2 id="6-attribute-not-equal-selector-namevalue">6. Attribute Not Equal Selector [name!=”value”]</h2>
+
 <p>value에 해당하는 문자 일치하지 않는 것을 찾을 때</p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">input[name!=</span><span class="dl">"</span><span class="nx">chiptune</span><span class="dl">"</span><span class="s2">]</span><span class="dl">"</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="dl">"</span><span class="s2">123</span><span class="dl">"</span><span class="p">);</span>
 
 <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">chiptune</span><span class="dl">"</span> <span class="nx">value</span><span class="o">=</span><span class="dl">""</span> <span class="o">/&gt;</span> <span class="c1">// NOT OK</span>
@@ -327,8 +340,11 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">Test2chiptune</span><span class="dl">"</span> <span class="nx">value</span><span class="o">=</span><span class="dl">""</span> <span class="o">/&gt;</span> <span class="c1">// OK</span>
 <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">Testchiptune</span><span class="dl">"</span> <span class="nx">value</span><span class="o">=</span><span class="dl">""</span> <span class="o">/&gt;</span> <span class="c1">// OK</span>
 </code></pre></div></div>
+
 <h2 id="7-attribute-starts-with-selector-namevalue">7. Attribute Starts With Selector [name^=”value”]</h2>
+
 <p>value로 시작하는 문자를 찾을 때</p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">input[name^=</span><span class="dl">"</span><span class="nx">chiptune</span><span class="dl">"</span><span class="s2">]</span><span class="dl">"</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="dl">"</span><span class="s2">123</span><span class="dl">"</span><span class="p">);</span>
 
 <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">chiptune</span><span class="dl">"</span> <span class="nx">value</span><span class="o">=</span><span class="dl">""</span> <span class="o">/&gt;</span> <span class="c1">// OK</span>
@@ -336,8 +352,11 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">Test2chiptune</span><span class="dl">"</span> <span class="nx">value</span><span class="o">=</span><span class="dl">""</span> <span class="o">/&gt;</span> <span class="c1">// NOT OK</span>
 <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">Testchiptune</span><span class="dl">"</span> <span class="nx">value</span><span class="o">=</span><span class="dl">""</span> <span class="o">/&gt;</span> <span class="c1">// NOT OK</span>
 </code></pre></div></div>
+
 <h2 id="8-multiple-attribute-selector-namevaluename2value2">8. Multiple Attribute Selector [name=”value”][name2=”value2”]</h2>
+
 <p>여러개를 동시에 검색할때</p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">input[name=</span><span class="dl">"</span><span class="nx">chiptune</span><span class="dl">"</span><span class="s2">][name=</span><span class="dl">"</span><span class="nx">chiptune</span><span class="o">-</span><span class="nx">test</span><span class="dl">"</span><span class="s2">]</span><span class="dl">"</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="dl">"</span><span class="s2">123</span><span class="dl">"</span><span class="p">);</span>
 
 <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">chiptune</span><span class="dl">"</span> <span class="nx">value</span><span class="o">=</span><span class="dl">""</span> <span class="o">/&gt;</span> <span class="c1">// OK</span>
@@ -529,7 +548,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

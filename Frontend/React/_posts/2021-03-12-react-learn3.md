@@ -2,7 +2,7 @@
 layout: post
 title: 3회차 - 컴포넌트 만들기
 description: >
-    [인프런:생활코딩 - REACT] 3회차 : 컴포넌트 만들기
+  [인프런:생활코딩 - REACT] 3회차 : 컴포넌트 만들기
 sitemap: false
 hide_last_modified: true
 categories: [Frontend]
@@ -14,10 +14,9 @@ tags: [React]
 
 ![react3-1](/assets/img/React/react3-1.png)
 
-
 ![react3-2](/assets/img/React/react3-2.png)
 
-## Task 
+## Task
 
 1. 컴포넌트를 만들때는 위와 같은 방식으로 동작한다. (컴포넌트 들을 합쳐 최종적으로 index.js 에서 div#root 에 렌더링? 함.)
 

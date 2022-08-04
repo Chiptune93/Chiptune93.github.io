@@ -2,11 +2,11 @@
 layout: post
 title: MYSQL - 특정일 + - 일 수 이전 상태 조회 SUBDATE
 description: >
-    MYSQL 특정일 + - 일 수 이전 상태 조회 SUBDATE
+  MYSQL 특정일 + - 일 수 이전 상태 조회 SUBDATE
 sitemap: false
 hide_last_modified: true
 categories: [Database]
-tags: [mysql,subdate,mysql date]
+tags: [mysql, subdate, mysql date]
 ---
 
 - Table of Contents

@@ -2,7 +2,7 @@
 layout: post
 title: Spring Boot - Spring Boot 2.6.2 Interceptor 추가
 description: >
-    [Spring Boot] Spring Boot 2.6.2 Interceptor 추가
+  [Spring Boot] Spring Boot 2.6.2 Interceptor 추가
 sitemap: false
 hide_last_modified: true
 categories: [Spring]
@@ -13,6 +13,7 @@ tags: [Interceptor, SpringBoot]
 {:toc .large-only}
 
 ## 1. Interceptor 생성
+
 ```java
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -52,9 +53,8 @@ public class defaultInterceptor implements HandlerInterceptor {
 }
 ```
 
-
-
 ## 2. 설정 적용하기
+
 ```java
 import com.docker.bootsample.interceptor.defaultInterceptor;
 

@@ -17,10 +17,10 @@ AWS 사용 중, READ 와 READ/WRITE DB가 분리되면서, 현재 사용중인 1
 구글링을 하면서 다음과 같은 글을 참고하여 작성하였다.
 
 https://taes-k.github.io/2020/03/11/sprinig-master-slave-dynamic-routing-datasource/
-https://mudchobo.github.io/posts/spring-boot-jpa-master-slave﻿
-
+https://mudchobo.github.io/posts/spring-boot-jpa-master-slave
 
 ## 1. SQLConfig.java
+
 ```java
 package com.test;
 
@@ -114,8 +114,8 @@ public class PostgreSQLConfig {
 
 - DependsOn : 스프링 순환 오류 발생 시, 의존성 순서를 지정하여 순환 오류가 발생하지 않도록 명시, DependsOn 뒤에 오는 Name 을 갖는 빈 주입 후, 다음 순서로 주입되게끔 함.
 
-
 ## 2. RoutingDataSource.java
+
 ```java
 package com.test.config;
 
@@ -144,10 +144,12 @@ public class PostgreSQLRoutingDataSource extends AbstractRoutingDataSource {
 ```
 
 ## 3. application.yml
+
 ```yml
-...
-datasource: 
-   hikari:
+
+---
+datasource:
+  hikari:
     master:
       jdbc-url: jdbc:log4jdbc:postgresql://{url}
       driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
@@ -158,15 +160,16 @@ datasource:
       driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
       username: slave
       password: slave
-...
 ```
 
 간단하게 설명하자면, Service 에 선언된 @Transactional 태그에 readOnly 가 true 냐 false 냐 에 따라 적용되는 ds가 달라지는 형태이다.
+
 ```java
 @Transactional
-or 
+or
 @Transactional(readOnly = true)
 ```
+
 미리 생성된 master 와 slave ds 객체를 맵 형태로 가지고 있다가, 호출 시 readOnly 여부를 판단하여 적절한 ds 를 리턴하여 sqlSession을 구성하게 된다.
 
-* DependsOn 은 제거 후 빌드 시, 스프링 순환 오류가 발생하여 이를 막기 위해 추가하였다. 근데 다른 프로젝트에 동일하게 적용하면 빌드 시, 에러가 나지 않아 해당 구문을 가져갈 지, 고쳐야할 지 고민 중이다.
+- DependsOn 은 제거 후 빌드 시, 스프링 순환 오류가 발생하여 이를 막기 위해 추가하였다. 근데 다른 프로젝트에 동일하게 적용하면 빌드 시, 에러가 나지 않아 해당 구문을 가져갈 지, 고쳐야할 지 고민 중이다.

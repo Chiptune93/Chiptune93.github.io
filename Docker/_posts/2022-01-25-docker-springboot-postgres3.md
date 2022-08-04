@@ -13,15 +13,16 @@ tags: [docker, springboot, postgres]
 {:toc .large-only}
 
 개선사항 진행
+
 1. Docker Compose 환경 별로 구분하기.
 
 2. 네트워크 관련 찾아보기
 
 ## Docker Compose 구분하기
+
 단일 docker-compose.yml 을 multi-compose.yml 로 분할.
 
 > docker-compose 파일 내에서는 if case 같은 조건문의 작성이 불가능하다.
-
 
 조건문의 작성이 불가능 하여 Multi-compose file 형태로 작성을 하기로 하였다.
 
@@ -31,17 +32,15 @@ docker-compose 옵션 중, -f 옵션을 지정하여 compose 파일을 재정의
 
 ![dockerboot3-1](/assets/img/Docker/dockerboot3-1.png)
 
-
 추가적으로, 각 환경마다 다른 변수 또는 값 때문에 .env 파일을 만들어 환경변수 형태로 각 환경 별 맞는 값을 제공하여 개발/운영 환경의 구분을 하기로 한다.
 
-
-
 # 1. docker-compose.yml - base file
+
 ```yml
 # docker-compose (base)
 # base file
 # 기본적으로 실행될 코드들을 정의한다.
-# docker-compose -f docker-compose.yml -f docker-compose.{env}.yml up 으로 
+# docker-compose -f docker-compose.yml -f docker-compose.{env}.yml up 으로
 # 오버라이딩 할 파일을 선택하여 실행한다.
 
 version: "3.7"
@@ -55,7 +54,7 @@ services:
       - 8080:8080
     # network 추가
     networks:
-#      - default
+      #      - default
       - boot-network
     # image build dir
     build:
@@ -64,9 +63,9 @@ services:
     #  args:
     #    WAR-FILE: ${DEV_WAR_FILE}
     # Dockerfile - ENTRYPOINT
-    entrypoint: 
+    entrypoint:
       - java
-      - '-jar'
+      - "-jar"
       - /app.war
     # Dockerfile - COPY command
 #    command: "COPY ${WAR_FILE} app.war"
@@ -101,6 +100,7 @@ networks:
 ```
 
 # 2. docker-compose.dev.yml - 개발 환경 정의 시 사용
+
 ```yml
 # docker-compose.dev
 # 개발 환경 정의
@@ -123,7 +123,7 @@ services:
     image: postgres:12.9-alpine
     # network 추가
     networks:
-#      - default
+      #      - default
       - boot-network
     # 포트 지정
     ports:
@@ -137,6 +137,7 @@ services:
 ```
 
 # 3. .env 파일 - 환경변수가 정의되어있다.
+
 ```
 # docker-compose 파일에 변수 할당하기 위한 설정 파일
 # 각 환경 별로 사용할 변수 및 내용을 정의
@@ -166,6 +167,7 @@ PROD_POSTGRES_PASSWORD=
 .env에 지정된 환경 변수들로 각 옵션에 맞게 넣어주게 되면 따로 구동 시에 환경변수를 재지정하거나 넣어줄 필요가 없다.
 
 # Docker Network in Docker-compose
+
 docker network 에 대해서는 아래의 링크를 참고.
 
 - docker networking 개요
@@ -176,8 +178,7 @@ https://docs.docker.com/network/
 
 https://ziwon.github.io/post/designing-scalable-portable-docker-container-networks/
 
-
-우선 샘플 상에서 시도 했던 
+우선 샘플 상에서 시도 했던
 
 "도커 네트워크" 를 cli 환경에서 우선 생성 --> compose 에서 external 로 사용은 하지 않아도 된다.
 
@@ -191,8 +192,8 @@ https://ziwon.github.io/post/designing-scalable-portable-docker-container-networ
 
 ![dockerboot3-3](/assets/img/Docker/dockerboot3-3.png)
 
-
 네트워크 생성은 아래 라인을 참고한다.
+
 ```yml
 # Docker Network : boot-network 란 이름의 bridge 네트워크 추가
 # {projectName}_{networkName} 으로 생성됨.

@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -260,10 +260,12 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 기본적인 버전 정보는 다음과 같다.</p>
 
 <h2 id="1-기본-프로젝트-세팅">1. 기본 프로젝트 세팅</h2>
+
 <p>JDK11
 Spring Boot 2.7.1
 Gradle 7.4.1 (Project Initialize &gt; VS Code Spring Extension &gt; Create a Gradle Project)
 그리고 Build.gradle 에 추가한 dependency 는 아래와 같다.</p>
+
 <div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">implementation</span> <span class="s1">'org.springframework.boot:spring-boot-starter-web'</span>
 <span class="n">compileOnly</span> <span class="s1">'org.projectlombok:lombok'</span>
 <span class="n">annotationProcessor</span> <span class="s1">'org.projectlombok:lombok'</span>
@@ -295,7 +297,9 @@ Gradle 7.4.1 (Project Initialize &gt; VS Code Spring Extension &gt; Create a Gra
 <p>실제 서비스에서는 MyBatis를 사용하는 만큼 샘플 프로젝트에서도 연동해보았다.</p>
 
 <h2 id="2-h2-database--mybatis-연계-설정">2. h2 Database + MyBatis 연계 설정</h2>
+
 <p>우선 build.gradle에 아래의 라이브러리가 필요하다.</p>
+
 <div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">build</span><span class="o">.</span><span class="na">gradle</span>
 <span class="c1">// https://mvnrepository.com/artifact/com.h2database/h2</span>
 <span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'com.h2database'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'h2'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'2.1.214'</span>
@@ -310,6 +314,7 @@ Gradle 7.4.1 (Project Initialize &gt; VS Code Spring Extension &gt; Create a Gra
 <p>설정 파일을 아래와 같이 세팅한다.</p>
 
 <p>application.yml</p>
+
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">spring</span><span class="pi">:</span>
   <span class="na">application</span><span class="pi">:</span>
     <span class="na">name</span><span class="pi">:</span> <span class="s">REST-API</span>
@@ -335,6 +340,7 @@ Gradle 7.4.1 (Project Initialize &gt; VS Code Spring Extension &gt; Create a Gra
 <p>그리고 난 후 간단한 test 클래스를 작성하여 어플리케이션을 구동하여 DB가 올라오는지 확인 할 수 있다.</p>
 
 <p>testRunner.java</p>
+
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">rest.api.sample</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">java.sql.Connection</span><span class="o">;</span>
@@ -364,7 +370,7 @@ Gradle 7.4.1 (Project Initialize &gt; VS Code Spring Extension &gt; Create a Gra
 
 <p><img src="/assets/img/Spring/restapi1.png" alt="restapi1" /></p>
 
-<p>이렇게 로그가 정상적으로 찍힌다면 문제없이 구동된 것이고, 콘솔로도 확인이 가능하다. 
+<p>이렇게 로그가 정상적으로 찍힌다면 문제없이 구동된 것이고, 콘솔로도 확인이 가능하다.
 내가 겪은 문제로는 Spring Boot 의 Auto Configuration이 제대로 동작하지 않아서 No Bean for datasouce 에러가 뜨긴 했는데, 새로고침과 재로딩을 통해 문제를 해결했다.</p>
 
 <p>이제 MyBatis를 추가해보자.</p>
@@ -372,6 +378,7 @@ Gradle 7.4.1 (Project Initialize &gt; VS Code Spring Extension &gt; Create a Gra
 <p>build.gradle에는 아까 추가를 했으니, application.yml에 아래의 설정을 추가한다.</p>
 
 <p>application.yml</p>
+
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">mybatis</span><span class="pi">:</span>
   <span class="c1"># mapper파일 위치 설정</span>
   <span class="na">mapper-locations</span><span class="pi">:</span> <span class="s">mybatis/**/*.xml</span>
@@ -389,25 +396,28 @@ Gradle 7.4.1 (Project Initialize &gt; VS Code Spring Extension &gt; Create a Gra
 <p>각 폴더에 맞게 작성한 모습</p>
 
 <h2 id="3-boot-running-시-h2-database에-샘플-데이터-추가하기">3. Boot Running 시, h2 database에 샘플 데이터 추가하기.</h2>
+
 <p>기본적으로 h2 database를 사용하게 되면, schema와 데이터를 어플리케이션 구동 시, 자동으로 찾아서 실행해준다.
 따라서, 해당 sql 파일을 작성하여 적절하게 놔두면 어플리케이션 구동 시, 알아서 읽어서 실행을 시켜준다.</p>
 
 <p>경로는 resouces 폴더 아래이며, 아래와 같이 작성했다.</p>
 
 <p>schema.sql</p>
+
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">members</span>
 <span class="p">(</span>
     <span class="n">user_id</span>         <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>     <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
     <span class="n">user_name</span>       <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>     <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
-    <span class="n">user_email</span>      <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>     <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>    
-    <span class="n">user_age</span>        <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>     <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>    
-    <span class="n">user_address</span>    <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>     <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>    
+    <span class="n">user_email</span>      <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>     <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">user_age</span>        <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>     <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">user_address</span>    <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>     <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
     <span class="n">user_enter_date</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>     <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
     <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
 <span class="p">);</span>
 </code></pre></div></div>
 
 <p>data.sql</p>
+
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user1'</span><span class="p">,</span><span class="s1">'유저1'</span><span class="p">,</span><span class="s1">'user1@user.net'</span><span class="p">,</span><span class="s1">'1'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 1길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
 <span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user2'</span><span class="p">,</span><span class="s1">'유저2'</span><span class="p">,</span><span class="s1">'user2@user.net'</span><span class="p">,</span><span class="s1">'2'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 2길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
 <span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user3'</span><span class="p">,</span><span class="s1">'유저3'</span><span class="p">,</span><span class="s1">'user3@user.net'</span><span class="p">,</span><span class="s1">'3'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 3길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
@@ -627,7 +637,7 @@ Gradle 7.4.1 (Project Initialize &gt; VS Code Spring Extension &gt; Create a Gra
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

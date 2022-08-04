@@ -83,8 +83,8 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
 
 
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+<link rel="shortcut icon"    href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="manifest" href="/assets/site.webmanifest">
 
@@ -113,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-04T11:41:29+09:00',
+    INDEX_KEY: 'index--2022-08-04T13:43:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -259,39 +259,44 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p>SpringBoot 2.7.2 , Java11 사용</p>
 
 <h2 id="1-h2-database-사용-설정">1. H2 Database 사용 설정</h2>
+
 <ul>
-  <li>build.gradle
-    <div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">dependencies</span> <span class="o">{</span>
-  <span class="o">...</span>
-  <span class="c1">// https://mvnrepository.com/artifact/com.h2database/h2</span>
-  <span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'com.h2database'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'h2'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'2.1.214'</span>
-  <span class="c1">// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jdbc</span>
-  <span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.springframework.boot'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'spring-boot-starter-data-jdbc'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'2.7.1'</span>
-  <span class="o">...</span>
-<span class="o">}</span>
-</code></pre></div>    </div>
-  </li>
-  <li>application.yml
-    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">spring</span><span class="pi">:</span>
-<span class="na">application</span><span class="pi">:</span>
-  <span class="na">name</span><span class="pi">:</span> <span class="s">sample</span>
-<span class="na">datasource</span><span class="pi">:</span>
-  <span class="na">hikari</span><span class="pi">:</span>
-    <span class="c1"># 메모리 사용하여 구동</span>
-    <span class="na">jdbc-url</span><span class="pi">:</span> <span class="s">jdbc:h2:mem:h2-test</span>
-    <span class="na">driver-class-name</span><span class="pi">:</span> <span class="s">org.h2.Driver</span>
-    <span class="na">username</span><span class="pi">:</span> <span class="s">sa</span>
-    <span class="na">password</span><span class="pi">:</span>
-    <span class="na">maximum-pool-size</span><span class="pi">:</span> <span class="m">10</span>
-<span class="na">h2</span><span class="pi">:</span>
-  <span class="na">console</span><span class="pi">:</span> <span class="c1"># h2 콘솔 사용 옵션</span>
-    <span class="na">enable</span><span class="pi">:</span> <span class="no">true</span>
-    <span class="na">path</span><span class="pi">:</span> <span class="s">/h2-console</span>
-</code></pre></div>    </div>
-  </li>
+  <li>build.gradle</li>
 </ul>
 
+<div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">dependencies</span> <span class="o">{</span>
+	<span class="o">...</span>
+	<span class="c1">// https://mvnrepository.com/artifact/com.h2database/h2</span>
+	<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'com.h2database'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'h2'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'2.1.214'</span>
+	<span class="c1">// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jdbc</span>
+	<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.springframework.boot'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'spring-boot-starter-data-jdbc'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'2.7.1'</span>
+    <span class="o">...</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>application.yml</li>
+</ul>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">spring</span><span class="pi">:</span>
+  <span class="na">application</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">sample</span>
+  <span class="na">datasource</span><span class="pi">:</span>
+    <span class="na">hikari</span><span class="pi">:</span>
+      <span class="c1"># 메모리 사용하여 구동</span>
+      <span class="na">jdbc-url</span><span class="pi">:</span> <span class="s">jdbc:h2:mem:h2-test</span>
+      <span class="na">driver-class-name</span><span class="pi">:</span> <span class="s">org.h2.Driver</span>
+      <span class="na">username</span><span class="pi">:</span> <span class="s">sa</span>
+      <span class="na">password</span><span class="pi">:</span>
+      <span class="na">maximum-pool-size</span><span class="pi">:</span> <span class="m">10</span>
+  <span class="na">h2</span><span class="pi">:</span>
+    <span class="na">console</span><span class="pi">:</span> <span class="c1"># h2 콘솔 사용 옵션</span>
+      <span class="na">enable</span><span class="pi">:</span> <span class="no">true</span>
+      <span class="na">path</span><span class="pi">:</span> <span class="s">/h2-console</span>
+</code></pre></div></div>
+
 <h2 id="2-csv-파일-경로">2. CSV 파일 경로</h2>
+
 <p><img src="/assets/img/Spring/h2csv1.png" alt="h2csv1" /></p>
 
 <p>csv 파일 위치 시킬 곳</p>
@@ -305,6 +310,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <p><img src="/assets/img/Spring/h2csv2.png" alt="h2csv2" /></p>
 
 <h2 id="3-schemasql-작성">3. Schema.sql 작성</h2>
+
 <p>예시) 데이터베이스 테이블 생성 하면서 데이터 밀어넣음.</p>
 
 <ul>
@@ -313,10 +319,11 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
   </li>
   <li>
     <p>Schema.sql</p>
-    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">bank_user</span> <span class="k">AS</span> <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">CSVREAD</span><span class="p">(</span><span class="s1">'classpath:bank_user.csv'</span><span class="p">);</span>
-</code></pre></div>    </div>
   </li>
 </ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">bank_user</span> <span class="k">AS</span> <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">CSVREAD</span><span class="p">(</span><span class="s1">'classpath:bank_user.csv'</span><span class="p">);</span>
+</code></pre></div></div>
 
 <p>클래스패스(classpath) 를 사용하여 지정된 위치에서 파일을 찾아올 수 있게끔 구성.</p>
 
@@ -515,7 +522,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.png)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">
