@@ -1,20 +1,17 @@
 
 
-1. bundle exec jekyll serve
+bundle exec jekyll serve
 
-2. crtl + c > jekyll 종료
+crtl + c > jekyll 종료
 
-3. git add .
+git add .
 
-4. git commit -m 'message'
+git commit -m 'message'
 
-5. bash publish.sh
-[
-    git checkout source
-    git branch -D master
-    git checkout -b master
-    git filter-branch --subdirectory-filter _site/ -f
-    git push --all
-    git checkout source
-]
-
+5. # bash publish.sh
+git checkout source
+git branch -D master
+git checkout -b master
+git filter-branch --subdirectory-filter _site/ -f
+git push --all
+git checkout source
