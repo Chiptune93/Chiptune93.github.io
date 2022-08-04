@@ -54,33 +54,33 @@ author:
 menu:
   # tisory > error,java,js,css,jquery,jsp,spring,db,server,aws,docker,network,react,vuejs,python,ide,etc,project,carrer
   - title:             🚀 Java
-    url:               /Java/
+    url:               /java/
   - title:             🔮 Spring
-    url:               /Spring/
+    url:               /spring/
   - title:             📋 Database
-    url:               /Database/
+    url:               /database/
   - title:             💻 Server
-    url:               /Server/
+    url:               /server/
   - title:             🎆 Frontend
-    url:               /Frontend/
+    url:               /frontend/
   - title:             🎃 AWS
-    url:               /AWS/
+    url:               /aws/
   - title:             🔌 Docker
-    url:               /Docker/
+    url:               /docker/
   - title:             📧 Network
-    url:               /Network/
+    url:               /network/
   - title:             ✨ Python
-    url:               /Python/
+    url:               /python/
   - title:             💎 IDE
-    url:               /IDE/
+    url:               /ide/
   - title:             🔥 Error
-    url:               /Error/
+    url:               /error/
   - title:             👑 Etc
-    url:               /Etc/
+    url:               /etc/
   - title:             🧭 Project
-    url:               /Project/
+    url:               /project/
   - title:             💯 Carrer
-    url:               /Carrer/
+    url:               /carrer/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
