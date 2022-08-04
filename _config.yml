@@ -39,6 +39,9 @@ keywords:              [tech,developer,java,spring,docker,mysql,oracle,error]
 # It also used by the `jekyll-seo-tag` plugin.
 logo:                  /assets/img/logo.png
 
+# future posts shows Y/N
+futrue: true 
+
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
