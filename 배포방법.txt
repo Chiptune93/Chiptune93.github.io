@@ -6,12 +6,7 @@ crtl + c > jekyll 종료
 
 git add .
 
-git commit -m 'message'
+git commit -am "add new posts"
 
 5. # bash publish.sh
-git checkout source
-git branch -D master
-git checkout -b master
-git filter-branch --subdirectory-filter _site/ -f
-git push --all
-git checkout source
+git checkout source && git branch -D master && git checkout -b master && git filter-branch --subdirectory-filter _site/ -f && git push --all && git checkout source
