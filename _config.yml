@@ -25,14 +25,13 @@ title:                 Chiptune93
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
+  Java Developer's Tech Blog & Exp Storage.
 
 # A shorter description for the sidebar.
 tagline:               Per Ardua Ad Astra. Lucete Stellae.
 
 # A list of keywords for your blog
-keywords:              [tech,developer,java,spring,docker,mysql,oracle,error]
+keywords:              [tech,developer,java,spring,docker,mysql,oracle,error,linux,server,backend]
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
