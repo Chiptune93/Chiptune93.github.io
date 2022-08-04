@@ -1,0 +1,11 @@
+
+
+1. bundle exec jekyll serve
+
+2. crtl + c > jekyll 종료
+
+3. git add .
+
+4. git commit -m 'message'
+
+5. bash publish.sh
