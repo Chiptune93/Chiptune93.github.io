@@ -363,7 +363,8 @@ plugins:
 # ---------------------------------------------------------------------------------------
 
 # Where you proof that you own this site (used by jekyll-seo-tag)
-# google_site_verification: <verification-id>
+# <meta name="google-site-verification" content="h-Kcf1JEo-TX6AcTLtmYiZbGGjnTnIfbgrEukp8n8r0" />
+google_site_verification: h-Kcf1JEo-TX6AcTLtmYiZbGGjnTnIfbgrEukp8n8r0
 # -- or --
 # webmaster_verifications:
 #   google:              <verification-id>
