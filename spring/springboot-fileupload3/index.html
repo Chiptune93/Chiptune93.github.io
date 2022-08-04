@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v9.1.6 <https://hydejack.com/>
+-->
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+
+  <meta name="robots" content="noindex">
+
+
+
+  
+    
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Spring Boot - 파일 업로드 만들기 -3- | Chiptune93</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Spring Boot - 파일 업로드 만들기 -3-" />
+<meta name="author" content="Donkyu Lim" />
+<meta property="og:locale" content="en_us,ko_KR" />
+<meta name="description" content="[Spring Boot] 파일 업로드 만들기 -3-" />
+<meta property="og:description" content="[Spring Boot] 파일 업로드 만들기 -3-" />
+<link rel="canonical" href="http://localhost:4000/spring/springboot-fileupload3/" />
+<meta property="og:url" content="http://localhost:4000/spring/springboot-fileupload3/" />
+<meta property="og:site_name" content="Chiptune93" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-03-27T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Spring Boot - 파일 업로드 만들기 -3-" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Donkyu Lim"},"dateModified":"2022-03-27T00:00:00+09:00","datePublished":"2022-03-27T00:00:00+09:00","description":"[Spring Boot] 파일 업로드 만들기 -3-","headline":"Spring Boot - 파일 업로드 만들기 -3-","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/spring/springboot-fileupload3/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Donkyu Lim"},"url":"http://localhost:4000/spring/springboot-fileupload3/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+    <meta name="keywords" content="tech,developer,java,spring,docker,mysql,oracle,error">
+  
+
+
+
+  <meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Chiptune93">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="application-name" content="Chiptune93">
+
+<meta name="generator" content="Hydejack v9.1.6" />
+
+
+<link rel="alternate" href="http://localhost:4000/spring/springboot-fileupload3/" hreflang="en-us,ko-kr">
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
+
+
+<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+
+<link rel="manifest" href="/assets/site.webmanifest">
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+
+
+<link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
+
+
+
+
+
+
+<script>!function(r,c){"use strict";function a(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}r.loadJS=function(e,t){var n=c.createElement("script"),e=(n.src=e,t&&a(n,"load",t,{once:!0}),c.scripts[0]);return e.parentNode.insertBefore(n,e),n},r._loaded=!1,r.loadJSDeferred=function(e,t){var n=c.createElement("script");function o(){r._loaded=!0,t&&a(n,"load",t,{once:!0});var e=c.scripts[0];e.parentNode.insertBefore(n,e)}return n.src=e,r._loaded?o():a(r,"load",o,{once:!0}),n},r.setRel=r.setRelStylesheet=function(e){a(c.getElementById(e),"load",function(){this.rel="stylesheet"},{once:!0})}}(window,document);
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+!function(w) {
+  w._baseURL = '/';
+  w._publicPath = '/assets/js/';
+  w._noPushState = false;
+  w._noDrawer = false;
+  w._noNavbar = false;
+  w._noToc = false;
+  w._noSearch = false;
+  w._search = {
+    DATA_URL: '/assets/sitedata.json?no-cache',
+    STORAGE_KEY: 'mini-search/',
+    INDEX_KEY: 'index--2022-08-04T09:53:21+09:00',
+  };
+  w._clapButton = true;
+}(window);</script>
+
+
+<script async src="/assets/bower_components/MathJax/es5/tex-mml-chtml.js" id="_MathJax"></script>
+
+
+<!--[if gt IE 8]><!---->
+
+  
+
+
+
+
+<link rel="stylesheet" href="/assets/css/hydejack-9.1.6.css" id="_stylePreload">
+<link rel="stylesheet" href="/assets/icomoon/style.css" id="_iconsPreload">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+KR:wght@200%7CNoto+Sans:400,400i,700,700i&display=swap" id="_fontsPreload">
+
+
+
+  <style id="_pageStyle">
+
+html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);--accent-color-highlight: rgba(79,177,186,0.1);--accent-color-darkened: #409ba3;--theme-color: rgb(25,55,71)}
+
+</style>
+
+
+<!--<![endif]-->
+
+
+
+
+</head>
+
+<body class="no-break-layout">
+  
+
+
+<hy-push-state
+  id="_pushState"
+  replace-selector="#_main"
+  link-selector="a[href]:not([href^='/assets/']):not(.external):not(.no-push-state)"
+  script-selector="script"
+  duration="500"
+  hashchange
+>
+  
+  
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <div class="nav-btn-bar">
+      <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <div class="nav-span"></div>
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+
+  <main
+  id="_main"
+  class="content layout-post"
+  role="main"
+>
+  <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+    <li><a href="/">home</a></li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/spring/">spring</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>springboot-fileupload3</span>
+        
+      </li>
+    
+  
+</ul></nav>
+  
+
+
+
+
+
+
+
+
+
+
+<article id="post-spring-springboot-fileupload3" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      
+        Spring Boot - 파일 업로드 만들기 -3-
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2022-03-27T00:00:00+09:00">27 Mar 2022</time> in <a href="/spring/" class="flip-title">Spring</a> on <span>Fileupload</span>, <span>Springboot</span>, <span>Springboot fileupload</span>
+      </span>
+      
+    </div>
+
+    
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      [Spring Boot] 파일 업로드 만들기 -3-
+
+    </p>
+  
+
+
+  </header>
+
+  
+    
+<p>지난번에 이어서 파일 업로드 함수에 기능을 추가 하였다.</p>
+
+<ol>
+  <li>
+    <p>파일 업로드 함수의 공통화</p>
+  </li>
+  <li>
+    <p>파일 예외처리 (사이즈,확장자)</p>
+  </li>
+  <li>
+    <p>파일 이름 암호화</p>
+  </li>
+  <li>
+    <p>파일 저장 위치를 타입에 따라 변경 및 날짜별로 폴더 구분하기</p>
+  </li>
+</ol>
+
+<ul>
+  <li>FIleUtil.java
+```java
+package com.file.example.util;</li>
+</ul>
+
+<p>import java.io.File;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
+import java.util.Base64;
+import java.util.HashMap;</p>
+
+<p>import com.file.example.repository.FileUploadRepository;</p>
+
+<p>import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;</p>
+
+<p>/**</p>
+<ul>
+  <li>
+    <p>파일 유틸 클래스
+ */
+@Component
+public class FileUtil {
+ // 서버 업로드 경로
+ @Value(“${spring.servlet.multipart.location}”)
+ private String uploadPath;</p>
+
+    <p>// 최대 파일 크기
+ private long MAX_SIZE = 52428800;</p>
+
+    <p>// 파일 정보 저장 시, 레파지토리
+ @Autowired
+ FileUploadRepository rpt;</p>
+
+    <p>/**</p>
+    <ul>
+      <li>업로드 경로 구하기</li>
+      <li></li>
+      <li>@param type</li>
+      <li>@return
+  */
+ public Path getUploadPath(String type) {
+ // 파일은 기본적으로 날짜 기준 (yyyymmdd) 으로 폴더를 구분
+ LocalDate ld = LocalDate.now();
+ String date = ld.format(DateTimeFormatter.ofPattern(“yyyyMMdd”));
+ String typeFolder = “”;
+ // 타입에 따라 날짜 내부에 폴더 구분
+ if (type.equals(“image”)) {
+     typeFolder = “image”;
+ } else if (type.equals(“document”)) {
+     typeFolder = “document”;
+ } else {
+     typeFolder = “”;
+ }
+ // 업로드 경로를 조합
+ uploadPath += File.separator + date + File.separator + typeFolder;
+ // 조합된 경로 체크
+ Path dir = Paths.get(uploadPath);
+ // 해당 경로 존재하는지 체크
+ if (!Files.exists(dir)) {
+     try {
+         // 경로가 없다면 생성
+         Files.createDirectories(dir);
+     } catch (Exception e) {
+         e.printStackTrace();
+         return null;
+     }
+ }
+ return dir;
+ }</li>
+    </ul>
+
+    <p>/**</p>
+    <ul>
+      <li>업로드 하기</li>
+      <li></li>
+      <li>@param file</li>
+      <li>
+        <p>@param path
+  */
+ public HashMap&lt;String, String&gt; upload(MultipartFile file, Path path) {
+ HashMap&lt;String, String&gt; result = new HashMap&lt;String, String&gt;();
+ // 파일 정보
+ String fileName = file.getOriginalFilename();
+ String fileSize = Long.toString(file.getSize());
+ String fileExt = fileName.substring(fileName.lastIndexOf(“.”) + 1);
+ String fileType = file.getContentType();
+ String filePath = “”;
+ // 결과 정보
+ String status = “”;
+ String message = “”;
+ // 예외처리 하기</p>
+
+        <p>// 1. 파일 사이즈
+ if (file.getSize() &gt; MAX_SIZE) {
+     status = “fail”;
+     message = “file over max upload size”;
+     result.put(“status”, status);
+     result.put(“message”, message);
+     return result;
+ }</p>
+
+        <p>// 2. 파일 확장자
+ // 화이트 리스트 방식으로 파일 확장자 체크
+ if (!Arrays.asList(“jpg”, “png”, “gif”, “jpeg”, “bmp”, “xlsx”, “ppt”, “pptx”, “txt”, “hwp”)
+         .contains(fileType.toLowerCase())) {
+     status = “fail”;
+     message = “file type is not allowed”;
+     result.put(“status”, status);
+     result.put(“message”, message);
+     return result;
+ }</p>
+
+        <p>// 3. 저장 파일 이름 랜덤화
+ String tempName = fileName.substring(0, fileName.lastIndexOf(“.”));
+ String encFileName = Base64.getEncoder().encodeToString(tempName.getBytes());
+ // 암호화된 경로로 패스 설정
+ filePath = path.toString() + File.separator + encFileName + “.” + fileExt;</p>
+
+        <p>// 4. 파일정보 맵에 담기.
+ HashMap&lt;String, String&gt; fileInfo = new HashMap&lt;String, String&gt;();</p>
+
+        <p>fileInfo.put(“fileName”, fileName);
+ fileInfo.put(“encFileName”, encFileName);
+ fileInfo.put(“fileSize”, fileSize);
+ fileInfo.put(“fileExt”, fileExt);
+ fileInfo.put(“fileType”, fileType);
+ fileInfo.put(“filePath”, filePath);</p>
+
+        <p>try {
+     InputStream is = file.getInputStream();
+     Files.copy(is, path.resolve(encFileName + “.” + fileExt), StandardCopyOption.REPLACE_EXISTING);</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> // 파일 저장에 성공하면 DB에 저장하기
+ int seq = rpt.insertFile(fileInfo);
+
+ status = "success";
+ message = "upload complete";  } catch (Exception e) {
+ e.printStackTrace();
+ status = "fail";
+ message = "upload fail";  }  result.put("status", status);  result.put("message", message);  return result;  } } ```
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>FileUploadService.java</p>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="nf">save3</span><span class="o">(</span><span class="nc">MultipartRequest</span> <span class="n">req</span><span class="o">)</span> <span class="o">{</span>
+      <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;();</span>
+      <span class="nc">MultipartFile</span> <span class="n">file</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="na">getFile</span><span class="o">(</span><span class="s">"singleFile3"</span><span class="o">);</span>
+      <span class="nc">Path</span> <span class="n">uploadPath</span> <span class="o">=</span> <span class="n">fu</span><span class="o">.</span><span class="na">getUploadPath</span><span class="o">(</span><span class="s">"image"</span><span class="o">);</span>
+      <span class="n">result</span> <span class="o">=</span> <span class="n">fu</span><span class="o">.</span><span class="na">upload</span><span class="o">(</span><span class="n">file</span><span class="o">,</span> <span class="n">uploadPath</span><span class="o">);</span>
+      <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+  <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>위 기능들을 추가하면서 파일 업로드가 점점 그럴듯해보이는데, 아직 할 일은 많다.</p>
+
+<p>우선, 단일 업로드 상황에서 이렇게까지 구현 하였으니 다음에는 아래의 내용을 진행할 생각이다.</p>
+
+<ol>
+  <li>
+    <p>다중 업로드 구현.</p>
+  </li>
+  <li>
+    <p>파일 업로드 라이브러리 (Vuejs) 사용.</p>
+  </li>
+  <li>
+    <p>파일 다운로드 / 삭제 처리</p>
+  </li>
+</ol>
+
+<p>음.. 2번은 좀 걸릴 것같아 1,3번을 다 처리한 후에 해야 할 것 같다.</p>
+
+<p>나중에 시간이 된다면 운영환경 처럼, 리눅스 서버에 올려서 테스트를 해보아야겠다.</p>
+
+<p>운영 환경에서는 경로가 윈도우나 맥처럼 나오지 않기 때문이기도 하고, 현재 개인 프로젝트로 진행한 Document 사이트에서 현재는 에디터 내에 일반 문자열데이터로 이미지를 저장하고 있어 공간 차지가 심하기 때문에 그쪽에다가 파일 업로드를 한 번 가져가서 적용해볼 생각이다.</p>
+
+<p>위 프로젝트는 아래에서 받아볼 수 있습니다.</p>
+
+<p>https://github.com/Chiptune93/Library/tree/main/Spring/FileUpload/SpringBoot/example</p>
+
+  
+</article>
+
+
+
+  <hr class="dingbat related mb6" />
+
+
+
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="/assets/img/logo.png"
+    srcset="/assets/img/logo.png 1x,/assets/img/logo.png 2x"
+    
+  
+  alt="Donkyu Lim"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  <p>2018년 IPP 일학습병행제로 개발을 시작해, 현재까지 웹 백엔드 개발자로 일하고 있습니다.
+<br /> 다른 개발자를 위한 내부 서비스 개발 및 문서화 공유에 신경을 많이 쓰는 편입니다.
+<br /> 새로운 일을 찾아 나서는 것을 좋아합니다.</p>
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/Chiptune93" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:eoen012@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+  
+
+  
+    
+
+
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Related Posts</h2>  <ul class="related-posts">                  <li class="h4">  <a href="/server/rclocal/" class="flip-title"><span>CentOS7 - rc.local 활성화 하기</span></a>  <time class="faded fine" datetime="2022-08-03T00:00:00+09:00">03 Aug 2022</time></li>                        <li class="h4">  <a href="/spring/h2-database-csv/" class="flip-title"><span>SpringBoot - H2 Database CSV 데이터 Import 하기</span></a>  <time class="faded fine" datetime="2022-07-29T00:00:00+09:00">29 Jul 2022</time></li>                        <li class="h4">  <a href="/spring/swagger-ui-3.0/" class="flip-title"><span>SpringBoot - Swagger ui 3.0 연동하기</span></a>  <time class="faded fine" datetime="2022-07-18T00:00:00+09:00">18 Jul 2022</time></li>            </ul></aside>
+
+  
+
+  
+  
+
+  
+    
+
+  
+
+
+  
+<footer class="content" role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2021. All rights reserved.
+</small></p>
+  
+  
+    <nav class="legal"><small>
+    
+      
+      <a class="heading flip-title" href="/LICENSE/">LICENSE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/NOTICE/">NOTICE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/CHANGELOG/">CHANGELOG</a>
+      
+    
+    </small></nav>
+  
+    <p><small>Powered by <a class="external" href="https://hydejack.com/">Hydejack</a> v<span id="_version">9.1.6</span></small></p>
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+  <hy-drawer
+  id="_drawer"
+  class=""
+  side="left"
+  threshold="10"
+  noscroll
+  
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+
+
+
+
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+
+    <div class="sidebar-sticky">
+  <div class="sidebar-about">
+    
+      <a class="no-hover" href="/" tabindex="-1">
+        <img src="/assets/img/logo.png" class="avatar" alt="Chiptune93" width="120" height="120" loading="lazy" />
+      </a>
+    
+    <a class="sidebar-title" href="/"><h2 class="h1">Chiptune93</h2></a>
+    
+    
+      <p class="">
+        Per Ardua Ad Astra. Lucete Stellae.
+
+      </p>
+    
+  </div>
+
+  <nav class="sidebar-nav heading" role="navigation">
+    <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a
+          id="_drawer--opened"
+          href="/Java/"
+          class="sidebar-nav-item "
+          
+        >
+          🚀 Java
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Spring/"
+          class="sidebar-nav-item "
+          
+        >
+          🔮 Spring
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Database/"
+          class="sidebar-nav-item "
+          
+        >
+          📋 Database
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Server/"
+          class="sidebar-nav-item "
+          
+        >
+          💻 Server
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Frontend/"
+          class="sidebar-nav-item "
+          
+        >
+          🎆 Frontend
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/AWS/"
+          class="sidebar-nav-item "
+          
+        >
+          🎃 AWS
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Docker/"
+          class="sidebar-nav-item "
+          
+        >
+          🔌 Docker
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Network/"
+          class="sidebar-nav-item "
+          
+        >
+          📧 Network
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Python/"
+          class="sidebar-nav-item "
+          
+        >
+          ✨ Python
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/IDE/"
+          class="sidebar-nav-item "
+          
+        >
+          💎 IDE
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Error/"
+          class="sidebar-nav-item "
+          
+        >
+          🔥 Error
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Etc/"
+          class="sidebar-nav-item "
+          
+        >
+          👑 Etc
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Project/"
+          class="sidebar-nav-item "
+          
+        >
+          🧭 Project
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Carrer/"
+          class="sidebar-nav-item "
+          
+        >
+          💯 Carrer
+        </a>
+      </li>
+    
+  
+</ul>
+
+  </nav>
+
+  
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/Chiptune93" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:eoen012@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+</hy-push-state>
+
+
+  <!--[if gt IE 10]><!---->
+  <script nomodule>!function(){var t,n=document.createElement("script");!("noModule"in n)&&"onbeforeload"in n&&(t=!1,document.addEventListener("beforeload",function(e){if(e.target===n)t=!0;else if(!e.target.hasAttribute("nomodule")||!t)return;e.preventDefault()},!0),n.type="module",n.src=".",document.head.appendChild(n),n.remove())}();
+</script>
+  <script src="/assets/js/hydejack-9.1.6.js" type="module"></script>
+  <script src="/assets/js/LEGACY-hydejack-9.1.6.js" nomodule defer></script>
+  
+
+  
+
+<!--<![endif]-->
+  <!-- <script>
+  document.querySelector('hy-push-state').setAttribute('prefetch', '');
+
+  document.querySelectorAll('.sidebar a[href^="/"]').forEach(function (el) { 
+    el.addEventListener('click', function (e) {
+      if (el.pathname === window.location.pathname) {
+        e.preventDefault();
+        e.stopPropagation();
+        document.querySelector('hy-drawer').close();
+      }
+    });
+  });
+</script> -->
+
+<!--
+Code for integrating CloudFlare's email protection with Hydejack's single page app loading.
+-->
+<script>
+  document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) {
+    function e(e){
+      (console.error?console.error:console.log).call(console,e)
+    }
+
+    function t(e){
+      return l.innerHTML='<a href="'+e.replace(/"/g,"&quot;")+'"></a>',l.childNodes[0].getAttribute("href")
+    }
+
+    function r(e,t){
+      var r=e.substr(t,2);return parseInt(r,16)
+    }
+
+    function n(e,n){
+      for(var o="",c=r(e,n),a=n+2;a<e.length;a+=2){
+        var l=r(e,a)^c;
+        o+=String.fromCharCode(l)
+      }
+      return t(o)
+    }
+
+    var o="/cdn-cgi/l/email-protection#",
+        c=".__cf_email__",
+        a="data-cfemail",
+        l=document.createElement("div");
+
+    !function(){
+      for(var t=document.getElementsByTagName("a"),r=0;r<t.length;r++)
+        try{
+          var c=t[r],a=c.href.indexOf(o);
+          a>-1&&(c.href="mailto:"+n(c.href,a+o.length))
+        }catch(t){
+          e(t)
+        }
+    }(),
+    function(){
+      for(var t=document.querySelectorAll(c),r=0;r<t.length;r++)
+        try{
+          var o=t[r],l=n(o.getAttribute(a),0),i=document.createTextNode(l);
+          o.parentNode.replaceChild(i,o)
+        }catch(t){
+          e(t)
+        }
+    }()
+  });
+</script>
+
+
+
+
+
+<div hidden>
+  
+  <h2 class="sr-only">Templates (for web app):</h2>
+
+  <template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+</ul></nav>
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+  <template id="_loading-template">
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+  <template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+  <template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="content-hash"></span>
+  </a>
+</template>
+
+</div>
+
+
+</body>
+</html>

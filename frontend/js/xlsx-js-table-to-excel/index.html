@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v9.1.6 <https://hydejack.com/>
+-->
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+
+  <meta name="robots" content="noindex">
+
+
+
+  
+    
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Javascript - xlsx-js-style 를 이용한 table 요소로 엑셀 파일 다운로드 시키기 | Chiptune93</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Javascript - xlsx-js-style 를 이용한 table 요소로 엑셀 파일 다운로드 시키기" />
+<meta name="author" content="Donkyu Lim" />
+<meta property="og:locale" content="en_us,ko_KR" />
+<meta name="description" content="xlsx-js-style 를 이용한 table 요소로 엑셀 파일 다운로드 시키기" />
+<meta property="og:description" content="xlsx-js-style 를 이용한 table 요소로 엑셀 파일 다운로드 시키기" />
+<link rel="canonical" href="http://localhost:4000/frontend/js/xlsx-js-table-to-excel/" />
+<meta property="og:url" content="http://localhost:4000/frontend/js/xlsx-js-table-to-excel/" />
+<meta property="og:site_name" content="Chiptune93" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-05T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Javascript - xlsx-js-style 를 이용한 table 요소로 엑셀 파일 다운로드 시키기" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Donkyu Lim"},"dateModified":"2021-11-05T00:00:00+09:00","datePublished":"2021-11-05T00:00:00+09:00","description":"xlsx-js-style 를 이용한 table 요소로 엑셀 파일 다운로드 시키기","headline":"Javascript - xlsx-js-style 를 이용한 table 요소로 엑셀 파일 다운로드 시키기","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/frontend/js/xlsx-js-table-to-excel/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Donkyu Lim"},"url":"http://localhost:4000/frontend/js/xlsx-js-table-to-excel/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+    <meta name="keywords" content="tech,developer,java,spring,docker,mysql,oracle,error">
+  
+
+
+
+  <meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Chiptune93">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="application-name" content="Chiptune93">
+
+<meta name="generator" content="Hydejack v9.1.6" />
+
+
+<link rel="alternate" href="http://localhost:4000/frontend/js/xlsx-js-table-to-excel/" hreflang="en-us,ko-kr">
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
+
+
+<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+
+<link rel="manifest" href="/assets/site.webmanifest">
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+
+
+<link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
+
+
+
+
+
+
+<script>!function(r,c){"use strict";function a(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}r.loadJS=function(e,t){var n=c.createElement("script"),e=(n.src=e,t&&a(n,"load",t,{once:!0}),c.scripts[0]);return e.parentNode.insertBefore(n,e),n},r._loaded=!1,r.loadJSDeferred=function(e,t){var n=c.createElement("script");function o(){r._loaded=!0,t&&a(n,"load",t,{once:!0});var e=c.scripts[0];e.parentNode.insertBefore(n,e)}return n.src=e,r._loaded?o():a(r,"load",o,{once:!0}),n},r.setRel=r.setRelStylesheet=function(e){a(c.getElementById(e),"load",function(){this.rel="stylesheet"},{once:!0})}}(window,document);
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+!function(w) {
+  w._baseURL = '/';
+  w._publicPath = '/assets/js/';
+  w._noPushState = false;
+  w._noDrawer = false;
+  w._noNavbar = false;
+  w._noToc = false;
+  w._noSearch = false;
+  w._search = {
+    DATA_URL: '/assets/sitedata.json?no-cache',
+    STORAGE_KEY: 'mini-search/',
+    INDEX_KEY: 'index--2022-08-04T09:53:21+09:00',
+  };
+  w._clapButton = true;
+}(window);</script>
+
+
+<script async src="/assets/bower_components/MathJax/es5/tex-mml-chtml.js" id="_MathJax"></script>
+
+
+<!--[if gt IE 8]><!---->
+
+  
+
+
+
+
+<link rel="stylesheet" href="/assets/css/hydejack-9.1.6.css" id="_stylePreload">
+<link rel="stylesheet" href="/assets/icomoon/style.css" id="_iconsPreload">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+KR:wght@200%7CNoto+Sans:400,400i,700,700i&display=swap" id="_fontsPreload">
+
+
+
+  <style id="_pageStyle">
+
+html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);--accent-color-highlight: rgba(79,177,186,0.1);--accent-color-darkened: #409ba3;--theme-color: rgb(25,55,71)}
+
+</style>
+
+
+<!--<![endif]-->
+
+
+
+
+</head>
+
+<body class="no-break-layout">
+  
+
+
+<hy-push-state
+  id="_pushState"
+  replace-selector="#_main"
+  link-selector="a[href]:not([href^='/assets/']):not(.external):not(.no-push-state)"
+  script-selector="script"
+  duration="500"
+  hashchange
+>
+  
+  
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <div class="nav-btn-bar">
+      <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <div class="nav-span"></div>
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+
+  <main
+  id="_main"
+  class="content layout-post"
+  role="main"
+>
+  <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+    <li><a href="/">home</a></li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/frontend/">frontend</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/frontend/js/">js</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>xlsx-js-table-to-excel</span>
+        
+      </li>
+    
+  
+</ul></nav>
+  
+
+
+
+
+
+
+
+
+
+
+<article id="post-frontend-js-xlsx-js-table-to-excel" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      
+        Javascript - xlsx-js-style 를 이용한 table 요소로 엑셀 파일 다운로드 시키기
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2021-11-05T00:00:00+09:00">05 Nov 2021</time> in <a href="/frontend/" class="flip-title">Frontend</a> / <span>Js</span> on <span>Xlsx-js</span>, <span>Xlsx-js-style</span>, <span>Table to excel</span>
+      </span>
+      
+    </div>
+
+    
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      xlsx-js-style 를 이용한 table 요소로 엑셀 파일 다운로드 시키기
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <ul class="large-only" id="markdown-toc">
+  <li><a href="#1-xlsx-js-style-에서-xlsxbundlejs-파일-import" id="markdown-toc-1-xlsx-js-style-에서-xlsxbundlejs-파일-import">1. xlsx-js-style 에서 “xlsx.bundle.js” 파일 import</a></li>
+  <li><a href="#2-xlsxextendscriptjs-파일-import" id="markdown-toc-2-xlsxextendscriptjs-파일-import">2. “xlsx.extendscript.js” 파일 import</a></li>
+  <li><a href="#3-해당-페이지에-import" id="markdown-toc-3-해당-페이지에-import">3. 해당 페이지에 import</a></li>
+  <li><a href="#4-소스-작업" id="markdown-toc-4-소스-작업">4. 소스 작업</a>    <ul>
+      <li><a href="#1-가장-기본적인-테이블---엑셀-생성" id="markdown-toc-1-가장-기본적인-테이블---엑셀-생성">1. 가장 기본적인 테이블 -&gt; 엑셀 생성</a></li>
+      <li><a href="#2-테이블에-스타일-추가하기" id="markdown-toc-2-테이블에-스타일-추가하기">2. 테이블에 스타일 추가하기</a></li>
+      <li><a href="#3-이-부분에서-xlsxextendscriptjs-를-수정하게-됩니다" id="markdown-toc-3-이-부분에서-xlsxextendscriptjs-를-수정하게-됩니다">3. 이 부분에서 xlsx.extendscript.js 를 수정하게 됩니다.</a>        <ul>
+          <li><a href="#1-xlsx-변수를-기존-변수와-겹치치-않고-사용하기-위해-변수명을-변경" id="markdown-toc-1-xlsx-변수를-기존-변수와-겹치치-않고-사용하기-위해-변수명을-변경">1. XLSX 변수를 기존 변수와 겹치치 않고 사용하기 위해 변수명을 변경</a></li>
+          <li><a href="#2-parse_dom_table-함수-변경" id="markdown-toc-2-parse_dom_table-함수-변경">2. parse_dom_table 함수 변경</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>참고 : https://programmer.help/blogs/export-excel-using-js-xlsx-pure-front-end.html</p>
+
+<h2 id="1-xlsx-js-style-에서-xlsxbundlejs-파일-import">1. xlsx-js-style 에서 “xlsx.bundle.js” 파일 import</h2>
+<p>https://github.com/gitbrent/xlsx-js-style</p>
+
+<p>dist 폴더 내에서 해당 파일을 가져온다.</p>
+
+<h2 id="2-xlsxextendscriptjs-파일-import">2. “xlsx.extendscript.js” 파일 import</h2>
+<p>https://www.cdnpkg.com/xlsx/file/xlsx.extendscript.js/?id=78603</p>
+
+<p>해당 파일은 XLSX 모듈을 확장하여 사용 가능하게 해준다.</p>
+
+<h2 id="3-해당-페이지에-import">3. 해당 페이지에 import</h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"/content/02comm/js/xlsx.bundle.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"/content/02comm/js/xlsx.extendscript.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+<p>xlsx-js 를 이용하여 엑셀 파일로 만드는 방식에는 JSON / ARRAY 등 여러 방식이 있으나 여기서는 HTML 요소인 table 태그를 사용하는 방법을 공유하고자 한다.</p>
+
+<hr />
+<h2 id="4-소스-작업">4. 소스 작업</h2>
+<h3 id="1-가장-기본적인-테이블---엑셀-생성">1. 가장 기본적인 테이블 -&gt; 엑셀 생성</h3>
+<ul>
+  <li>html
+```HTML
+<a href="#" class="btn01 col04" title="엑셀 다운로드" onclick="test1();">
+  <span>엑셀 다운로드1</span>
+</a></li>
+</ul>
+<div class="table_wrap pc_view">
+	<table class="table t_list" id="test">
+		<thead>
+			<tr>
+				<th>항목1</th>
+				<th>항목2</th>
+				<th>항목3</th>
+				<th>항목4</th>
+				<th>항목5</th>
+			</tr>
+		</thead>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+		</tr>
+		<tbody>
+		</tbody>
+	</table>
+</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- js
+```js
+function test1() {
+		// workBook Create
+		var wb = XLSX.utils.book_new();
+		// workSheet Create
+		var ws = XLSX.utils.table_to_sheet( document.getElementById( 'test' ));
+		// Sheet Append With Title
+		XLSX.utils.book_append_sheet( wb ,ws ,'sheet title' );
+		// Create Excel File With File Name
+		XLSX.writeFile( wb ,( '파일명.xlsx' ) );
+	}
+</code></pre></div></div>
+<ul>
+  <li>결과</li>
+</ul>
+
+<p><img src="/assets/img/Frontend/JS/xlsx1.png" alt="xlsx-js" /></p>
+
+<hr />
+<h3 id="2-테이블에-스타일-추가하기">2. 테이블에 스타일 추가하기</h3>
+
+<p>여기서부터는 함수 내용만 변경됩니다.</p>
+
+<ul>
+  <li>js
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">test2</span><span class="p">()</span> <span class="p">{</span>
+      <span class="c1">// workBook Create</span>
+      <span class="kd">var</span> <span class="nx">wb</span> <span class="o">=</span> <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">book_new</span><span class="p">();</span>
+      <span class="c1">// workSheet Create</span>
+      <span class="kd">var</span> <span class="nx">ws</span> <span class="o">=</span> <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">table_to_sheet</span><span class="p">(</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span> <span class="dl">'</span><span class="s1">test</span><span class="dl">'</span> <span class="p">));</span>
+      <span class="c1">// for in Cells add style</span>
+      <span class="k">for</span> <span class="p">(</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">ws</span> <span class="p">)</span> <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span> <span class="k">typeof</span> <span class="p">(</span> <span class="nx">ws</span><span class="p">[</span> <span class="nx">i</span> <span class="p">]</span> <span class="p">)</span> <span class="o">!=</span> <span class="dl">"</span><span class="s2">object</span><span class="dl">"</span> <span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+          <span class="kd">let</span> <span class="nx">cell</span> <span class="o">=</span> <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">decode_cell</span><span class="p">(</span> <span class="nx">i</span> <span class="p">);</span>
+          <span class="c1">// add Style to All Cells</span>
+          <span class="nx">ws</span><span class="p">[</span> <span class="nx">i</span> <span class="p">].</span><span class="nx">s</span> <span class="o">=</span> <span class="p">{</span>
+              <span class="na">font</span> <span class="p">:</span> <span class="p">{</span>
+                  <span class="na">name</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">arial</span><span class="dl">"</span>
+              <span class="p">}</span> <span class="p">,</span>
+              <span class="na">alignment</span> <span class="p">:</span> <span class="p">{</span>
+                  <span class="na">vertical</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span> <span class="p">,</span>
+                  <span class="na">horizontal</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span> <span class="p">,</span>
+                  <span class="na">wrapText</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">1</span><span class="dl">'</span> <span class="p">,</span>
+              <span class="p">}</span> <span class="p">,</span>
+              <span class="na">border</span> <span class="p">:</span> <span class="p">{</span>
+                  <span class="na">right</span> <span class="p">:</span> <span class="p">{</span>
+                      <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
+                      <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
+                  <span class="p">}</span> <span class="p">,</span>
+                  <span class="na">left</span> <span class="p">:</span> <span class="p">{</span>
+                      <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
+                      <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
+                  <span class="p">}</span> <span class="p">,</span>
+                  <span class="na">top</span> <span class="p">:</span> <span class="p">{</span>
+                      <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
+                      <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
+                  <span class="p">}</span> <span class="p">,</span>
+                  <span class="na">bottom</span> <span class="p">:</span> <span class="p">{</span>
+                      <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
+                      <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
+                  <span class="p">}</span> <span class="p">,</span>
+              <span class="p">}</span>
+          <span class="p">};</span>
+          <span class="c1">// Cell format change</span>
+          <span class="cm">/* if ( cell.c == 0 ) { // first column
+              ws[ i ].s.numFmt = "DD/MM/YYYY HH:MM"; // for dates
+              ws[ i ].z = "DD/MM/YYYY HH:MM";
+          } else {
+              ws[ i ].s.numFmt = "00.00"; // other numbers
+          } */</span>
+
+          <span class="c1">// First row is filled gray bg</span>
+          <span class="k">if</span> <span class="p">(</span> <span class="nx">cell</span><span class="p">.</span><span class="nx">r</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+              <span class="nx">ws</span><span class="p">[</span> <span class="nx">i</span> <span class="p">].</span><span class="nx">s</span><span class="p">.</span><span class="nx">fill</span> <span class="o">=</span> <span class="p">{</span>
+                  <span class="na">patternType</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">solid</span><span class="dl">"</span> <span class="p">,</span>
+                  <span class="na">fgColor</span> <span class="p">:</span> <span class="p">{</span>
+                      <span class="na">rgb</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">b2b2b2</span><span class="dl">"</span>
+                  <span class="p">}</span> <span class="p">,</span>
+                  <span class="na">bgColor</span> <span class="p">:</span> <span class="p">{</span>
+                      <span class="na">rgb</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">b2b2b2</span><span class="dl">"</span>
+                  <span class="p">}</span>
+              <span class="p">};</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+      <span class="c1">// Sheet Append With Title</span>
+      <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">book_append_sheet</span><span class="p">(</span> <span class="nx">wb</span> <span class="p">,</span><span class="nx">ws</span> <span class="p">,</span><span class="dl">'</span><span class="s1">sheet title</span><span class="dl">'</span> <span class="p">);</span>
+      <span class="c1">// Create Excel File With File Name</span>
+      <span class="nx">XLSX</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span> <span class="nx">wb</span> <span class="p">,(</span> <span class="dl">'</span><span class="s1">파일명.xlsx</span><span class="dl">'</span> <span class="p">)</span> <span class="p">);</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>결과</li>
+</ul>
+
+<p><img src="/assets/img/Frontend/JS/xlsx2.png" alt="xlsx" /></p>
+
+<hr />
+
+<h3 id="3-이-부분에서-xlsxextendscriptjs-를-수정하게-됩니다">3. 이 부분에서 xlsx.extendscript.js 를 수정하게 됩니다.</h3>
+
+<p>테이블을 시트로 만드는 과정에서 몇가지 커스텀 과정을 진행합니다.</p>
+
+<ul>
+  <li>xlsx.extendscript.js 수정하기</li>
+</ul>
+
+<h4 id="1-xlsx-변수를-기존-변수와-겹치치-않고-사용하기-위해-변수명을-변경">1. XLSX 변수를 기존 변수와 겹치치 않고 사용하기 위해 변수명을 변경</h4>
+
+<p>해당 파일 9160 라인 근처에 “var XLSX” 로 선언되는 변수가 있습니다.</p>
+
+<p>해당 변수를 XLSX2 로 변경하고, 이후 나오는 변수들을 전부 XLSX2 로 변경합니다.</p>
+
+<p><img src="/assets/img/Frontend/JS/xlsx3.png" alt="xlsx3" /></p>
+
+<h4 id="2-parse_dom_table-함수-변경">2. parse_dom_table 함수 변경</h4>
+
+<p>해당 함수는 테이블을 가져와 파싱하는 부분인데 옵션 파라미터를 받아 처리하기 위해 수정합니다.</p>
+
+<p>해당 옵션에는 rowIndex 와 merge 구문을 추가하기 위함입니다.</p>
+
+<ul>
+  <li>변경 전</li>
+</ul>
+
+<p><img src="/assets/img/Frontend/JS/xlsx4.png" alt="xlsx4" /></p>
+
+<ul>
+  <li>변경 후</li>
+</ul>
+
+<p><img src="/assets/img/Frontend/JS/xlsx5.png" alt="xlsx5" /></p>
+
+<p>위 소스 수정 작업을 통해 커스텀화 할 수 있게 되었습니다.</p>
+
+<p>이후, 파싱하는 과정에서 XLSX2 변수를 통해 사용해주면 됩니다.</p>
+
+<ul>
+  <li>js
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">test3</span> <span class="p">()</span> <span class="p">{</span>
+      <span class="c1">// Create WorkBook</span>
+      <span class="kd">var</span> <span class="nx">wb</span> <span class="o">=</span> <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">book_new</span><span class="p">();</span>
+      <span class="c1">// Define Option</span>
+      <span class="kd">var</span> <span class="nx">opt</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="c1">// new row except table element</span>
+          <span class="na">rowIndex</span> <span class="p">:</span> <span class="mi">1</span> <span class="p">,</span>
+          <span class="c1">// merge option ( if you have to merge new row )</span>
+          <span class="na">merges</span> <span class="p">:</span> <span class="p">[</span> <span class="p">{</span>
+              <span class="c1">// start</span>
+              <span class="na">s</span> <span class="p">:</span> <span class="p">{</span>
+                  <span class="na">c</span> <span class="p">:</span> <span class="mi">0</span> <span class="p">,</span> <span class="c1">// col</span>
+                  <span class="na">r</span> <span class="p">:</span> <span class="mi">0</span>	<span class="c1">// row</span>
+              <span class="p">}</span> <span class="p">,</span>
+              <span class="c1">// end</span>
+              <span class="na">e</span> <span class="p">:</span> <span class="p">{</span>
+                  <span class="na">c</span> <span class="p">:</span> <span class="nx">$</span><span class="p">(</span> <span class="dl">"</span><span class="s2">#test</span><span class="dl">"</span> <span class="p">).</span><span class="nx">find</span><span class="p">(</span> <span class="dl">"</span><span class="s2">th</span><span class="dl">"</span> <span class="p">).</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">,</span> <span class="c1">// col ( this means : merge as table column counts )</span>
+                  <span class="na">r</span> <span class="p">:</span> <span class="mi">0</span> <span class="c1">// row</span>
+              <span class="p">}</span>
+          <span class="p">}</span> <span class="p">]</span> <span class="p">,</span>
+      <span class="p">};</span>
+      <span class="c1">// WorkSheet</span>
+      <span class="kd">var</span> <span class="nx">ws</span> <span class="o">=</span> <span class="nx">XLSX2</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">table_to_sheet</span><span class="p">(</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span> <span class="dl">'</span><span class="s1">test</span><span class="dl">'</span> <span class="p">)</span> <span class="p">,</span><span class="nx">opt</span> <span class="p">);</span>
+      <span class="c1">// new row --&gt; Title</span>
+      <span class="nx">ws</span><span class="p">[</span> <span class="dl">"</span><span class="s2">A1</span><span class="dl">"</span> <span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="na">t</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">s</span><span class="dl">"</span> <span class="p">,</span>
+          <span class="na">v</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">CUSTOM TITLE</span><span class="dl">"</span>
+      <span class="p">};</span>
+      <span class="c1">// new row --&gt; style</span>
+      <span class="nx">ws</span><span class="p">[</span> <span class="dl">"</span><span class="s2">A1</span><span class="dl">"</span> <span class="p">].</span><span class="nx">s</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="na">font</span> <span class="p">:</span> <span class="p">{</span>
+              <span class="na">name</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">arial</span><span class="dl">"</span> <span class="p">,</span>
+              <span class="na">bold</span> <span class="p">:</span> <span class="kc">true</span> <span class="p">,</span>
+          <span class="p">}</span> <span class="p">,</span>
+          <span class="na">alignment</span> <span class="p">:</span> <span class="p">{</span>
+              <span class="na">vertical</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span> <span class="p">,</span>
+              <span class="na">horizontal</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span> <span class="p">,</span>
+              <span class="na">wrapText</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">1</span><span class="dl">'</span> <span class="p">,</span> <span class="c1">// any truthy value here</span>
+          <span class="p">}</span> <span class="p">,</span>
+          <span class="na">border</span> <span class="p">:</span> <span class="p">{</span>
+              <span class="na">right</span> <span class="p">:</span> <span class="p">{</span>
+                  <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
+                  <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
+              <span class="p">}</span> <span class="p">,</span>
+              <span class="na">left</span> <span class="p">:</span> <span class="p">{</span>
+                  <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
+                  <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
+              <span class="p">}</span> <span class="p">,</span>
+              <span class="na">top</span> <span class="p">:</span> <span class="p">{</span>
+                  <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
+                  <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
+              <span class="p">}</span> <span class="p">,</span>
+          <span class="p">}</span> <span class="p">,</span>
+      <span class="p">};</span>
+      <span class="c1">// cell style</span>
+      <span class="k">for</span> <span class="p">(</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">ws</span> <span class="p">)</span> <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span> <span class="k">typeof</span> <span class="p">(</span> <span class="nx">ws</span><span class="p">[</span> <span class="nx">i</span> <span class="p">]</span> <span class="p">)</span> <span class="o">!=</span> <span class="dl">"</span><span class="s2">object</span><span class="dl">"</span> <span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+          <span class="kd">let</span> <span class="nx">cell</span> <span class="o">=</span> <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">decode_cell</span><span class="p">(</span> <span class="nx">i</span> <span class="p">);</span>
+          <span class="c1">// cell style</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cell</span><span class="p">)</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ws</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+
+          <span class="nx">ws</span><span class="p">[</span> <span class="nx">i</span> <span class="p">].</span><span class="nx">s</span> <span class="o">=</span> <span class="p">{</span>
+              <span class="na">font</span> <span class="p">:</span> <span class="p">{</span>
+                  <span class="na">name</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">arial</span><span class="dl">"</span>
+              <span class="p">}</span> <span class="p">,</span>
+              <span class="na">alignment</span> <span class="p">:</span> <span class="p">{</span>
+                  <span class="na">vertical</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span> <span class="p">,</span>
+                  <span class="na">horizontal</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span> <span class="p">,</span>
+                  <span class="na">wrapText</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">1</span><span class="dl">'</span> <span class="p">,</span>
+              <span class="p">}</span> <span class="p">,</span>
+              <span class="na">border</span> <span class="p">:</span> <span class="p">{</span>
+                  <span class="na">right</span> <span class="p">:</span> <span class="p">{</span>
+                      <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
+                      <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
+                  <span class="p">}</span> <span class="p">,</span>
+                  <span class="na">left</span> <span class="p">:</span> <span class="p">{</span>
+                      <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
+                      <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
+                  <span class="p">}</span> <span class="p">,</span>
+                  <span class="na">top</span> <span class="p">:</span> <span class="p">{</span>
+                      <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
+                      <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
+                  <span class="p">}</span> <span class="p">,</span>
+                  <span class="na">bottom</span> <span class="p">:</span> <span class="p">{</span>
+                      <span class="na">style</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">thin</span><span class="dl">"</span> <span class="p">,</span>
+                      <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">000000</span><span class="dl">"</span>
+                  <span class="p">}</span> <span class="p">,</span>
+              <span class="p">}</span>
+          <span class="p">};</span>
+          <span class="c1">// new row &amp; first row ( table th ) style</span>
+          <span class="k">if</span> <span class="p">(</span> <span class="nx">cell</span><span class="p">.</span><span class="nx">r</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">cell</span><span class="p">.</span><span class="nx">r</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">{</span>
+              <span class="nx">ws</span><span class="p">[</span> <span class="nx">i</span> <span class="p">].</span><span class="nx">s</span><span class="p">.</span><span class="nx">fill</span> <span class="o">=</span> <span class="p">{</span>
+                  <span class="na">patternType</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">solid</span><span class="dl">"</span> <span class="p">,</span>
+                  <span class="na">fgColor</span> <span class="p">:</span> <span class="p">{</span>
+                      <span class="na">rgb</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">b2b2b2</span><span class="dl">"</span>
+                  <span class="p">}</span> <span class="p">,</span>
+                  <span class="na">bgColor</span> <span class="p">:</span> <span class="p">{</span>
+                      <span class="na">rgb</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">b2b2b2</span><span class="dl">"</span>
+                  <span class="p">}</span>
+              <span class="p">};</span>
+          <span class="p">}</span>
+          <span class="c1">// if you merge other rows use this</span>
+          <span class="cm">/* if ( i == "!merges" ) {
+              ws[ "!merges" ].push( {
+                  s : {
+                      c : 0 ,
+                      r : 0
+                  } ,
+                  e : {
+                      c : 0 ,
+                      r : 0
+                  }
+              } );
+          } */</span>
+      <span class="p">}</span>
+      <span class="c1">// Sheet Append With Title</span>
+      <span class="nx">XLSX</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">book_append_sheet</span><span class="p">(</span> <span class="nx">wb</span> <span class="p">,</span><span class="nx">ws</span> <span class="p">,</span><span class="dl">'</span><span class="s1">sheet title</span><span class="dl">'</span> <span class="p">);</span>
+      <span class="c1">// Create Excel File With File Name</span>
+      <span class="nx">XLSX</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span> <span class="nx">wb</span> <span class="p">,(</span> <span class="dl">'</span><span class="s1">파일명.xlsx</span><span class="dl">'</span> <span class="p">)</span> <span class="p">);</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>결과</li>
+</ul>
+
+<p><img src="/assets/img/Frontend/JS/xlsx6.png" alt="xlsx6" /></p>
+
+<hr />
+<p>셀 형식 변경이나 기타 다른 옵션도 많으니 더 자세한 부분은 해당 라이브러리 검색하여 추가해보시면서 하면 빠르게 하실 수 있을 것 같습니다 !</p>
+
+<p>이상 입니다. :D</p>
+
+  
+</article>
+
+
+
+  <hr class="dingbat related mb6" />
+
+
+
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="/assets/img/logo.png"
+    srcset="/assets/img/logo.png 1x,/assets/img/logo.png 2x"
+    
+  
+  alt="Donkyu Lim"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  <p>2018년 IPP 일학습병행제로 개발을 시작해, 현재까지 웹 백엔드 개발자로 일하고 있습니다.
+<br /> 다른 개발자를 위한 내부 서비스 개발 및 문서화 공유에 신경을 많이 쓰는 편입니다.
+<br /> 새로운 일을 찾아 나서는 것을 좋아합니다.</p>
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/Chiptune93" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:eoen012@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+  
+
+  
+    
+
+
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Related Posts</h2>  <ul class="related-posts">                  <li class="h4">  <a href="/server/rclocal/" class="flip-title"><span>CentOS7 - rc.local 활성화 하기</span></a>  <time class="faded fine" datetime="2022-08-03T00:00:00+09:00">03 Aug 2022</time></li>                        <li class="h4">  <a href="/spring/h2-database-csv/" class="flip-title"><span>SpringBoot - H2 Database CSV 데이터 Import 하기</span></a>  <time class="faded fine" datetime="2022-07-29T00:00:00+09:00">29 Jul 2022</time></li>                        <li class="h4">  <a href="/spring/swagger-ui-3.0/" class="flip-title"><span>SpringBoot - Swagger ui 3.0 연동하기</span></a>  <time class="faded fine" datetime="2022-07-18T00:00:00+09:00">18 Jul 2022</time></li>            </ul></aside>
+
+  
+
+  
+  
+
+  
+    
+
+  
+
+
+  
+<footer class="content" role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2021. All rights reserved.
+</small></p>
+  
+  
+    <nav class="legal"><small>
+    
+      
+      <a class="heading flip-title" href="/LICENSE/">LICENSE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/NOTICE/">NOTICE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/CHANGELOG/">CHANGELOG</a>
+      
+    
+    </small></nav>
+  
+    <p><small>Powered by <a class="external" href="https://hydejack.com/">Hydejack</a> v<span id="_version">9.1.6</span></small></p>
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+  <hy-drawer
+  id="_drawer"
+  class=""
+  side="left"
+  threshold="10"
+  noscroll
+  
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+
+
+
+
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+
+    <div class="sidebar-sticky">
+  <div class="sidebar-about">
+    
+      <a class="no-hover" href="/" tabindex="-1">
+        <img src="/assets/img/logo.png" class="avatar" alt="Chiptune93" width="120" height="120" loading="lazy" />
+      </a>
+    
+    <a class="sidebar-title" href="/"><h2 class="h1">Chiptune93</h2></a>
+    
+    
+      <p class="">
+        Per Ardua Ad Astra. Lucete Stellae.
+
+      </p>
+    
+  </div>
+
+  <nav class="sidebar-nav heading" role="navigation">
+    <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a
+          id="_drawer--opened"
+          href="/Java/"
+          class="sidebar-nav-item "
+          
+        >
+          🚀 Java
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Spring/"
+          class="sidebar-nav-item "
+          
+        >
+          🔮 Spring
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Database/"
+          class="sidebar-nav-item "
+          
+        >
+          📋 Database
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Server/"
+          class="sidebar-nav-item "
+          
+        >
+          💻 Server
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Frontend/"
+          class="sidebar-nav-item "
+          
+        >
+          🎆 Frontend
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/AWS/"
+          class="sidebar-nav-item "
+          
+        >
+          🎃 AWS
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Docker/"
+          class="sidebar-nav-item "
+          
+        >
+          🔌 Docker
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Network/"
+          class="sidebar-nav-item "
+          
+        >
+          📧 Network
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Python/"
+          class="sidebar-nav-item "
+          
+        >
+          ✨ Python
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/IDE/"
+          class="sidebar-nav-item "
+          
+        >
+          💎 IDE
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Error/"
+          class="sidebar-nav-item "
+          
+        >
+          🔥 Error
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Etc/"
+          class="sidebar-nav-item "
+          
+        >
+          👑 Etc
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Project/"
+          class="sidebar-nav-item "
+          
+        >
+          🧭 Project
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Carrer/"
+          class="sidebar-nav-item "
+          
+        >
+          💯 Carrer
+        </a>
+      </li>
+    
+  
+</ul>
+
+  </nav>
+
+  
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/Chiptune93" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:eoen012@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+</hy-push-state>
+
+
+  <!--[if gt IE 10]><!---->
+  <script nomodule>!function(){var t,n=document.createElement("script");!("noModule"in n)&&"onbeforeload"in n&&(t=!1,document.addEventListener("beforeload",function(e){if(e.target===n)t=!0;else if(!e.target.hasAttribute("nomodule")||!t)return;e.preventDefault()},!0),n.type="module",n.src=".",document.head.appendChild(n),n.remove())}();
+</script>
+  <script src="/assets/js/hydejack-9.1.6.js" type="module"></script>
+  <script src="/assets/js/LEGACY-hydejack-9.1.6.js" nomodule defer></script>
+  
+
+  
+
+<!--<![endif]-->
+  <!-- <script>
+  document.querySelector('hy-push-state').setAttribute('prefetch', '');
+
+  document.querySelectorAll('.sidebar a[href^="/"]').forEach(function (el) { 
+    el.addEventListener('click', function (e) {
+      if (el.pathname === window.location.pathname) {
+        e.preventDefault();
+        e.stopPropagation();
+        document.querySelector('hy-drawer').close();
+      }
+    });
+  });
+</script> -->
+
+<!--
+Code for integrating CloudFlare's email protection with Hydejack's single page app loading.
+-->
+<script>
+  document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) {
+    function e(e){
+      (console.error?console.error:console.log).call(console,e)
+    }
+
+    function t(e){
+      return l.innerHTML='<a href="'+e.replace(/"/g,"&quot;")+'"></a>',l.childNodes[0].getAttribute("href")
+    }
+
+    function r(e,t){
+      var r=e.substr(t,2);return parseInt(r,16)
+    }
+
+    function n(e,n){
+      for(var o="",c=r(e,n),a=n+2;a<e.length;a+=2){
+        var l=r(e,a)^c;
+        o+=String.fromCharCode(l)
+      }
+      return t(o)
+    }
+
+    var o="/cdn-cgi/l/email-protection#",
+        c=".__cf_email__",
+        a="data-cfemail",
+        l=document.createElement("div");
+
+    !function(){
+      for(var t=document.getElementsByTagName("a"),r=0;r<t.length;r++)
+        try{
+          var c=t[r],a=c.href.indexOf(o);
+          a>-1&&(c.href="mailto:"+n(c.href,a+o.length))
+        }catch(t){
+          e(t)
+        }
+    }(),
+    function(){
+      for(var t=document.querySelectorAll(c),r=0;r<t.length;r++)
+        try{
+          var o=t[r],l=n(o.getAttribute(a),0),i=document.createTextNode(l);
+          o.parentNode.replaceChild(i,o)
+        }catch(t){
+          e(t)
+        }
+    }()
+  });
+</script>
+
+
+
+
+
+<div hidden>
+  
+  <h2 class="sr-only">Templates (for web app):</h2>
+
+  <template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+</ul></nav>
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+  <template id="_loading-template">
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+  <template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+  <template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="content-hash"></span>
+  </a>
+</template>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v9.1.6 <https://hydejack.com/>
+-->
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+
+  <meta name="robots" content="noindex">
+
+
+
+  
+    
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Docker 자습서 정리 | Chiptune93</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Docker 자습서 정리" />
+<meta name="author" content="Donkyu Lim" />
+<meta property="og:locale" content="en_us,ko_KR" />
+<meta name="description" content="MS : Docker 자습서 정리" />
+<meta property="og:description" content="MS : Docker 자습서 정리" />
+<link rel="canonical" href="http://localhost:4000/docker/docker-self-study/" />
+<meta property="og:url" content="http://localhost:4000/docker/docker-self-study/" />
+<meta property="og:site_name" content="Chiptune93" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-13T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Docker 자습서 정리" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Donkyu Lim"},"dateModified":"2022-01-13T00:00:00+09:00","datePublished":"2022-01-13T00:00:00+09:00","description":"MS : Docker 자습서 정리","headline":"Docker 자습서 정리","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/docker/docker-self-study/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Donkyu Lim"},"url":"http://localhost:4000/docker/docker-self-study/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+    <meta name="keywords" content="tech,developer,java,spring,docker,mysql,oracle,error">
+  
+
+
+
+  <meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Chiptune93">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="application-name" content="Chiptune93">
+
+<meta name="generator" content="Hydejack v9.1.6" />
+
+
+<link rel="alternate" href="http://localhost:4000/docker/docker-self-study/" hreflang="en-us,ko-kr">
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
+
+
+<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+
+<link rel="manifest" href="/assets/site.webmanifest">
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+
+
+<link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
+
+
+
+
+
+
+<script>!function(r,c){"use strict";function a(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}r.loadJS=function(e,t){var n=c.createElement("script"),e=(n.src=e,t&&a(n,"load",t,{once:!0}),c.scripts[0]);return e.parentNode.insertBefore(n,e),n},r._loaded=!1,r.loadJSDeferred=function(e,t){var n=c.createElement("script");function o(){r._loaded=!0,t&&a(n,"load",t,{once:!0});var e=c.scripts[0];e.parentNode.insertBefore(n,e)}return n.src=e,r._loaded?o():a(r,"load",o,{once:!0}),n},r.setRel=r.setRelStylesheet=function(e){a(c.getElementById(e),"load",function(){this.rel="stylesheet"},{once:!0})}}(window,document);
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+!function(w) {
+  w._baseURL = '/';
+  w._publicPath = '/assets/js/';
+  w._noPushState = false;
+  w._noDrawer = false;
+  w._noNavbar = false;
+  w._noToc = false;
+  w._noSearch = false;
+  w._search = {
+    DATA_URL: '/assets/sitedata.json?no-cache',
+    STORAGE_KEY: 'mini-search/',
+    INDEX_KEY: 'index--2022-08-04T09:53:21+09:00',
+  };
+  w._clapButton = true;
+}(window);</script>
+
+
+<script async src="/assets/bower_components/MathJax/es5/tex-mml-chtml.js" id="_MathJax"></script>
+
+
+<!--[if gt IE 8]><!---->
+
+  
+
+
+
+
+<link rel="stylesheet" href="/assets/css/hydejack-9.1.6.css" id="_stylePreload">
+<link rel="stylesheet" href="/assets/icomoon/style.css" id="_iconsPreload">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+KR:wght@200%7CNoto+Sans:400,400i,700,700i&display=swap" id="_fontsPreload">
+
+
+
+  <style id="_pageStyle">
+
+html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);--accent-color-highlight: rgba(79,177,186,0.1);--accent-color-darkened: #409ba3;--theme-color: rgb(25,55,71)}
+
+</style>
+
+
+<!--<![endif]-->
+
+
+
+
+</head>
+
+<body class="no-break-layout">
+  
+
+
+<hy-push-state
+  id="_pushState"
+  replace-selector="#_main"
+  link-selector="a[href]:not([href^='/assets/']):not(.external):not(.no-push-state)"
+  script-selector="script"
+  duration="500"
+  hashchange
+>
+  
+  
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <div class="nav-btn-bar">
+      <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <div class="nav-span"></div>
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+
+  <main
+  id="_main"
+  class="content layout-post"
+  role="main"
+>
+  <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+    <li><a href="/">home</a></li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/docker/">docker</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>docker-self-study</span>
+        
+      </li>
+    
+  
+</ul></nav>
+  
+
+
+
+
+
+
+
+
+
+
+<article id="post-docker-docker-self-study" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      
+        Docker 자습서 정리
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2022-01-13T00:00:00+09:00">13 Jan 2022</time> in <a href="/docker/" class="flip-title">Docker</a> on <span>Docker</span>, <span>Ms docker self study</span>
+      </span>
+      
+    </div>
+
+    
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      MS : Docker 자습서 정리
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <ul class="large-only" id="markdown-toc">
+  <li><a href="#1부--시작" id="markdown-toc-1부--시작">1부 : 시작</a></li>
+  <li><a href="#2부--애플리케이션" id="markdown-toc-2부--애플리케이션">2부 : 애플리케이션</a></li>
+  <li><a href="#3부--앱-업데이트" id="markdown-toc-3부--앱-업데이트">3부 : 앱 업데이트</a></li>
+  <li><a href="#4부--앱-공유" id="markdown-toc-4부--앱-공유">4부 : 앱 공유</a></li>
+  <li><a href="#5부--데이터-유지" id="markdown-toc-5부--데이터-유지">5부 : 데이터 유지</a></li>
+  <li><a href="#6부--바인드-탑재-사용" id="markdown-toc-6부--바인드-탑재-사용">6부 : 바인드 탑재 사용</a></li>
+  <li><a href="#7부--다중-컨테이너-앱" id="markdown-toc-7부--다중-컨테이너-앱">7부 : 다중 컨테이너 앱</a></li>
+  <li><a href="#8부--docker-compose-사용" id="markdown-toc-8부--docker-compose-사용">8부 : Docker Compose 사용</a></li>
+  <li><a href="#9부--이미지-계층화" id="markdown-toc-9부--이미지-계층화">9부 : 이미지 계층화</a></li>
+  <li><a href="#10부--클라우드에-배포" id="markdown-toc-10부--클라우드에-배포">10부 : 클라우드에 배포</a></li>
+</ul>
+
+<h1 id="1부--시작">1부 : 시작</h1>
+<blockquote>
+  <p>컨테이너?</p>
+</blockquote>
+
+<p>컨테이너는 앱을 빌드하고 실행하기 위한 플랫폼을 제공하지만 전체 운영 체제의 전체 크기와 오버헤드가 없는 VM(가상 머신)과 같은 소규모 가상화 환경입니다.
+간단히 말하면  컨테이너는 호스트 머신의 다른 모든 프로세스로부터 격리된, 사용자 머신의 또 다른 프로세스입니다.</p>
+
+<blockquote>
+  <p>컨테이너 이미지?</p>
+</blockquote>
+
+<p>컨테이너를 실행하는 경우 컨테이너는 격리된 파일시스템을 사용합니다. 이 사용자 지정 파일시스템은 컨테이너 이미지 에서 제공됩니다. 이미지에는 컨테이너 파일 시스템이 포함되어 있으므로 애플리케이션을 실행하는 데 필요한 모든 것(모든 종속성, 구성, 스크립트, 이진 파일 등)이 있어야 합니다. 또한 이미지에는 환경 변수, 실행할 기본 명령, 기타 메타데이터와 같은 컨테이너의 다른 구성도 포함되어 있습니다.</p>
+
+<blockquote>
+  <p>docker 실행명령</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d -p 80:80 docker/getting-started
+</code></pre></div>  </div>
+  <ul>
+    <li>-d : 백그라운드에서 분리 모드로 컨테이너를 실행.</li>
+    <li>-p : 호스트의 포트 80을 컨테이너 포트 80에 연결</li>
+  </ul>
+</blockquote>
+
+<h1 id="2부--애플리케이션">2부 : 애플리케이션</h1>
+<p>앱 컨테이너 이미지 빌드, 빌드를 위해선 Dockerfile 이란게 필요하다.</p>
+
+<blockquote>
+  <p>Dockerfile?</p>
+</blockquote>
+
+<p>Dockerfile은 컨테이너 이미지를 만드는 데 사용되는 텍스트 기반 명령 스크립트</p>
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> node:12-alpine</span>
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+<span class="k">COPY</span><span class="s"> . .</span>
+<span class="k">RUN </span>yarn <span class="nb">install</span> <span class="nt">--production</span>
+<span class="k">CMD</span><span class="s"> ["node", "/app/src/index.js"]</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Apple M1 환경에서는 python 문제가 있어 아래 내용으로 빌드하였다.
+    <div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> node:12-alpine</span>
+<span class="k">RUN </span>apk add <span class="nt">--no-cache</span> python2 g++ make
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+<span class="k">COPY</span><span class="s"> . .</span>
+<span class="k">RUN </span>apk <span class="nt">--no-cache</span> <span class="nt">--virtual</span> build-dependencies add <span class="se">\
+</span>python2 <span class="se">\
+</span>make <span class="se">\
+</span>g++
+<span class="k">RUN </span>yarn <span class="nb">install</span> <span class="nt">--production</span>
+<span class="k">CMD</span><span class="s"> ["node", "src/index.js"]</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Docker Image 빌드 명령</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build -t getting-started .
+</code></pre></div>  </div>
+  <p>-t : 태그 네임 지정, 사람이 읽을 수 있도록 하는 최종 이미지 이름을 지정한다.</p>
+</blockquote>
+
+<blockquote>
+  <p>Docker Image Run 명령</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -dp 3000:3000 getting-started
+</code></pre></div>  </div>
+</blockquote>
+
+<h1 id="3부--앱-업데이트">3부 : 앱 업데이트</h1>
+<p>CLI를 사용한 컨테이너 제거</p>
+
+<blockquote>
+  <p>Docker 조회</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <p>Docker Stop</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Swap out &lt;the-container-id&gt; with the ID from docker ps
+docker stop &lt;the-container-id&gt;
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <p>Docker 제거</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker rm &lt;the-container-id&gt;
+</code></pre></div>  </div>
+  <p>docker rm 명령에 “force” 플래그를 추가하면 단일 명령으로 컨테이너를 중지하고 제거할 수 있습니다.
+예: docker rm -f <the-container-id></the-container-id></p>
+</blockquote>
+
+<h1 id="4부--앱-공유">4부 : 앱 공유</h1>
+<blockquote>
+  <p>이미지 푸시 - Docker Hub</p>
+</blockquote>
+
+<p>Docker Hub 에 Docker 계정으로 로그인하여 레파지토리 생성.</p>
+
+<p>빈 상태의 레파지토리가 만들어지며, 이 곳에 이미지를 푸시 할 수 있음.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker push docker/getting-started
+The push refers to repository [docker.io/docker/getting-started]
+An image does not exist locally with the tag: docker/getting-started
+</code></pre></div></div>
+<p>첫 이미지를 푸시하게 되면, 다음과 같은 문구가 뜨는데 이는 이미지에 이름이 지정되지 않아 발생하는 문제. 따라서 빌드한 이미지를 레파지토리에 올리기 위해서는 레파지토리와 동일하게 네이밍을 해주어야 한다.</p>
+
+<blockquote>
+  <p>CLI - Docker Login</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker login -u &lt;username&gt;
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <p>Image Name 지정하기</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker tag getting-started &lt;username&gt;/getting-started:&lt;tagname&gt;
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <p>Image Push</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker push &lt;username&gt;/getting-started:&lt;tagname&gt;
+</code></pre></div>  </div>
+</blockquote>
+
+<p>tagname은 지정하지 않으면 latest 로 올라간다.</p>
+
+<blockquote>
+  <p>새 인스턴스에서 이미지 실행하기</p>
+</blockquote>
+
+<p>새로운 환경에서 이미지를 pull 받아 실행해본다.</p>
+
+<p>Play With Docker 라는 사이트에서 새로운 환경을 구성하여 테스트.</p>
+
+<p><img src="/assets/img/Docker/dockerself1.png" alt="dockerself1" /></p>
+
+<p>위 처럼 3000배지가 뜨면 running이 성공적으로 이루어 진 것. 이후 해당 배지 클릭을 통해 구동 중인 모습을 확인 가능하다.
+** Apple M1 칩을 사용하는 모델의 경우 Docker 이미지 빌드 시, 해당 호스트의 환경인 linux/arm64/v8 로 빌드되게 된다. 따라서 위 사이트에서 이미지를 구동하기 위해서는 Docker build 명령 시 “–platform linux/amd64” 키워드를 추가하여 빌드하면 해당 환경으로 빌드된다.</p>
+
+<h1 id="5부--데이터-유지">5부 : 데이터 유지</h1>
+<blockquote>
+  <p>컨테이너 파일 시스템</p>
+</blockquote>
+
+<p>컨테이너는 실행 시 이미지의 다양한 계층을 파일 시스템에 사용합니다. 또한 각 컨테이너에는 파일을 만들거나 업데이트하거나 제거할 수 있는 자체 “스크래치 공간”이 할당됩니다. 같은 이미지를 사용하는 ‘경우에도’ 다른 컨테이너에는 변경 내용이 표시되지 않습니다.</p>
+
+<blockquote>
+  <p>컨테이너 볼륨</p>
+</blockquote>
+
+<p>컨테이너의 특정 파일 시스템 경로를 호스트 머신에 다시 연결하는 기능.
+다른 컨테이너 혹은 재시작 후에도 동일한 경로로 탑재하면 똑같이 표시된다.</p>
+
+<blockquote>
+  <p>Named Volume(명명된 볼륨)</p>
+</blockquote>
+
+<p>명명된 볼륨은 단순히 데이터 버킷으로 생각하면 됩니다.
+Docker에서 디스크 상의 실제 위치를 유지 관리하므로 볼륨 이름만 기억하면 됩니다.</p>
+
+<blockquote>
+  <p>볼륨 생성</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume create &lt;volume-name&gt;
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <p>컨테이너 시작 시, 볼륨 탑재</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -dp 3000:3000 -v &lt;volume-name&gt;:&lt;탑재할 데이터 경로&gt; &lt;image-name&gt;
+</code></pre></div>  </div>
+</blockquote>
+
+<p>이런 식으로, 볼륨을 사용하여 컨테이너가 종료되어도 데이터가 유지되게끔 설정할 수 있습니다.</p>
+
+<ul>
+  <li>기본 Docker 엔진 설치에서 지원되는 두 가지 기본 볼륨 유형이지만 NFS, SFTP, NetApp 등을 지원하는 데 사용할 수 있는 많은 볼륨 드라이버 플러그 인이 있습니다.</li>
+</ul>
+
+<blockquote>
+  <p>볼륨 확인하기</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume inspect &lt;volume-name&gt;
+</code></pre></div>  </div>
+</blockquote>
+
+<p>Mountpoint가 디스크에서 데이터가 저장되는 실제 위치입니다.</p>
+
+<p>** Docker Desktop에서 실행되는 동안 Docker Desktop의 볼륨 데이터에 직접 액세스 하는 Docker 명령은 실제로 머신의 작은 VM 내에서 실행됩니다. Mountpoint 디렉터리의 실제 내용을 확인하려면 먼저 VM 내부에 액세스해야 합니다. WSL 2에서는 WSL 2 배포판 내에 있으며, 파일 탐색기를 통해 액세스할 수 있습니다.</p>
+
+<h1 id="6부--바인드-탑재-사용">6부 : 바인드 탑재 사용</h1>
+<p>바인드 탑재 를 사용하면 호스트의 탑재 지점을 정확하게 제어할 수 있습니다. 이 유형은 데이터 유지뿐 아니라 컨테이너에 추가 데이터를 제공하는 데에도 사용됩니다. 애플리케이션 작업 시 바인드 탑재를 사용하여 소스 코드를 컨테이너에 탑재하면 변경 내용을 즉시 확인할 수 있으며, 컨테이너가 코드 변경을 확인하고 응답하게 할 수 있습니다.</p>
+
+<p>예시로 확인.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -dp 3000:3000 -w /app -v ${PWD}:/app node:12-alpine sh -c "apk add --no-cache python2 g++ make &amp;&amp; apk --no-cache --virtual build-dependencies add python2 make g++ &amp;&amp; yarn install &amp;&amp; yarn run dev"
+</code></pre></div></div>
+<ul>
+  <li>-w /app - 컨테이너 내의 작업 디렉터리</li>
+  <li>-v ${PWD}:/app” - 컨테이너에 있는 호스트의 현재 디렉터리를 /app 디렉터리로 바인드 탑재합니다.
+바인드 탑재 사용은 로컬 개발 설정에서 ‘매우’ 일반적입니다. 개발 머신에 모든 빌드 도구와 환경을 설치할 필요가 없다는 이점이 있기 때문입니다. 단일 docker run 명령을 사용하면 개발 환경이 풀되어 바로 사용할 수 있습니다.</li>
+</ul>
+
+<blockquote>
+  <p>바인드 마운트 vs 볼륨</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>바인드 마운트의 경우, 호스트의 디렉터리를 러닝 시, 마운트하여 바로 사용하게끔 함. 따라서, 수정이 일어나도 바로바로 반영됨
+( 외부 리소스를 추가하여 바로 확인이 가능 )</p>
+  </li>
+  <li>
+    <p>볼륨의 경우, 호스트의 디렉터리를 도커의 볼륨 영역으로 가지고 와 볼륨을 생성하여 해당 볼륨을 컨테이너에 마운트한다. 
+( 도커의 볼륨 영역에서 제어가 되기 때문에 외부에서 바로 추가할 수 없다 )
+–&gt; 그러면 추가해야 하는 경우에는 어떻게?</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>볼륨이 바인드 마운트보다 좋은 장점 From Docker Docs</p>
+</blockquote>
+
+<ol>
+  <li>
+    <p>백업하거나 이동시키기 쉽다.</p>
+  </li>
+  <li>
+    <p>docker CLI 명령어로 볼륨을 관리할 수 있다.</p>
+  </li>
+  <li>
+    <p>볼륨은 리눅스, 윈도우 컨테이너에서 모두 동작한다.</p>
+  </li>
+  <li>
+    <p>컨테이너간에 볼륨을 안전하게 공유할 수 있다.</p>
+  </li>
+  <li>
+    <p>볼륨드라이버를 사용하면 볼륨의 내용을 암호화하거나 다른 기능을 추가 할 수 있다.</p>
+  </li>
+  <li>
+    <p>새로운 볼륨은 컨테이너로 내용을 미리 채울 수 있다.</p>
+  </li>
+</ol>
+
+<h1 id="7부--다중-컨테이너-앱">7부 : 다중 컨테이너 앱</h1>
+<blockquote>
+  <p>컨테이너 네트워킹</p>
+</blockquote>
+
+<p>같은 네트워크 대역에 있는 컨테이너 앱 끼리는 상호간 통신 규약에 따라 통신이 가능하다.</p>
+
+<blockquote>
+  <p>MySQL 연결하기</p>
+</blockquote>
+
+<p>Docker Network 생성</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker network create &lt;network-name&gt;
+</code></pre></div></div>
+
+<blockquote>
+  <p>MySQL 컨테이너 실행 및 Network 연결</p>
+  <div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run --platform linux/x86_64 -d \
+--network &lt;network-name&gt; --network-alias mysql \
+-v todo-mysql-data:/var/lib/mysql \
+-e MYSQL_ROOT_PASSWORD=secret \
+-e MYSQL_DATABASE=todos \
+</code></pre></div>  </div>
+  <p>mysql:5.7</p>
+  <ul>
+    <li>여기서는 todo-mysql-data라는 볼륨 이름을 사용하고, MySQL에서 데이터를 저장하는 위치인 /var/lib/mysql에 볼륨을 탑재합니다. 그러나 docker volume create 명령을 실행한 적은 없습니다. Docker에서 명명된 볼륨을 사용하려는 의도를 인식하고 자동으로 볼륨을 만듭니다.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>MySQL 컨테이너 상태 확인</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker exec -it &lt;mysql-container-id&gt; mysql -p
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <p>실행 중인 컨테이너와 MySQL에 연결하기</p>
+</blockquote>
+
+<p>네트워킹 문제 해결 또는 디버그에 유용한 ‘많은’ 도구가 포함된 nicolaka/netshoot 컨테이너를 사용</p>
+
+<p>netshoot 컨테이너 실행</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -it --network todo-app nicolaka/netshoot
+</code></pre></div></div>
+
+<blockquote>
+  <p>MySQL 컨테이너 주소 확인</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dig mysql
+</code></pre></div>  </div>
+  <p>“ANSWER SECTION”에서 mysql에 대해 A 레코드가 표시되며, 172.23.0.2로 확인됩니다(사용자 IP 주소는 다른 값일 가능성이 높음). mysql는 일반적으로 유효한 호스트 이름이 아니지만, Docker에서 해당 네트워크 별칭을 가진 컨테이너의 IP 주소로 확인할 수 있었습니다(앞에서 사용한 –network-alias 플래그 참조).</p>
+</blockquote>
+
+<p>따라서 앱이 mysql이라는 호스트에 연결하기만 하면 데이터베이스와 통신할 수 있습니다.</p>
+
+<blockquote>
+  <p>MySQL 과 앱 컨테이너 연결</p>
+</blockquote>
+
+<p>해당 정보를 바탕으로 환경변수에 MySQL 정보를 지정하여 연결 실행</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-dp</span> 3000:3000 <span class="se">\</span>
+  <span class="nt">-w</span> /app <span class="nt">-v</span> <span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>:/app <span class="se">\</span>
+  <span class="nt">--network</span> todo-app <span class="se">\</span>
+  <span class="nt">-e</span> <span class="nv">MYSQL_HOST</span><span class="o">=</span>mysql <span class="se">\</span>
+  <span class="nt">-e</span> <span class="nv">MYSQL_USER</span><span class="o">=</span>root <span class="se">\</span>
+  <span class="nt">-e</span> <span class="nv">MYSQL_PASSWORD</span><span class="o">=</span>secret <span class="se">\</span>
+  <span class="nt">-e</span> <span class="nv">MYSQL_DB</span><span class="o">=</span>todos <span class="se">\</span>
+  node:12-alpine <span class="se">\</span>
+  sh <span class="nt">-c</span> <span class="s2">"apk add --no-cache python2 g++ make &amp;&amp; apk --no-cache --virtual build-dependencies add python2 make g++ &amp;&amp; yarn install &amp;&amp; yarn run dev"</span>
+</code></pre></div></div>
+
+<p>앱 러닝 후, 접속하여 몇개의 아이템을 저장합니다. 이후, 다시 MySQL을 실행하여 데이터 베이스를 확인하면 todo에서 입력한 데이터들이 저장되는 것을 확인할 수 있습니다.</p>
+
+<h1 id="8부--docker-compose-사용">8부 : Docker Compose 사용</h1>
+<p>Docker Compose는 다중 컨테이너 애플리케이션을 정의하고 공유할 수 있도록 개발된 도구입니다. Compose에서 서비스를 정의하는 YAML 파일을 만들고, 단일 명령을 사용하여 모두 실행하거나 모두 종료할 수 있습니다.</p>
+
+<p>Compose를 사용할 경우의 ‘중요한’ 이점은 파일에서 애플리케이션 스택을 정의하고 프로젝트 리포지토리 루트에 파일을 저장하여(이제 버전 제어 사용) 다른 사용자가 프로젝트에 참여하기 쉽게 만들 수 있다는 것입니다.</p>
+
+<ul>
+  <li>mac용 docker desktop을 설치하였다면, 별도로 설치할 필요가 없다.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose version
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>위 명령어를 실행하여 버전이 보인다면 설치가 되어 있는 것이다.</p>
+
+<blockquote>
+  <p>Docker Compose 파일 만들기</p>
+</blockquote>
+
+<p>프로젝트 루트에 docker-compose.yml 이라는 파일 생성하여 다음과 같이 지정</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 스키마 버전 정의. 최신을 사용하는 것이 가장 좋다.</span>
+<span class="na">version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">3.7"</span> 
+
+<span class="c1"># 서비스 목록 정의</span>
+<span class="na">services</span><span class="pi">:</span>
+  <span class="c1"># 앱 서비스 정의</span>
+  <span class="na">app</span><span class="pi">:</span>
+    <span class="c1"># 컨테이너 이미지 이름 정의 </span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">node:12-alpine</span>
+    <span class="c1"># 실행하고자 하는 명령어</span>
+    <span class="na">command</span><span class="pi">:</span> <span class="s">sh -c "apk add --no-cache python2 g++ make &amp;&amp; apk --no-cache --virtual build-dependencies add python2 make g++ &amp;&amp; yarn install &amp;&amp; yarn run dev"</span>
+    <span class="c1"># 포트 정의 ( host 3000 을 container 3000으로 마이그레이션 )</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">3000:3000</span>
+    <span class="c1"># 작업 디렉토리와 볼륨 매핑을 마이그레이션</span>
+    <span class="c1"># 파일이 위치한 곳 기준으로 상대경로를 사용할 수 있다.</span>
+    <span class="na">working_dir</span><span class="pi">:</span> <span class="s">/app</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">./:/app</span>
+    <span class="c1"># 환경변수를 이용한 DB 세팅.</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="na">MYSQL_HOST</span><span class="pi">:</span> <span class="s">mysql</span>
+      <span class="na">MYSQL_USER</span><span class="pi">:</span> <span class="s">root</span>
+      <span class="na">MYSQL_PASSWORD</span><span class="pi">:</span> <span class="s">secret</span>
+      <span class="na">MYSQL_DB</span><span class="pi">:</span> <span class="s">todos</span>
+  <span class="c1"># MySQL 서비스 정의 </span>
+  <span class="na">mysql</span><span class="pi">:</span>
+    <span class="c1"># 이미지 이름 정의</span>
+    <span class="na">image </span><span class="pi">:</span> <span class="s">mysql:5.7</span>
+    <span class="c1"># docker run 으로 실행할 때는 자동으로 volume 이 설정되었지만</span>
+    <span class="c1"># 여기서는 자동이 아니므로 경로를 지정해준다. </span>
+    <span class="c1"># 이름 : 경로 로 지정해주며, 여기서 지정된 이름을 바깥 volumes 에서 탑재하여 사용한다.</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">todo-mysql-data:/var/lib/mysql</span>
+    <span class="c1"># 환경변수 지정</span>
+    <span class="na">environment</span><span class="pi">:</span> 
+      <span class="na">MYSQL_ROOT_PASSWORD</span><span class="pi">:</span> <span class="s">secret</span>
+      <span class="na">MYSQL_DATABASE</span><span class="pi">:</span> <span class="s">todos</span>
+<span class="na">volumes</span><span class="pi">:</span>
+  <span class="na">todo-mysql-data</span><span class="pi">:</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>애플리케이션 스택 실행</p>
+</blockquote>
+
+<p>위와 같이 설정을 끝냈으면, 이제 실행을 하면 된다.</p>
+
+<p>docker-compose.yml 파일이 있는 경로에서 실행.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up -d
+</code></pre></div></div>
+
+<p>아래와 같은 내용이 뜨면 성공한 것이다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Creating network "app_default" with the default driver
+Creating volume "app_todo-mysql-data" with default driver
+Creating app_app_1 ... done
+Creating app_mysql_1 ... done
+</code></pre></div></div>
+
+<p>해당 러닝 로그를 아래 명령어로 확인.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose logs -f
+</code></pre></div></div>
+
+<p>아래와 같이 표기가 된다면 러닝에 성공한 것이다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql_1  | 2019-10-03T03:07:16.083639Z 0 [Note] mysqld: ready for connections.
+mysql_1  | Version: '5.7.27'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+app_1    | Connected to mysql db at host mysql
+app_1    | Listening on port 3000
+</code></pre></div></div>
+
+<blockquote>
+  <p>실행 중인 앱 스택 확인</p>
+</blockquote>
+
+<p>vscode에서 docker 확장을 보면 스택 확인이 가능하다.</p>
+
+<p>이로써 docker compose 를 통해 mysql과 앱을 네트워킹으로 연결하여 서비스를 올리는데 성공하였다.</p>
+
+<blockquote>
+  <p>종료하기</p>
+</blockquote>
+
+<p>모두 종료할 준비가 되었으면 docker-compose down을 실행하거나 VS Code Docker 확장의 컨테이너 목록에서 애플리케이션을 마우스 오른쪽 단추로 클릭하고 Compose 종료 를 선택합니다. 컨테이너가 중지되고 네트워크가 제거됩니다.</p>
+
+<h1 id="9부--이미지-계층화">9부 : 이미지 계층화</h1>
+
+<blockquote>
+  <p>이미지 계층 확인</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker image history &lt;image-name&gt;
+</code></pre></div>  </div>
+</blockquote>
+
+<p>이미지에 쓰인 계층들을 확인할 수 있다. 맨 위가 최신 계층 이며 이를 통해 각 계층의 용량 등을 쉽게 파악 할 수 있다.</p>
+
+<blockquote>
+  <p>계층 캐싱</p>
+</blockquote>
+
+<p>Dockerfile의 각 명령이 계층이 되는것 임을 확인 했으니, 계층이 변경 될 때 마다 종속성을 다시 설치하는 것은 비효율 적이므로, 이를 줄이기 위한 방법을 적용해야 함.</p>
+
+<p>예제에서는 node에서 종속성을 갖는 package.json 파일을 복사하여 설치 한 후, 나머지를 그 이후에 복사하여 package.json만 변경 점이 있을 때 다시 설치하도록 변경함.</p>
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> node:12-alpine</span>
+<span class="k">RUN </span>apk add <span class="nt">--no-cache</span> python2 g++ make
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+<span class="c"># 종속성 카피</span>
+<span class="k">COPY</span><span class="s"> package.json yarn.lock ./</span>
+ COPY . .
+<span class="k">RUN </span>apk <span class="nt">--no-cache</span> <span class="nt">--virtual</span> build-dependencies add <span class="se">\
+</span>  python2 <span class="se">\
+</span>  make <span class="se">\
+</span>  g++
+<span class="k">RUN </span>yarn <span class="nb">install</span> <span class="nt">--production</span>
+<span class="k">COPY</span><span class="s"> . .</span>
+<span class="k">CMD</span><span class="s"> ["node", "src/index.js"]</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>다단계 빌드</p>
+</blockquote>
+
+<p>런타임 종속성과 빌드 시간 종속성 구분
+앱을 실행하는 데 필요한 ‘항목’만 제공하여 전체 이미지 크기 축소</p>
+
+<p>Maven/Tomcat 예제</p>
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 첫번째 단계. 빌드단계에서만 JDK 필요, 여기서 수행.</span>
+<span class="k">FROM</span><span class="s"> maven AS build</span>
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+<span class="k">COPY</span><span class="s"> . .</span>
+<span class="k">RUN </span>mvn package
+
+<span class="c"># 두번째 단계. 빌드된 결과물을 톰캣 디렉터리로 복사. </span>
+<span class="c"># 이 단계가 마지막이므로, 최종 빌드되는 이미지는 이 단계의 결과물임.</span>
+<span class="k">FROM</span><span class="s"> tomcat</span>
+<span class="k">COPY</span><span class="s"> --from=build /app/target/file.war /usr/local/tomcat/webapps</span>
+</code></pre></div></div>
+
+<p>React 예제</p>
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 첫번째 단계. 이 단계에서 빌드 수행</span>
+<span class="k">FROM</span><span class="s"> node:12 AS build</span>
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+<span class="k">COPY</span><span class="s"> package* yarn.lock ./</span>
+<span class="k">RUN </span>yarn <span class="nb">install</span>
+<span class="k">COPY</span><span class="s"> public ./public</span>
+<span class="k">COPY</span><span class="s"> src ./src</span>
+<span class="k">RUN </span>yarn run build
+
+<span class="c"># 두번째 단계. 이 단계에서 nginx에 빌드된 결과물을 옮김.</span>
+<span class="k">FROM</span><span class="s"> nginx:alpine</span>
+<span class="k">COPY</span><span class="s"> --from=build /app/build /usr/share/nginx/html</span>
+</code></pre></div></div>
+
+<p>즉, 빌드 단계에만 필요한 도구들을 전부 이미지에 포함시키지 않고, 빌드 수행 후 이미지에는 포함 시키지 않아 이미지의 용량을 크게 줄일 수 있다. 위 두가지 예제로 보면, 빌드 후의 결과물만 WAS에 옮기고 이미지를 생성하여 이미지 크기를 크게 줄인 것을 알 수 있다.</p>
+
+<h1 id="10부--클라우드에-배포">10부 : 클라우드에 배포</h1>
+<p>클라우드에 배포하기 위해서는 클라우드 컨텍스트가 필요. 현재까지 사용한 것은 기본 docker 컨텍스트임.</p>
+
+<p>예제에서는 Azure(애저) 를 사용하며, 계정을 이용하여 애저 컨텍스트를 추가 할 수 있음.
+해당 컨텍스트를 추가하게 되면 다음의 명령어로 해당 컨텍스트에서 이미지를 실행할 수 있음.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker context use myacicontext
+docker run  -dp 3000:3000 &lt;username&gt;/getting-started
+</code></pre></div></div>
+
+<p>끝.</p>
+
+  
+</article>
+
+
+
+  <hr class="dingbat related mb6" />
+
+
+
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="/assets/img/logo.png"
+    srcset="/assets/img/logo.png 1x,/assets/img/logo.png 2x"
+    
+  
+  alt="Donkyu Lim"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  <p>2018년 IPP 일학습병행제로 개발을 시작해, 현재까지 웹 백엔드 개발자로 일하고 있습니다.
+<br /> 다른 개발자를 위한 내부 서비스 개발 및 문서화 공유에 신경을 많이 쓰는 편입니다.
+<br /> 새로운 일을 찾아 나서는 것을 좋아합니다.</p>
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/Chiptune93" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:eoen012@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+  
+
+  
+    
+
+
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Related Posts</h2>  <ul class="related-posts">                  <li class="h4">  <a href="/server/rclocal/" class="flip-title"><span>CentOS7 - rc.local 활성화 하기</span></a>  <time class="faded fine" datetime="2022-08-03T00:00:00+09:00">03 Aug 2022</time></li>                        <li class="h4">  <a href="/spring/h2-database-csv/" class="flip-title"><span>SpringBoot - H2 Database CSV 데이터 Import 하기</span></a>  <time class="faded fine" datetime="2022-07-29T00:00:00+09:00">29 Jul 2022</time></li>                        <li class="h4">  <a href="/spring/swagger-ui-3.0/" class="flip-title"><span>SpringBoot - Swagger ui 3.0 연동하기</span></a>  <time class="faded fine" datetime="2022-07-18T00:00:00+09:00">18 Jul 2022</time></li>            </ul></aside>
+
+  
+
+  
+  
+
+  
+    
+
+  
+
+
+  
+<footer class="content" role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2021. All rights reserved.
+</small></p>
+  
+  
+    <nav class="legal"><small>
+    
+      
+      <a class="heading flip-title" href="/LICENSE/">LICENSE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/NOTICE/">NOTICE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/CHANGELOG/">CHANGELOG</a>
+      
+    
+    </small></nav>
+  
+    <p><small>Powered by <a class="external" href="https://hydejack.com/">Hydejack</a> v<span id="_version">9.1.6</span></small></p>
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+  <hy-drawer
+  id="_drawer"
+  class=""
+  side="left"
+  threshold="10"
+  noscroll
+  
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+
+
+
+
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+
+    <div class="sidebar-sticky">
+  <div class="sidebar-about">
+    
+      <a class="no-hover" href="/" tabindex="-1">
+        <img src="/assets/img/logo.png" class="avatar" alt="Chiptune93" width="120" height="120" loading="lazy" />
+      </a>
+    
+    <a class="sidebar-title" href="/"><h2 class="h1">Chiptune93</h2></a>
+    
+    
+      <p class="">
+        Per Ardua Ad Astra. Lucete Stellae.
+
+      </p>
+    
+  </div>
+
+  <nav class="sidebar-nav heading" role="navigation">
+    <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a
+          id="_drawer--opened"
+          href="/Java/"
+          class="sidebar-nav-item "
+          
+        >
+          🚀 Java
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Spring/"
+          class="sidebar-nav-item "
+          
+        >
+          🔮 Spring
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Database/"
+          class="sidebar-nav-item "
+          
+        >
+          📋 Database
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Server/"
+          class="sidebar-nav-item "
+          
+        >
+          💻 Server
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Frontend/"
+          class="sidebar-nav-item "
+          
+        >
+          🎆 Frontend
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/AWS/"
+          class="sidebar-nav-item "
+          
+        >
+          🎃 AWS
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Docker/"
+          class="sidebar-nav-item "
+          
+        >
+          🔌 Docker
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Network/"
+          class="sidebar-nav-item "
+          
+        >
+          📧 Network
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Python/"
+          class="sidebar-nav-item "
+          
+        >
+          ✨ Python
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/IDE/"
+          class="sidebar-nav-item "
+          
+        >
+          💎 IDE
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Error/"
+          class="sidebar-nav-item "
+          
+        >
+          🔥 Error
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Etc/"
+          class="sidebar-nav-item "
+          
+        >
+          👑 Etc
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Project/"
+          class="sidebar-nav-item "
+          
+        >
+          🧭 Project
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Carrer/"
+          class="sidebar-nav-item "
+          
+        >
+          💯 Carrer
+        </a>
+      </li>
+    
+  
+</ul>
+
+  </nav>
+
+  
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/Chiptune93" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:eoen012@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+</hy-push-state>
+
+
+  <!--[if gt IE 10]><!---->
+  <script nomodule>!function(){var t,n=document.createElement("script");!("noModule"in n)&&"onbeforeload"in n&&(t=!1,document.addEventListener("beforeload",function(e){if(e.target===n)t=!0;else if(!e.target.hasAttribute("nomodule")||!t)return;e.preventDefault()},!0),n.type="module",n.src=".",document.head.appendChild(n),n.remove())}();
+</script>
+  <script src="/assets/js/hydejack-9.1.6.js" type="module"></script>
+  <script src="/assets/js/LEGACY-hydejack-9.1.6.js" nomodule defer></script>
+  
+
+  
+
+<!--<![endif]-->
+  <!-- <script>
+  document.querySelector('hy-push-state').setAttribute('prefetch', '');
+
+  document.querySelectorAll('.sidebar a[href^="/"]').forEach(function (el) { 
+    el.addEventListener('click', function (e) {
+      if (el.pathname === window.location.pathname) {
+        e.preventDefault();
+        e.stopPropagation();
+        document.querySelector('hy-drawer').close();
+      }
+    });
+  });
+</script> -->
+
+<!--
+Code for integrating CloudFlare's email protection with Hydejack's single page app loading.
+-->
+<script>
+  document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) {
+    function e(e){
+      (console.error?console.error:console.log).call(console,e)
+    }
+
+    function t(e){
+      return l.innerHTML='<a href="'+e.replace(/"/g,"&quot;")+'"></a>',l.childNodes[0].getAttribute("href")
+    }
+
+    function r(e,t){
+      var r=e.substr(t,2);return parseInt(r,16)
+    }
+
+    function n(e,n){
+      for(var o="",c=r(e,n),a=n+2;a<e.length;a+=2){
+        var l=r(e,a)^c;
+        o+=String.fromCharCode(l)
+      }
+      return t(o)
+    }
+
+    var o="/cdn-cgi/l/email-protection#",
+        c=".__cf_email__",
+        a="data-cfemail",
+        l=document.createElement("div");
+
+    !function(){
+      for(var t=document.getElementsByTagName("a"),r=0;r<t.length;r++)
+        try{
+          var c=t[r],a=c.href.indexOf(o);
+          a>-1&&(c.href="mailto:"+n(c.href,a+o.length))
+        }catch(t){
+          e(t)
+        }
+    }(),
+    function(){
+      for(var t=document.querySelectorAll(c),r=0;r<t.length;r++)
+        try{
+          var o=t[r],l=n(o.getAttribute(a),0),i=document.createTextNode(l);
+          o.parentNode.replaceChild(i,o)
+        }catch(t){
+          e(t)
+        }
+    }()
+  });
+</script>
+
+
+
+
+
+<div hidden>
+  
+  <h2 class="sr-only">Templates (for web app):</h2>
+
+  <template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+</ul></nav>
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+  <template id="_loading-template">
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+  <template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+  <template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="content-hash"></span>
+  </a>
+</template>
+
+</div>
+
+
+</body>
+</html>
