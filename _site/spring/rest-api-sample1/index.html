@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v9.1.6 <https://hydejack.com/>
+-->
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+
+  <meta name="robots" content="noindex">
+
+
+
+  
+    
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SpringBoot - Rest Api Sample 만들기 | Chiptune93</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="SpringBoot - Rest Api Sample 만들기" />
+<meta name="author" content="Donkyu Lim" />
+<meta property="og:locale" content="en_us,ko_KR" />
+<meta name="description" content="[SpringBoot] Rest Api Sample 만들기 #1" />
+<meta property="og:description" content="[SpringBoot] Rest Api Sample 만들기 #1" />
+<link rel="canonical" href="http://localhost:4000/spring/rest-api-sample1/" />
+<meta property="og:url" content="http://localhost:4000/spring/rest-api-sample1/" />
+<meta property="og:site_name" content="Chiptune93" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-07-05T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SpringBoot - Rest Api Sample 만들기" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Donkyu Lim"},"dateModified":"2022-07-05T00:00:00+09:00","datePublished":"2022-07-05T00:00:00+09:00","description":"[SpringBoot] Rest Api Sample 만들기 #1","headline":"SpringBoot - Rest Api Sample 만들기","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/spring/rest-api-sample1/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Donkyu Lim"},"url":"http://localhost:4000/spring/rest-api-sample1/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+    <meta name="keywords" content="tech,developer,java,spring,docker,mysql,oracle,error">
+  
+
+
+
+  <meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Chiptune93">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="application-name" content="Chiptune93">
+
+<meta name="generator" content="Hydejack v9.1.6" />
+
+
+<link rel="alternate" href="http://localhost:4000/spring/rest-api-sample1/" hreflang="en-us,ko-kr">
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
+
+
+<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+
+<link rel="manifest" href="/assets/site.webmanifest">
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+
+
+<link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
+
+
+
+
+
+
+<script>!function(r,c){"use strict";function a(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}r.loadJS=function(e,t){var n=c.createElement("script"),e=(n.src=e,t&&a(n,"load",t,{once:!0}),c.scripts[0]);return e.parentNode.insertBefore(n,e),n},r._loaded=!1,r.loadJSDeferred=function(e,t){var n=c.createElement("script");function o(){r._loaded=!0,t&&a(n,"load",t,{once:!0});var e=c.scripts[0];e.parentNode.insertBefore(n,e)}return n.src=e,r._loaded?o():a(r,"load",o,{once:!0}),n},r.setRel=r.setRelStylesheet=function(e){a(c.getElementById(e),"load",function(){this.rel="stylesheet"},{once:!0})}}(window,document);
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+!function(w) {
+  w._baseURL = '/';
+  w._publicPath = '/assets/js/';
+  w._noPushState = false;
+  w._noDrawer = false;
+  w._noNavbar = false;
+  w._noToc = false;
+  w._noSearch = false;
+  w._search = {
+    DATA_URL: '/assets/sitedata.json?no-cache',
+    STORAGE_KEY: 'mini-search/',
+    INDEX_KEY: 'index--2022-08-04T09:53:21+09:00',
+  };
+  w._clapButton = true;
+}(window);</script>
+
+
+<script async src="/assets/bower_components/MathJax/es5/tex-mml-chtml.js" id="_MathJax"></script>
+
+
+<!--[if gt IE 8]><!---->
+
+  
+
+
+
+
+<link rel="stylesheet" href="/assets/css/hydejack-9.1.6.css" id="_stylePreload">
+<link rel="stylesheet" href="/assets/icomoon/style.css" id="_iconsPreload">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+KR:wght@200%7CNoto+Sans:400,400i,700,700i&display=swap" id="_fontsPreload">
+
+
+
+  <style id="_pageStyle">
+
+html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);--accent-color-highlight: rgba(79,177,186,0.1);--accent-color-darkened: #409ba3;--theme-color: rgb(25,55,71)}
+
+</style>
+
+
+<!--<![endif]-->
+
+
+
+
+</head>
+
+<body class="no-break-layout">
+  
+
+
+<hy-push-state
+  id="_pushState"
+  replace-selector="#_main"
+  link-selector="a[href]:not([href^='/assets/']):not(.external):not(.no-push-state)"
+  script-selector="script"
+  duration="500"
+  hashchange
+>
+  
+  
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <div class="nav-btn-bar">
+      <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <div class="nav-span"></div>
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+
+  <main
+  id="_main"
+  class="content layout-post"
+  role="main"
+>
+  <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+    <li><a href="/">home</a></li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/spring/">spring</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>rest-api-sample1</span>
+        
+      </li>
+    
+  
+</ul></nav>
+  
+
+
+
+
+
+
+
+
+
+
+<article id="post-spring-rest-api-sample1" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      
+        SpringBoot - Rest Api Sample 만들기
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2022-07-05T00:00:00+09:00">05 Jul 2022</time> in <a href="/spring/" class="flip-title">Spring</a> on <span>Springboot</span>, <span>Rest api</span>, <span>Api</span>, <span>H2database</span>
+      </span>
+      
+    </div>
+
+    
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      [SpringBoot] Rest Api Sample 만들기 #1
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <ul class="large-only" id="markdown-toc">
+  <li><a href="#1-기본-프로젝트-세팅" id="markdown-toc-1-기본-프로젝트-세팅">1. 기본 프로젝트 세팅</a></li>
+  <li><a href="#2-h2-database--mybatis-연계-설정" id="markdown-toc-2-h2-database--mybatis-연계-설정">2. h2 Database + MyBatis 연계 설정</a></li>
+  <li><a href="#3-boot-running-시-h2-database에-샘플-데이터-추가하기" id="markdown-toc-3-boot-running-시-h2-database에-샘플-데이터-추가하기">3. Boot Running 시, h2 database에 샘플 데이터 추가하기.</a></li>
+</ul>
+
+<p>기존에 급하게 진행한 사내 SMS API 서비스를 만들고 나서, 정리도 할 겸 샘플로 REST API 샘플 프로젝트를 만들어보기로 했다.
+기본적인 버전 정보는 다음과 같다.</p>
+
+<h2 id="1-기본-프로젝트-세팅">1. 기본 프로젝트 세팅</h2>
+<p>JDK11
+Spring Boot 2.7.1
+Gradle 7.4.1 (Project Initialize &gt; VS Code Spring Extension &gt; Create a Gradle Project)
+그리고 Build.gradle 에 추가한 dependency 는 아래와 같다.</p>
+<div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">implementation</span> <span class="s1">'org.springframework.boot:spring-boot-starter-web'</span>
+<span class="n">compileOnly</span> <span class="s1">'org.projectlombok:lombok'</span>
+<span class="n">annotationProcessor</span> <span class="s1">'org.projectlombok:lombok'</span>
+<span class="n">testImplementation</span> <span class="s1">'org.springframework.boot:spring-boot-starter-test'</span>
+
+<span class="c1">// dev tool</span>
+<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.springframework.boot'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'spring-boot-devtools'</span>
+<span class="c1">// https://mvnrepository.com/artifact/com.google.code.gson/gson</span>
+<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'com.google.code.gson'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'gson'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'2.8.9'</span>
+<span class="c1">// https://mvnrepository.com/artifact/com.h2database/h2</span>
+<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'com.h2database'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'h2'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'2.1.214'</span>
+<span class="c1">// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jdbc</span>
+<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.springframework.boot'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'spring-boot-starter-data-jdbc'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'2.7.1'</span>
+<span class="c1">// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa</span>
+<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.springframework.boot'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'spring-boot-starter-data-jpa'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'2.7.1'</span>
+<span class="c1">// https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter</span>
+<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.mybatis.spring.boot'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'mybatis-spring-boot-starter'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'2.2.2'</span>
+</code></pre></div></div>
+
+<p>설정하면서, 추가적으로 원래는 테스트 할 때 반복문을 통해서 데이터 샘플을 생성하여 테스트하곤 했었는데, 실제 이 샘플을 기반으로 서비스를 생성하게 되면 어차피 데이터베이스에서 데이터를 가져와 API를 구성해야 하는 만큼 샘플 데이터를 어떻게 하면 효율적으로 제공할 수 있을까를 고민하였는데, 그 때 마침 검색해서 나온 것이 h2 Database 였다.</p>
+
+<p>여태까지는 “테스트” 단계는 그다지 많이 고려를 하지 않았었는데, 막상 사용해보니 생각보다 괜찮았다.</p>
+
+<p>Spring Boot의 Auto Configuration을 통하여 별도의 많은 셋팅을 하지 않더라도 DB를 세팅하여 프로젝트를 돌릴 수 있었다.
+아래는 h2 database에 대해 찾은 블로그 글이다.</p>
+
+<p>https://dololak.tistory.com/285</p>
+
+<p>실제 서비스에서는 MyBatis를 사용하는 만큼 샘플 프로젝트에서도 연동해보았다.</p>
+
+<h2 id="2-h2-database--mybatis-연계-설정">2. h2 Database + MyBatis 연계 설정</h2>
+<p>우선 build.gradle에 아래의 라이브러리가 필요하다.</p>
+<div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">build</span><span class="o">.</span><span class="na">gradle</span>
+<span class="c1">// https://mvnrepository.com/artifact/com.h2database/h2</span>
+<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'com.h2database'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'h2'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'2.1.214'</span>
+<span class="c1">// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jdbc</span>
+<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.springframework.boot'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'spring-boot-starter-data-jdbc'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'2.7.1'</span>
+<span class="c1">// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa</span>
+<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.springframework.boot'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'spring-boot-starter-data-jpa'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'2.7.1'</span>
+<span class="c1">// https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter</span>
+<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'org.mybatis.spring.boot'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'mybatis-spring-boot-starter'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'2.2.2'</span>
+</code></pre></div></div>
+
+<p>설정 파일을 아래와 같이 세팅한다.</p>
+
+<p>application.yml</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">spring</span><span class="pi">:</span>
+  <span class="na">application</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">REST-API</span>
+  <span class="na">datasource</span><span class="pi">:</span>
+    <span class="na">hikari</span><span class="pi">:</span>
+      <span class="c1"># 메모리를 사용하여 DB를 올린다.</span>
+      <span class="na">jdbc-url</span><span class="pi">:</span> <span class="s">jdbc:h2:mem:h2-test</span>
+      <span class="c1"># 파일 형태를 사용하고자 한다면 다음과 같이 사용한다.</span>
+      <span class="c1"># jdbc-url: jdbc:h2:file:{경로}/{파일명}</span>
+      <span class="na">driver-class-name</span><span class="pi">:</span> <span class="s">org.h2.Driver</span>
+      <span class="na">username</span><span class="pi">:</span> <span class="s">sa</span>
+      <span class="na">password</span><span class="pi">:</span>
+      <span class="na">generate-unique-name</span><span class="pi">:</span> <span class="no">false</span>
+      <span class="na">maximum-pool-size</span><span class="pi">:</span> <span class="m">4</span>
+  <span class="na">h2</span><span class="pi">:</span>
+    <span class="na">console</span><span class="pi">:</span>
+      <span class="na">enable</span><span class="pi">:</span> <span class="no">true</span>
+      <span class="na">path</span><span class="pi">:</span> <span class="s">/h2-console</span>
+</code></pre></div></div>
+
+<p>h2-test라는 DB명은 마음대로, username/password는 위와 같이 설정한다. 아래의 h2 항목은 브라우저로 콘솔창에 접근하기 위한 설정과 경로이다. 위 설정대로라면 어플리케이션 구동 후, http://localhost:8080/h2-console 로 콘솔에 접속이 가능하다(8080포트기준)</p>
+
+<p>그리고 난 후 간단한 test 클래스를 작성하여 어플리케이션을 구동하여 DB가 올라오는지 확인 할 수 있다.</p>
+
+<p>testRunner.java</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">rest.api.sample</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.sql.Connection</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.sql.DataSource</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.ApplicationArguments</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.ApplicationRunner</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Component</span><span class="o">;</span>
+
+<span class="nd">@Component</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestRunner</span> <span class="kd">implements</span> <span class="nc">ApplicationRunner</span> <span class="o">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="nc">DataSource</span> <span class="n">dataSource</span><span class="o">;</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">(</span><span class="nc">ApplicationArguments</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+        <span class="nc">Connection</span> <span class="n">connection</span> <span class="o">=</span> <span class="n">dataSource</span><span class="o">.</span><span class="na">getConnection</span><span class="o">();</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"url : "</span> <span class="o">+</span> <span class="n">connection</span><span class="o">.</span><span class="na">getMetaData</span><span class="o">().</span><span class="na">getURL</span><span class="o">());</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"userName : "</span> <span class="o">+</span> <span class="n">connection</span><span class="o">.</span><span class="na">getMetaData</span><span class="o">().</span><span class="na">getUserName</span><span class="o">());</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><img src="/assets/img/Spring/restapi1.png" alt="restapi1" /></p>
+
+<p>이렇게 로그가 정상적으로 찍힌다면 문제없이 구동된 것이고, 콘솔로도 확인이 가능하다. 
+내가 겪은 문제로는 Spring Boot 의 Auto Configuration이 제대로 동작하지 않아서 No Bean for datasouce 에러가 뜨긴 했는데, 새로고침과 재로딩을 통해 문제를 해결했다.</p>
+
+<p>이제 MyBatis를 추가해보자.</p>
+
+<p>build.gradle에는 아까 추가를 했으니, application.yml에 아래의 설정을 추가한다.</p>
+
+<p>application.yml</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">mybatis</span><span class="pi">:</span>
+  <span class="c1"># mapper파일 위치 설정</span>
+  <span class="na">mapper-locations</span><span class="pi">:</span> <span class="s">mybatis/**/*.xml</span>
+  <span class="c1"># 카멜 케이스 허용</span>
+  <span class="na">configuration</span><span class="pi">:</span>
+    <span class="na">map-underscore-to-camel-case</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="c1"># 풀 패키지명을 지정하지 않기 위한 미리 정의 추가</span>
+  <span class="na">type-aliases-package</span><span class="pi">:</span> <span class="s">rest.api.sample.data</span>
+</code></pre></div></div>
+
+<p>그리고 각 설정에 맞게 repository에 interface 클래스와 mapper를 추가하면 된다.</p>
+
+<p><img src="/assets/img/Spring/restapi2.png" alt="restapi2" /></p>
+
+<p>각 폴더에 맞게 작성한 모습</p>
+
+<h2 id="3-boot-running-시-h2-database에-샘플-데이터-추가하기">3. Boot Running 시, h2 database에 샘플 데이터 추가하기.</h2>
+<p>기본적으로 h2 database를 사용하게 되면, schema와 데이터를 어플리케이션 구동 시, 자동으로 찾아서 실행해준다.
+따라서, 해당 sql 파일을 작성하여 적절하게 놔두면 어플리케이션 구동 시, 알아서 읽어서 실행을 시켜준다.</p>
+
+<p>경로는 resouces 폴더 아래이며, 아래와 같이 작성했다.</p>
+
+<p>schema.sql</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">members</span>
+<span class="p">(</span>
+    <span class="n">user_id</span>         <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>     <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">user_name</span>       <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>     <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">user_email</span>      <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>     <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>    
+    <span class="n">user_age</span>        <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>     <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>    
+    <span class="n">user_address</span>    <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>     <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>    
+    <span class="n">user_enter_date</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>     <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>data.sql</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user1'</span><span class="p">,</span><span class="s1">'유저1'</span><span class="p">,</span><span class="s1">'user1@user.net'</span><span class="p">,</span><span class="s1">'1'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 1길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user2'</span><span class="p">,</span><span class="s1">'유저2'</span><span class="p">,</span><span class="s1">'user2@user.net'</span><span class="p">,</span><span class="s1">'2'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 2길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user3'</span><span class="p">,</span><span class="s1">'유저3'</span><span class="p">,</span><span class="s1">'user3@user.net'</span><span class="p">,</span><span class="s1">'3'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 3길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user4'</span><span class="p">,</span><span class="s1">'유저4'</span><span class="p">,</span><span class="s1">'user4@user.net'</span><span class="p">,</span><span class="s1">'4'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 4길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user5'</span><span class="p">,</span><span class="s1">'유저5'</span><span class="p">,</span><span class="s1">'user5@user.net'</span><span class="p">,</span><span class="s1">'5'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 5길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user6'</span><span class="p">,</span><span class="s1">'유저6'</span><span class="p">,</span><span class="s1">'user6@user.net'</span><span class="p">,</span><span class="s1">'6'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 6길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user7'</span><span class="p">,</span><span class="s1">'유저7'</span><span class="p">,</span><span class="s1">'user7@user.net'</span><span class="p">,</span><span class="s1">'7'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 7길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user8'</span><span class="p">,</span><span class="s1">'유저8'</span><span class="p">,</span><span class="s1">'user8@user.net'</span><span class="p">,</span><span class="s1">'8'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 8길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user9'</span><span class="p">,</span><span class="s1">'유저9'</span><span class="p">,</span><span class="s1">'user9@user.net'</span><span class="p">,</span><span class="s1">'9'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 9길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user10'</span><span class="p">,</span><span class="s1">'유저10'</span><span class="p">,</span><span class="s1">'user10@user.net'</span><span class="p">,</span><span class="s1">'10'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 10길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user11'</span><span class="p">,</span><span class="s1">'유저11'</span><span class="p">,</span><span class="s1">'user11@user.net'</span><span class="p">,</span><span class="s1">'11'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 11길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user12'</span><span class="p">,</span><span class="s1">'유저12'</span><span class="p">,</span><span class="s1">'user12@user.net'</span><span class="p">,</span><span class="s1">'12'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 12길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user13'</span><span class="p">,</span><span class="s1">'유저13'</span><span class="p">,</span><span class="s1">'user13@user.net'</span><span class="p">,</span><span class="s1">'13'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 13길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user14'</span><span class="p">,</span><span class="s1">'유저14'</span><span class="p">,</span><span class="s1">'user14@user.net'</span><span class="p">,</span><span class="s1">'14'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 14길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user15'</span><span class="p">,</span><span class="s1">'유저15'</span><span class="p">,</span><span class="s1">'user15@user.net'</span><span class="p">,</span><span class="s1">'15'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 15길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user16'</span><span class="p">,</span><span class="s1">'유저16'</span><span class="p">,</span><span class="s1">'user16@user.net'</span><span class="p">,</span><span class="s1">'16'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 16길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user17'</span><span class="p">,</span><span class="s1">'유저17'</span><span class="p">,</span><span class="s1">'user17@user.net'</span><span class="p">,</span><span class="s1">'17'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 17길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user18'</span><span class="p">,</span><span class="s1">'유저18'</span><span class="p">,</span><span class="s1">'user18@user.net'</span><span class="p">,</span><span class="s1">'18'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 18길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user19'</span><span class="p">,</span><span class="s1">'유저19'</span><span class="p">,</span><span class="s1">'user19@user.net'</span><span class="p">,</span><span class="s1">'19'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 19길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user20'</span><span class="p">,</span><span class="s1">'유저20'</span><span class="p">,</span><span class="s1">'user20@user.net'</span><span class="p">,</span><span class="s1">'20'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 20길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user21'</span><span class="p">,</span><span class="s1">'유저21'</span><span class="p">,</span><span class="s1">'user20@user.net'</span><span class="p">,</span><span class="s1">'21'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 21길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user22'</span><span class="p">,</span><span class="s1">'유저22'</span><span class="p">,</span><span class="s1">'user20@user.net'</span><span class="p">,</span><span class="s1">'22'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 22길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user23'</span><span class="p">,</span><span class="s1">'유저23'</span><span class="p">,</span><span class="s1">'user20@user.net'</span><span class="p">,</span><span class="s1">'23'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 23길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user24'</span><span class="p">,</span><span class="s1">'유저24'</span><span class="p">,</span><span class="s1">'user20@user.net'</span><span class="p">,</span><span class="s1">'24'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 24길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user25'</span><span class="p">,</span><span class="s1">'유저25'</span><span class="p">,</span><span class="s1">'user20@user.net'</span><span class="p">,</span><span class="s1">'25'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 25길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user26'</span><span class="p">,</span><span class="s1">'유저26'</span><span class="p">,</span><span class="s1">'user20@user.net'</span><span class="p">,</span><span class="s1">'26'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 26길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user27'</span><span class="p">,</span><span class="s1">'유저27'</span><span class="p">,</span><span class="s1">'user20@user.net'</span><span class="p">,</span><span class="s1">'27'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 27길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user28'</span><span class="p">,</span><span class="s1">'유저28'</span><span class="p">,</span><span class="s1">'user20@user.net'</span><span class="p">,</span><span class="s1">'28'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 28길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user29'</span><span class="p">,</span><span class="s1">'유저29'</span><span class="p">,</span><span class="s1">'user20@user.net'</span><span class="p">,</span><span class="s1">'29'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 29길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">members</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_name</span><span class="p">,</span><span class="n">user_email</span><span class="p">,</span><span class="n">user_age</span><span class="p">,</span><span class="n">user_address</span><span class="p">,</span><span class="n">user_enter_date</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'user30'</span><span class="p">,</span><span class="s1">'유저30'</span><span class="p">,</span><span class="s1">'user20@user.net'</span><span class="p">,</span><span class="s1">'30'</span><span class="p">,</span><span class="s1">'서울시 유저구 유저동 30길'</span><span class="p">,</span><span class="s1">'2022-07-01'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>이렇게 작성해 놓고 어플리케이션을 구동시킨 다음, http://localhost:8080/h2-console 로 접속하여 데이터를 확인할 수 있다.</p>
+
+<p><img src="/assets/img/Spring/restapi3.png" alt="restapi3" /></p>
+
+  
+</article>
+
+
+
+  <hr class="dingbat related mb6" />
+
+
+
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="/assets/img/logo.png"
+    srcset="/assets/img/logo.png 1x,/assets/img/logo.png 2x"
+    
+  
+  alt="Donkyu Lim"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  <p>2018년 IPP 일학습병행제로 개발을 시작해, 현재까지 웹 백엔드 개발자로 일하고 있습니다.
+<br /> 다른 개발자를 위한 내부 서비스 개발 및 문서화 공유에 신경을 많이 쓰는 편입니다.
+<br /> 새로운 일을 찾아 나서는 것을 좋아합니다.</p>
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/Chiptune93" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:eoen012@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+  
+
+  
+    
+
+
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Related Posts</h2>  <ul class="related-posts">                  <li class="h4">  <a href="/server/rclocal/" class="flip-title"><span>CentOS7 - rc.local 활성화 하기</span></a>  <time class="faded fine" datetime="2022-08-03T00:00:00+09:00">03 Aug 2022</time></li>                        <li class="h4">  <a href="/spring/h2-database-csv/" class="flip-title"><span>SpringBoot - H2 Database CSV 데이터 Import 하기</span></a>  <time class="faded fine" datetime="2022-07-29T00:00:00+09:00">29 Jul 2022</time></li>                        <li class="h4">  <a href="/spring/swagger-ui-3.0/" class="flip-title"><span>SpringBoot - Swagger ui 3.0 연동하기</span></a>  <time class="faded fine" datetime="2022-07-18T00:00:00+09:00">18 Jul 2022</time></li>            </ul></aside>
+
+  
+
+  
+  
+
+  
+    
+
+  
+
+
+  
+<footer class="content" role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2021. All rights reserved.
+</small></p>
+  
+  
+    <nav class="legal"><small>
+    
+      
+      <a class="heading flip-title" href="/LICENSE/">LICENSE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/NOTICE/">NOTICE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/CHANGELOG/">CHANGELOG</a>
+      
+    
+    </small></nav>
+  
+    <p><small>Powered by <a class="external" href="https://hydejack.com/">Hydejack</a> v<span id="_version">9.1.6</span></small></p>
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+  <hy-drawer
+  id="_drawer"
+  class=""
+  side="left"
+  threshold="10"
+  noscroll
+  
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+
+
+
+
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+
+    <div class="sidebar-sticky">
+  <div class="sidebar-about">
+    
+      <a class="no-hover" href="/" tabindex="-1">
+        <img src="/assets/img/logo.png" class="avatar" alt="Chiptune93" width="120" height="120" loading="lazy" />
+      </a>
+    
+    <a class="sidebar-title" href="/"><h2 class="h1">Chiptune93</h2></a>
+    
+    
+      <p class="">
+        Per Ardua Ad Astra. Lucete Stellae.
+
+      </p>
+    
+  </div>
+
+  <nav class="sidebar-nav heading" role="navigation">
+    <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a
+          id="_drawer--opened"
+          href="/Java/"
+          class="sidebar-nav-item "
+          
+        >
+          🚀 Java
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Spring/"
+          class="sidebar-nav-item "
+          
+        >
+          🔮 Spring
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Database/"
+          class="sidebar-nav-item "
+          
+        >
+          📋 Database
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Server/"
+          class="sidebar-nav-item "
+          
+        >
+          💻 Server
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Frontend/"
+          class="sidebar-nav-item "
+          
+        >
+          🎆 Frontend
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/AWS/"
+          class="sidebar-nav-item "
+          
+        >
+          🎃 AWS
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Docker/"
+          class="sidebar-nav-item "
+          
+        >
+          🔌 Docker
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Network/"
+          class="sidebar-nav-item "
+          
+        >
+          📧 Network
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Python/"
+          class="sidebar-nav-item "
+          
+        >
+          ✨ Python
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/IDE/"
+          class="sidebar-nav-item "
+          
+        >
+          💎 IDE
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Error/"
+          class="sidebar-nav-item "
+          
+        >
+          🔥 Error
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Etc/"
+          class="sidebar-nav-item "
+          
+        >
+          👑 Etc
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Project/"
+          class="sidebar-nav-item "
+          
+        >
+          🧭 Project
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Carrer/"
+          class="sidebar-nav-item "
+          
+        >
+          💯 Carrer
+        </a>
+      </li>
+    
+  
+</ul>
+
+  </nav>
+
+  
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/Chiptune93" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:eoen012@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+</hy-push-state>
+
+
+  <!--[if gt IE 10]><!---->
+  <script nomodule>!function(){var t,n=document.createElement("script");!("noModule"in n)&&"onbeforeload"in n&&(t=!1,document.addEventListener("beforeload",function(e){if(e.target===n)t=!0;else if(!e.target.hasAttribute("nomodule")||!t)return;e.preventDefault()},!0),n.type="module",n.src=".",document.head.appendChild(n),n.remove())}();
+</script>
+  <script src="/assets/js/hydejack-9.1.6.js" type="module"></script>
+  <script src="/assets/js/LEGACY-hydejack-9.1.6.js" nomodule defer></script>
+  
+
+  
+
+<!--<![endif]-->
+  <!-- <script>
+  document.querySelector('hy-push-state').setAttribute('prefetch', '');
+
+  document.querySelectorAll('.sidebar a[href^="/"]').forEach(function (el) { 
+    el.addEventListener('click', function (e) {
+      if (el.pathname === window.location.pathname) {
+        e.preventDefault();
+        e.stopPropagation();
+        document.querySelector('hy-drawer').close();
+      }
+    });
+  });
+</script> -->
+
+<!--
+Code for integrating CloudFlare's email protection with Hydejack's single page app loading.
+-->
+<script>
+  document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) {
+    function e(e){
+      (console.error?console.error:console.log).call(console,e)
+    }
+
+    function t(e){
+      return l.innerHTML='<a href="'+e.replace(/"/g,"&quot;")+'"></a>',l.childNodes[0].getAttribute("href")
+    }
+
+    function r(e,t){
+      var r=e.substr(t,2);return parseInt(r,16)
+    }
+
+    function n(e,n){
+      for(var o="",c=r(e,n),a=n+2;a<e.length;a+=2){
+        var l=r(e,a)^c;
+        o+=String.fromCharCode(l)
+      }
+      return t(o)
+    }
+
+    var o="/cdn-cgi/l/email-protection#",
+        c=".__cf_email__",
+        a="data-cfemail",
+        l=document.createElement("div");
+
+    !function(){
+      for(var t=document.getElementsByTagName("a"),r=0;r<t.length;r++)
+        try{
+          var c=t[r],a=c.href.indexOf(o);
+          a>-1&&(c.href="mailto:"+n(c.href,a+o.length))
+        }catch(t){
+          e(t)
+        }
+    }(),
+    function(){
+      for(var t=document.querySelectorAll(c),r=0;r<t.length;r++)
+        try{
+          var o=t[r],l=n(o.getAttribute(a),0),i=document.createTextNode(l);
+          o.parentNode.replaceChild(i,o)
+        }catch(t){
+          e(t)
+        }
+    }()
+  });
+</script>
+
+
+
+
+
+<div hidden>
+  
+  <h2 class="sr-only">Templates (for web app):</h2>
+
+  <template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+</ul></nav>
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+  <template id="_loading-template">
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+  <template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+  <template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="content-hash"></span>
+  </a>
+</template>
+
+</div>
+
+
+</body>
+</html>

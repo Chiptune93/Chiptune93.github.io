@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v9.1.6 <https://hydejack.com/>
+-->
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+
+  <meta name="robots" content="noindex">
+
+
+
+  
+    
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SpringBoot - Swagger ui 3.0 연동하기 | Chiptune93</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="SpringBoot - Swagger ui 3.0 연동하기" />
+<meta name="author" content="Donkyu Lim" />
+<meta property="og:locale" content="en_us,ko_KR" />
+<meta name="description" content="[SpringBoot] Swagger ui 3.0 연동하기" />
+<meta property="og:description" content="[SpringBoot] Swagger ui 3.0 연동하기" />
+<link rel="canonical" href="http://localhost:4000/spring/swagger-ui-3.0/" />
+<meta property="og:url" content="http://localhost:4000/spring/swagger-ui-3.0/" />
+<meta property="og:site_name" content="Chiptune93" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-07-18T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SpringBoot - Swagger ui 3.0 연동하기" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Donkyu Lim"},"dateModified":"2022-07-18T00:00:00+09:00","datePublished":"2022-07-18T00:00:00+09:00","description":"[SpringBoot] Swagger ui 3.0 연동하기","headline":"SpringBoot - Swagger ui 3.0 연동하기","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/spring/swagger-ui-3.0/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"Donkyu Lim"},"url":"http://localhost:4000/spring/swagger-ui-3.0/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+    <meta name="keywords" content="tech,developer,java,spring,docker,mysql,oracle,error">
+  
+
+
+
+  <meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Chiptune93">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="application-name" content="Chiptune93">
+
+<meta name="generator" content="Hydejack v9.1.6" />
+
+
+<link rel="alternate" href="http://localhost:4000/spring/swagger-ui-3.0/" hreflang="en-us,ko-kr">
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Chiptune93" />
+
+
+<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+
+<link rel="manifest" href="/assets/site.webmanifest">
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+
+
+<link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
+
+
+
+
+
+
+<script>!function(r,c){"use strict";function a(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}r.loadJS=function(e,t){var n=c.createElement("script"),e=(n.src=e,t&&a(n,"load",t,{once:!0}),c.scripts[0]);return e.parentNode.insertBefore(n,e),n},r._loaded=!1,r.loadJSDeferred=function(e,t){var n=c.createElement("script");function o(){r._loaded=!0,t&&a(n,"load",t,{once:!0});var e=c.scripts[0];e.parentNode.insertBefore(n,e)}return n.src=e,r._loaded?o():a(r,"load",o,{once:!0}),n},r.setRel=r.setRelStylesheet=function(e){a(c.getElementById(e),"load",function(){this.rel="stylesheet"},{once:!0})}}(window,document);
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+!function(w) {
+  w._baseURL = '/';
+  w._publicPath = '/assets/js/';
+  w._noPushState = false;
+  w._noDrawer = false;
+  w._noNavbar = false;
+  w._noToc = false;
+  w._noSearch = false;
+  w._search = {
+    DATA_URL: '/assets/sitedata.json?no-cache',
+    STORAGE_KEY: 'mini-search/',
+    INDEX_KEY: 'index--2022-08-04T09:53:21+09:00',
+  };
+  w._clapButton = true;
+}(window);</script>
+
+
+<script async src="/assets/bower_components/MathJax/es5/tex-mml-chtml.js" id="_MathJax"></script>
+
+
+<!--[if gt IE 8]><!---->
+
+  
+
+
+
+
+<link rel="stylesheet" href="/assets/css/hydejack-9.1.6.css" id="_stylePreload">
+<link rel="stylesheet" href="/assets/icomoon/style.css" id="_iconsPreload">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+KR:wght@200%7CNoto+Sans:400,400i,700,700i&display=swap" id="_fontsPreload">
+
+
+
+  <style id="_pageStyle">
+
+html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);--accent-color-highlight: rgba(79,177,186,0.1);--accent-color-darkened: #409ba3;--theme-color: rgb(25,55,71)}
+
+</style>
+
+
+<!--<![endif]-->
+
+
+
+
+</head>
+
+<body class="no-break-layout">
+  
+
+
+<hy-push-state
+  id="_pushState"
+  replace-selector="#_main"
+  link-selector="a[href]:not([href^='/assets/']):not(.external):not(.no-push-state)"
+  script-selector="script"
+  duration="500"
+  hashchange
+>
+  
+  
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <div class="nav-btn-bar">
+      <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <div class="nav-span"></div>
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+
+  <main
+  id="_main"
+  class="content layout-post"
+  role="main"
+>
+  <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+    <li><a href="/">home</a></li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/spring/">spring</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>swagger-ui-3.0</span>
+        
+      </li>
+    
+  
+</ul></nav>
+  
+
+
+
+
+
+
+
+
+
+
+<article id="post-spring-swagger-ui-3.0" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      
+        SpringBoot - Swagger ui 3.0 연동하기
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2022-07-18T00:00:00+09:00">18 Jul 2022</time> in <a href="/spring/" class="flip-title">Spring</a> on <span>Swagger</span>, <span>Springboot</span>, <span>Swagger3.0</span>
+      </span>
+      
+    </div>
+
+    
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      [SpringBoot] Swagger ui 3.0 연동하기
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <ul class="large-only" id="markdown-toc">
+  <li><a href="#1-swagger-30-세팅하기" id="markdown-toc-1-swagger-30-세팅하기">1. Swagger 3.0 세팅하기.</a></li>
+  <li><a href="#4-키-관련-설정" id="markdown-toc-4-키-관련-설정">4. 키 관련 설정</a></li>
+</ul>
+
+<h2 id="1-swagger-30-세팅하기">1. Swagger 3.0 세팅하기.</h2>
+<p>구글에 검색해서 나온 스웨거 세팅 관련 포스트는 대부분 2.X 버전대 이거나, 3.0 라이브러리를 받았음에도, 스웨거 세팅에서 SWAGGER2버전으로 낮추어 사용하는 글이 혼재하여 정리하고자 글을 작성한다.</p>
+
+<p>우선 내가 적용하고자 하는 스프링 부트의 버전은 2.7.1 버전이며, 스웨거는 open api 3.0 OAS3 문서 버전을 만들고자 한다.</p>
+
+<ul>
+  <li>build.gradle
+    <div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// https://mvnrepository.com/artifact/io.springfox/springfox-boot-starter</span>
+<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'io.springfox'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'springfox-boot-starter'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'3.0.0'</span>
+<span class="c1">// https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui</span>
+<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'io.springfox'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'springfox-swagger-ui'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'3.0.0'</span>
+<span class="c1">// https://mvnrepository.com/artifact/io.springfox/springfox-oas</span>
+<span class="n">implementation</span> <span class="nl">group:</span> <span class="s1">'io.springfox'</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">'springfox-oas'</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">'3.0.0'</span>
+<span class="err">위</span> <span class="mi">3</span><span class="err">가지</span> <span class="err">버전을</span> <span class="err">받아서</span> <span class="err">사용했을</span> <span class="err">때</span><span class="o">,</span> <span class="err">정상</span> <span class="err">구동이</span> <span class="err">가능</span> <span class="err">했다</span><span class="o">.</span> <span class="err">보통은</span> <span class="n">springfox</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">starter</span><span class="err">만</span> <span class="err">넣으면</span> <span class="err">된다는</span> <span class="err">얘기가</span> <span class="err">많았는데</span><span class="o">,</span> <span class="err">내</span> <span class="err">경우에는</span> <span class="err">아래</span> <span class="mi">2</span><span class="err">가지도</span> <span class="err">있어야</span> <span class="err">구동이</span> <span class="err">정상적으로</span> <span class="err">가능했다</span><span class="o">.</span>
+</code></pre></div>    </div>
+  </li>
+  <li>SwaggerConfig.java
+```java
+package com.sample.swagger.config;</li>
+</ul>
+
+<p>import java.util.Arrays;</p>
+
+<p>import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;</p>
+
+<p>import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;</p>
+
+<p>@EnableWebMvc
+@Configuration
+public class SwaggerConfig extends WebMvcConfigurationSupport {</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Bean
+public Docket api(TypeResolver typeResolver) {
+    return new Docket(DocumentationType.OAS_30) // 3.0 문서버전으로 세팅
+            .useDefaultResponseMessages(true)
+            .apiInfo(apiInfo())
+            .select()
+            .apis(RequestHandlerSelectors.basePackage("com.sample.swagger.controller"))
+            .paths(PathSelectors.any())
+            .build();
+}
+
+private ApiInfo apiInfo() {
+    return new ApiInfoBuilder()
+            .title("Swagger 3.0 Api Sample")
+            .description("This is Sample")
+            .version("1.0")
+            .build();
+} } ``` 위의 설정을 웹 설정에 추가한다. 참고로, MVC설정을 따로 해주지 않는 프로젝트라면 아래의 설정도 같이 추가해주어야 한다.
+</code></pre></div></div>
+
+<ul>
+  <li>WebConfig.java
+```java
+package com.sample.swagger.config;</li>
+</ul>
+
+<p>import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;</p>
+
+<p>@Configuration
+public class WebConfig implements WebMvcConfigurer {</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Override
+public void addResourceHandlers(ResourceHandlerRegistry registry) {
+    registry.addResourceHandler("/swagger-ui/**")
+            .addResourceLocations("classpath:/META-INF/resources/webjars/springfox-swagger-ui/")
+            .resourceChain(false);
+}
+
+@Override
+public void addViewControllers(ViewControllerRegistry registry) {
+    registry.addViewController("/swagger-ui/")
+            .setViewName("forward:/swagger-ui/index.html");
+}
+</code></pre></div></div>
+
+<p>}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>위 설정이 없다면, 아무리 프로젝트를 돌려도 스웨거 파싱 페이지에 접근 할 수 가 없다. (리소스가 없다고 에러가 발생한다.)
+
+## 2. @Schema 작성
+Swagger 3.0 버전에서는 ApiModelProperty 대신 Schema 어노테이션으로 모델을 작성한다.
+파라미터 / 실제 응답 데이터 / 응답 내 데이터 3가지 종류에 대해 예제를 제공할 생각이므로, 세개를 다 정의해야 한다.
+예제 구조는 dataParam / dataRes / data 로 잡았으며, dataRes 내부에 List&lt;data&gt; 가 존재하는 것으로 세팅하였다.
+
+### @Schema 
+- name : 모델명
+- description : 해당 모델에 대한 설명
+- defaultValue : 기본 값(있다면)
+- allowableValues : 허용 값 범위(있다면)
+- example : 예제 데이터 (작성해야 스웨거 문서에 데이터가 일반 타입이 아닌 데이터가 있는 것으로 나타남)
+
+- dataParam.java
+```java
+package com.sample.swagger.data;
+
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Getter;
+import lombok.Setter;
+
+@Schema(name = "dataParam", description = "유저 조회 파라미터")
+@Getter
+@Setter
+public class dataParam {
+    @Schema(description = "요청 개수", defaultValue = "", allowableValues = {}, example = "1")
+    private int num;
+}
+</code></pre></div></div>
+
+<ul>
+  <li>data.java
+```java
+package com.sample.swagger.data;</li>
+</ul>
+
+<p>import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Getter;
+import lombok.Setter;</p>
+
+<p>@Schema(name = “data”, description = “유저 데이터”)
+@Getter
+@Setter
+public class data {
+    @Schema(description = “유저 번호”, defaultValue = “”, allowableValues = {}, example = “1”)
+    private int userNo;
+    @Schema(description = “유저 이름”, defaultValue = “”, allowableValues = {}, example = “user1”)
+    private String username;
+}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+- dataRes.java
+```java
+package com.sample.swagger.data;
+
+import java.util.List;
+
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Getter;
+import lombok.Setter;
+
+@Schema(name = "dataRes", description = "유저 조회 응답 데이터")
+@Getter
+@Setter
+public class dataRes {
+    @Schema(description = "유저 리스트", defaultValue = "", allowableValues = {}, example = "")
+    private List&lt;data&gt; dataList;
+}
+</code></pre></div></div>
+
+<p>그리고, 응답을 정의할 클래스도 작성하였다. 여기서 주목할 점은 글로벌 에러 처리 혹은 기타 에러 처리로 인해 리턴되는 데이터 형태는 스웨거에서 잡지 못한다는 것이다. 따라서, 별도로 추가하고 싶은 예외 케이스의 경우(예를 들어, 200 정상 리턴 외, 400-500대 등의 에러를 스웨거에서 제공하고 싶은 경우.) 별도 클래스를 작성하여 @Schema 어노테이션을 준 후, 응답에 추가해주어야 한다.</p>
+
+<p>우선, 응답 클래스 3가지를 작성한다.</p>
+
+<ul>
+  <li>ApiRes : 정상 응답 시, 컨트롤러에서 리턴하는 클래스
+```java
+package com.sample.swagger.response;</li>
+</ul>
+
+<p>import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Getter;
+import lombok.Setter;</p>
+
+<p>@Schema(name = “ApiRes”, description = “Api Response Format”)
+@Getter
+@Setter
+public class ApiRes<T> {
+    @Schema(description = "요청결과 상태", nullable = false, example = "success")
+    private String result_status;
+    @Schema(description = "요청결과", nullable = false, example = "")
+    private T result;</T></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public ApiRes(T result) {
+    this.result_status = "success";
+    this.result = result;
+}
+</code></pre></div></div>
+
+<p>}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+- ApiErr : 에러가 발생한 경우 보여줄 에러
+```java
+package com.sample.swagger.response;
+
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Getter;
+import lombok.Setter;
+
+@Schema(name = "ApiErr", description = "Api Response Err")
+@Getter
+@Setter
+public class ApiErr {
+    @Schema(description = "요청결과 상태", nullable = false, example = "fail")
+    private String error_status;
+    @Schema(description = "요청결과 메세지", nullable = false, example = "요청이 실패하였습니다.")
+    private String error_message;
+
+    public ApiErr(String error_status, String error_message) {
+        this.error_status = error_status;
+        this.error_message = error_message;
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>ApiNoAuth : 권한 없는 경우 보여줄 에러
+```java
+package com.sample.swagger.response;</li>
+</ul>
+
+<p>import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Getter;
+import lombok.Setter;</p>
+
+<p>@Schema(name = “ApiNoAuth”, description = “Api Response No Auth”)
+@Getter
+@Setter
+public class ApiNoAuth {
+    @Schema(description = “요청결과 상태”, nullable = false, example = “fail”)
+    private String error_status;
+    @Schema(description = “요청결과 메세지”, nullable = false, example = “권한이 없습니다.”)
+    private String error_message;
+}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+데이터 및 응답에 대한 스키마를 작성하였으면, 해당 컨트롤러로 이동하여 컨트롤러에 대해 정의한다.
+
+## 3. @ApiResponse, @Tag, @ApiOperation
+### @Tag : 같은 태그로 작성된 컨트롤러들을 묶어주는 역할을 한다.
+- name : 태그명 작성
+- description : 태그에 대한 설명
+### @ApiResponse : 해당 컨트롤러에 대한 응답을 정의한다.
+- 상위에 @ApiResponses(values={}) 로 묶인다.
+- responseCode : 응답코드를 정의한다.
+- description : 해당 응답에 대한 설명을 정의한다.
+- content : 해당 응답에 대한 내용을 정의한다. @Content를 통해 내용을 따로 정의할 수 있으며, 보통 @Schema implemention을 통해 미리 정의된 클래스 스키마를 사용 가능하다.
+### @ApiOperation: API 동작에 대한 설명을 정의한다.
+- value : 동작 값을 정의한다.
+- notes : 동작에 대한 설명을 정의한다.
+- authorizations : 뒤에서 언급할 인증 관련 값을 정의한다. (키 관련)
+
+- ApiController.java
+```java
+package com.sample.swagger.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.sample.swagger.data.data;
+import com.sample.swagger.data.dataParam;
+import com.sample.swagger.data.dataRes;
+import com.sample.swagger.response.ApiErr;
+import com.sample.swagger.response.ApiNoAuth;
+import com.sample.swagger.response.ApiRes;
+
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
+@Tag(name = "user", description = "get user list")
+@RestController
+@RequestMapping("/api")
+public class ApiController {
+
+    @Tag(name = "user")
+    @ApiOperation(value = "유저 리스트", notes = "파라미터로 넘어온 수 만큼 유저를 리턴한다.", authorizations = {
+            @Authorization(value = "apiKey") })
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "요청 성공", content = @Content(schema = @Schema(implementation = ApiRes.class))),
+            @ApiResponse(responseCode = "201", description = "500과 동일"),
+            @ApiResponse(responseCode = "401", description = "권한 없음(키누락)", content = @Content(schema = @Schema(implementation = ApiNoAuth.class))),
+            @ApiResponse(responseCode = "403", description = "500과 동일"),
+            @ApiResponse(responseCode = "404", description = "500과 동일"),
+            @ApiResponse(responseCode = "500", description = "요청 실패", content = @Content(schema = @Schema(implementation = ApiErr.class)))
+    })
+    @GetMapping(value = "/getUser", produces = "application/json")
+    public ResponseEntity&lt;ApiRes&lt;dataRes&gt;&gt; getUser(@RequestParam int num) {
+        dataRes res = new dataRes();
+        List&lt;data&gt; result = new ArrayList&lt;data&gt;();
+        for (int i = 0; i &lt; num; i++) {
+            data d = new data();
+            d.setUserNo(i);
+            d.setUsername("user" + i);
+            result.add(d);
+        }
+        res.setDataList(result);
+        return new ResponseEntity&lt;ApiRes&lt;dataRes&gt;&gt;(new ApiRes&lt;dataRes&gt;(res), HttpStatus.OK);
+    }
+
+    @Tag(name = "user")
+    @ApiOperation(value = "유저 리스트", notes = "파라미터로 넘어온 수 만큼 유저를 리턴한다.", authorizations = {
+            @Authorization(value = "apiKey") })
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "요청 성공", content = @Content(schema = @Schema(implementation = ApiRes.class))),
+            @ApiResponse(responseCode = "201", description = "500과 동일"),
+            @ApiResponse(responseCode = "401", description = "권한 없음(키누락)", content = @Content(schema = @Schema(implementation = ApiNoAuth.class))),
+            @ApiResponse(responseCode = "403", description = "500과 동일"),
+            @ApiResponse(responseCode = "404", description = "500과 동일"),
+            @ApiResponse(responseCode = "500", description = "요청 실패", content = @Content(schema = @Schema(implementation = ApiErr.class)))
+    })
+    @PostMapping(value = "/getUser", produces = "application/json")
+    public ResponseEntity&lt;ApiRes&lt;dataRes&gt;&gt; postUser(@RequestBody dataParam param) {
+        dataRes res = new dataRes();
+        List&lt;data&gt; result = new ArrayList&lt;data&gt;();
+        for (int i = 0; i &lt; param.getNum(); i++) {
+            data d = new data();
+            d.setUserNo(i);
+            d.setUsername("user" + i);
+            result.add(d);
+        }
+        res.setDataList(result);
+        return new ResponseEntity&lt;ApiRes&lt;dataRes&gt;&gt;(new ApiRes&lt;dataRes&gt;(res), HttpStatus.OK);
+    }
+}
+</code></pre></div></div>
+
+<p>응답에 작성된 클래스를 지정하고 돌려보면 가끔 오류로 찾지 못한다는 메세지가 뜰 수 있는데 이럴때는 설정 쪽을 건드려서 해당 클래스를 추가해주면 된다.</p>
+
+<p>추측으로는 실제 컨트롤러에서 리턴하는 클래스가 아니기 때문에 잡지 못하는게 아닌가 한다.</p>
+
+<ul>
+  <li>SwaggerConfig.java
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Bean</span>
+<span class="kd">public</span> <span class="nc">Docket</span> <span class="nf">api</span><span class="o">(</span><span class="nc">TypeResolver</span> <span class="n">typeResolver</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nf">Docket</span><span class="o">(</span><span class="nc">DocumentationType</span><span class="o">.</span><span class="na">OAS_30</span><span class="o">)</span>
+  <span class="c1">// * 실제 에러 처리로 리턴하는 클래스를 명시하고자 할 때 해당 모델을 추가해준다.</span>
+  <span class="o">.</span><span class="na">additionalModels</span><span class="o">(</span>
+  <span class="n">typeResolver</span><span class="o">.</span><span class="na">resolve</span><span class="o">(</span><span class="nc">ApiRes</span><span class="o">.</span><span class="na">class</span><span class="o">),</span>
+  <span class="n">typeResolver</span><span class="o">.</span><span class="na">resolve</span><span class="o">(</span><span class="nc">ApiErr</span><span class="o">.</span><span class="na">class</span><span class="o">),</span>
+  <span class="n">typeResolver</span><span class="o">.</span><span class="na">resolve</span><span class="o">(</span><span class="nc">ApiNoAuth</span><span class="o">.</span><span class="na">class</span><span class="o">))</span>
+  <span class="c1">// * 스키마 멤버 변수 중, Date 관련 변수 문제로 인해 설정 추가</span>
+  <span class="o">.</span><span class="na">directModelSubstitute</span><span class="o">(</span><span class="nc">LocalDate</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">java</span><span class="o">.</span><span class="na">sql</span><span class="o">.</span><span class="na">Date</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">directModelSubstitute</span><span class="o">(</span><span class="nc">LocalDateTime</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">Date</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">useDefaultResponseMessages</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">apiInfo</span><span class="o">(</span><span class="n">apiInfo</span><span class="o">())</span>
+  <span class="o">.</span><span class="na">select</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">apis</span><span class="o">(</span><span class="nc">RequestHandlerSelectors</span><span class="o">.</span><span class="na">basePackage</span><span class="o">(</span><span class="s">"com.sample.swagger.controller"</span><span class="o">))</span>
+  <span class="o">.</span><span class="na">paths</span><span class="o">(</span><span class="nc">PathSelectors</span><span class="o">.</span><span class="na">any</span><span class="o">())</span>
+  <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>이렇게 까지만 작성하고 로컬 구동한 뒤, http://localhost:8080/swagger-ui/index.html 을 접속하면 다음과 같은 화면을 만나볼 수 있다.</p>
+
+<p><img src="/assets/img/Spring/swagger1.png" alt="swagger1" /></p>
+
+<p><img src="/assets/img/Spring/swagger2.png" alt="swagger2" /></p>
+
+<h2 id="4-키-관련-설정">4. 키 관련 설정</h2>
+<p>Swagger에서 가장 큰 특징 중 하나는 키 관련 설정을 제공한다는 것이다. 찾아보면 실제 토큰 값 또는 처리되는 방식에 따라 다르게 적용하는 방법이 있다.</p>
+
+<p>우선 현재 샘플로 작성한 프로젝트에서는 단순히 헤더에 특정 값이 있는지를 체크할 것이기 때문에 단순하게 진행했다. 설정은 남겨놓았으니 참고 하면 된다.</p>
+
+<ul>
+  <li>SwaggerConfig.java
+```java
+package com.sample.swagger.config;</li>
+</ul>
+
+<p>import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Arrays;</p>
+
+<p>import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;</p>
+
+<p>import com.fasterxml.classmate.TypeResolver;
+import com.sample.swagger.response.ApiErr;
+import com.sample.swagger.response.ApiNoAuth;
+import com.sample.swagger.response.ApiRes;</p>
+
+<p>import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.ApiKey;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;</p>
+
+<p>@EnableWebMvc
+@Configuration
+public class SwaggerConfig extends WebMvcConfigurationSupport {</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Bean
+public Docket api(TypeResolver typeResolver) {
+    return new Docket(DocumentationType.OAS_30)
+            // * 실제 에러 처리로 리턴하는 클래스를 명시하고자 할 때 해당 모델을 추가해준다.
+            .additionalModels(
+                    typeResolver.resolve(ApiRes.class),
+                    typeResolver.resolve(ApiErr.class),
+                    typeResolver.resolve(ApiNoAuth.class))
+            // * 스키마 멤버 변수 중, Date 관련 변수 문제로 인해 설정 추가
+            .directModelSubstitute(LocalDate.class, java.sql.Date.class)
+            .directModelSubstitute(LocalDateTime.class, java.util.Date.class)
+            .useDefaultResponseMessages(true)
+            .apiInfo(apiInfo())
+            // 인증 토큰 방식이 있을때만 사용.
+            // .securityContexts(Arrays.asList(securityContext()))
+            .securitySchemes(Arrays.asList(apiKey()))
+            .select()
+            .apis(RequestHandlerSelectors.basePackage("com.sample.swagger.controller"))
+            .paths(PathSelectors.any())
+            .build();
+}
+
+private ApiInfo apiInfo() {
+    return new ApiInfoBuilder()
+            .title("Swagger 3.0 Api Sample")
+            .description("This is Sample")
+            .version("1.0")
+            .build();
+}
+
+// 인증 토큰 방식이 있을때만 사용.
+/*
+ * private SecurityContext securityContext() {
+ * return SecurityContext.builder()
+ * .securityReferences(defaultAuth())
+ * .build();
+ * }
+ */
+
+// 인증 토큰 방식이 있을때만 사용.
+/*
+ * private List&lt;SecurityReference&gt; defaultAuth() {
+ * AuthorizationScope authorizationScope = new AuthorizationScope("global",
+ * "accessEverything");
+ * AuthorizationScope[] authorizationScopes = new AuthorizationScope[1];
+ * authorizationScopes[0] = authorizationScope;
+ * return Arrays.asList(new SecurityReference("Authorization",
+ * authorizationScopes));
+ * }
+ */
+
+private ApiKey apiKey() {
+    return new ApiKey("apiKey", "apiKey", "header");
+} } ```
+</code></pre></div></div>
+
+<p>위에서 중요한 부분은 apiKey() 부분인데, 파라미터 순서대로 name, keyname, passAs 이다. 이를 참고하여 작성하고 아래와 같이 컨트롤러의 @ApiOperation 부분에 내부 옵션으로 지정하면 된다</p>
+
+<ul>
+  <li>ApiController.java
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@ApiOperation</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"유저 리스트"</span><span class="o">,</span> <span class="n">notes</span> <span class="o">=</span> <span class="s">"파라미터로 넘어온 수 만큼 유저를 리턴한다."</span><span class="o">,</span> <span class="n">authorizations</span> <span class="o">=</span> <span class="o">{</span><span class="nd">@Authorization</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"apiKey"</span><span class="o">)</span> <span class="o">})</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>해당 작업을 완료하고 다시 프로젝트를 돌려 확인해보면 아래와 같이 버튼이 추가된 것을 볼 수 있다.</p>
+
+<p><img src="/assets/img/Spring/swagger3.png" alt="swagger3" /></p>
+
+<p>해당 버튼을 클릭하면 아래와 같이 팝업이 뜬다.</p>
+
+<p><img src="/assets/img/Spring/swagger4.png" alt="swagger4" /></p>
+
+<p>여기에 값을 입력 후, Authorize를 클릭하면, 해당 값이 저장되어 테스트 시 같이 전달 된다.</p>
+
+<p><img src="/assets/img/Spring/swagger5.png" alt="swagger5" /></p>
+
+<p>되게 간단하게 한다고 시작했는데 정리하는데 생각보다 시간이 많이 걸렸다. 무엇보다 스프링 부트에서 어노테이션으로 작업하는 예제가 많이 없어서 그렇기도 하고, 버전에 따라 옵션 값이나 어노테이션이 달라지는 부분도 있는데 찾기가 매우 힘들었다.</p>
+
+<p>Swagger는 이렇게 한 번 정리 해놓으면 편하게 사용할 수 있으니 한 번 쯤은 시도해볼 만 한 가치가 있다고 본다.</p>
+
+<p>해당 포스트의 예제 소스는 아래에서 보실 수 있습니다.</p>
+
+<p>https://github.com/Chiptune93/spring-example/tree/main/Swagger/3.0/swagger</p>
+
+  
+</article>
+
+
+
+  <hr class="dingbat related mb6" />
+
+
+
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="/assets/img/logo.png"
+    srcset="/assets/img/logo.png 1x,/assets/img/logo.png 2x"
+    
+  
+  alt="Donkyu Lim"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  <p>2018년 IPP 일학습병행제로 개발을 시작해, 현재까지 웹 백엔드 개발자로 일하고 있습니다.
+<br /> 다른 개발자를 위한 내부 서비스 개발 및 문서화 공유에 신경을 많이 쓰는 편입니다.
+<br /> 새로운 일을 찾아 나서는 것을 좋아합니다.</p>
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/Chiptune93" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:eoen012@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+  
+
+  
+    
+
+
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Related Posts</h2>  <ul class="related-posts">                  <li class="h4">  <a href="/server/rclocal/" class="flip-title"><span>CentOS7 - rc.local 활성화 하기</span></a>  <time class="faded fine" datetime="2022-08-03T00:00:00+09:00">03 Aug 2022</time></li>                        <li class="h4">  <a href="/spring/h2-database-csv/" class="flip-title"><span>SpringBoot - H2 Database CSV 데이터 Import 하기</span></a>  <time class="faded fine" datetime="2022-07-29T00:00:00+09:00">29 Jul 2022</time></li>                        <li class="h4">  <a href="/error/springboot-cors-error/" class="flip-title"><span>SpringBoot 2.7+ CORS 이슈 및 해결방법</span></a>  <time class="faded fine" datetime="2022-07-07T00:00:00+09:00">07 Jul 2022</time></li>            </ul></aside>
+
+  
+
+  
+  
+
+  
+    
+
+  
+
+
+  
+<footer class="content" role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2021. All rights reserved.
+</small></p>
+  
+  
+    <nav class="legal"><small>
+    
+      
+      <a class="heading flip-title" href="/LICENSE/">LICENSE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/NOTICE/">NOTICE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/CHANGELOG/">CHANGELOG</a>
+      
+    
+    </small></nav>
+  
+    <p><small>Powered by <a class="external" href="https://hydejack.com/">Hydejack</a> v<span id="_version">9.1.6</span></small></p>
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+  <hy-drawer
+  id="_drawer"
+  class=""
+  side="left"
+  threshold="10"
+  noscroll
+  
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+
+
+
+
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+
+    <div class="sidebar-sticky">
+  <div class="sidebar-about">
+    
+      <a class="no-hover" href="/" tabindex="-1">
+        <img src="/assets/img/logo.png" class="avatar" alt="Chiptune93" width="120" height="120" loading="lazy" />
+      </a>
+    
+    <a class="sidebar-title" href="/"><h2 class="h1">Chiptune93</h2></a>
+    
+    
+      <p class="">
+        Per Ardua Ad Astra. Lucete Stellae.
+
+      </p>
+    
+  </div>
+
+  <nav class="sidebar-nav heading" role="navigation">
+    <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a
+          id="_drawer--opened"
+          href="/Java/"
+          class="sidebar-nav-item "
+          
+        >
+          🚀 Java
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Spring/"
+          class="sidebar-nav-item "
+          
+        >
+          🔮 Spring
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Database/"
+          class="sidebar-nav-item "
+          
+        >
+          📋 Database
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Server/"
+          class="sidebar-nav-item "
+          
+        >
+          💻 Server
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Frontend/"
+          class="sidebar-nav-item "
+          
+        >
+          🎆 Frontend
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/AWS/"
+          class="sidebar-nav-item "
+          
+        >
+          🎃 AWS
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Docker/"
+          class="sidebar-nav-item "
+          
+        >
+          🔌 Docker
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Network/"
+          class="sidebar-nav-item "
+          
+        >
+          📧 Network
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Python/"
+          class="sidebar-nav-item "
+          
+        >
+          ✨ Python
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/IDE/"
+          class="sidebar-nav-item "
+          
+        >
+          💎 IDE
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Error/"
+          class="sidebar-nav-item "
+          
+        >
+          🔥 Error
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Etc/"
+          class="sidebar-nav-item "
+          
+        >
+          👑 Etc
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Project/"
+          class="sidebar-nav-item "
+          
+        >
+          🧭 Project
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Carrer/"
+          class="sidebar-nav-item "
+          
+        >
+          💯 Carrer
+        </a>
+      </li>
+    
+  
+</ul>
+
+  </nav>
+
+  
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/Chiptune93" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:eoen012@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+</hy-push-state>
+
+
+  <!--[if gt IE 10]><!---->
+  <script nomodule>!function(){var t,n=document.createElement("script");!("noModule"in n)&&"onbeforeload"in n&&(t=!1,document.addEventListener("beforeload",function(e){if(e.target===n)t=!0;else if(!e.target.hasAttribute("nomodule")||!t)return;e.preventDefault()},!0),n.type="module",n.src=".",document.head.appendChild(n),n.remove())}();
+</script>
+  <script src="/assets/js/hydejack-9.1.6.js" type="module"></script>
+  <script src="/assets/js/LEGACY-hydejack-9.1.6.js" nomodule defer></script>
+  
+
+  
+
+<!--<![endif]-->
+  <!-- <script>
+  document.querySelector('hy-push-state').setAttribute('prefetch', '');
+
+  document.querySelectorAll('.sidebar a[href^="/"]').forEach(function (el) { 
+    el.addEventListener('click', function (e) {
+      if (el.pathname === window.location.pathname) {
+        e.preventDefault();
+        e.stopPropagation();
+        document.querySelector('hy-drawer').close();
+      }
+    });
+  });
+</script> -->
+
+<!--
+Code for integrating CloudFlare's email protection with Hydejack's single page app loading.
+-->
+<script>
+  document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) {
+    function e(e){
+      (console.error?console.error:console.log).call(console,e)
+    }
+
+    function t(e){
+      return l.innerHTML='<a href="'+e.replace(/"/g,"&quot;")+'"></a>',l.childNodes[0].getAttribute("href")
+    }
+
+    function r(e,t){
+      var r=e.substr(t,2);return parseInt(r,16)
+    }
+
+    function n(e,n){
+      for(var o="",c=r(e,n),a=n+2;a<e.length;a+=2){
+        var l=r(e,a)^c;
+        o+=String.fromCharCode(l)
+      }
+      return t(o)
+    }
+
+    var o="/cdn-cgi/l/email-protection#",
+        c=".__cf_email__",
+        a="data-cfemail",
+        l=document.createElement("div");
+
+    !function(){
+      for(var t=document.getElementsByTagName("a"),r=0;r<t.length;r++)
+        try{
+          var c=t[r],a=c.href.indexOf(o);
+          a>-1&&(c.href="mailto:"+n(c.href,a+o.length))
+        }catch(t){
+          e(t)
+        }
+    }(),
+    function(){
+      for(var t=document.querySelectorAll(c),r=0;r<t.length;r++)
+        try{
+          var o=t[r],l=n(o.getAttribute(a),0),i=document.createTextNode(l);
+          o.parentNode.replaceChild(i,o)
+        }catch(t){
+          e(t)
+        }
+    }()
+  });
+</script>
+
+
+
+
+
+<div hidden>
+  
+  <h2 class="sr-only">Templates (for web app):</h2>
+
+  <template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+</ul></nav>
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+  <template id="_loading-template">
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+  <template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+  <template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="content-hash"></span>
+  </a>
+</template>
+
+</div>
+
+
+</body>
+</html>
