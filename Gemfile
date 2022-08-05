@@ -16,6 +16,9 @@ gem "duktape"
 # Fixes `jekyll serve` in ruby 3
 gem "webrick"
 
+# Chiptune -> m1 mac ... 
+gem "kramdown", "~> 2.3.2"
+
 group :jekyll_plugins do
   gem "github-pages"
   gem "jekyll-include-cache"
