@@ -91,8 +91,6 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
 
-  <link rel="dns-prefetch" href="https://www.google-analytics.com">
-
 
 <link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
 
@@ -115,7 +113,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-08-05T09:50:48+09:00',
+    INDEX_KEY: 'index--2022-08-05T11:54:16+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -147,7 +145,15 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <!--<![endif]-->
 
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N6KPDZJCZT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-N6KPDZJCZT');
+</script>
 
 </head>
 
@@ -1061,33 +1067,6 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
   
 
   
-  <script>!function(w, d) {
-    w.ga=w.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-
-    /**/
-      ga('create', 'G-N6KPDZJCZT', 'auto');
-    /**/
-
-    var pushStateEl = d.getElementById('_pushState');
-    var timeoutId;
-    pushStateEl.addEventListener('hy-push-state-load', function() {
-      w.clearTimeout(timeoutId);
-      timeoutId = w.setTimeout(function() {
-        ga('set', 'page', w.location.pathname);
-        ga('send', 'pageview');
-      }, 500);
-    });
-
-    d.addEventListener('hy--cookies-ok', function () {
-      w.ga(function(tracker) {
-        w.ga("set", "anonymizeIp", undefined);
-        localStorage && localStorage.setItem("ga--client-id", tracker.get("clientId"));
-      });
-    });
-
-    w.loadJSDeferred('https://www.google-analytics.com/analytics.js');
-  }(window, document);</script>
-
 
 <!--<![endif]-->
   <!-- <script>
