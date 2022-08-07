@@ -3,7 +3,7 @@ layout: post
 title: Spring Multi DataSource - Read / Write Dynamic DataSource
 description: >
   [ Spring Multi DataSource ] Read / Write Dynamic DataSource
-sitemap: false
+
 hide_last_modified: true
 categories: [Spring]
 tags: [spring, datasource, dynamic datasouce]

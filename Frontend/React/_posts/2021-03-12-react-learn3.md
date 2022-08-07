@@ -3,7 +3,7 @@ layout: post
 title: 3회차 - 컴포넌트 만들기
 description: >
   [인프런:생활코딩 - REACT] 3회차 : 컴포넌트 만들기
-sitemap: false
+
 hide_last_modified: true
 categories: [Frontend]
 tags: [React]

@@ -3,7 +3,7 @@ layout: post
 title: VS Code - code snippet $ escape ( dollar sign )
 description: >
   [VS Code] code snippet $ escape ( dollar sign )
-sitemap: false
+
 hide_last_modified: true
 categories: [IDE]
 tags: [vscode, snippet, escape]

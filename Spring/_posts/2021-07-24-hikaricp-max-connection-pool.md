@@ -3,7 +3,7 @@ layout: post
 title: Spring Boot Gradle - Hikari CP MAX Connection Pool 설정하기
 description: >
   [Spring Boot Gradle] Hikari CP MAX Connection Pool 설정하기
-sitemap: false
+
 hide_last_modified: true
 categories: [Spring]
 tags: [SpringBoot, Gradle, Hikari, Connection Pool]

@@ -3,7 +3,7 @@ layout: post
 title: Document Page
 description: >
   Document Page - Personal Project
-sitemap: false
+
 hide_last_modified: true
 categories: [Project]
 tags: [spa, project]

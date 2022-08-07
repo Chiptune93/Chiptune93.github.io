@@ -3,7 +3,7 @@ layout: post
 title: Apache - TLS 1.2 설정하기
 description: >
   [Apache] TLS 1.2 설정하기
-sitemap: false
+
 hide_last_modified: true
 categories: [Server]
 tags: [apache, tls]

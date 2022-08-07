@@ -3,7 +3,7 @@ layout: post
 title: Javascript - xlsx-js-style 를 이용한 table 요소로 엑셀 파일 다운로드 시키기
 description: >
   xlsx-js-style 를 이용한 table 요소로 엑셀 파일 다운로드 시키기
-sitemap: false
+
 hide_last_modified: true
 categories: [Frontend]
 tags: [xlsx-js, xlsx-js-style, table to excel]

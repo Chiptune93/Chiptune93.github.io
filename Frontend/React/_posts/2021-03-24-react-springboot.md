@@ -3,7 +3,7 @@ layout: post
 title: React - Spring boot + React 연계 프로젝트 생성하기
 description: >
   Spring boot + React 연계 프로젝트 생성하기
-sitemap: false
+
 hide_last_modified: true
 categories: [Frontend]
 tags: [React, springboot]

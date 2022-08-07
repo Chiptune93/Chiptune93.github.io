@@ -3,7 +3,7 @@ layout: post
 title: MYSQL/ORACLE - 테이블 정의서 간단하게 뽑는 쿼리
 description: >
   MYSQL/ORACLE - 테이블 정의서 간단하게 뽑는 쿼리
-sitemap: false
+
 hide_last_modified: true
 categories: [Database]
 tags: [mysql, oracle, table, 테이블정의서]

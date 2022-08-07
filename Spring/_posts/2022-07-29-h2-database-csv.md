@@ -3,7 +3,7 @@ layout: post
 title: SpringBoot - H2 Database CSV 데이터 Import 하기
 description: >
   [SpringBoot] H2 Database CSV 데이터 Import 하기
-sitemap: false
+
 hide_last_modified: true
 categories: [Spring]
 tags: [h2database, csv import, h2 csv]

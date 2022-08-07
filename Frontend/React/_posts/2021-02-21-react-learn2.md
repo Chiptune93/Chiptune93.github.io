@@ -3,7 +3,7 @@ layout: post
 title: 2회차 - CSS 코딩 ~ 배포하기
 description: >
   [인프런:생활코딩 - REACT] 2회차 : CSS 코딩 ~ 배포하기
-sitemap: false
+
 hide_last_modified: true
 categories: [Frontend]
 tags: [React]

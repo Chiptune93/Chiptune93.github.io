@@ -3,7 +3,7 @@ layout: post
 title: VS Code Main Class Not Found Exception 해결
 description: >
   VS Code Main Class Not Found Exception 해결
-sitemap: false
+
 hide_last_modified: true
 categories: [Error]
 tags: [VsCode, Main Class Not Found]

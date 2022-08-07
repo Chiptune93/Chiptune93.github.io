@@ -3,7 +3,7 @@ layout: post
 title: App Sync - Amplify 를 이용한 App Sync Data Subscribe.
 description: >
   [App Sync] Amplify 를 이용한 App Sync Data Subscribe.
-sitemap: false
+
 hide_last_modified: true
 categories: [AWS]
 tags: [AWS, appsync, data Subscribe]

@@ -3,7 +3,7 @@ layout: post
 title: Linux - Svn Conflict Option
 description: >
   [Linux] Svn Conflict Option
-sitemap: false
+
 hide_last_modified: true
 categories: [Etc]
 tags: [Linux, Svn, conflict]

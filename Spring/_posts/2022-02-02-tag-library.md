@@ -3,7 +3,7 @@ layout: post
 title: Spring Boot - Tag Library 사용하기
 description: >
   [Spring Boot] Tag Library 사용하기
-sitemap: false
+
 hide_last_modified: true
 categories: [Spring]
 tags: [tag library, SpringBoot]

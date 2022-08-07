@@ -3,7 +3,7 @@ layout: post
 title: ORACLE - COMMENT, FOREIGN KEY, PRIMARY KEY 설정
 description: >
   [ORACLE] COMMENT, FOREIGN KEY, PRIMARY KEY 설정
-sitemap: false
+
 hide_last_modified: true
 categories: [Database]
 tags: [oracle, comment, foreign key, primary key]

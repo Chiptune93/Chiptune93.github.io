@@ -3,7 +3,7 @@ layout: post
 title: ECR - Spring Boot + JSP 프로젝트 JIB로 ECR 업로드하기
 description: >
   [ECR] Spring Boot + JSP 프로젝트 JIB로 ECR 업로드하기
-sitemap: false
+
 hide_last_modified: true
 categories: [AWS]
 tags: [AWS, ECR, JIB, ECR upload]

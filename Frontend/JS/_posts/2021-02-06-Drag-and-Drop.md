@@ -3,7 +3,7 @@ layout: post
 title: Javascript - Drag and Drop 간단하게 구현하기.
 description: >
   Drag and Drop 간단하게 구현하기.
-sitemap: false
+
 hide_last_modified: true
 categories: [Frontend]
 tags: [JS, Drag and Drop]

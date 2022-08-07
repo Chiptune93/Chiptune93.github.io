@@ -3,7 +3,7 @@ layout: post
 title: 1회차 - 처음 ~ JS 코딩하기
 description: >
   [인프런:생활코딩 - REACT] 1회차 : 처음 ~ JS 코딩하기
-sitemap: false
+
 hide_last_modified: true
 categories: [Frontend]
 tags: [React]

@@ -3,7 +3,7 @@ layout: post
 title: AOP - AOP Aspect 를 이용한 로그 처리 하기
 description: >
   [AOP] AOP Aspect 를 이용한 로그 처리 하기
-sitemap: false
+
 hide_last_modified: true
 categories: [Spring]
 tags: [spring, spring aop]

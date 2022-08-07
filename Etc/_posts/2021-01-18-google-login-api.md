@@ -3,7 +3,7 @@ layout: post
 title: Google Login API 연동하기(Web Service)
 description: >
   Google Login API 연동하기(Web Service)
-sitemap: false
+
 hide_last_modified: true
 categories: [Etc]
 tags: [google, login api]

@@ -3,7 +3,7 @@ layout: post
 title: Docker Spring boot + Postgresql (1)
 description: >
   [실습] Docker Spring boot + Postgresql (1)
-sitemap: false
+
 hide_last_modified: true
 categories: [Docker]
 tags: [docker, springboot, postgresql]

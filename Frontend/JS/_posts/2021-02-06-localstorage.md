@@ -3,7 +3,7 @@ layout: post
 title: Javascript - localstorage 사용하기
 description: >
   localstorage 사용하기
-sitemap: false
+
 hide_last_modified: true
 categories: [Frontend]
 tags: [localstorage, Javascript]

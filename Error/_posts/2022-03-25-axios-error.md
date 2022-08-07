@@ -3,7 +3,7 @@ layout: post
 title: Axios - Vuejs / React 환경에서 axios 모듈 get/post 통신 에러
 description: >
   [Axios] Vuejs / React 환경에서 axios 모듈 get/post 통신 에러
-sitemap: false
+
 hide_last_modified: true
 categories: [Error]
 tags: [vuejs, react, axios, axios error]

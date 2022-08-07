@@ -3,7 +3,7 @@ layout: post
 title: Spring Boot - 파일 업로드 만들기 -1-
 description: >
     [Spring Boot] 파일 업로드 만들기 -1-
-sitemap: false
+
 hide_last_modified: true
 categories: [Spring]
 tags: [fileupload, SpringBoot, springboot fileupload]

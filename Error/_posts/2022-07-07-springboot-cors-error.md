@@ -3,7 +3,7 @@ layout: post
 title: SpringBoot 2.7+ CORS 이슈 및 해결방법
 description: >
   SpringBoot 2.7+ CORS 이슈 및 해결방법
-sitemap: false
+
 hide_last_modified: true
 categories: [Error]
 tags: [springboot, cors]

@@ -3,7 +3,7 @@ layout: post
 title: JSP - Input text 항목 엔터 시, 자동 submit 막기.
 description: >
   Input text 항목 엔터 시, 자동 submit 막기.
-sitemap: false
+
 hide_last_modified: true
 categories: [Frontend]
 tags: [jsp, auto submit]

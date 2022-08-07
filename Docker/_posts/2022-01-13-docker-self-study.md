@@ -3,7 +3,7 @@ layout: post
 title: Docker 자습서 정리
 description: >
   MS : Docker 자습서 정리
-sitemap: false
+
 hide_last_modified: true
 categories: [Docker]
 tags: [Docker, MS docker self study]

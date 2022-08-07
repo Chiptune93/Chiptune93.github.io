@@ -3,7 +3,7 @@ layout: post
 title: Naver Cloud Outbound Mailer API 가이드 For Java
 description: >
   Naver Cloud Outbound Mailer API 가이드 For Java
-sitemap: false
+
 hide_last_modified: true
 categories: [Java]
 tags: [Java, API, Cloud Mail]

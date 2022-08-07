@@ -3,7 +3,7 @@ layout: post
 title: postgreSQL - pg lock 조회 및 해제
 description: >
   [postgreSQL] pg lock 조회 및 해제
-sitemap: false
+
 hide_last_modified: true
 categories: [Database]
 tags: [postgres, postgreSQL, pg lock]

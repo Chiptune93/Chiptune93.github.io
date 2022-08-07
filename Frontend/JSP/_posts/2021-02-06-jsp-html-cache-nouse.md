@@ -3,7 +3,7 @@ layout: post
 title: JSP/HTML - 페이지 캐시 미사용 설정
 description: >
   JSP/HTML 페이지 캐시 미사용 설정
-sitemap: false
+
 hide_last_modified: true
 categories: [Frontend]
 tags: [jsp, html, no cache, cache]

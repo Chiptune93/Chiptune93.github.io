@@ -3,7 +3,7 @@ layout: post
 title: Javascript - 스크립트 파일 import 시, 캐시 안남게 처리하기
 description: >
   스크립트 파일 import 시, 캐시 안남게 처리하기
-sitemap: false
+
 hide_last_modified: true
 categories: [Frontend]
 tags: [cache, javascript, import script]

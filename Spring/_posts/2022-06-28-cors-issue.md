@@ -3,7 +3,7 @@ layout: post
 title: SpringBoot - CORS 처리하기
 description: >
   [SpringBoot] CORS 처리하기
-sitemap: false
+
 hide_last_modified: true
 categories: [Spring]
 tags: [spring, springboot, cors]

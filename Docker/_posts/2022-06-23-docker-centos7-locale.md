@@ -3,7 +3,7 @@ layout: post
 title: Docker CentOS7 locale language ko_KR 설정
 description: >
   [Docker CentOS7] CentOS7 locale language ko_KR 설정
-sitemap: false
+
 hide_last_modified: true
 categories: [Docker]
 tags: [Docker, Centos7, locale, lang]

@@ -3,7 +3,7 @@ layout: post
 title: React 학습 시작.
 description: >
   React 학습 시작.
-sitemap: false
+
 hide_last_modified: true
 categories: [Frontend]
 tags: [react]

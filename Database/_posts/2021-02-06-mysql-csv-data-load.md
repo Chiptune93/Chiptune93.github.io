@@ -3,7 +3,7 @@ layout: post
 title: MYSQL - CSV 파일에서 데이터 가져오기 시, 설정
 description: >
   MYSQL CSV 파일에서 데이터 가져오기 시, 설정
-sitemap: false
+
 hide_last_modified: true
 categories: [Database]
 tags: [mysql, csv data, csv data load]

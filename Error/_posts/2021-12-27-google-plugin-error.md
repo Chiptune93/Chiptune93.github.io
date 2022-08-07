@@ -3,7 +3,7 @@ layout: post
 title: In plugin 'com.google.cloud.tools.jib' type 'com.google.cloud.tools.jib.gradle.BuildImageTask' property 'jib.allowInsecureRegistries' of type boolean shouldn't be annotated with @Optional.
 description: >
   In plugin 'com.google.cloud.tools.jib' type 'com.google.cloud.tools.jib.gradle.BuildImageTask' property 'jib.allowInsecureRegistries' of type boolean shouldn't be annotated with @Optional.
-sitemap: false
+
 hide_last_modified: true
 categories: [Error]
 tags: [google cloud error, jib error, jib]

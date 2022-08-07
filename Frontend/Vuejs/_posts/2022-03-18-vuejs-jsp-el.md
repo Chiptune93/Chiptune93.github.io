@@ -3,7 +3,7 @@ layout: post
 title: Vuejs - EL 값을 바인딩 하면, 이벤트 전달이 안되는 현상
 description: >
   [ Vue js + JSP ] EL 값을 바인딩 하면, 이벤트 전달이 안되는 현상
-sitemap: false
+
 hide_last_modified: true
 categories: [Frontend]
 tags: [vuejs, jsp, el]

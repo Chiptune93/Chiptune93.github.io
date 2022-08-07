@@ -3,7 +3,7 @@ layout: post
 title: 구글 로그인 API 연동 시, 에러 발생 및 해결(Web Service)
 description: >
   구글 로그인 API 연동 시, 에러 발생 및 해결(Web Service)
-sitemap: false
+
 hide_last_modified: true
 categories: [Error]
 tags: [Error, Google Login Api]

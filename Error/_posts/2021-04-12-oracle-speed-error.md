@@ -3,7 +3,7 @@ layout: post
 title: Oracle - 쿼리 내 조건 변수 또는 하드코딩 사이 속도 이슈 해결 (ojdbc7,8 download)
 description: >
   Oracle - 쿼리 내 조건 변수 또는 하드코딩 사이 속도 이슈 해결 (ojdbc7,8 download)
-sitemap: false
+
 hide_last_modified: true
 categories: [Error]
 tags: [Oracle, ojdbc, Error]

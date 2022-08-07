@@ -3,7 +3,7 @@ layout: post
 title: Spring Boot - Spring Boot 2.6.2 Interceptor 추가
 description: >
   [Spring Boot] Spring Boot 2.6.2 Interceptor 추가
-sitemap: false
+
 hide_last_modified: true
 categories: [Spring]
 tags: [Interceptor, SpringBoot]

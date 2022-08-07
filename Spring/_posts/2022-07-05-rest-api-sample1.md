@@ -3,7 +3,7 @@ layout: post
 title: SpringBoot - Rest Api Sample 만들기 #1
 description: >
   [SpringBoot] Rest Api Sample 만들기 #1
-sitemap: false
+
 hide_last_modified: true
 categories: [Spring]
 tags: [springboot, rest api, api, h2database]

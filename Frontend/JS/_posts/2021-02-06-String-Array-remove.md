@@ -3,7 +3,7 @@ layout: post
 title: Javascript - String Array 내 빈 요소 제거하기
 description: >
   String Array 내 빈 요소 제거하기
-sitemap: false
+
 hide_last_modified: true
 categories: [category]
 tags: [tag]

@@ -3,7 +3,7 @@ layout: post
 title: DynamoDB - 파티션 키/정렬 키/필터 정리
 description: >
   [DynamoDB] 파티션 키/정렬 키/필터 정리
-sitemap: false
+
 hide_last_modified: true
 categories: [AWS]
 tags: [AWS, DynamoDB, DynamoDB Key]

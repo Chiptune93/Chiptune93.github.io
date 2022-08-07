@@ -3,7 +3,7 @@ layout: post
 title: jQuery - 실시간 요소 변경 탐지하기
 description: >
   [jQuery] 실시간 요소 변경 탐지하기
-sitemap: false
+
 hide_last_modified: true
 categories: [Frontend]
 tags: [Element Change, jQuery, event handler]
