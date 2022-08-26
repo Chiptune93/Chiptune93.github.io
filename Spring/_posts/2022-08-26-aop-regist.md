@@ -28,6 +28,7 @@ tags: [Spring, SpringBoot, AOP]
 제일 먼저 aspect 를 작성한다.
 
 - 예제 소스 : 실행 시간을 계산하는 AOP 클래스
+
 ```java
 public class RunningTimeAspect {
 	public Object around(ProceedingJoinPoint jp) throws Throwable {
@@ -51,6 +52,7 @@ XML로 Aspect를 정의하기 위해서는 스프링이 제공하는 aop 태그�
 context 관련 XML에 아래의 요소들을 정의한다.
 
 - xml 빈 설정
+
 ```xml
 <beans xmlns="http://www.springframework.org/schema/beans"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -67,6 +69,7 @@ http://www.springframework.org/schema/aop/spring-aop-4.0.xsd" <- 추가됨.
 ```
 
 - aop config 등록
+
 ```xml
 ...
 <!-- 해당 클래스를 빈으로 등록 -->
@@ -98,8 +101,10 @@ Spring이 bean에 대해서 Aspect에 의해 advice를 받는지 판단하고 Pr
 
 Spring AOP에선 두 가지 방법을 통해 autoproxying 설정할 수 있다.
 
-- <aop:aspectj-autoproxy />
-- @Configuration, @EnableAspectJAutoProxy
+```
+1. <aop:aspectj-autoproxy />
+2. @Configuration, @EnableAspectJAutoProxy
+```
 
 XML에서 <aop:aspectj-autoproxy /> 태그를 작성하는 방법과 순수 Java 코드로 autoproxying 환경을 설정하는 방법이 있다.
 
@@ -121,6 +126,7 @@ Spring Boot에선 자체적으로 autoproxying 설정이 내장되어 있어
 
 
 - 예제 소스
+
 ```java
 @Aspect /* Aspect 사용하겠다는 의미 */
 @Component /* 컴포넌트 어노테이션을 통해 빈 등록 */
@@ -149,5 +155,12 @@ public class RunningTimeAspect {
     }
 
 }
-
 ```
+
+## 마치며
+
+아무래도 스키마 방식 보다는 어노테이션을 통한 관리가 좀 더 쉽게 느껴진다.
+
+스키마 방식의 경우, 소스와 별개로 관리포인트가 한 곳 더 생기게 되어 불편하다.
+
+어노테이션을 통한 방식이 좀 더 직관적이고 관리상 편리하다는 생각이 든다.
