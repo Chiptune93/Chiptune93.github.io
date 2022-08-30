@@ -44,7 +44,7 @@ xml 방식에서는 mapUnderscoreToCamelCase 라는 명칭을 사용하고
 
 yml 방식에서는 map-underscore-to-camel-case 명칭을 사용한다.
 
-1. config.xml 작성하기.
+- config.xml 작성하기.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -59,7 +59,7 @@ yml 방식에서는 map-underscore-to-camel-case 명칭을 사용한다.
 </configuration>
 ```
 
-2. application.yml 사용하기.
+- application.yml 사용하기.
 
 ```yml
 ...
