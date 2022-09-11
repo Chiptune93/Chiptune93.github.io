@@ -10,7 +10,7 @@ tags: [AWS, Lambda, DynamoDB, Postgre]
 ---
 
 - Table of Contents
-  {:toc .large-only}
+{:toc .large-only}
 
 ## 람다에서 다이나모 또는 Postgre 액세스
 
