@@ -10,7 +10,7 @@ tags: [Discord, Python]
 ---
 
 - Table of Contents
-  {:toc .large-only}
+{:toc .large-only}
 
 
 # Discord Bot 샘플 생성하기.

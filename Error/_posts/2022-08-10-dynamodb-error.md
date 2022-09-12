@@ -10,7 +10,7 @@ tags: [AWS, DynamoDB]
 ---
 
 - Table of Contents
-  {:toc .large-only}
+{:toc .large-only}
 
 DynamoDB Java SDK 를 사용하여 Table 스캔 도중 해당 에러가 발생하였다.
 

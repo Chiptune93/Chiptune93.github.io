@@ -10,6 +10,6 @@ tags: [태그]
 ---
 
 - Table of Contents
-  {:toc .large-only}
+{:toc .large-only}
 
 포스트 내용 작성
