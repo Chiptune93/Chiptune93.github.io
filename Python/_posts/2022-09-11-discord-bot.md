@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Discord Bot 만들기 [1]
+title: Python - Discord Bot 만들기
 description: >
     디스코드 봇을 생성하고 연결하는 과정을 기록합니다.
 
