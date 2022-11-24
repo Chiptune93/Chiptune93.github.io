@@ -62,6 +62,8 @@ menu:
     url:               /server/
   - title:             🎆 Frontend
     url:               /frontend/
+  - title:             🧬 Git
+    url:               /git/
   - title:             🎃 AWS
     url:               /aws/
   - title:             🔌 Docker
