@@ -1,3 +1,0 @@
-- 로컬로 구동
-bundle exec jekyll serve
-(새환경에서 구동시, 루비 등 환경 설치 후 bundler install 실행 후 위 명령 실행)

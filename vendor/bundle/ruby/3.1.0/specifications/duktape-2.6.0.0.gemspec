@@ -16,8 +16,8 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/judofyr/duktape.rb".freeze
   s.licenses = ["MIT".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 1.9.3".freeze)
-  s.rubygems_version = "3.3.7".freeze
+  s.rubygems_version = "3.3.11".freeze
   s.summary = "Bindings to the Duktape JavaScript interpreter".freeze
 
-  s.installed_by_version = "3.3.7" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.3.11" if s.respond_to? :installed_by_version
 end

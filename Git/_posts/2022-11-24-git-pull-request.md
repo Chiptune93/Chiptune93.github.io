@@ -5,7 +5,7 @@ description: >
   Git - Pull Request(PR)
 
 hide_last_modified: true
-categories: [git]
+categories: [Git]
 tags: [git, PR, Pull Request]
 ---
 
