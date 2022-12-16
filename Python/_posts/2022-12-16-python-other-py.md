@@ -12,6 +12,7 @@ tags: [import python, other python function, Python, 파이썬]
 - Table of Contents
 {:toc .large-only}
 
+
 ## 다른 파이썬 파일의 함수 포함시키기
 - function.py
 ```python
