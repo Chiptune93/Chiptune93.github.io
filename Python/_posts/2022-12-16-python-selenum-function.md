@@ -491,6 +491,7 @@ actions.perform()
 ActionChains(driver).key_down(Keys.CONTROL).send_keys('c').key_up(Keys.CONTROL).perform()
 ```
 
+
 |함수|설명|
 |---|---|
 click(on_element=None)|	인자로 주어진 요소를 왼쪽 클릭한다.
@@ -509,6 +510,7 @@ perform()	|이미 쌓여 있는(stored) 모든 행동을 수행한다(chaining).
 reset_actions()|	이미 쌓여 있는(stored) 모든 행동을 제거한다.
 send_keys(*keys_to_send)	|키보드 입력을 현재 focused된 요소에 보낸다.
 send_keys_to_element(element, *keys_to_send)	|보드 입력을 주어진 요소에 보낸다.
+
 
 ## 경고 창 다루기(alerts)
 - 브라우저 얼럿 경고창을 무시하는 등의 처리를 할 수 있는 기능을 제공한다.
