@@ -87,6 +87,8 @@ try:
 finally:
 	driver.quit()
 ```
+
+
 |함수|설명|
 |----|---|
 title_is|페이지의 title이 일치하면 True, 그렇지 않으면 False를 반환한다.
