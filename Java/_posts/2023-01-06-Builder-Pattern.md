@@ -6,7 +6,7 @@ description: >
 
 hide_last_modified: true
 categories: [Java]
-tags: [Builder, Builder Pattern, @Builder, Java]
+tags: [Builder, Builder Pattern, Builder Annotation, Java]
 published: true
 ---
 
