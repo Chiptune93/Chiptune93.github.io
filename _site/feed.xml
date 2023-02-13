@@ -1,5 +1,343 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us,ko-KR"><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-us,ko-KR" /><updated>2023-01-23T18:26:33+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Chiptune93</title><subtitle>Java Developer&apos;s Tech Blog &amp; Exp Storage.
-</subtitle><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><entry><title type="html">Notion Database를 활용한 Discord Bot</title><link href="http://localhost:4000/project/Project-Discord-bot/" rel="alternate" type="text/html" title="Notion Database를 활용한 Discord Bot" /><published>2023-01-23T00:00:00+09:00</published><updated>2023-01-23T00:00:00+09:00</updated><id>http://localhost:4000/project/Project-Discord-bot</id><content type="html" xml:base="http://localhost:4000/project/Project-Discord-bot/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us,ko-KR"><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-us,ko-KR" /><updated>2023-02-14T01:46:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Chiptune93</title><subtitle>Java Developer&apos;s Tech Blog &amp; Exp Storage.
+</subtitle><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><entry><title type="html">Inno Setup 5,6 Korean</title><link href="http://localhost:4000/etc/Inno-setup-korean/" rel="alternate" type="text/html" title="Inno Setup 5,6 Korean" /><published>2023-02-14T00:00:00+09:00</published><updated>2023-02-14T00:00:00+09:00</updated><id>http://localhost:4000/etc/Inno-setup-korean</id><content type="html" xml:base="http://localhost:4000/etc/Inno-setup-korean/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#innosetup-한국어-사용하기&quot; id=&quot;markdown-toc-innosetup-한국어-사용하기&quot;&gt;InnoSetup 한국어 사용하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#innosetup-5버전-6버전에서-사용-가능한-파일&quot; id=&quot;markdown-toc-innosetup-5버전-6버전에서-사용-가능한-파일&quot;&gt;InnoSetup 5버전, 6버전에서 사용 가능한 파일&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#사용-방법&quot; id=&quot;markdown-toc-사용-방법&quot;&gt;사용 방법&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#5버전과-6버전의-다른점&quot; id=&quot;markdown-toc-5버전과-6버전의-다른점&quot;&gt;5버전과 6버전의 다른점&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;innosetup-한국어-사용하기&quot;&gt;InnoSetup 한국어 사용하기&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Inno Setup 은 현재 6버전이 최신이며 &lt;a href=&quot;https://jrsoftware.org/isdl.php&quot;&gt;여기서&lt;/a&gt; 다운로드 받을 수 있다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;현재 공식적으로 등록된 한국어 번역본은 &lt;a href=&quot;https://github.com/jrsoftware/issrc/blob/main/Files/Languages/Unofficial/Korean.isl&quot;&gt;깃헙&lt;/a&gt;에 업로드 되어있으며 ‘비공식’ 이다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;현재 6.2.1 까지 지원한다고 되어 있는데, 무슨 영문인지 6버전은 고사하고 5버전에서도 먹통이다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;innosetup-5버전-6버전에서-사용-가능한-파일&quot;&gt;InnoSetup 5버전, 6버전에서 사용 가능한 파일&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;해결 방법을 찾던 중, &lt;a href=&quot;https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&amp;amp;blogId=utime&amp;amp;logNo=150143279912&quot;&gt;이 주소&lt;/a&gt;에서 발견한 파일이다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/assets/file/Etc/Korean.isl&quot;&gt;Korean.isl&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;해당 파일을 사용하면 5버전이든 6버전이든 한국어로 사용이 가능 했다&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;확인한 버전은 5.6 버전과 6.2.1 버전이다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;사용-방법&quot;&gt;사용 방법&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;윈도우 기준, 설치폴더인 &lt;b&gt;C:\Program Files (x86)\Inno Setup 6(5)\Languages&lt;/b&gt; 에 넣고 사용하면 된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5버전과-6버전의-다른점&quot;&gt;5버전과 6버전의 다른점&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;5버전에서는 default.isl 이 있어, 한국어만 사용할 것이라면 해당 파일을 default.isl 로 이름을 변경하여 넣어도 무관하다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;6버전에서는 그냥 Korean 으로 넣고 사용하는 것을 추천한다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;해당 파일을 올려주신 ‘시간한줌’ 님께 감사드립니다. ( _ _ )&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Etc" /><category term="Innosetup" /><category term="Inno Setup Korean" /><category term="Korean" /><summary type="html"></summary></entry><entry><title type="html">Python - cmd에서 테이블 형태 표현하기</title><link href="http://localhost:4000/python/python-pretty-table/" rel="alternate" type="text/html" title="Python - cmd에서 테이블 형태 표현하기" /><published>2023-01-28T00:00:00+09:00</published><updated>2023-01-28T00:00:00+09:00</updated><id>http://localhost:4000/python/python-pretty-table</id><content type="html" xml:base="http://localhost:4000/python/python-pretty-table/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#파이썬-환경-cmdconsole에서-테이블-형태-표현하기&quot; id=&quot;markdown-toc-파이썬-환경-cmdconsole에서-테이블-형태-표현하기&quot;&gt;파이썬 환경 cmd(console)에서 테이블 형태 표현하기&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#format-을-활용한-데이터-표현&quot; id=&quot;markdown-toc-format-을-활용한-데이터-표현&quot;&gt;format() 을 활용한 데이터 표현&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#pandas&quot; id=&quot;markdown-toc-pandas&quot;&gt;pandas&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#tabulate&quot; id=&quot;markdown-toc-tabulate&quot;&gt;tabulate&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#prettytable&quot; id=&quot;markdown-toc-prettytable&quot;&gt;prettytable&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;파이썬-환경-cmdconsole에서-테이블-형태-표현하기&quot;&gt;파이썬 환경 cmd(console)에서 테이블 형태 표현하기&lt;/h1&gt;
+
+&lt;p&gt;파이썬으로 개발하다보면 로깅이나 다른 표현 등을 위해 데이터를 테이블 형태로 표현하고 싶을 때가 있습니다.&lt;/p&gt;
+
+&lt;p&gt;보통, 결과를 다른 쪽으로 요청하거나 파일로 떨구거나 등등 작업을 하지만 이 와 연계 혹은 확인용으로 
+콘솔 환경에서 테이블 형태로 데이터를 보고싶을 때도 있습니다.&lt;/p&gt;
+
+&lt;p&gt;이 때, 간편하게 테이블 형태로 데이터를 표현하는 라이브러리를 소개합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;format-을-활용한-데이터-표현&quot;&gt;format() 을 활용한 데이터 표현&lt;/h2&gt;
+
+&lt;p&gt;format() 을 활용한 데이터 표현입니다.
+여기서는 데이터에 대한 자릿수 등을 감안하여 표현할 때 정수로 주어진 열의 너비를
+일일히 지정해주어야 합니다.&lt;/p&gt;
+
+&lt;p&gt;각 열에 있는 숫자의 최대 길이를 지정해주어야 합니다. 화살표는 ^ , &amp;gt; , &amp;lt; 로 되어있는데
+이는 ‘가운데’,’오른쪽’,’왼쪽’ 정렬을 의미합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2222&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6777&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;| {:1} | {:^4} | {:&amp;gt;4} | {:&amp;lt;3} |&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# 결과
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2222&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6777&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;별도의 라이브러리 추가 없이도 정렬을 할 수 있지만 일일히 이렇게 지정하는 것은
+단순 작업에 대한 복잡성을 추가하게 됩니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;pandas&quot;&gt;pandas&lt;/h2&gt;
+
+&lt;p&gt;Pandas 라이브러리를 활용한 표현 방식입니다.&lt;/p&gt;
+
+&lt;p&gt;컬럼과 인덱스 명을 지정할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2222&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6777&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;a&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;b&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;c&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;d&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;row_1&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;row_2&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# 결과
+&lt;/span&gt;       &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;row_1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;2222&lt;/span&gt;    &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;row_2&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;    &lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;6777&lt;/span&gt;    &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그냥 단순히 인덱스를 제외하고 보고싶어서 아래와 같이 실행해도 인덱스는 표현됩니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2222&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6777&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;a&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;b&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;c&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;d&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# 결과
+&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;2222&lt;/span&gt;    &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;    &lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;6777&lt;/span&gt;    &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;더 많은 옵션이나 가이드는 이 주소를 참고하세요 (https://pandas.pydata.org/docs/user_guide/index.html)&lt;/p&gt;
+
+&lt;h2 id=&quot;tabulate&quot;&gt;tabulate&lt;/h2&gt;
+
+&lt;p&gt;해당 라이브러리에서 기본적으로는 아래와 같이 사용하면 테이블 형태를 표현할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;tabulate&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tabulate&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2222&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6777&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tabulate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# 결과
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;----&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;----&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;2222&lt;/span&gt;    &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;    &lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;6777&lt;/span&gt;    &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;----&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;----&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;테이블 헤더가 있거나 다른 옵션을 주고 싶은 경우에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tablefmt&lt;/code&gt; 을 사용하여 
+옵션을 주면 다음과 같이 표현할 수도 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;tabulate&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tabulate&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;col 1&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;col 2&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;col 3&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;col 4&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2222&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6777&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tabulate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;firstrow&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tablefmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;fancy_grid&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# 결과
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;╒═════════╤═════════╤═════════╤═════════╕&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;╞═════════╪═════════╪═════════╪═════════╡&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;       &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;    &lt;span class=&quot;mi&quot;&gt;2222&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;      &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;     &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;├─────────┼─────────┼─────────┼─────────┤&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;       &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;      &lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;    &lt;span class=&quot;mi&quot;&gt;6777&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;       &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;╘═════════╧═════════╧═════════╧═════════╛&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;해당 라이브러리에서 제공되는 많은 기능 중 한가지 특징 적인 것은 html 에서 사용할 수 있도록 기능을 제공해준다는 것입니다. 데이터를 마크업으로 제공하여, 웹에 게시할 때 조금 더 효과적으로 제공할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tablefmt&lt;/code&gt; 옵션을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;html&lt;/code&gt; 으로 주게 되면 다음과 같은 결과가 나옵니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;tabulate&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tabulate&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;col 1&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;col 2&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;col 3&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;col 4&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2222&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6777&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tabulate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;firstrow&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tablefmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;html&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# 결과
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;thead&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;th&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text-align: right;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;th&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;th&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text-align: right;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;th&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;th&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text-align: right;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;th&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;th&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text-align: right;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;th&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;thead&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tbody&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;td&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text-align: right;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;      &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;td&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;td&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text-align: right;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;2222&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;td&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;td&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text-align: right;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;     &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;td&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;td&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text-align: right;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;    &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;td&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;td&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text-align: right;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;      &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;td&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;td&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text-align: right;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;     &lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;td&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;td&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text-align: right;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;6777&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;td&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;td&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text-align: right;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;      &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;td&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tbody&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;prettytable&quot;&gt;prettytable&lt;/h2&gt;
+
+&lt;p&gt;해당 라이브러리는 테이블 형태를 표현할 때 row 옵션이나 정렬을 각각 지정할 수 있으며
+상세하게 옵션을 조정할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;prettytable&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PrettyTable&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;col 1&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;col 2&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;col 3&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;col 4&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2222&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6777&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tab&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PrettyTable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_rows&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:])&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# 결과
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+-------+-------+-------+-------+&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;+-------+-------+-------+-------+&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;2222&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;6777&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;+-------+-------+-------+-------+&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위 결과에서 컬럼 하나를 추가해보겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;prettytable&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PrettyTable&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;col 1&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;col 2&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;col 3&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;col 4&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2222&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6777&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tab&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PrettyTable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_rows&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_column&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;col 5&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;43&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;align&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;r&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;valign&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;t&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# 결과
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+-------+-------+-------+-------+-------+&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;+-------+-------+-------+-------+-------+&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;2222&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;6777&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;    &lt;span class=&quot;mi&quot;&gt;43&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;+-------+-------+-------+-------+-------+&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이런 식으로 컬럼의 추가 및 정렬 옵션 제공이 row 별로 가능하여 
+원하는 형식을 쉽게 표현할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;또한, 한 가지 장점으로 csv 파일을 읽어 표현할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;prettytable&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;from_csv&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;data_file.csv&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;table_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;tab&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;from_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이 외에도 데이터베이스 조회한 데이터를 가져오는 방법 등 다양한 방법이나 옵션을 제공합니다.
+추가적인 정보를 원하시면 여기(https://pypi.org/project/prettytable/) 를 참고하세요.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;참고 : https://learnpython.com/blog/print-table-in-python/&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Python" /><category term="Python" /><category term="파이썬" /><category term="cmd" /><category term="cmd line table" /><category term="cmd table" /><category term="콘솔" /><category term="콘솔 테이블" /><summary type="html"></summary></entry><entry><title type="html">Python - Docker Running Python</title><link href="http://localhost:4000/python/python/" rel="alternate" type="text/html" title="Python - Docker Running Python" /><published>2023-01-28T00:00:00+09:00</published><updated>2023-01-28T00:00:00+09:00</updated><id>http://localhost:4000/python/python</id><content type="html" xml:base="http://localhost:4000/python/python/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#파이썬을-실행-시키는-docker-image-구성하기&quot; id=&quot;markdown-toc-파이썬을-실행-시키는-docker-image-구성하기&quot;&gt;파이썬을 실행 시키는 Docker Image 구성하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#python-환경을-갖는-서버-이미지-구성하기&quot; id=&quot;markdown-toc-python-환경을-갖는-서버-이미지-구성하기&quot;&gt;Python 환경을 갖는 서버 이미지 구성하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#python-이미지를-활용한-실행-환경-dockerfile-구성하기&quot; id=&quot;markdown-toc-python-이미지를-활용한-실행-환경-dockerfile-구성하기&quot;&gt;Python 이미지를 활용한 실행 환경 Dockerfile 구성하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#결론&quot; id=&quot;markdown-toc-결론&quot;&gt;결론&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;파이썬을-실행-시키는-docker-image-구성하기&quot;&gt;파이썬을 실행 시키는 Docker Image 구성하기&lt;/h1&gt;
+
+&lt;p&gt;최근 discord bot을 python 을 통해 실행시키도록 구성하는 작업을 하고 나서 
+실제 서비스를 하기 위한 준비를 하게 되었다.&lt;/p&gt;
+
+&lt;p&gt;해당 py 파일을 계속 실행 시키고 이벤트 기반으로 대기하는 형태여서 이를 실행시키고 있을 서버가 필요했다.&lt;/p&gt;
+
+&lt;p&gt;내가 원하는 것은 다음과 같았다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;파이썬 파일을 구동할 수 있는 환경&lt;/li&gt;
+  &lt;li&gt;해당 파일을 서버에서 계속 구동할 수 있어야 함&lt;/li&gt;
+  &lt;li&gt;다만 서버 환경에서 서버 자체에 무언가 추가하거나 환경 구성을 하기가 싫었음&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;따라서, 해당 파일을 가지고 Docker 에 이미지 형태로 구성하여 구동되는 서버가 필요했다.
+어차피 통신만 가능하면 Docker로 구동하여도 호스트 포트와 컨테이터 포트연관성은 상관 없을 듯 하였다.&lt;/p&gt;
+
+&lt;h1 id=&quot;python-환경을-갖는-서버-이미지-구성하기&quot;&gt;Python 환경을 갖는 서버 이미지 구성하기&lt;/h1&gt;
+
+&lt;p&gt;우선, 해당 파이썬 파일을 실행 시킬 서버 환경을 구성해야 했다.
+간단하게 Cent OS 7 이미지를 구동해서, 그 안에 파이썬 환경을 갖춘 후
+파일을 실행 시키려고 하였다.&lt;/p&gt;
+
+&lt;p&gt;그래서 우선 https://hub.docker.com/_/centos 에서 Cent OS 7 을 다운로드 해서 작업하려고 하였다.&lt;/p&gt;
+
+&lt;p&gt;우선 이런 형태를 가지고 이미지를 구성하려고 하였다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;CentOS7 이미지를 구동하고, Python을 설치한다.&lt;/li&gt;
+  &lt;li&gt;해당 이미지에서 파이썬 파일을 실행 할 수 있도록 한 후, 이미지화 한다.&lt;/li&gt;
+  &lt;li&gt;커스터마이징 한 이미지를 실행해서 인수로 해당 파일을 실행 할 수 있도록 한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;그런데, 이렇게 하려니 너무 할 작업이 많았다. Cent OS 7 이미지를 받아서 해당 환경 내에서
+다시 개발 환경을 구성하려니 필요한 모듈이 너무 많았다.&lt;/p&gt;
+
+&lt;p&gt;따라서, Docker Python Official Image를 받아서 사용하기로 하였다.&lt;/p&gt;
+
+&lt;p&gt;https://hub.docker.com/_/python&lt;/p&gt;
+
+&lt;p&gt;여기서 버전 별로 파이썬이 설치된 환경의 이미지를 받을 수 있다.
+별도의 환경을 구성하지 않아도 파이썬 환경이 설치된 채로 이미지를 구동하기 때문에
+별도의 작업 없이 해당 이미지를 사용하여 컨테이너를 구동할 때, 내 파일만 실행되게끔 하면 되었다.&lt;/p&gt;
+
+&lt;h1 id=&quot;python-이미지를-활용한-실행-환경-dockerfile-구성하기&quot;&gt;Python 이미지를 활용한 실행 환경 Dockerfile 구성하기&lt;/h1&gt;
+
+&lt;p&gt;Dockerfile을 다음과 같이 구성했다. 라인 별 설명은 주석으로 달아 놓았다.
+어쨋든 파이썬 파일 하나를 실행하면서 올라가기 때문에 나중에 다른 파이썬 파일을 실행해야하는 경우에도
+이를 계속 활용할 수 있을 것이다.&lt;/p&gt;
+
+&lt;div class=&quot;language-dockerfile highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# python 3.10.8 환경 이미지 사용&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; python:3.10.8-buster&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 호스트의 dockerfile이 있는 경로 전체를 컨테이너의 /app 경로로 옮긴다.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;COPY&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; . /app&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 컨테이너 실행 시, 작업 디렉토리를 /app으로 지정한다.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;WORKDIR&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; /app&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 작업 디렉토리에서 아래 명령을 실행한다.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 파이썬 라이브러리 환경을 갖는 파일을 읽어 필요 라이브러리를 다운로드 한다.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;pip3 &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.txt
+&lt;span class=&quot;c&quot;&gt;# 명령 실행의 진입점을 python3 로 지정한다.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;ENTRYPOINT&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; [&quot;python3&quot;]&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 위의 명령 실행에 대한 인수를 지정한다.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;CMD&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; [&quot;interview-bot-ver2.0.py&quot;]&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 위 명령 기준으로 컨테이너 구동 후 아래 명령을 실행한다.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# python3 interview-bot-ver2.0.py&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;예를 들어, 위의 dockerfile과 같이 동일 경로에&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;requirements.txt&lt;/li&gt;
+  &lt;li&gt;{구동할 파이썬 파일}.py&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;파일을 올려놓고 해당 dockerfile을 이미지화 하여 구동하면 된다.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# dockerfile 이미지화&lt;/span&gt;
+docker build &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; pyContainer:1.0
+
+&lt;span class=&quot;c&quot;&gt;# docker run&lt;/span&gt;
+docker run &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; pyCon pyContainer:1.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;결론&quot;&gt;결론&lt;/h1&gt;
+
+&lt;p&gt;해당 이미지를 활용하면 빠르게 파이썬 파일을 실행하는 서버 환경을 구축하여 구동할 수 있다.
+간단하게 파이썬 파일 하나만 실행시키는 정도면 크게 무리는 없을 듯 하지만
+현재 저렇게 이미지를 구성하여 러닝하는 경우 용량이 약 1.0GB 정도 된다.&lt;/p&gt;
+
+&lt;p&gt;원래 파이썬에서 제공하는 공식 이미지 자체가 저 정도 크기이다 보니.. 용량을 줄일 수 있다면
+더 획기적이겠지만 미니멀하게 이미지를 만드려는 시도 자체가 너무 번거롭다보니 
+우선 저렇게라도 구동해놓고 사용하고 있다.&lt;/p&gt;
+
+&lt;p&gt;구동할 파이썬 파일이 많아지면 단일 컨테이너 서버에서 nginx나 다른 서버를 이용해
+파이썬 파일을 구동시키는 것도 나쁘지 않을 것 같다.&lt;/p&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Python" /><category term="Python" /><category term="파이썬" /><category term="docker" /><category term="docker python" /><category term="dockerfile" /><summary type="html"></summary></entry><entry><title type="html">Notion Database를 활용한 Discord Bot</title><link href="http://localhost:4000/project/Project-Discord-bot/" rel="alternate" type="text/html" title="Notion Database를 활용한 Discord Bot" /><published>2023-01-23T00:00:00+09:00</published><updated>2023-01-23T00:00:00+09:00</updated><id>http://localhost:4000/project/Project-Discord-bot</id><content type="html" xml:base="http://localhost:4000/project/Project-Discord-bot/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#프로젝트-개요&quot; id=&quot;markdown-toc-프로젝트-개요&quot;&gt;프로젝트 개요&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#사용기술&quot; id=&quot;markdown-toc-사용기술&quot;&gt;사용기술&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#개발환경&quot; id=&quot;markdown-toc-개발환경&quot;&gt;개발환경&lt;/a&gt;&lt;/li&gt;
@@ -1078,135 +1416,7 @@ sys.path에 경로를 추가해주어야 한다.&lt;/p&gt;
 # 또는
 &lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# function() 으로 사용
 &lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Python" /><category term="Python" /><category term="파이썬" /><category term="import" /><category term="from" /><category term="from import" /><summary type="html"></summary></entry><entry><title type="html">Python - Request 라이브러리 사용</title><link href="http://localhost:4000/python/python-request/" rel="alternate" type="text/html" title="Python - Request 라이브러리 사용" /><published>2022-12-16T00:00:00+09:00</published><updated>2022-12-16T00:00:00+09:00</updated><id>http://localhost:4000/python/python-request</id><content type="html" xml:base="http://localhost:4000/python/python-request/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#request-라이브러리-사용&quot; id=&quot;markdown-toc-request-라이브러리-사용&quot;&gt;Request 라이브러리 사용&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#기본-사용-방법&quot; id=&quot;markdown-toc-기본-사용-방법&quot;&gt;기본 사용 방법&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#get-요청-시-파라미터-전달-방법&quot; id=&quot;markdown-toc-get-요청-시-파라미터-전달-방법&quot;&gt;GET 요청 시, 파라미터 전달 방법&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#post-요청-시-파라미터-전달-방법&quot; id=&quot;markdown-toc-post-요청-시-파라미터-전달-방법&quot;&gt;POST 요청 시, 파라미터 전달 방법&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#헤더-또는-쿠키의-추가&quot; id=&quot;markdown-toc-헤더-또는-쿠키의-추가&quot;&gt;헤더 또는 쿠키의 추가&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;request-라이브러리-사용&quot;&gt;Request 라이브러리 사용&lt;/h1&gt;
-
-&lt;h2 id=&quot;기본-사용-방법&quot;&gt;기본 사용 방법&lt;/h2&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;requests&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;https://google.com&apos;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status_code&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# &amp;lt;Response [200]&amp;gt;
-# 200
-# &amp;lt;!doctype html&amp;gt;&amp;lt;html itemscope=&quot;&quot; itemtype=...&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;get-요청-시-파라미터-전달-방법&quot;&gt;GET 요청 시, 파라미터 전달 방법&lt;/h2&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;requests&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;https://google.com&apos;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;param1&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;value1&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;param2&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;value&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;post-요청-시-파라미터-전달-방법&quot;&gt;POST 요청 시, 파라미터 전달 방법&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;일반적인 방법&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;requests&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;https://google.com&apos;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;param1&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;value1&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;param2&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;value&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Json 전달&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;outer&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;inner&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;value&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dumps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;헤더-또는-쿠키의-추가&quot;&gt;헤더 또는 쿠키의 추가&lt;/h2&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Content-Type&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;application/json; charset=utf-8&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;cookies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;session_id&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;sorryidontcare&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# GET
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cookies&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cookies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# POST
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dumps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cookies&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cookies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Python" /><category term="Python" /><category term="파이썬" /><category term="Request" /><summary type="html"></summary></entry><entry><title type="html">Python - 다른 python 파일 포함 시키기</title><link href="http://localhost:4000/python/python-other-py/" rel="alternate" type="text/html" title="Python - 다른 python 파일 포함 시키기" /><published>2022-12-16T00:00:00+09:00</published><updated>2022-12-16T00:00:00+09:00</updated><id>http://localhost:4000/python/python-other-py</id><content type="html" xml:base="http://localhost:4000/python/python-other-py/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#다른-파이썬-파일의-함수-포함시키기&quot; id=&quot;markdown-toc-다른-파이썬-파일의-함수-포함시키기&quot;&gt;다른 파이썬 파일의 함수 포함시키기&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;다른-파이썬-파일의-함수-포함시키기&quot;&gt;다른 파이썬 파일의 함수 포함시키기&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;function.py
-```python
-import os
-import sys&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;def func(parameter1,parameter2):
-    print(parameter1)
-    print(parameter2)&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;return True ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;main.py
-```python
-import os
-import sys&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;import function
-function.func(1,2)&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;1
-2&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;from function import func
-func(1,2)&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;1
-2&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;```&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;import function
-    &lt;ul&gt;
-      &lt;li&gt;function 파일을 포함 시키는 방법&lt;/li&gt;
-      &lt;li&gt;내부 함수는 파일명.함수명 으로 사용한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;from function import func
-    &lt;ul&gt;
-      &lt;li&gt;파일명.함수명으로 사용하기 번거로울 때 사용.&lt;/li&gt;
-      &lt;li&gt;함수를 임포트 시킨다고 보면 된다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Python" /><category term="import python" /><category term="other python function" /><category term="Python" /><category term="파이썬" /><summary type="html"></summary></entry><entry><title type="html">Python - 업무 자동화 팁</title><link href="http://localhost:4000/python/python-auto/" rel="alternate" type="text/html" title="Python - 업무 자동화 팁" /><published>2022-12-16T00:00:00+09:00</published><updated>2022-12-16T00:00:00+09:00</updated><id>http://localhost:4000/python/python-auto</id><content type="html" xml:base="http://localhost:4000/python/python-auto/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Python" /><category term="Python" /><category term="파이썬" /><category term="import" /><category term="from" /><category term="from import" /><summary type="html"></summary></entry><entry><title type="html">Python - 업무 자동화 팁</title><link href="http://localhost:4000/python/python-auto/" rel="alternate" type="text/html" title="Python - 업무 자동화 팁" /><published>2022-12-16T00:00:00+09:00</published><updated>2022-12-16T00:00:00+09:00</updated><id>http://localhost:4000/python/python-auto</id><content type="html" xml:base="http://localhost:4000/python/python-auto/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#파이썬-업무-자동화-관련-포스트-공유&quot; id=&quot;markdown-toc-파이썬-업무-자동화-관련-포스트-공유&quot;&gt;파이썬 업무 자동화 관련 포스트 공유&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#사장님-몰래-하는-파이썬-업무자동화부제--들키면-일-많아짐&quot; id=&quot;markdown-toc-사장님-몰래-하는-파이썬-업무자동화부제--들키면-일-많아짐&quot;&gt;사장님 몰래 하는 파이썬 업무자동화(부제 : 들키면 일 많아짐)&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
@@ -1370,826 +1580,4 @@ func(1,2)&lt;/p&gt;
   &lt;li&gt;params: url 파라미터&lt;/li&gt;
   &lt;li&gt;query: 쿼리 스트링&lt;/li&gt;
   &lt;li&gt;fragment: fragment 식별자&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Python" /><category term="URL Encoding" /><category term="urllib" /><category term="Python" /><category term="파이썬" /><summary type="html"></summary></entry><entry><title type="html">Python - Selenium Functions</title><link href="http://localhost:4000/python/python-selenum-function/" rel="alternate" type="text/html" title="Python - Selenium Functions" /><published>2022-12-16T00:00:00+09:00</published><updated>2022-12-16T00:00:00+09:00</updated><id>http://localhost:4000/python/python-selenum-function</id><content type="html" xml:base="http://localhost:4000/python/python-selenum-function/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#import&quot; id=&quot;markdown-toc-import&quot;&gt;import&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#driver-load&quot; id=&quot;markdown-toc-driver-load&quot;&gt;Driver Load&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#wait-till-load-webpage로딩-대기&quot; id=&quot;markdown-toc-wait-till-load-webpage로딩-대기&quot;&gt;Wait till Load Webpage(로딩 대기)&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#implict-wait-암묵적-대기&quot; id=&quot;markdown-toc-implict-wait-암묵적-대기&quot;&gt;Implict wait (암묵적 대기)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#explict-wait-명시적-대기&quot; id=&quot;markdown-toc-explict-wait-명시적-대기&quot;&gt;Explict wait (명시적 대기)&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#요소-찾기xpath&quot; id=&quot;markdown-toc-요소-찾기xpath&quot;&gt;요소 찾기(XPATH)&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#요소-가져오는-방법&quot; id=&quot;markdown-toc-요소-가져오는-방법&quot;&gt;요소 가져오는 방법&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#xpath-가져오기&quot; id=&quot;markdown-toc-xpath-가져오기&quot;&gt;XPath 가져오기&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#키보드-입력&quot; id=&quot;markdown-toc-키보드-입력&quot;&gt;키보드 입력&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#키보드-값-전달&quot; id=&quot;markdown-toc-키보드-값-전달&quot;&gt;키보드 값 전달&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#입력-값-클리어하기&quot; id=&quot;markdown-toc-입력-값-클리어하기&quot;&gt;입력 값 클리어하기&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#파일-업로드&quot; id=&quot;markdown-toc-파일-업로드&quot;&gt;파일 업로드&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#상호작용-하기&quot; id=&quot;markdown-toc-상호작용-하기&quot;&gt;상호작용 하기&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#클릭하기&quot; id=&quot;markdown-toc-클릭하기&quot;&gt;클릭하기&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#옵션-선택-및-submit&quot; id=&quot;markdown-toc-옵션-선택-및-submit&quot;&gt;옵션 선택 및 Submit&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#드래그-앤-드랍&quot; id=&quot;markdown-toc-드래그-앤-드랍&quot;&gt;드래그 앤 드랍&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#window-frame-이동&quot; id=&quot;markdown-toc-window-frame-이동&quot;&gt;Window, Frame 이동&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#javascript-실행&quot; id=&quot;markdown-toc-javascript-실행&quot;&gt;JavaScript 실행&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#브라우저-창-다루기&quot; id=&quot;markdown-toc-브라우저-창-다루기&quot;&gt;브라우저 창 다루기&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#화면-이동맨-밑으로-내려가기-등&quot; id=&quot;markdown-toc-화면-이동맨-밑으로-내려가기-등&quot;&gt;화면 이동(맨 밑으로 내려가기 등)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#브라우저-최소화최대화&quot; id=&quot;markdown-toc-브라우저-최소화최대화&quot;&gt;브라우저 최소화/최대화&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#스크린샷-저장&quot; id=&quot;markdown-toc-스크린샷-저장&quot;&gt;스크린샷 저장&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#optionchromeoption&quot; id=&quot;markdown-toc-optionchromeoption&quot;&gt;Option(ChromeOption)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#actionchains-마우스-키보드-입력-등-연속-동작-실행&quot; id=&quot;markdown-toc-actionchains-마우스-키보드-입력-등-연속-동작-실행&quot;&gt;ActionChains (마우스, 키보드 입력 등 연속 동작 실행)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#경고-창-다루기alerts&quot; id=&quot;markdown-toc-경고-창-다루기alerts&quot;&gt;경고 창 다루기(alerts)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#기타-기능&quot; id=&quot;markdown-toc-기타-기능&quot;&gt;기타 기능&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;import&quot;&gt;import&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;셀레니움 내 다양한 모듈/함수 등을 포함시키는 방법&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;webdriver&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium.webdriver.common.by&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;By&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium.webdriver.common.keys&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Keys&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium.webdriver.support.ui&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WebDriverWait&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium.webdriver.support&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;expected_conditions&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EC&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;driver-load&quot;&gt;Driver Load&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;웹 드라이버를 로드함으로써, 웹 사이트에 접근 가능하게 한다.&lt;/li&gt;
-  &lt;li&gt;하기 예시는 크롬드라이버를 예로 사용하며 추가적인 옵션 또한 존재한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# 크롬 드라이버 설정
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chrome_options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;webdriver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ChromeOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;chrome_options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;headless&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 웹 페이지를 실제로 띄우지 않겠다.
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chrome_options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;--disable-gpu&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# GPU를 사용하지 않겠다.
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chrome_options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;lang=ko_KR&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 언어 설정을 ko_KR로 사용하겠다.
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chrome_options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 웹 에이전트 지정
-&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# Window
-# driver = webdriver.Chrome(&apos;C:\chromedriver.exe&apos;, chrome_options=chrome_options)
-&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# Mac
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;webdriver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Chrome&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;/opt/homebrew/chromedriver&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chrome_options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chrome_options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;현재 URL 가져오기&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;now_url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current_url&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;now_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;드라이버 닫기&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;driver.close()
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;wait-till-load-webpage로딩-대기&quot;&gt;Wait till Load Webpage(로딩 대기)&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;브라우저에서 요소를 로딩하는데 걸리는 시간이 있기 때문에, 요소가 전부 준비되기 까지 대기하는 과정&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;implict-wait-암묵적-대기&quot;&gt;Implict wait (암묵적 대기)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;찾으려는 요소가 로드 될 때까지 지정된 시간을 대기한다. 드라이버에 전역 설정으로 저장되며 기본값은 0이다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# 10초 대기를 설정한다.
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;implicitly_wait&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time_to_wait&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;explict-wait-명시적-대기&quot;&gt;Explict wait (명시적 대기)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;대기 하는 조건을 사용하여, 해당 조건이 완료될 때까지 대기 한 후 완료되면 실행되도록 한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;webdriver&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium.webdriver.common.by&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;By&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium.webdriver.support.ui&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WebDriverWait&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium.webdriver.support&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;expected_conditions&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EC&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;webdriver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Chrome&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;/opt/homebrew/chromedriver&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chrome_options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chrome_options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.google.com&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;element&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WebDriverWait&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;until&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;# element_id 라는 아이디를 가진 요소가 로딩 될 때까지 10초간 기다린 후, 요소를 가져오는 것을 시도한다.
-&lt;/span&gt;            &lt;span class=&quot;n&quot;&gt;EC&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;presence_of_element_located&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;By&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;element_id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;finally&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;quit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;함수&lt;/th&gt;
-      &lt;th&gt;설명&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;title_is&lt;/td&gt;
-      &lt;td&gt;페이지의 title이 일치하면 True, 그렇지 않으면 False를 반환한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;title_contains&lt;/td&gt;
-      &lt;td&gt;페이지의 title에 대소문자를 구분하여 해당 문자열이 포함되어 있는지 확인한다. 포함되면 True, 그렇지 않으면 False를 반환한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;presence_of_element_located&lt;/td&gt;
-      &lt;td&gt;페이지의 DOM에 요소가 있는지 확인한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;visibility_of_element_located&lt;/td&gt;
-      &lt;td&gt;요소가 페이지의 DOM에 있고 볼 수 있는 상태인지 확인한다. 볼 수 있다는 상태는 요소가 표시될 뿐만 아니라 높이와 너비가 0보다 커야 한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;visibility_of&lt;/td&gt;
-      &lt;td&gt;페이지의 DOM에 있는 요소가 보이는지 확인한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;presence_of_all_elements_located&lt;/td&gt;
-      &lt;td&gt;페이지에 적어도 하나의 요소가 있는지 확인한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;text_to_be_present_in_element&lt;/td&gt;
-      &lt;td&gt;주어진 텍스트가 지정된 요소에 있는지 확인한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;text_to_be_present_in_element_value&lt;/td&gt;
-      &lt;td&gt;주어진 텍스트가 지정된 요소의 로케이터에 있는지 확인한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;frame_to_be_available_and_switch_to_it&lt;/td&gt;
-      &lt;td&gt;주어진 프레임을 전환할 수 있는지 확인한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;invisibility_of_element_located&lt;/td&gt;
-      &lt;td&gt;페이지의 DOM에 요소가 보이지 않거나 존재하지 않는지 확인한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;element_to_be_clickable&lt;/td&gt;
-      &lt;td&gt;요소가 표시되고 클릭할 수 있는지 확인한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;staleness_of&lt;/td&gt;
-      &lt;td&gt;요소가 더이상 DOM에 연결되지 않을 때까지 기다린다. 요소가 DOM에 연결이 되어있으면 False를 반환하고, 그렇지 않으면 True를 반환한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;element_to_be_selected&lt;/td&gt;
-      &lt;td&gt;요소가 선택될 수 있는지 확인한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;element_located_to_be_selected&lt;/td&gt;
-      &lt;td&gt;요소가 선택될 수 있는 위치에 있는지 확인한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;element_selection_state_to_be&lt;/td&gt;
-      &lt;td&gt;지정된 요소가 선택되었는지 확인한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;element_located_selection_state_to_be&lt;/td&gt;
-      &lt;td&gt;요소를 찾고, 요소가 선택된 상태인지 확인한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;alert_is_present&lt;/td&gt;
-      &lt;td&gt;알림이 있는지 확인한다.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h1 id=&quot;요소-찾기xpath&quot;&gt;요소 찾기(XPATH)&lt;/h1&gt;
-
-&lt;h2 id=&quot;요소-가져오는-방법&quot;&gt;요소 가져오는 방법&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;웹 크롤링 시, 혹은 웹에서 요소를 찾을 때 사용하는 방법 중 Xpath 라는 것이 있다.&lt;/li&gt;
-  &lt;li&gt;요소를 다음과 같이 찾는 것 처럼 하나의 속성으로써 찾아올 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# 클래스로 요소 찾기
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;By&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CLASS_NAME&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;class&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# 아이디로 찾기
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;By&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# CSS에서 selector 지정하는 것 처럼 사용
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;By&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CSS_SELECTOR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;p.content&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# 링크에서 지정한 URL 로 찾기
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;By&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LINK_TEXT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;link_text&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# 태그 명으로 찾기
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;By&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TAG_NAME&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;tag_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;xpath-가져오기&quot;&gt;XPath 가져오기&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;이런 경로들을 구조만 보고도 알 수 있다면 바로 사용할 수 있겠지만 불행하게도 그렇게까지 복잡한 구조를 바로 인식할 만큼 우리는 똑똑하지 않아서 
-아래와 같은 기능을 이용해 간단히 XPath를 가져올 수 있다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;크롬 &amp;gt; 개발자 도구 &amp;gt; 요소 선택&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;가져 오고 싶은 요소를 선택한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/Python/selenium/xpath1.png&quot; alt=&quot;이미지1&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;해당 요소를 우클릭 &amp;gt; 복사 &amp;gt; XPath 가져오기&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/Python/selenium/xpath2.png&quot; alt=&quot;이미지2&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;해당 기능을 이용하면 바로 XPath를 가져올 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;By&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;XPATH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;/html/body/div[1]/div[3]/center/div/form[1]/div[1]/div/table/tbody/tr[2]/td[5]/input[1]&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;DOM Element 구조에 따르는 경로를 표시한 것이다 [3] 같은 것은 3번째 요소라는 뜻이다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;표현식&lt;/p&gt;
-
-    &lt;table&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;
-          &lt;th&gt;표현식&lt;/th&gt;
-          &lt;th&gt;설명&lt;/th&gt;
-        &lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;nodename&lt;/td&gt;
-          &lt;td&gt;nodename을 name으로 갖는 모든 요소 선택&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;/&lt;/td&gt;
-          &lt;td&gt;root 요소에서 선택&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;//&lt;/td&gt;
-          &lt;td&gt;현재 요소의 자손 요소를 선택&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;.&lt;/td&gt;
-          &lt;td&gt;현재 요소를 선택&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;..&lt;/td&gt;
-          &lt;td&gt;현재 요소의 부모 요소를 선택&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;@&lt;/td&gt;
-          &lt;td&gt;속성(attibutes)를 선택&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;*&lt;/td&gt;
-          &lt;td&gt;모든 요소에 매치됨&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;@*&lt;/td&gt;
-          &lt;td&gt;모든 속성 요소에 매치됨&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;node()&lt;/td&gt;
-          &lt;td&gt;모든 종류의 모든 요소에 매치됨&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;|&lt;/td&gt;
-          &lt;td&gt;OR 조건의 기능&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;예시&lt;/p&gt;
-
-    &lt;table&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;
-          &lt;th&gt;표현식&lt;/th&gt;
-          &lt;th&gt;설명&lt;/th&gt;
-        &lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;/div&lt;/td&gt;
-          &lt;td&gt;root 요소의 div 요소&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;./div&lt;/td&gt;
-          &lt;td&gt;현재 요소의 자식 요소 중 div 요소&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;/*&lt;/td&gt;
-          &lt;td&gt;name에 상관없이 root 요소를 선택&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;./* 또는 *&lt;/td&gt;
-          &lt;td&gt;context 요소의 모든 자식 요소를 선택&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;//div&lt;/td&gt;
-          &lt;td&gt;현재 웹페이지에서 모든 div 요소를 선택&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;.//div&lt;/td&gt;
-          &lt;td&gt;현재 요소의 모든 자손 div 요소를 선택&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;//*&lt;/td&gt;
-          &lt;td&gt;현재 웹페이지의 모든 요소를 선택&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;.//*&lt;/td&gt;
-          &lt;td&gt;현재 요소의 모든 자손 요소를 선택&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;/div/p[0]&lt;/td&gt;
-          &lt;td&gt;root &amp;gt; div &amp;gt; p 요소 중 첫 번째 p 요소를 선택&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;/div/p[position()&amp;lt;3]&lt;/td&gt;
-          &lt;td&gt;root &amp;gt; div &amp;gt; p 요소 중 첫 두 p 요소를 선택&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;/div/p[last()]&lt;/td&gt;
-          &lt;td&gt;root &amp;gt; div &amp;gt; p 요소 중 마지막 p 요소를 선택&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;/bookstore/book[price&amp;gt;35.00]&lt;/td&gt;
-          &lt;td&gt;root &amp;gt; bookstore &amp;gt; book 요소 중 price 속성이 35.00 초과인 요소들을 선택&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;//*[@id=”tsf”]/div[2]/&lt;/td&gt;
-          &lt;td&gt;id가 tsf인 모든 요소의 자식 div 요소 중 3번째 요소를 선택&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;//title | //price&lt;/td&gt;
-          &lt;td&gt;title 또는 price 요소를 선택&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Xpath에 대해 더 자세히 알고자 한다면 아래 링크를 참고하세요&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://www.w3schools.com/xml/xpath_syntax.asp&quot;&gt;참고 링크&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;키보드-입력&quot;&gt;키보드 입력&lt;/h1&gt;
-
-&lt;h2 id=&quot;키보드-값-전달&quot;&gt;키보드 값 전달&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;어떤 요소를 선택 후, 키 값을 보낼 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# 선택한 요소에 &apos;test&apos; 라는 값을 보냄
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;By&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send_keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;test&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;가능한 시스템 키 입력 값&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
-    Set of special keys codes.
-    &quot;&quot;&quot;&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;NULL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue000&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;CANCEL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue001&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# ^break
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;HELP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue002&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;BACKSPACE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue003&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;BACK_SPACE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BACKSPACE&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;TAB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue004&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;CLEAR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue005&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;RETURN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue006&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ENTER&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue007&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;SHIFT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue008&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;LEFT_SHIFT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SHIFT&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;CONTROL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue009&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;LEFT_CONTROL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CONTROL&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ALT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue00a&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;LEFT_ALT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ALT&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;PAUSE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue00b&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ESCAPE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue00c&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;SPACE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue00d&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;PAGE_UP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue00e&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;PAGE_DOWN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue00f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;END&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue010&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;HOME&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue011&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;LEFT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue012&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ARROW_LEFT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LEFT&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;UP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue013&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ARROW_UP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UP&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;RIGHT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue014&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ARROW_RIGHT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RIGHT&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;DOWN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue015&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ARROW_DOWN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DOWN&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;INSERT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue016&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;DELETE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue017&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;SEMICOLON&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue018&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;EQUALS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue019&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;NUMPAD0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue01a&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# number pad keys
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;NUMPAD1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue01b&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;NUMPAD2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue01c&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;NUMPAD3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue01d&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;NUMPAD4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue01e&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;NUMPAD5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue01f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;NUMPAD6&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue020&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;NUMPAD7&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue021&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;NUMPAD8&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue022&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;NUMPAD9&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue023&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;MULTIPLY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue024&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ADD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue025&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;SEPARATOR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue026&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;SUBTRACT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue027&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;DECIMAL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue028&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;DIVIDE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue029&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;F1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue031&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# function  keys
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;F2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue032&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;F3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue033&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;F4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue034&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;F5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue035&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;F6&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue036&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;F7&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue037&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;F8&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue038&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;F9&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue039&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;F10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue03a&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;F11&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue03b&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;F12&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue03c&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;META&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue03d&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;COMMAND&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ue03d&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;입력-값-클리어하기&quot;&gt;입력 값 클리어하기&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;입력된 값을 초기화 한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;파일-업로드&quot;&gt;파일 업로드&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;파일을 업로드한다.&lt;/li&gt;
-  &lt;li&gt;파일 업로드 요소(input)를 선택 후, 경로로 지정된 파일을 전송한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;By&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;input&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send_keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;상호작용-하기&quot;&gt;상호작용 하기&lt;/h1&gt;
-
-&lt;h2 id=&quot;클릭하기&quot;&gt;클릭하기&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;클릭 함수를 사용하여 요소를 클릭한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;By&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;login_btn&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;옵션-선택-및-submit&quot;&gt;옵션 선택 및 Submit&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Select 함수를 import 하여 간단히 사용가능하다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium.webdriver.support.ui&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Select&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# 셀렉트 요소 선택
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;By&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NAME&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;select_elem_name&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# 인덱스 번호로 선택
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select_by_index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# 옵션명으로 선택
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select_by_visible_text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;option_text&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# 값 내용으로 선택
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select_by_value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;1&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# 인덱스 번호로 선택 해제
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deselect_by_index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# 옵션명으로 선택 해제
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deselect_by_visible_text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;option_text&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# 값 내용으로 선택 해제
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deselect_by_value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;1&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# 전부 해제
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deselect_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# 선택된 옵션 전체 리스트 얻기
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;all_selected_options&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# 첫번째 선택된 옵션 가져오기
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first_selected_option&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# 가능한 옵션 모두 보기
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;제출(submit)하려면 요소를 찾은 뒤 click()을 수행해도 되지만, 다음과 같이 써도 된다.
-    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;By&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TAG_NAME&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;form&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;submit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;드래그-앤-드랍&quot;&gt;드래그 앤 드랍&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;ActionChains을 사용하여 source 요소에서 target 요소로 Drag &amp;amp; Drop을 실행한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium.webdriver&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ActionChains&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;action_chains&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ActionChains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;action_chains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drag_and_drop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;window-frame-이동&quot;&gt;Window, Frame 이동&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;쉽게 말해 어떤 창 또는 프레임으로 포커싱을 옮긴다고 생각하면 된다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;switch_to_frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;frame&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;switch_to_window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;window&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# frame 내 서브 프레임으로도 이동 가능하다.
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;switch_to_frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;frame.0.child&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;window name을 통해 이동하는 것은 아래와 같다.
-    &lt;ul&gt;
-      &lt;li&gt;여기서, target 속성의 이름을 기재하여 사용한다.
-        &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://google.com&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;window&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;...&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;열려있는 브라우저들을 반복하여 포커싱 할 수도 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;window_handles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;switch_to_window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;frame 밖으로 나가려면 다음과 같이 쓰면 기본 frame으로 되돌아간다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;switch_to_default_content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;경고창으로 이동할 수도 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;alert&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;switch_to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alert&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;javascript-실행&quot;&gt;JavaScript 실행&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;driver.execute_script() 함수를 실행할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;test value&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;execute_script&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;document.getElementsByName(&apos;id&apos;)[0].value=&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;브라우저-창-다루기&quot;&gt;브라우저 창 다루기&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;뒤로가기, 앞으로 가기&lt;/li&gt;
-  &lt;li&gt;브라우저는 뒤로가기(back)와 앞으로 가기(forward) 기능을 제공한다. 이를 selenium으로 구현이 가능하다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;forward&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;화면-이동맨-밑으로-내려가기-등&quot;&gt;화면 이동(맨 밑으로 내려가기 등)&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;크롤링을 하다 보면 화면의 끝으로 내려가야 내용이 동적으로 추가되는 경우를 자주 볼 수 있다.&lt;/li&gt;
-  &lt;li&gt;이런 경우에는 웹페이지의 최하단으로 내려가는 코드를 실행할 필요가 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;execute_script&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;window.scrollTo(0, document.body.scrollHeight);&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;물론 전체를 내려가야 할 필요가 없다면 document.body.scrollHeight) 대신 지정된 값만큼 이동해도 된다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;특정 요소까지 계속 찾으려면 ActionChain을 써도 된다.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium.webdriver&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ActionChains&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;By&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;ID&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;ActionChains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;move_to_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;브라우저-최소화최대화&quot;&gt;브라우저 최소화/최대화&lt;/h2&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minimize_window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maximize_window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;스크린샷-저장&quot;&gt;스크린샷 저장&lt;/h2&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save_screenshot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;screen_shot.png&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;optionchromeoption&quot;&gt;Option(ChromeOption)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;여러 옵션을 설정할 수 있다. 브라우저의 창 크기, 해당 기기의 정보 등을 설정할 수 있다.&lt;/li&gt;
-  &lt;li&gt;기본적인 사용법은 다음과 같다. 브라우저가 실행될 때 창 크기를 설정할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;webdriver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ChromeOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;window-size=1920,1080&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;webdriver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Chrome&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;chromedriver&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;다른&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;기능들은&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;여기에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;적어&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;두었다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;코드를&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;보면&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;역할을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;짐작할&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;수&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;있을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;것이다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;headless&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;window-size=1920x1080&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;disable-gpu&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;start-maximized&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;disable-infobars&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;--disable-extensions&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_experimental_option&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;excludeSwitches&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;enable-automation&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_experimental_option&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;useAutomationExtension&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;--disable-blink-features=AutomationControlled&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_experimental_option&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;debuggerAddress&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;127.0.0.1:9222&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;actionchains-마우스-키보드-입력-등-연속-동작-실행&quot;&gt;ActionChains (마우스, 키보드 입력 등 연속 동작 실행)&lt;/h2&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium.webdriver&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ActionChains&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;menu&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element_by_css_selector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;.nav&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;hidden_submenu&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element_by_css_selector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;.nav #submenu1&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;ActionChains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;move_to_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;menu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hidden_submenu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# 위 한 줄은 아래와 같은 동작을 수행한다.
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;actions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ActionChains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;actions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;move_to_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;menu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;actions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hidden_submenu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;actions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ul&gt;
-  &lt;li&gt;마우스 클릭, Drag &amp;amp; Drop, 키보드 입력 등을 연속적으로 수행할 수 있다.
-    &lt;ul&gt;
-      &lt;li&gt;on_element 인자를 받는 함수는, 해당 인자가 주어지지 않으면 현재 마우스 위치를 기준으로 한다.&lt;/li&gt;
-      &lt;li&gt;element 인자를 받는 함수는, 해당 인자가 주어지지 않으면 현재 선택이 되어 있는 요소를 기준으로 한다.&lt;/li&gt;
-      &lt;li&gt;key_down, key_up 함수는 Ctrl 등의 키를 누를 때 쓰면 된다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Ctrl + C를 누른다.
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ActionChains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key_down&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CONTROL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send_keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;c&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key_up&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CONTROL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;함수&lt;/th&gt;
-      &lt;th&gt;설명&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;click(on_element=None)&lt;/td&gt;
-      &lt;td&gt;인자로 주어진 요소를 왼쪽 클릭한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;click_and_hold(on_element=None)&lt;/td&gt;
-      &lt;td&gt;인자로 주어진 요소를 왼쪽 클릭하고 누르고 있는다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;release(on_element=None)&lt;/td&gt;
-      &lt;td&gt;마우스를 주어진 요소에서 뗀다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;context_click(on_element=None)&lt;/td&gt;
-      &lt;td&gt;인자로 주어진 요소를 오른쪽 클릭한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;double_click(on_element=None)&lt;/td&gt;
-      &lt;td&gt;인자로 주어진 요소를 왼쪽 더블클릭한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;drag_and_drop(source, target)&lt;/td&gt;
-      &lt;td&gt;source 요소에서 마우스 왼쪽 클릭하여 계속 누른 채로 target까지 이동한 뒤 마우스를 놓는다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;drag_and_drop_by_offset(source, xoffset, yoffset)&lt;/td&gt;
-      &lt;td&gt;위와 비슷하지만 offset만큼 이동하여 마우스를 놓는다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;key_down(value, element=None)&lt;/td&gt;
-      &lt;td&gt;value로 주어진 키를 누르고 떼지 않는다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;key_up(value, element=None)&lt;/td&gt;
-      &lt;td&gt;value로 주어진 키를 뗀다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;move_to_element(to_element)&lt;/td&gt;
-      &lt;td&gt;마우스를 해당 요소의 중간 위치로 이동한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;move_to_element_with_offset(to_element, xoffset, yoffset)&lt;/td&gt;
-      &lt;td&gt;마우스를 해당 요소에서 offset만큼 이동한 위치로 이동한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;pause(seconds)&lt;/td&gt;
-      &lt;td&gt;주어진 시간(초 단위)만큼 입력을 중지한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;perform()&lt;/td&gt;
-      &lt;td&gt;이미 쌓여 있는(stored) 모든 행동을 수행한다(chaining).&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;reset_actions()&lt;/td&gt;
-      &lt;td&gt;이미 쌓여 있는(stored) 모든 행동을 제거한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;send_keys(*keys_to_send)&lt;/td&gt;
-      &lt;td&gt;키보드 입력을 현재 focused된 요소에 보낸다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;send_keys_to_element(element, *keys_to_send)&lt;/td&gt;
-      &lt;td&gt;보드 입력을 주어진 요소에 보낸다.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;경고-창-다루기alerts&quot;&gt;경고 창 다루기(alerts)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;브라우저 얼럿 경고창을 무시하는 등의 처리를 할 수 있는 기능을 제공한다.&lt;/li&gt;
-  &lt;li&gt;아래 코드는 경고창에서 수락/거절을 누르거나, 경고창의 내용을 출력, 혹은 경고창에 특정 키 입력을 보낼 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium.webdriver.common.alert&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Alert&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;Alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accept&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dismiss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send_keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keysToSend&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ESCAPE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;기타-기능&quot;&gt;기타 기능&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Touch Actions: 마우스/키보드 입력과 비슷하게 chaining이 가능하다. 터치와 관련한 여러 기능을 제공한다. selenium.webdriver.common.touch_actions.TouchActions&lt;/li&gt;
-  &lt;li&gt;Proxy: Proxy 기능을 사용할 수 있다. selenium.webdriver.common.proxy.Proxy&lt;/li&gt;
-  &lt;li&gt;쿠키(Cookies): 쿠키를 추가하거나 가져올 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Go to the correct domain
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;http://www.example.com&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Now set the cookie. This one&apos;s valid for the entire domain
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cookie&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;‘&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;‘&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;‘&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;‘&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_cookie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cookie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# And now output all the available cookies for the current URL
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_cookies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;참고&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://selenium-python.readthedocs.io/index.html&quot;&gt;https://selenium-python.readthedocs.io/index.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Python" /><category term="Selenium" /><category term="Webdriver" /><category term="Python" /><category term="파이썬" /><summary type="html"></summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Python" /><category term="URL Encoding" /><category term="urllib" /><category term="Python" /><category term="파이썬" /><summary type="html"></summary></entry></feed>
