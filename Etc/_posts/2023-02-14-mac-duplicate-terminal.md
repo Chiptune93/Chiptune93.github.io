@@ -12,6 +12,9 @@ tags: [Innosetup, Inno Setup Korean, Korean]
 - Table of Contents
 {:toc .large-only}
 
+
+
+
 # 개요
 
 - Mac이 Ventura 로 업데이트 되면서, 터미널 앱의 복사를 막아버림.
