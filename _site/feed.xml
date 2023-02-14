@@ -1,5 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us,ko-KR"><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-us,ko-KR" /><updated>2023-02-14T01:46:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Chiptune93</title><subtitle>Java Developer&apos;s Tech Blog &amp; Exp Storage.
-</subtitle><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><entry><title type="html">Inno Setup 5,6 Korean</title><link href="http://localhost:4000/etc/Inno-setup-korean/" rel="alternate" type="text/html" title="Inno Setup 5,6 Korean" /><published>2023-02-14T00:00:00+09:00</published><updated>2023-02-14T00:00:00+09:00</updated><id>http://localhost:4000/etc/Inno-setup-korean</id><content type="html" xml:base="http://localhost:4000/etc/Inno-setup-korean/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us,ko-KR"><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-us,ko-KR" /><updated>2023-02-14T22:55:58+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Chiptune93</title><subtitle>Java Developer&apos;s Tech Blog &amp; Exp Storage.
+</subtitle><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><entry><title type="html">Mac Ventura Duplicate Terminal.app</title><link href="http://localhost:4000/etc/mac-duplicate-terminal/" rel="alternate" type="text/html" title="Mac Ventura Duplicate Terminal.app" /><published>2023-02-14T00:00:00+09:00</published><updated>2023-02-14T00:00:00+09:00</updated><id>http://localhost:4000/etc/mac-duplicate-terminal</id><content type="html" xml:base="http://localhost:4000/etc/mac-duplicate-terminal/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#개요&quot; id=&quot;markdown-toc-개요&quot;&gt;개요&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#방법&quot; id=&quot;markdown-toc-방법&quot;&gt;방법&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#트러블-슈팅&quot; id=&quot;markdown-toc-트러블-슈팅&quot;&gt;트러블 슈팅&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mac이 Ventura 로 업데이트 되면서, 터미널 앱의 복사를 막아버림.&lt;/li&gt;
+  &lt;li&gt;따라서, 기존에 인텔기반 터미널(로제타2)과 기존 터미널 2개를 사용하던 방법을 사용할 수 없게됨.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;방법&quot;&gt;방법&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;~/.zshrc 에 아래의 내용을 추가함.&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# zsh shell을 arm64 환경으로 설정 후, 로그인&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;arm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;env /usr/bin/arch -arm64 /bin/zsh --login&quot;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# zsh shell을 x86_64 환경으로 설정 후, 로그인&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;intel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;env /usr/bin/arch -x86_64 /bin/zsh --login&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;위 내용을 통해, 터미널을 접속 한 후 ‘arm’ 을 입력하면 arm 환경으로 ‘intel’ 을 입력하면 x86 환경으로 터미널을 실행할 수 있음.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;따라서, 기존 처럼 2개의 터미널로써는 아니지만 환경을 왔다갔다 하면서 사용할 수 있게 됨.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;관련 링크 : &lt;a href=&quot;https://stackoverflow.com/questions/74198234/duplication-of-terminal-in-macos-ventura&quot;&gt;https://stackoverflow.com/questions/74198234/duplication-of-terminal-in-macos-ventura&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;트러블-슈팅&quot;&gt;트러블 슈팅&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;위 작업을 하고 나서 파이썬을 실행하려고 하니, 아래와 같은 에러 메세지와 마주함.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;해당 문제는 Command Line Tools 식별 문제로 아래 명령으로 Command Line Tools 를 설치하여 해결함.&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;xcode-select &lt;span class=&quot;nt&quot;&gt;--install&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;출처 페이지 : &lt;a href=&quot;https://www.hahwul.com/2019/11/18/how-to-fix-xcrun-error-after-macos-update/&quot;&gt;https://www.hahwul.com/2019/11/18/how-to-fix-xcrun-error-after-macos-update/&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Etc" /><category term="Innosetup" /><category term="Inno Setup Korean" /><category term="Korean" /><summary type="html"></summary></entry><entry><title type="html">Inno Setup 5,6 Korean</title><link href="http://localhost:4000/etc/Inno-setup-korean/" rel="alternate" type="text/html" title="Inno Setup 5,6 Korean" /><published>2023-02-14T00:00:00+09:00</published><updated>2023-02-14T00:00:00+09:00</updated><id>http://localhost:4000/etc/Inno-setup-korean</id><content type="html" xml:base="http://localhost:4000/etc/Inno-setup-korean/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#innosetup-한국어-사용하기&quot; id=&quot;markdown-toc-innosetup-한국어-사용하기&quot;&gt;InnoSetup 한국어 사용하기&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#innosetup-5버전-6버전에서-사용-가능한-파일&quot; id=&quot;markdown-toc-innosetup-5버전-6버전에서-사용-가능한-파일&quot;&gt;InnoSetup 5버전, 6버전에서 사용 가능한 파일&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#사용-방법&quot; id=&quot;markdown-toc-사용-방법&quot;&gt;사용 방법&lt;/a&gt;&lt;/li&gt;
@@ -57,7 +113,108 @@
 
 &lt;blockquote&gt;
   &lt;p&gt;해당 파일을 올려주신 ‘시간한줌’ 님께 감사드립니다. ( _ _ )&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Etc" /><category term="Innosetup" /><category term="Inno Setup Korean" /><category term="Korean" /><summary type="html"></summary></entry><entry><title type="html">Python - cmd에서 테이블 형태 표현하기</title><link href="http://localhost:4000/python/python-pretty-table/" rel="alternate" type="text/html" title="Python - cmd에서 테이블 형태 표현하기" /><published>2023-01-28T00:00:00+09:00</published><updated>2023-01-28T00:00:00+09:00</updated><id>http://localhost:4000/python/python-pretty-table</id><content type="html" xml:base="http://localhost:4000/python/python-pretty-table/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+&lt;/blockquote&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Etc" /><category term="Innosetup" /><category term="Inno Setup Korean" /><category term="Korean" /><summary type="html"></summary></entry><entry><title type="html">Python - Docker Running Python</title><link href="http://localhost:4000/python/python/" rel="alternate" type="text/html" title="Python - Docker Running Python" /><published>2023-01-28T00:00:00+09:00</published><updated>2023-01-28T00:00:00+09:00</updated><id>http://localhost:4000/python/python</id><content type="html" xml:base="http://localhost:4000/python/python/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#파이썬을-실행-시키는-docker-image-구성하기&quot; id=&quot;markdown-toc-파이썬을-실행-시키는-docker-image-구성하기&quot;&gt;파이썬을 실행 시키는 Docker Image 구성하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#python-환경을-갖는-서버-이미지-구성하기&quot; id=&quot;markdown-toc-python-환경을-갖는-서버-이미지-구성하기&quot;&gt;Python 환경을 갖는 서버 이미지 구성하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#python-이미지를-활용한-실행-환경-dockerfile-구성하기&quot; id=&quot;markdown-toc-python-이미지를-활용한-실행-환경-dockerfile-구성하기&quot;&gt;Python 이미지를 활용한 실행 환경 Dockerfile 구성하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#결론&quot; id=&quot;markdown-toc-결론&quot;&gt;결론&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;파이썬을-실행-시키는-docker-image-구성하기&quot;&gt;파이썬을 실행 시키는 Docker Image 구성하기&lt;/h1&gt;
+
+&lt;p&gt;최근 discord bot을 python 을 통해 실행시키도록 구성하는 작업을 하고 나서 
+실제 서비스를 하기 위한 준비를 하게 되었다.&lt;/p&gt;
+
+&lt;p&gt;해당 py 파일을 계속 실행 시키고 이벤트 기반으로 대기하는 형태여서 이를 실행시키고 있을 서버가 필요했다.&lt;/p&gt;
+
+&lt;p&gt;내가 원하는 것은 다음과 같았다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;파이썬 파일을 구동할 수 있는 환경&lt;/li&gt;
+  &lt;li&gt;해당 파일을 서버에서 계속 구동할 수 있어야 함&lt;/li&gt;
+  &lt;li&gt;다만 서버 환경에서 서버 자체에 무언가 추가하거나 환경 구성을 하기가 싫었음&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;따라서, 해당 파일을 가지고 Docker 에 이미지 형태로 구성하여 구동되는 서버가 필요했다.
+어차피 통신만 가능하면 Docker로 구동하여도 호스트 포트와 컨테이터 포트연관성은 상관 없을 듯 하였다.&lt;/p&gt;
+
+&lt;h1 id=&quot;python-환경을-갖는-서버-이미지-구성하기&quot;&gt;Python 환경을 갖는 서버 이미지 구성하기&lt;/h1&gt;
+
+&lt;p&gt;우선, 해당 파이썬 파일을 실행 시킬 서버 환경을 구성해야 했다.
+간단하게 Cent OS 7 이미지를 구동해서, 그 안에 파이썬 환경을 갖춘 후
+파일을 실행 시키려고 하였다.&lt;/p&gt;
+
+&lt;p&gt;그래서 우선 https://hub.docker.com/_/centos 에서 Cent OS 7 을 다운로드 해서 작업하려고 하였다.&lt;/p&gt;
+
+&lt;p&gt;우선 이런 형태를 가지고 이미지를 구성하려고 하였다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;CentOS7 이미지를 구동하고, Python을 설치한다.&lt;/li&gt;
+  &lt;li&gt;해당 이미지에서 파이썬 파일을 실행 할 수 있도록 한 후, 이미지화 한다.&lt;/li&gt;
+  &lt;li&gt;커스터마이징 한 이미지를 실행해서 인수로 해당 파일을 실행 할 수 있도록 한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;그런데, 이렇게 하려니 너무 할 작업이 많았다. Cent OS 7 이미지를 받아서 해당 환경 내에서
+다시 개발 환경을 구성하려니 필요한 모듈이 너무 많았다.&lt;/p&gt;
+
+&lt;p&gt;따라서, Docker Python Official Image를 받아서 사용하기로 하였다.&lt;/p&gt;
+
+&lt;p&gt;https://hub.docker.com/_/python&lt;/p&gt;
+
+&lt;p&gt;여기서 버전 별로 파이썬이 설치된 환경의 이미지를 받을 수 있다.
+별도의 환경을 구성하지 않아도 파이썬 환경이 설치된 채로 이미지를 구동하기 때문에
+별도의 작업 없이 해당 이미지를 사용하여 컨테이너를 구동할 때, 내 파일만 실행되게끔 하면 되었다.&lt;/p&gt;
+
+&lt;h1 id=&quot;python-이미지를-활용한-실행-환경-dockerfile-구성하기&quot;&gt;Python 이미지를 활용한 실행 환경 Dockerfile 구성하기&lt;/h1&gt;
+
+&lt;p&gt;Dockerfile을 다음과 같이 구성했다. 라인 별 설명은 주석으로 달아 놓았다.
+어쨋든 파이썬 파일 하나를 실행하면서 올라가기 때문에 나중에 다른 파이썬 파일을 실행해야하는 경우에도
+이를 계속 활용할 수 있을 것이다.&lt;/p&gt;
+
+&lt;div class=&quot;language-dockerfile highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# python 3.10.8 환경 이미지 사용&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; python:3.10.8-buster&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 호스트의 dockerfile이 있는 경로 전체를 컨테이너의 /app 경로로 옮긴다.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;COPY&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; . /app&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 컨테이너 실행 시, 작업 디렉토리를 /app으로 지정한다.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;WORKDIR&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; /app&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 작업 디렉토리에서 아래 명령을 실행한다.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 파이썬 라이브러리 환경을 갖는 파일을 읽어 필요 라이브러리를 다운로드 한다.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;pip3 &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.txt
+&lt;span class=&quot;c&quot;&gt;# 명령 실행의 진입점을 python3 로 지정한다.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;ENTRYPOINT&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; [&quot;python3&quot;]&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 위의 명령 실행에 대한 인수를 지정한다.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;CMD&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; [&quot;interview-bot-ver2.0.py&quot;]&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 위 명령 기준으로 컨테이너 구동 후 아래 명령을 실행한다.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# python3 interview-bot-ver2.0.py&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;예를 들어, 위의 dockerfile과 같이 동일 경로에&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;requirements.txt&lt;/li&gt;
+  &lt;li&gt;{구동할 파이썬 파일}.py&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;파일을 올려놓고 해당 dockerfile을 이미지화 하여 구동하면 된다.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# dockerfile 이미지화&lt;/span&gt;
+docker build &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; pyContainer:1.0
+
+&lt;span class=&quot;c&quot;&gt;# docker run&lt;/span&gt;
+docker run &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; pyCon pyContainer:1.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;결론&quot;&gt;결론&lt;/h1&gt;
+
+&lt;p&gt;해당 이미지를 활용하면 빠르게 파이썬 파일을 실행하는 서버 환경을 구축하여 구동할 수 있다.
+간단하게 파이썬 파일 하나만 실행시키는 정도면 크게 무리는 없을 듯 하지만
+현재 저렇게 이미지를 구성하여 러닝하는 경우 용량이 약 1.0GB 정도 된다.&lt;/p&gt;
+
+&lt;p&gt;원래 파이썬에서 제공하는 공식 이미지 자체가 저 정도 크기이다 보니.. 용량을 줄일 수 있다면
+더 획기적이겠지만 미니멀하게 이미지를 만드려는 시도 자체가 너무 번거롭다보니 
+우선 저렇게라도 구동해놓고 사용하고 있다.&lt;/p&gt;
+
+&lt;p&gt;구동할 파이썬 파일이 많아지면 단일 컨테이너 서버에서 nginx나 다른 서버를 이용해
+파이썬 파일을 구동시키는 것도 나쁘지 않을 것 같다.&lt;/p&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Python" /><category term="Python" /><category term="파이썬" /><category term="docker" /><category term="docker python" /><category term="dockerfile" /><summary type="html"></summary></entry><entry><title type="html">Python - cmd에서 테이블 형태 표현하기</title><link href="http://localhost:4000/python/python-pretty-table/" rel="alternate" type="text/html" title="Python - cmd에서 테이블 형태 표현하기" /><published>2023-01-28T00:00:00+09:00</published><updated>2023-01-28T00:00:00+09:00</updated><id>http://localhost:4000/python/python-pretty-table</id><content type="html" xml:base="http://localhost:4000/python/python-pretty-table/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#파이썬-환경-cmdconsole에서-테이블-형태-표현하기&quot; id=&quot;markdown-toc-파이썬-환경-cmdconsole에서-테이블-형태-표현하기&quot;&gt;파이썬 환경 cmd(console)에서 테이블 형태 표현하기&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#format-을-활용한-데이터-표현&quot; id=&quot;markdown-toc-format-을-활용한-데이터-표현&quot;&gt;format() 을 활용한 데이터 표현&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#pandas&quot; id=&quot;markdown-toc-pandas&quot;&gt;pandas&lt;/a&gt;&lt;/li&gt;
@@ -236,108 +393,7 @@
 
 &lt;blockquote&gt;
   &lt;p&gt;참고 : https://learnpython.com/blog/print-table-in-python/&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Python" /><category term="Python" /><category term="파이썬" /><category term="cmd" /><category term="cmd line table" /><category term="cmd table" /><category term="콘솔" /><category term="콘솔 테이블" /><summary type="html"></summary></entry><entry><title type="html">Python - Docker Running Python</title><link href="http://localhost:4000/python/python/" rel="alternate" type="text/html" title="Python - Docker Running Python" /><published>2023-01-28T00:00:00+09:00</published><updated>2023-01-28T00:00:00+09:00</updated><id>http://localhost:4000/python/python</id><content type="html" xml:base="http://localhost:4000/python/python/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#파이썬을-실행-시키는-docker-image-구성하기&quot; id=&quot;markdown-toc-파이썬을-실행-시키는-docker-image-구성하기&quot;&gt;파이썬을 실행 시키는 Docker Image 구성하기&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#python-환경을-갖는-서버-이미지-구성하기&quot; id=&quot;markdown-toc-python-환경을-갖는-서버-이미지-구성하기&quot;&gt;Python 환경을 갖는 서버 이미지 구성하기&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#python-이미지를-활용한-실행-환경-dockerfile-구성하기&quot; id=&quot;markdown-toc-python-이미지를-활용한-실행-환경-dockerfile-구성하기&quot;&gt;Python 이미지를 활용한 실행 환경 Dockerfile 구성하기&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#결론&quot; id=&quot;markdown-toc-결론&quot;&gt;결론&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;파이썬을-실행-시키는-docker-image-구성하기&quot;&gt;파이썬을 실행 시키는 Docker Image 구성하기&lt;/h1&gt;
-
-&lt;p&gt;최근 discord bot을 python 을 통해 실행시키도록 구성하는 작업을 하고 나서 
-실제 서비스를 하기 위한 준비를 하게 되었다.&lt;/p&gt;
-
-&lt;p&gt;해당 py 파일을 계속 실행 시키고 이벤트 기반으로 대기하는 형태여서 이를 실행시키고 있을 서버가 필요했다.&lt;/p&gt;
-
-&lt;p&gt;내가 원하는 것은 다음과 같았다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;파이썬 파일을 구동할 수 있는 환경&lt;/li&gt;
-  &lt;li&gt;해당 파일을 서버에서 계속 구동할 수 있어야 함&lt;/li&gt;
-  &lt;li&gt;다만 서버 환경에서 서버 자체에 무언가 추가하거나 환경 구성을 하기가 싫었음&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;따라서, 해당 파일을 가지고 Docker 에 이미지 형태로 구성하여 구동되는 서버가 필요했다.
-어차피 통신만 가능하면 Docker로 구동하여도 호스트 포트와 컨테이터 포트연관성은 상관 없을 듯 하였다.&lt;/p&gt;
-
-&lt;h1 id=&quot;python-환경을-갖는-서버-이미지-구성하기&quot;&gt;Python 환경을 갖는 서버 이미지 구성하기&lt;/h1&gt;
-
-&lt;p&gt;우선, 해당 파이썬 파일을 실행 시킬 서버 환경을 구성해야 했다.
-간단하게 Cent OS 7 이미지를 구동해서, 그 안에 파이썬 환경을 갖춘 후
-파일을 실행 시키려고 하였다.&lt;/p&gt;
-
-&lt;p&gt;그래서 우선 https://hub.docker.com/_/centos 에서 Cent OS 7 을 다운로드 해서 작업하려고 하였다.&lt;/p&gt;
-
-&lt;p&gt;우선 이런 형태를 가지고 이미지를 구성하려고 하였다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;CentOS7 이미지를 구동하고, Python을 설치한다.&lt;/li&gt;
-  &lt;li&gt;해당 이미지에서 파이썬 파일을 실행 할 수 있도록 한 후, 이미지화 한다.&lt;/li&gt;
-  &lt;li&gt;커스터마이징 한 이미지를 실행해서 인수로 해당 파일을 실행 할 수 있도록 한다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;그런데, 이렇게 하려니 너무 할 작업이 많았다. Cent OS 7 이미지를 받아서 해당 환경 내에서
-다시 개발 환경을 구성하려니 필요한 모듈이 너무 많았다.&lt;/p&gt;
-
-&lt;p&gt;따라서, Docker Python Official Image를 받아서 사용하기로 하였다.&lt;/p&gt;
-
-&lt;p&gt;https://hub.docker.com/_/python&lt;/p&gt;
-
-&lt;p&gt;여기서 버전 별로 파이썬이 설치된 환경의 이미지를 받을 수 있다.
-별도의 환경을 구성하지 않아도 파이썬 환경이 설치된 채로 이미지를 구동하기 때문에
-별도의 작업 없이 해당 이미지를 사용하여 컨테이너를 구동할 때, 내 파일만 실행되게끔 하면 되었다.&lt;/p&gt;
-
-&lt;h1 id=&quot;python-이미지를-활용한-실행-환경-dockerfile-구성하기&quot;&gt;Python 이미지를 활용한 실행 환경 Dockerfile 구성하기&lt;/h1&gt;
-
-&lt;p&gt;Dockerfile을 다음과 같이 구성했다. 라인 별 설명은 주석으로 달아 놓았다.
-어쨋든 파이썬 파일 하나를 실행하면서 올라가기 때문에 나중에 다른 파이썬 파일을 실행해야하는 경우에도
-이를 계속 활용할 수 있을 것이다.&lt;/p&gt;
-
-&lt;div class=&quot;language-dockerfile highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# python 3.10.8 환경 이미지 사용&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; python:3.10.8-buster&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# 호스트의 dockerfile이 있는 경로 전체를 컨테이너의 /app 경로로 옮긴다.&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;COPY&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; . /app&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# 컨테이너 실행 시, 작업 디렉토리를 /app으로 지정한다.&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;WORKDIR&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; /app&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# 작업 디렉토리에서 아래 명령을 실행한다.&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# 파이썬 라이브러리 환경을 갖는 파일을 읽어 필요 라이브러리를 다운로드 한다.&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;pip3 &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.txt
-&lt;span class=&quot;c&quot;&gt;# 명령 실행의 진입점을 python3 로 지정한다.&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;ENTRYPOINT&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; [&quot;python3&quot;]&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# 위의 명령 실행에 대한 인수를 지정한다.&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;CMD&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; [&quot;interview-bot-ver2.0.py&quot;]&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# 위 명령 기준으로 컨테이너 구동 후 아래 명령을 실행한다.&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# python3 interview-bot-ver2.0.py&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;예를 들어, 위의 dockerfile과 같이 동일 경로에&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;requirements.txt&lt;/li&gt;
-  &lt;li&gt;{구동할 파이썬 파일}.py&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;파일을 올려놓고 해당 dockerfile을 이미지화 하여 구동하면 된다.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# dockerfile 이미지화&lt;/span&gt;
-docker build &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; pyContainer:1.0
-
-&lt;span class=&quot;c&quot;&gt;# docker run&lt;/span&gt;
-docker run &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; pyCon pyContainer:1.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;결론&quot;&gt;결론&lt;/h1&gt;
-
-&lt;p&gt;해당 이미지를 활용하면 빠르게 파이썬 파일을 실행하는 서버 환경을 구축하여 구동할 수 있다.
-간단하게 파이썬 파일 하나만 실행시키는 정도면 크게 무리는 없을 듯 하지만
-현재 저렇게 이미지를 구성하여 러닝하는 경우 용량이 약 1.0GB 정도 된다.&lt;/p&gt;
-
-&lt;p&gt;원래 파이썬에서 제공하는 공식 이미지 자체가 저 정도 크기이다 보니.. 용량을 줄일 수 있다면
-더 획기적이겠지만 미니멀하게 이미지를 만드려는 시도 자체가 너무 번거롭다보니 
-우선 저렇게라도 구동해놓고 사용하고 있다.&lt;/p&gt;
-
-&lt;p&gt;구동할 파이썬 파일이 많아지면 단일 컨테이너 서버에서 nginx나 다른 서버를 이용해
-파이썬 파일을 구동시키는 것도 나쁘지 않을 것 같다.&lt;/p&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Python" /><category term="Python" /><category term="파이썬" /><category term="docker" /><category term="docker python" /><category term="dockerfile" /><summary type="html"></summary></entry><entry><title type="html">Notion Database를 활용한 Discord Bot</title><link href="http://localhost:4000/project/Project-Discord-bot/" rel="alternate" type="text/html" title="Notion Database를 활용한 Discord Bot" /><published>2023-01-23T00:00:00+09:00</published><updated>2023-01-23T00:00:00+09:00</updated><id>http://localhost:4000/project/Project-Discord-bot</id><content type="html" xml:base="http://localhost:4000/project/Project-Discord-bot/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+&lt;/blockquote&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Python" /><category term="Python" /><category term="파이썬" /><category term="cmd" /><category term="cmd line table" /><category term="cmd table" /><category term="콘솔" /><category term="콘솔 테이블" /><summary type="html"></summary></entry><entry><title type="html">Notion Database를 활용한 Discord Bot</title><link href="http://localhost:4000/project/Project-Discord-bot/" rel="alternate" type="text/html" title="Notion Database를 활용한 Discord Bot" /><published>2023-01-23T00:00:00+09:00</published><updated>2023-01-23T00:00:00+09:00</updated><id>http://localhost:4000/project/Project-Discord-bot</id><content type="html" xml:base="http://localhost:4000/project/Project-Discord-bot/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#프로젝트-개요&quot; id=&quot;markdown-toc-프로젝트-개요&quot;&gt;프로젝트 개요&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#사용기술&quot; id=&quot;markdown-toc-사용기술&quot;&gt;사용기술&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#개발환경&quot; id=&quot;markdown-toc-개발환경&quot;&gt;개발환경&lt;/a&gt;&lt;/li&gt;
@@ -1452,132 +1508,4 @@ sys.path에 경로를 추가해주어야 한다.&lt;/p&gt;
       &lt;li&gt;업무 자동화 사례&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Python" /><category term="Python" /><category term="파이썬" /><category term="업무자동화" /><summary type="html"></summary></entry><entry><title type="html">Python - URL Encoding</title><link href="http://localhost:4000/python/python-url-encoding/" rel="alternate" type="text/html" title="Python - URL Encoding" /><published>2022-12-16T00:00:00+09:00</published><updated>2022-12-16T00:00:00+09:00</updated><id>http://localhost:4000/python/python-url-encoding</id><content type="html" xml:base="http://localhost:4000/python/python-url-encoding/">&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#url-인코딩&quot; id=&quot;markdown-toc-url-인코딩&quot;&gt;URL 인코딩&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#인코딩을-하는-이유&quot; id=&quot;markdown-toc-인코딩을-하는-이유&quot;&gt;인코딩을 하는 이유&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#urllib&quot; id=&quot;markdown-toc-urllib&quot;&gt;urllib&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#단순-문자열-인코딩디코딩&quot; id=&quot;markdown-toc-단순-문자열-인코딩디코딩&quot;&gt;단순 문자열 인코딩/디코딩&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#urlparse-시-속성-값&quot; id=&quot;markdown-toc-urlparse-시-속성-값&quot;&gt;urlparse 시, 속성 값&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;url-인코딩&quot;&gt;URL 인코딩&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;URL 인코딩은 퍼센트 인코딩이라고도 불리며 URL에 문자를 표현하는 문자 인코딩 방법입니다. 알파벳이나 숫자 등 몇몇 문자를 제외한 나머지는 1바이트 단위로 묶인 16진수로 인코딩하는 방식입니다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;인코딩을-하는-이유&quot;&gt;인코딩을 하는 이유&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;GET 방식을 통해 HTTP 요청을 할 때 쿼리 파라미터가 붙는 경우가 생기는데 URL은 아스키 코드값만 사용됩니다. 이 쿼리 파라미터에 한글이 포함될 경우, 아스키 코드만으로 표현을 할 수 없어서 인코딩을 진행해야 합니다. 호출하는 API마다 쿼리 파라미터에 한글 문자 그대로를 지원하는 경우도 있지만 그렇지 않은 경우도 있으므로 미리 인코딩을 거친 형식으로 전송하는 것이 바람직합니다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;urllib&quot;&gt;urllib&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;파이썬 내장함수로 제공되는 urllib을 통해 URL Encoding이 가능합니다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urlparse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;https://google.com/search?q=검색어&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_qs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urlencode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doseq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;#{&apos;q&apos;: [&apos;검색어&apos;]}
-#q=%EA%B2%80%EC%83%89%EC%96%B4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;인코딩 시, 캐릭터셋을 지정하고 싶은 경우 아래와 같이 작성합니다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urlparse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;https://google.com/search?q=검색어&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_qs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urlencode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;UTF-8&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doseq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# {&apos;q&apos;: [&apos;검색어&apos;]}
-# q=%EA%B2%80%EC%83%89%EC%96%B4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;단순-문자열-인코딩디코딩&quot;&gt;단순 문자열 인코딩/디코딩&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;단순 문자열을 인코딩/디코딩 하고싶은 경우 아래와 같이 작성합니다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;
-
-
-&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;검색어&apos;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;quote&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unquote&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# %EA%B2%80%EC%83%89%EC%96%B4
-# 검색어
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;urlparse-시-속성-값&quot;&gt;urlparse 시, 속성 값&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;urlparse 시, 사용할 수 있는 속성 값은 아래와 같습니다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# scheme://username:password@host:port/path;params?query#fragment
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urlparse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;https://google.com/search?q=검색어&amp;amp;params=999#id123&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scheme&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hostname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;netloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fragment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;#ParseResult(scheme=&apos;https&apos;, netloc=&apos;google.com&apos;, path=&apos;/search&apos;, params=&apos;&apos;, query=&apos;q=검색어&amp;amp;params=999&apos;, #fragment=&apos;id123&apos;)
-#https
-#None
-#None
-#google.com
-#None
-#google.com
-#/search
-#
-#q=검색어&amp;amp;params=999
-#id123
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;scheme: http, https, ftp, smtp 등등 스키마&lt;/li&gt;
-  &lt;li&gt;username: 사용자 명&lt;/li&gt;
-  &lt;li&gt;password: 비밀번호&lt;/li&gt;
-  &lt;li&gt;hostname: 호스트 명&lt;/li&gt;
-  &lt;li&gt;port: 포트 번호&lt;/li&gt;
-  &lt;li&gt;netloc: 네트워크 정보&lt;/li&gt;
-  &lt;li&gt;path: 경로&lt;/li&gt;
-  &lt;li&gt;params: url 파라미터&lt;/li&gt;
-  &lt;li&gt;query: 쿼리 스트링&lt;/li&gt;
-  &lt;li&gt;fragment: fragment 식별자&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Python" /><category term="URL Encoding" /><category term="urllib" /><category term="Python" /><category term="파이썬" /><summary type="html"></summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Donkyu Lim</name><email>eoen012@gmail.com</email></author><category term="Python" /><category term="Python" /><category term="파이썬" /><category term="업무자동화" /><summary type="html"></summary></entry></feed>

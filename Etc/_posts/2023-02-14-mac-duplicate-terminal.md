@@ -35,7 +35,7 @@ tags: [Innosetup, Inno Setup Korean, Korean]
 
 - 따라서, 기존 처럼 2개의 터미널로써는 아니지만 환경을 왔다갔다 하면서 사용할 수 있게 됨.
 
-- 관련 링크 : (https://stackoverflow.com/questions/74198234/duplication-of-terminal-in-macos-ventura)
+- 관련 링크 : [https://stackoverflow.com/questions/74198234/duplication-of-terminal-in-macos-ventura](https://stackoverflow.com/questions/74198234/duplication-of-terminal-in-macos-ventura)
 
 # 트러블 슈팅
 
@@ -49,4 +49,4 @@ tags: [Innosetup, Inno Setup Korean, Korean]
   xcode-select --install
   ```
 
-- 출처 페이지 : (https://www.hahwul.com/2019/11/18/how-to-fix-xcrun-error-after-macos-update/)
+- 출처 페이지 : [https://www.hahwul.com/2019/11/18/how-to-fix-xcrun-error-after-macos-update/](https://www.hahwul.com/2019/11/18/how-to-fix-xcrun-error-after-macos-update/)
