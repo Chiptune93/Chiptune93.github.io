@@ -351,6 +351,13 @@ bot.run(os.getenv('DISCORD_BOT_TOKEN'))
 3. 요청에 따른 응답 보내기
 
 
-# 2차 개발 진행
+# 2차 개발 진행 및 마무리
 
-2차 개발 진행 중 ... 
+## 마무리 소스 정리 및 문서 작성
+
+- [소스 전체 레파지토리](https://github.com/Chiptune93/Interview-Discord-Bot) 
+
+- [실제 동작하는 봇 소스 파일(파이썬)](https://github.com/Chiptune93/Interview-Discord-Bot/blob/main/DIscord-Interview-Bot/interview-bot-2.0.py)
+
+
+
