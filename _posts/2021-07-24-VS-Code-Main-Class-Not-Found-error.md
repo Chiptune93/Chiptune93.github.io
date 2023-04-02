@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: VS Code Main Class Not Found Exception 해결
 description: >
   VS Code Main Class Not Found Exception 해결
 
-hide_last_modified: true
+
 categories: [Error]
 tags: [VsCode, Main Class Not Found]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ## 문제
 

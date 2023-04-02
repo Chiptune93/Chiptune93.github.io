@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: Spring Boot - 파일 업로드 만들기 -3-
 description: >
     [Spring Boot] 파일 업로드 만들기 -3-
 
-hide_last_modified: true
+
 categories: [Spring]
 tags: [fileupload,springboot,springboot fileupload]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 지난번에 이어서 파일 업로드 함수에 기능을 추가 하였다.
 

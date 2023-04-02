@@ -1,16 +1,8 @@
 ---
-layout: post
 title: Apache - TLS 1.2 설정하기
-description: >
-  [Apache] TLS 1.2 설정하기
-
-hide_last_modified: true
 categories: [Server]
 tags: [apache, tls]
 ---
-
-- Table of Contents
-{:toc .large-only}
 
 apache httpd.conf 또는 ssl 설정 구문에 다음 내용을 추가
 

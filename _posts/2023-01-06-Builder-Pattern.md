@@ -1,17 +1,16 @@
 ---
-layout: post
+
 title: Builder Pattren
 description: >
   Java Builder Pattern 에 대한 내용 정리입니다.
 
-hide_last_modified: true
+
 categories: [Java]
 tags: [Builder, Builder Pattern, Builder Annotation, Java]
 published: true
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 # Builder 란?
 

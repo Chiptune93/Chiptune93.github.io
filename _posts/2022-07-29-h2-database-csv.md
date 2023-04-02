@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: SpringBoot - H2 Database CSV 데이터 Import 하기
 description: >
   [SpringBoot] H2 Database CSV 데이터 Import 하기
 
-hide_last_modified: true
+
 categories: [Spring]
 tags: [h2database, csv import, h2 csv]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 SpringBoot 2.7.2 , Java11 사용
 

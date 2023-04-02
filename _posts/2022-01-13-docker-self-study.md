@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: Docker 자습서 정리
 description: >
   MS : Docker 자습서 정리
 
-hide_last_modified: true
+
 categories: [Docker]
 tags: [Docker, MS docker self study]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 # 1부 : 시작
 

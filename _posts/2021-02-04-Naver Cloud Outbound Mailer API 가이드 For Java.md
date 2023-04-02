@@ -1,16 +1,8 @@
 ---
-layout: post
 title: Naver Cloud Outbound Mailer API 가이드 For Java
-description: >
-  Naver Cloud Outbound Mailer API 가이드 For Java
-
-hide_last_modified: true
 categories: [Java]
 tags: [Java, API, Cloud Mail]
 ---
-
-- Table of Contents
-{:toc .large-only}
 
 ## 네이버 아웃 바운드 메일 사용하기
 

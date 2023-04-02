@@ -1,16 +1,9 @@
 ---
-layout: post
 title: 구글 로그인 API 연동 시, 에러 발생 및 해결(Web Service)
-description: >
-  구글 로그인 API 연동 시, 에러 발생 및 해결(Web Service)
-
-hide_last_modified: true
 categories: [Error]
 tags: [Error, Google Login Api]
 ---
 
-- Table of Contents
-{:toc .large-only}
 
 다음 내용은 구글 로그인 API 를 연동하면서 발생했던 문제점 및 해결 방법을 복기한 내용입니다.
 

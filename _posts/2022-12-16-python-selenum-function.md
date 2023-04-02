@@ -1,15 +1,14 @@
 ---
-layout: post
+
 title: Python - Selenium Functions
 description: >
     파이썬 셀리니움 모듈 내에서 사용하는 함수에 대해 기술합니다.
-hide_last_modified: true
+
 categories: [Python]
 tags: [Selenium, Webdriver, Python, 파이썬]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 
 # import

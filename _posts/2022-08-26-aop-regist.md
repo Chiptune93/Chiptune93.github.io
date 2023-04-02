@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: Spring/SpringBoot AOP 클래스 사용하기
 description: >
   Spring / SpringBoot 에서 AOP 클래스 사용 및 설정 방법
 
-hide_last_modified: true
+
 categories: [Spring]
 tags: [Spring, SpringBoot, AOP]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 스프링과 스프링 부트에서는 AspectJ를 통한 AOP 등록방법이 상이하다.
 

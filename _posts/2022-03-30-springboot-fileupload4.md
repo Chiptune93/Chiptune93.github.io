@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: Spring Boot - 파일 업로드 만들기 -4-
 description: >
   [Spring Boot] 파일 업로드 만들기 -4-
 
-hide_last_modified: true
+
 categories: [Spring]
 tags: [fileupload, springboot, springboot fileupload]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 지난 게시글에 이어서, 파일 업로드 관련 작업을 다시 진행했다. 이번에 중점을 둔 것은 다중 파일 업로드 지원이다.
 

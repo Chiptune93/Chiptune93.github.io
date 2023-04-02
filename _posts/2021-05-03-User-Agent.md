@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: User-Agent 로 접속한 사용자 브라우저 체크하기
 description: >
   User-Agent 로 접속한 사용자 브라우저 체크하기
 
-hide_last_modified: true
+
 categories: [Java]
 tags: [Java, User-Agent]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ## 유저 에이전트 체크하기
 

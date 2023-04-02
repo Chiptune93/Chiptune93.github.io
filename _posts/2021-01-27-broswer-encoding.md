@@ -1,16 +1,9 @@
 ---
-layout: post
 title: ERR_INCOMPLETE_CHUNKED_ENCODING 200
-description: >
-  ERR_INCOMPLETE_CHUNKED_ENCODING 200
-
-hide_last_modified: true
 categories: [Etc]
 tags: [encoding error, browser]
 ---
 
-- Table of Contents
-{:toc .large-only}
 
 ## 크롬/엣지 ERR_INCOMPLETE_CHUNKED_ENCODING 200 에러
 

@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: YouTube 검색 데이터 가져오기 - YouTube Data Api 연동
 description: >
   YouTube 검색 데이터 가져오기 - YouTube Data Api 연동
 
-hide_last_modified: true
+
 categories: [Java]
 tags: [Java, YouTube, YouTube API]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ## YouTube Data API
 

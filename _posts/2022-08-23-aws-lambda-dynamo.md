@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: AWS Lambda - Dynamo DB / Postgre Access
 description: >
   AWS 람다에서 다이나모 DB / Postgre 액세스 및 처리
 
-hide_last_modified: true
+
 categories: [AWS]
 tags: [AWS, Lambda, DynamoDB, Postgre]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ## 람다에서 다이나모 또는 Postgre 액세스
 

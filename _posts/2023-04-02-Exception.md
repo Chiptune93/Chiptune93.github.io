@@ -1,17 +1,16 @@
 ---
-layout: post
+
 title: Java Exception
 description: >
   자바 예외처리 및 작성 방법
 
-hide_last_modified: true
+
 categories: [Java]
 tags: [Java, Java Exception]
 published: true
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 
 # **예외 처리 시, 팁**

@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: 사내 SMS Api Service
 description: >
   사내 SMS Api Service
 
-hide_last_modified: true
+
 categories: [Project]
 tags: [docker, springboot, Personal Project]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 # 1. 개요
 

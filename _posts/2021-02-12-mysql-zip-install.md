@@ -1,16 +1,8 @@
 ---
-layout: post
 title: MySQL - mysql-8.0.23-winx64.zip 설치 및 실행하기
-description: >
-  mysql-8.0.23-winx64.zip 설치 및 실행하기
-
-hide_last_modified: true
 categories: [Database]
 tags: [mysql, mysql install, mysql zip install]
 ---
-
-- Table of Contents
-{:toc .large-only}
 
 ## 1. MYSQL COMMUNITY SERVER ZIP 파일 다운로드
 

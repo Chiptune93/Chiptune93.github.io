@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: Docker Application build Python 에러 해결
 description: >
   [MS 자습서] Docker Application build Python 에러 해결
 
-hide_last_modified: true
+
 categories: [Docker]
 tags: [Docker, python, docker build]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 https://docs.microsoft.com/ko-kr/visualstudio/docker/tutorials/your-application
 

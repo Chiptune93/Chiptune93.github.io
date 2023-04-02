@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: NoSuchMethodError - org.apache.commons.codec.binary.hex.encodehexstring
 description: >
   NoSuchMethodError - org.apache.commons.codec.binary.hex.encodehexstring
 
-hide_last_modified: true
+
 categories: [Error]
 tags: [Java Error, NoSuchMethodError]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ## NoSuchMethodError : org.apache.commons.codec.binary.hex.encodehexstring 에러 해결
 

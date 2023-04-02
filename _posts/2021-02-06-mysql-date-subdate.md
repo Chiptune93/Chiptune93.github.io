@@ -1,16 +1,9 @@
 ---
-layout: post
 title: MYSQL - 특정일 + - 일 수 이전 상태 조회 SUBDATE
-description: >
-  MYSQL 특정일 + - 일 수 이전 상태 조회 SUBDATE
-
-hide_last_modified: true
 categories: [Database]
 tags: [mysql, subdate, mysql date]
 ---
 
-- Table of Contents
-{:toc .large-only}
 
 특정 테이블에 대하여 특정 시간 전 데이터를 보고자 할 때 사용.12시간 전 테이블 상태를 알고싶다거나 등등..
 

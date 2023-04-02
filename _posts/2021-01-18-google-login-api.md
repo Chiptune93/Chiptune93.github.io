@@ -1,16 +1,10 @@
 ---
-layout: post
 title: Google Login API 연동하기(Web Service)
-description: >
-  Google Login API 연동하기(Web Service)
-
-hide_last_modified: true
 categories: [Etc]
 tags: [google, login api]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 * 2021.01.18 기준 작동 확인됨.
 

@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: Git - Pull Request(PR)
 description: >
   Git - Pull Request(PR)
 
-hide_last_modified: true
+
 categories: [Git]
 tags: [git, PR, Pull Request]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 참고 : [Git 입문](https://backlog.com/git-tutorial/kr/)
 

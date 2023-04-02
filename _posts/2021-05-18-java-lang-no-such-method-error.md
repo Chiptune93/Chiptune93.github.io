@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: java.lang.NoSuchMethodError - org.apache.log4j.Logger
 description: >
   java.lang.NoSuchMethodError :org.apache.log4j.Logger
 
-hide_last_modified: true
+
 categories: [Error]
 tags: [NoSuchMethodError, apache log4j]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ## NoSuchMethodError : java.lang.NoSuchMethodError: org.apache.log4j.Logger
 

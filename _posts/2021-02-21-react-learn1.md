@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: 1회차 - 처음 ~ JS 코딩하기
 description: >
   [인프런:생활코딩 - REACT] 1회차 : 처음 ~ JS 코딩하기
 
-hide_last_modified: true
+
 categories: [Frontend]
 tags: [React]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ![react1-1](/assets/img/React/react1-1.png)
 

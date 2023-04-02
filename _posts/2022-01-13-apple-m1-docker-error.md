@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: Apple M1 Docker Build Error
 description: >
   Apple M1 Docker Build Error
 
-hide_last_modified: true
+
 categories: [Error]
 tags: [apple m1, apple docker, docker error, m1 docker error]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ## 문제
 

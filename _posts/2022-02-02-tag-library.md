@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: Spring Boot - Tag Library 사용하기
 description: >
   [Spring Boot] Tag Library 사용하기
 
-hide_last_modified: true
+
 categories: [Spring]
 tags: [tag library, SpringBoot]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ## 1. TagLibrary build.gradle 추가
 

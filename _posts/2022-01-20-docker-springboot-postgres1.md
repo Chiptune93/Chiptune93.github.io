@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: Docker Spring boot + Postgresql (1)
 description: >
   [실습] Docker Spring boot + Postgresql (1)
 
-hide_last_modified: true
+
 categories: [Docker]
 tags: [docker, springboot, postgresql]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ## Docker 명령 참고
 

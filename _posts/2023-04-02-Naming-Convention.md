@@ -1,17 +1,16 @@
 ---
-layout: post
+
 title: Java Naming Conventions & Naming
 description: >
   자바 네이밍 컨벤션에 관한 글 
 
-hide_last_modified: true
+
 categories: [Java]
 tags: [Java, Java Naming Conventions]
 published: true
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 # **Java Naming Conventions**
 

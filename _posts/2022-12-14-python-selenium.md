@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: Python - Selenium 설치(웹크롤링)
 description: >
     파이썬 셀리니움을 사용하여 웹 크롤링 세팅하는 방법을 기술합니다.
 
-hide_last_modified: true
+
 categories: [Python]
 tags: [Selenium, Webdriver, Python]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 
 ## Selenium 설치

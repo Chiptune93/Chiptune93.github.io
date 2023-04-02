@@ -1,15 +1,14 @@
 ---
-layout: post
+
 title: Python - Request 라이브러리 사용
 description: >
   파이썬 Request 라이브러리 사용방법에 대한 간단한 정리
-hide_last_modified: true
+
 categories: [Python]
 tags: [Python, 파이썬, Request]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 
 # Request 라이브러리 사용

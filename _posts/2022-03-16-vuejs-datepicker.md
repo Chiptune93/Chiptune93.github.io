@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: VueJs - Datepicker 이벤트 관련 문제
 description: >
   [ VueJs Datepicker ] datepicker 이벤트 관련 문제
 
-hide_last_modified: true
+
 categories: [Frontend]
 tags: [vuejs, datepicker]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 vuejs Datepicker 사용 시, IOS 15+ 모바일 환경에서 발생한 문제에 대해 공유하고자 한다.
 

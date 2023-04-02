@@ -1,16 +1,8 @@
 ---
-layout: post
 title: MYSQL/ORACLE - 테이블 정의서 간단하게 뽑는 쿼리
-description: >
-  MYSQL/ORACLE - 테이블 정의서 간단하게 뽑는 쿼리
-
-hide_last_modified: true
 categories: [Database]
 tags: [mysql, oracle, table, 테이블정의서]
 ---
-
-- Table of Contents
-{:toc .large-only}
 
 ## MySQL
 

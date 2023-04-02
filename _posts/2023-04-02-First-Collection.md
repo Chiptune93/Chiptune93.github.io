@@ -1,17 +1,16 @@
 ---
-layout: post
+
 title: Java First Class Collection
 description: >
   자바 일급 콜렉션을 사용하는 방법 및 의미
 
-hide_last_modified: true
+
 categories: [Java]
 tags: [Java, 일급 컬렉션, java first class collection]
 published: true
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 
 # **자바 일급 콜렉션(First Class Collection)**

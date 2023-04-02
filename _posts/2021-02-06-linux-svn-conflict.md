@@ -1,16 +1,8 @@
 ---
-layout: post
 title: Linux - Svn Conflict Option
-description: >
-  [Linux] Svn Conflict Option
-
-hide_last_modified: true
 categories: [Etc]
 tags: [Linux, Svn, conflict]
 ---
-
-- Table of Contents
-{:toc .large-only}
 
 (e) edit - 병합된 파일을 편집기로 열기
 

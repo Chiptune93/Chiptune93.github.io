@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: DynamoDB - 파티션 키/정렬 키/필터 정리
 description: >
   [DynamoDB] 파티션 키/정렬 키/필터 정리
 
-hide_last_modified: true
+
 categories: [AWS]
 tags: [AWS, DynamoDB, DynamoDB Key]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 MYSQL 이나 ORACLE 과는 다른 개념을 갖는 다이나모 DB 에 대한 개인적인 정리.
 

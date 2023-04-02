@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: ToastUI Editor - 이미지 복사 붙여 넣기 시, 파일 업로드 및 UI처리
 description: >
   [ToastUI Editor] 이미지 복사 붙여 넣기 시, 파일 업로드 및 UI처리
 
-hide_last_modified: true
+
 categories: [Frontend]
 tags: [paste event handler, toastui editor, image paste]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 기존에 진행 했던 프로젝트에서는 글 작성 시, Toast UI Editor 를 사용하고 있었다.
 

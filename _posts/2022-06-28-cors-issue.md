@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: SpringBoot - CORS 처리하기
 description: >
   [SpringBoot] CORS 처리하기
 
-hide_last_modified: true
+
 categories: [Spring]
 tags: [spring, springboot, cors]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ## 1. Global WebConfig
 

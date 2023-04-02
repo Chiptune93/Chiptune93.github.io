@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: Spring AOP Joinpoint 와 ProceedingJoinPoint
 description: >
   스프링에서 Joinpoint와 ProceedingJoinPoint의 차이
 
-hide_last_modified: true
+
 categories: [Spring]
 tags: [Spring, SpringBoot, AOP]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ## Joinpoint
 

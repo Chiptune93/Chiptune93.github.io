@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: React 학습 시작.
 description: >
   React 학습 시작.
 
-hide_last_modified: true
+
 categories: [Frontend]
 tags: [react]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ![jerry](/assets/img/jerry.gif)
 

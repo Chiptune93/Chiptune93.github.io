@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: Python - Discord Bot 만들기
 description: >
     디스코드 봇을 생성하고 연결하는 과정을 기록합니다.
 
-hide_last_modified: true
+
 categories: [Python]
 tags: [Discord, Python]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 
 # Discord Bot 샘플 생성하기.

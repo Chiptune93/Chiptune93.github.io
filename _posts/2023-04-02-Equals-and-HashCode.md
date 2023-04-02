@@ -1,17 +1,16 @@
 ---
-layout: post
+
 title: Java equals() and hashCode()
 description: >
   자바 equals() 메소드와 hashCode() 를 이용한 비교 방법
 
-hide_last_modified: true
+
 categories: [Java]
 tags: [Java, equals, hashcode, java equals(), java hashcode()]
 published: true
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 # **hashCode() & equals()**
 hashCode() 메소드는 객체의 해시 코드를 반환하는 메소드이며, equals() 메소드는 두 객체가 동등한지 비교하는 메소드입니다. 이 두 메소드는 객체 동등성 비교를 위해 필수적으로 구현되어야 합니다.

@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: App Sync - Java 에서 AppSync Api Request 보내는 예제.
 description: >
   [App Sync] Java 에서 AppSync Api Request 보내는 예제.
 
-hide_last_modified: true
+
 categories: [AWS]
 tags: [AWS, AppSync, api request]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ## 소스 주소
 

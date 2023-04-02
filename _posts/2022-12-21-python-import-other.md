@@ -1,15 +1,14 @@
 ---
-layout: post
+
 title: Python - import other file
 description: >
   파이썬에서 다른 파일을 임포트 하는 방법
-hide_last_modified: true
+
 categories: [Python]
 tags: [Python, 파이썬, import, from, from import]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 
 

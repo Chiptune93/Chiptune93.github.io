@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: npm 설치 후, start 시 에러 해결
 description: >
   npm 설치 후, start 시 에러 해결
 
-hide_last_modified: true
+
 categories: [Error]
 tags: [npm, npm start error]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ```
 npm missing file 'package.json'

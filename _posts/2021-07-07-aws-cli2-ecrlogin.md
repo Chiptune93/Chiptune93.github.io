@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: AWS CLI 2.0 ECR get-login-password 인증 문제
 description: >
   AWS CLI 2.0 ECR get-login-password 인증 문제
 
-hide_last_modified: true
+
 categories: [AWS]
 tags: [AWS, ECR, ECR Login, get login password]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ## 문제
 

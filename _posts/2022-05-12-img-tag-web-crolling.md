@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: Python - 구글 이미지 검색 크롤링하는 소스
 description: >
   구글 이미지 검색 크롤링하는 소스
 
-hide_last_modified: true
+
 categories: [Python]
 tags: [Python, Google Crolling, Crolling]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 이전에 진행한 특정 사이트에서 이미지 다운로드 시켜주는 예제 진행 후,
 

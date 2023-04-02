@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: ControllerAdvice, ExceptionHandler Annotation
 description: >
   스프링에서의 어노테이션을 통한 예외처리 하는 방법 
 
-hide_last_modified: true
+
 categories: [Spring]
 tags: [Spring, SpringBoot, ControllerAdvice, ExceptionHandler]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 
 # **ControllerAdvice && ExceptionHandler**

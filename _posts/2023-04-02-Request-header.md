@@ -1,18 +1,8 @@
 ---
-layout: post
 title: RequestHeader Annotation
-description: >
-  스프링에서의 RequestHeader 를 통해, 헤더 값 받아오기
-
-hide_last_modified: true
 categories: [Spring]
 tags: [Spring, SpringBoot, RequestHeader]
 ---
-
-- Table of Contents
-{:toc .large-only}
-
-
 
 # **@RequestHeader란?**
 @RequestHeader는 스프링에서 제공하는 어노테이션 중 하나로, HTTP 요청 헤더 값을 컨트롤러 메서드의 매개변수로 받을 수 있게 해줍니다.

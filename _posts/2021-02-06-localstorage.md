@@ -1,16 +1,8 @@
 ---
-layout: post
 title: Javascript - localstorage 사용하기
-description: >
-  localstorage 사용하기
-
-hide_last_modified: true
 categories: [Frontend]
 tags: [localstorage, Javascript]
 ---
-
-- Table of Contents
-{:toc .large-only}
 
 `localstorage. `으로 사용
 

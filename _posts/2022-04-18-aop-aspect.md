@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: AOP - AOP Aspect 를 이용한 로그 처리 하기
 description: >
   [AOP] AOP Aspect 를 이용한 로그 처리 하기
 
-hide_last_modified: true
+
 categories: [Spring]
 tags: [spring, spring aop]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ## AOP 및 구성요소 간단 설명
 

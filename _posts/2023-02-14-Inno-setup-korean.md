@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: Inno Setup 5,6 Korean
 description: >
   Inno Setup 5버전 및 6버전 한국어 번역본 적용 및 공유
 
-hide_last_modified: true
+
 categories: [Etc]
 tags: [Innosetup, Inno Setup Korean, Korean]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 # InnoSetup 한국어 사용하기
 

@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: Document Page
 description: >
   Document Page - Personal Project
 
-hide_last_modified: true
+
 categories: [Project]
 tags: [spa, project]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 # 1. 개요
 

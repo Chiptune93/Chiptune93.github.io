@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: Spring Boot - Application Context 사용하기
 description: >
   [Spring Boot] Application Context 사용하기
 
-hide_last_modified: true
+
 categories: [Spring]
 tags: [applicationContext, SpringBoot]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ## Application Context
 

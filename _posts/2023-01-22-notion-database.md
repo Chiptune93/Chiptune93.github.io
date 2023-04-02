@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: Notion API - Query Database (Simple)
 description: >
   Notion 데이터베이스를 웹 요청을 통해 가져와 사용할 수 있는 방법에 대해 알아본다.
 
-hide_last_modified: true
+
 categories: [Etc]
 tags: [Notion, Notion API]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 # Notion Database 생성
 

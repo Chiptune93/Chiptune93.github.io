@@ -1,16 +1,9 @@
 ---
-layout: post
 title: JSP - Input text 항목 엔터 시, 자동 submit 막기.
-description: >
-  Input text 항목 엔터 시, 자동 submit 막기.
-
-hide_last_modified: true
 categories: [Frontend]
 tags: [jsp, auto submit]
 ---
 
-- Table of Contents
-{:toc .large-only}
 
 가끔가다 마주치는 문제로, input type text 요소에 onkeypress 를 설정하지 않았는데도
 

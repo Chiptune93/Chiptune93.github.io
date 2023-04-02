@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: 2회차 - CSS 코딩 ~ 배포하기
 description: >
   [인프런:생활코딩 - REACT] 2회차 : CSS 코딩 ~ 배포하기
 
-hide_last_modified: true
+
 categories: [Frontend]
 tags: [React]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ![react2-1](/assets/img/React/react2-1.png)
 

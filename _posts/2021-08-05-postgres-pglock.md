@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: postgreSQL - pg lock 조회 및 해제
 description: >
   [postgreSQL] pg lock 조회 및 해제
 
-hide_last_modified: true
+
 categories: [Database]
 tags: [postgres, postgreSQL, pg lock]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 ## 1. LOCK 조회
 

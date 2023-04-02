@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: Python - 다른 python 파일 포함 시키기
 description: >
     파이썬 파일에서 다른 파이썬 파일의 함수 등을 사용하는 방법을 기술합니다.
     
-hide_last_modified: true
+
 categories: [Python]
 tags: [import python, other python function, Python, 파이썬]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 
 ## 다른 파이썬 파일의 함수 포함시키기

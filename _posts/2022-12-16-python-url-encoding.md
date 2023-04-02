@@ -1,15 +1,14 @@
 ---
-layout: post
+
 title: Python - URL Encoding
 description: >
   파이썬을 이용한 URL Encoding
-hide_last_modified: true
+
 categories: [Python]
 tags: [URL Encoding, urllib, Python, 파이썬]
 ---
 
-- Table of Contents
-{:toc .large-only}
+
 
 
 # URL 인코딩

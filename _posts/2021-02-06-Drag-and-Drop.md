@@ -1,16 +1,8 @@
 ---
-layout: post
 title: Javascript - Drag and Drop 간단하게 구현하기.
-description: >
-  Drag and Drop 간단하게 구현하기.
-
-hide_last_modified: true
 categories: [Frontend]
 tags: [JS, Drag and Drop]
 ---
-
-- Table of Contents
-{:toc .large-only}
 
 아래 방법은 javascript 를 통해 Drag and Drop 기능을 사용하는 방법에 대해 구현한 내용이며
 
