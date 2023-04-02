@@ -1,10 +1,10 @@
 ---
 title: Naver Cloud Outbound Mailer API 가이드 For Java
-categories: [Java]
+categories: [Backend, Java]
 tags: [Java, API, Cloud Mail]
 ---
 
-## 네이버 아웃 바운드 메일 사용하기
+### 네이버 아웃 바운드 메일 사용하기
 
 네이버 아웃바운드 메일러를 사용할 일이 있어
 
@@ -18,7 +18,7 @@ JAVA 구현 예시를 찾다가 다음을 발견하였다.
 
 [docs.gov-ncloud.com/ko/email/email-1-3.html](docs.gov-ncloud.com/ko/email/email-1-3.html)
 
-## 소스 내 설정
+### 소스 내 설정
 
 다운 받은 소스 내
 
@@ -28,7 +28,7 @@ generated-code\src\main\java\com 에 있는 nbp 소스 전체를 프로젝트에
 
 이후 아래 목록의 jar 파일들을 전부 다운받거나 pom 에 추가하여 프로젝트로 가져온다.
 
-### pom.xml
+##### pom.xml
 
 ```xml
 <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
@@ -101,7 +101,7 @@ generated-code\src\main\java\com 에 있는 nbp 소스 전체를 프로젝트에
 
 아래는 실제 예제 동작 시, 동작했던 코드이다.
 
-### Java Code
+##### Java Code
 
 ```java
 public static void createMailRequest() {

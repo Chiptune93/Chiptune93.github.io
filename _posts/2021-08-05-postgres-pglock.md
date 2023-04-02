@@ -1,10 +1,10 @@
 ---
 title: postgreSQL - pg lock 조회 및 해제
-categories: [Database]
+categories: [Backend, Database]
 tags: [postgres, postgreSQL, pg lock]
 ---
 
-## 1. LOCK 조회
+### 1. LOCK 조회
 
 ```sql
 select
@@ -19,7 +19,7 @@ where
 	b.relname = '{tableName}'
 ```
 
-## 2. PG_CANCEL_BACKEND 로 작업캔슬.
+### 2. PG_CANCEL_BACKEND 로 작업캔슬.
 
 ```sql
 select
@@ -34,7 +34,7 @@ where
 	b.relname = '{tableName}'
 ```
 
-## 3. 위 방법이 안되는 경우, PG_TERMINATE_BACKEND로 상위 PID까지 캔슬.
+### 3. 위 방법이 안되는 경우, PG_TERMINATE_BACKEND로 상위 PID까지 캔슬.
 
 ```sql
 select

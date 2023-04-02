@@ -1,6 +1,6 @@
 ---
 title: SpringBoot 2.7+ CORS 이슈 및 해결방법
-categories: [Error]
+categories: [Etc, Error]
 tags: [springboot, cors]
 ---
 
@@ -11,7 +11,7 @@ tags: [springboot, cors]
 - localhost:8080/users - SpringBoot API Server 에서 유저 데이터를 리턴.
 - localhost:8090/index.html - API서버로 요청을 보내는 스크립트가 있는 html 페이지
 
-## index.html
+### index.html
 
 ```html
 <!DOCTYPE html>
@@ -76,7 +76,7 @@ COPY . /usr/share/nginx/html
 
 해당 확장프로그램을 깔면 알아서 해당 이슈가 안나오도록 설정해준다. 내 환경에서만 오류를 안나게 하고 싶다면 이렇게 해도 상관 없다.(물론 크롬 한정)
 
-## SpringBoot에서 AllowOrigin 하는 방법
+### SpringBoot에서 AllowOrigin 하는 방법
 
 첫번째는 Spring Boot 에서 WebMvcConfigurer를 사용하여 허용해주는 것이다.
 해당 방식은 Config 외에도 @CrossOrigin 이라는 어노테이션으로 컨트롤러 마다 설정이 가능하다.
@@ -118,9 +118,9 @@ public class WebConfig implements WebMvcConfigurer {
 
 따라서, CORS 필터를 적용하여 해결한 사례를 찾아보았다.
 
-## CORS Filter를 이용한 방법
+### CORS Filter를 이용한 방법
 
-### corsFilter.java
+##### corsFilter.java
 
 ```java
 package rest.api.sample.config;

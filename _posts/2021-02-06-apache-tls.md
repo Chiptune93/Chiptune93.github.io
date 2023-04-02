@@ -1,6 +1,6 @@
 ---
 title: Apache - TLS 1.2 설정하기
-categories: [Server]
+categories: [Backend, Server]
 tags: [apache, tls]
 ---
 

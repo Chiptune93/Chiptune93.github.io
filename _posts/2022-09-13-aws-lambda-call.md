@@ -1,15 +1,15 @@
 ---
 title: AWS Lambda - Lambda 내부에서 다른 람다 함수 호출하기
-categories: [AWS]
+categories: [Cloud, AWS]
 tags: [AWS, Lambda, Functions]
 ---
 
-## Lambda 에서 다른 Lambda 호출하기
+### Lambda 에서 다른 Lambda 호출하기
 
 - 람다 함수 내부에서 또 다른 람다 함수를 호출한다.
 - 'boto3' 라이브러리가 필요하다.
 
-### 1. 실행 권한 확인
+##### 1. 실행 권한 확인
 
 
  - Lambda 에서 구성 -> 권한으로 이동하여 권한을 클릭
@@ -29,7 +29,7 @@ tags: [AWS, Lambda, Functions]
      ![이미지4](/assets/img/AWS/0913-4.png)
 
 
-### 2. 에제 코드 작성 및 함수 등록
+##### 2. 에제 코드 작성 및 함수 등록
 
 - test1 함수에서 test2 함수를 호출하는 예제
 
@@ -77,7 +77,7 @@ tags: [AWS, Lambda, Functions]
 
     ```
 
-### 3. 각 함수의 동작 테스트 
+##### 3. 각 함수의 동작 테스트 
 
 - test1 함수를 테스트
 

@@ -1,17 +1,17 @@
 ---
 title: AOP - AOP Aspect 를 이용한 로그 처리 하기
-categories: [Spring]
+categories: [Backend, Spring]
 tags: [spring, spring aop]
 ---
 
-## AOP 및 구성요소 간단 설명
+### AOP 및 구성요소 간단 설명
 
 스프링 핵심 구성 요소 중 하나인 AOP 는 로직을 관심사(Aspect)라는 부분으로 나누는 것으로 시작합니다.
 OOP에서 모듈화의 핵심 단위는 클래스인 반면, AOP의 모듈화 단위는 Aspect 입니다.
 
 종속성 주입은 애플리케이션 개체를 서로 분리하는데 도움이 되고, AOP는 개체와 횡단 관심사를 분리하는데 도움이 됩니다.
 
-## [용어 설명]
+### [용어 설명]
 
 Aspect
 

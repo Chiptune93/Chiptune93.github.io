@@ -1,19 +1,19 @@
 ---
 title: Spring - Driver net.sf.log4jdbc.sql.jdbcapi.DriverSpy claims to not accept jdbcUrl
-categories: [Error]
+categories: [Etc, Error]
 tags: [Spring, log4jdbc error, DriverSpy not Accept jdbc url, jdbc url error]
 ---
 
-## 문제
+### 문제
 
 Driver net.sf.log4jdbc.sql.jdbcapi.DriverSpy claims to not accept jdbcUrl 오류를 만났다.
 
-## 현상
+### 현상
 
 최초 발생 과정은 DB 연결 시, application.yml 파일에 DB 주소를 적었으나 해당 오류를 뱉어내던 상황이었다.
 환경은 JDK11 / Spring Boot / Mybatis / HikariCp 였으며, IDE는 VS Code 였다.
 
-## 해결
+### 해결
 
 해결 방법은 다음과 같았다.
 

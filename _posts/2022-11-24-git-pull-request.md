@@ -1,12 +1,12 @@
 ---
 title: Git - Pull Request(PR)
-categories: [Git]
+categories: [Etc, git]
 tags: [git, PR, Pull Request]
 ---
 
 참고 : [Git 입문](https://backlog.com/git-tutorial/kr/)
 
-# 1. Fork와 Pull Request
+## 1. Fork와 Pull Request
 
 다른 사람의 프로젝트에 참여해 기여자로써 공헌 또는 프로젝트를 수정하고 싶다면
 해당 레파지토리를 수정할 수 있는 권한을 가져야 한다.
@@ -38,7 +38,7 @@ tags: [git, PR, Pull Request]
 > Fork 없이 Pull Request 하는 방법? <br/> > 해당 오리진 레파지토리에 브랜치를 생성할 수 있는 액세스 권한이 있는 경우에는 fork 없이 브랜치 pull request가 가능하다. 
 
 
-# 2. PR
+## 2. PR
 
 위의 사례에서 보듯, Pull Request는 쉽게 말해 내가 로컬에서 수정한 브랜치를 원본 레파지토리에 적용하고 싶으니 검토 후에 괜찮으면 적용해 달라 라는 것으로 정의할 수 있습니다.
 
@@ -58,9 +58,9 @@ tags: [git, PR, Pull Request]
 7. 승인되어 pr을 master 브랜치에 merge
 8. merge 이후 동기화 및 브랜치 삭제
 
-# 3. PR 실습
+## 3. PR 실습
 
-## 3.1. 특정 원본 저장소를 Fork
+### 3.1. 특정 원본 저장소를 Fork
 ![이미지](/assets/img/Git/pr3.png)
 
 ![이미지](/assets/img/Git/pr4.png)
@@ -70,7 +70,7 @@ fork가 완료되면 내 저장소에 해당 레파지토리가 복사되며
 
 ![이미지](/assets/img/Git/pr5.png)
 
-## 3.2. Fork 한 저장소를 로컬에 Clone
+### 3.2. Fork 한 저장소를 로컬에 Clone
 
 ![이미지](/assets/img/Git/pr6.png)
 
@@ -91,21 +91,21 @@ $ git remote -v # 원격저장소 주소확인
 
 ![이미지](/assets/img/Git/pr8.png)
 
-## 3.2. 브랜치 생성 후 작업하기
+### 3.2. 브랜치 생성 후 작업하기
 
 - branch 생성하기
 
 ```bash
-# 브랜치 생성
+## 브랜치 생성
 $ git branch dev-test
 
-# 브랜치 이동
+## 브랜치 이동
 $ git checkout dev-test
 
-# 브랜치 생성 후 이동
+## 브랜치 생성 후 이동
 $ git checkout -b dev-test
 
-# 브랜치 조회
+## 브랜치 조회
 $ git bracnch
 ```
 
@@ -118,20 +118,20 @@ $ git bracnch
 - 작업 후, commit & push
 
 ```bash
-# add
+## add
 $ git add .
 
-# commit
+## commit
 $ git commit -m "msg"
 
-# push
+## push
 $ git push origin dev-test
 ```
 
 ![이미지](/assets/img/Git/pr11.png)
 ![이미지](/assets/img/Git/pr12.png)
 
-## 3.3. 작업 후, PR 하기.
+### 3.3. 작업 후, PR 하기.
 
 - push가 완료 되면, 원격 저장소에서 PR 가능.
 
@@ -152,10 +152,10 @@ $ git push origin dev-test
 - PR merge 이후, 동기화 및 브랜치를 삭제하여 작업을 완료.
 
 ```bash
-# 원본저장소와 동기화
+## 원본저장소와 동기화
 $ git pull forkedRepo
 
-# 브랜치 삭제
+## 브랜치 삭제
 $git branch -d dev-test
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: Python - 웹 사이트 IMG 태그 소스 파일 가져오기
-categories: [Python]
+categories: [Frontend, Python]
 tags: [python, img, web img, crolling]
 ---
 
@@ -17,11 +17,11 @@ from time import sleep
 from bs4 import BeautifulSoup
 import uuid
 
-# 저장할 이미지 폴더
+## 저장할 이미지 폴더
 path = "E:/이미지"
 
-# 크롬 드라이버 설정
-# (크롤링할 때 웹 페이지 띄우지 않음, gpu 사용 안함, 한글 지원, user-agent 헤더 추가)
+## 크롬 드라이버 설정
+## (크롤링할 때 웹 페이지 띄우지 않음, gpu 사용 안함, 한글 지원, user-agent 헤더 추가)
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('headless')
 chrome_options.add_argument('--disable-gpu')
@@ -37,21 +37,21 @@ selector = input('insert selector :: ')
 if selector == '':
     selector = 'div.item-post-inner'
 
-# 페이지 가져오기
+## 페이지 가져오기
 driver.get(url)
-# response 대기를 위한 2초 슬립
+## response 대기를 위한 2초 슬립
 sleep(2)
 
-# html로 파싱
+## html로 파싱
 soup = BeautifulSoup(driver.page_source, "html.parser")
 
-# 이미지 요소 리스트 가져오기
+## 이미지 요소 리스트 가져오기
 imgs = soup.select(selector + ' img')
 
-# 비디오 요소 리스트 가져오기
+## 비디오 요소 리스트 가져오기
 vids = soup.select(selector + ' video > source')
 
-# 요소만큼 반복
+## 요소만큼 반복
 if len(imgs) > 0:
     for img in imgs:
         # 이미지 소스 주소 추출
@@ -71,7 +71,7 @@ if len(imgs) > 0:
             print('에러')
             sys.exit(0)
 
-# 요소만큼 반복
+## 요소만큼 반복
 if len(vids) > 0:
     for vid in vids:
         # 이미지 소스 주소 추출

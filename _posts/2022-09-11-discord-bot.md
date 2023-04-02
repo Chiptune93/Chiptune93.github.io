@@ -1,18 +1,18 @@
 ---
 title: Python - Discord Bot 만들기
-categories: [Python]
+categories: [Frontend, Python]
 tags: [Discord, Python]
 ---
 
-# Discord Bot 샘플 생성하기.
+## Discord Bot 샘플 생성하기.
 
-## 개발 환경
+### 개발 환경
 
 1. Mac OS Monterey (12.5)
 2. Python 3.10.7
 3. VS Code
 
-## Discord 어플리케이션 생성
+### Discord 어플리케이션 생성
 
 1. Discord Developers 접속 (https://discord.com/developers/applications)
 
@@ -61,9 +61,9 @@ tags: [Discord, Python]
 
     ![이미지](/assets/img/Python/discord1/11.png)
 
-## Discord Bot 에 연결하는 파이썬 코드 작성하기.
+### Discord Bot 에 연결하는 파이썬 코드 작성하기.
 
-### Discord Python Library 설치.
+##### Discord Python Library 설치.
 ```bash
 $ pip install -U discord.py # 디스코드 패키지
 $ pip install -U python-dotenv # env 파일로 환경 변수 세팅하기 위해 설치.
@@ -72,7 +72,7 @@ $ pip install -U python-dotenv # env 파일로 환경 변수 세팅하기 위해
 - discord.py 는 디스코드에서 제공하는 라이브러리이다. 이를 이용하여 디스코드 봇과 연결 및 다양한 기능을 사용한다.
 - python-dotenv 는 env 파일을 이용하여 토큰 값 혹은 민감 정보들을 포함시키기 위해 사용한다.
 
-### 샘플 소스 코드 작성
+##### 샘플 소스 코드 작성
 
 - 방금 생성한 봇과 연결하기 위한 샘플 코드를 작성한다.
 
@@ -142,7 +142,7 @@ $ pip install -U python-dotenv # env 파일로 환경 변수 세팅하기 위해
 
 
 
-## 마치며
+### 마치며
 
 해당 포스트에서는 다음을 알아보았다.
 

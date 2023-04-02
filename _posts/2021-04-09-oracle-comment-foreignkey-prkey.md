@@ -1,6 +1,6 @@
 ---
 title: ORACLE - COMMENT, FOREIGN KEY, PRIMARY KEY 설정
-categories: [Database]
+categories: [Backend, Database]
 tags: [oracle, comment, foreign key, primary key]
 ---
 

@@ -1,11 +1,11 @@
 ---
 title: Spring Boot - Application Context 사용하기
-categories: [Spring]
+categories: [Backend, Spring]
 tags: [applicationContext, SpringBoot]
 ---
 
 
-## Application Context
+### Application Context
 
 어플리케이션 구성에 대한 접근을 가능케 하는 인터페이스 (설명)
 

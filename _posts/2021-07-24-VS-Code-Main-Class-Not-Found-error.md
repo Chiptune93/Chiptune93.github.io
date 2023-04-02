@@ -1,14 +1,14 @@
 ---
 title: VS Code Main Class Not Found Exception 해결
-categories: [Error]
+categories: [Etc, Error]
 tags: [VsCode, Main Class Not Found]
 ---
 
-## 문제
+### 문제
 
 VS Code 에서 Spring Boot Gradle Project 를 개발하는 도중, 작업 환경을 데스크탑에서 노트북으로 옮겼는데, 이상하게도 데스크탑 환경에서 잘만 돌아가는 소스들이, 노트북 환경에서는 돌아가지 않았다.
 
-## 오류 현상
+### 오류 현상
 
 현상은 VS Code 내 Spring DashBoard 에서 프로젝트 실행 시, Main Class 를 찾지 못하는 현상이었다. 검색해서 아래와 같은 시도를 해보았다.
 

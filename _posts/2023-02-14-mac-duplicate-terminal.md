@@ -1,15 +1,15 @@
 ---
 title: Mac Ventura Duplicate Terminal.app
-categories: [Etc]
+categories: [Etc, Issue & Info]
 tags: [Innosetup, Inno Setup Korean, Korean]
 ---
 
-# 개요
+## 개요
 
 - Mac이 Ventura 로 업데이트 되면서, 터미널 앱의 복사를 막아버림.
 - 따라서, 기존에 인텔기반 터미널(로제타2)과 기존 터미널 2개를 사용하던 방법을 사용할 수 없게됨.
 
-# 방법
+## 방법
 
 - ~/.zshrc 에 아래의 내용을 추가함.
 
@@ -26,7 +26,7 @@ tags: [Innosetup, Inno Setup Korean, Korean]
 
 - 관련 링크 : [https://stackoverflow.com/questions/74198234/duplication-of-terminal-in-macos-ventura](https://stackoverflow.com/questions/74198234/duplication-of-terminal-in-macos-ventura)
 
-# 트러블 슈팅
+## 트러블 슈팅
 
 - 위 작업을 하고 나서 파이썬을 실행하려고 하니, 아래와 같은 에러 메세지와 마주함.
 

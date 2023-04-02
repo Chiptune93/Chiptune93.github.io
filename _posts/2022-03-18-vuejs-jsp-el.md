@@ -1,6 +1,6 @@
 ---
 title: Vuejs - EL 값을 바인딩 하면, 이벤트 전달이 안되는 현상
-categories: [Frontend]
+categories: [Frontend, Scripts]
 tags: [vuejs, jsp, el]
 ---
 

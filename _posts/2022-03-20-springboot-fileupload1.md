@@ -1,10 +1,10 @@
 ---
 title: Spring Boot - 파일 업로드 만들기 -1-
-categories: [Spring]
+categories: [Backend, Spring]
 tags: [fileupload, SpringBoot, springboot fileupload]
 ---
 
-## 작업환경
+### 작업환경
 늘 사용하지만, 직접 만들어 보지는 못했던 파일 업로드 만들기를 해 볼 생각이다.
 
 작업 환경은 다음과 같다.
@@ -18,7 +18,7 @@ tags: [fileupload, SpringBoot, springboot fileupload]
 4. War 배포 사용
 
 
-## 정의
+### 정의
 FileUpload / Download 서비스는 다음을 전제로 개발하기로 한다.
 
 
@@ -36,7 +36,7 @@ FileUpload / Download 서비스는 다음을 전제로 개발하기로 한다.
 
 
 
-## 작업
+### 작업
 우선 기본적으로 프로젝트 세팅 및 기본 기능 테스트 부터 진행한다.
 
 프로젝트는 vs code에서 initailize gradle project를 이용해 생성했고 아래와 같은 내용을 추가 했다.

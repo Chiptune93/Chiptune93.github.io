@@ -1,14 +1,14 @@
 ---
 title: POI Excel 현재 컬럼(열)에 셀 스타일 전체 적용하기
-categories: [Java]
+categories: [Backend, Java]
 tags: [Java, POI, Excel, Style]
 ---
 
-## 자바로 구성된 엑셀 시트에 셀 스타일 동일하게 적용하기
+### 자바로 구성된 엑셀 시트에 셀 스타일 동일하게 적용하기
 
 workbook을 사용한 엑셀 생성 코드 내에서 사용할 수 있습니다.
 
-### Source Code
+##### Source Code
 
 ```java
 // cell style 정의

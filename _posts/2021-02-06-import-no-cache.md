@@ -1,6 +1,6 @@
 ---
 title: Javascript - 스크립트 파일 import 시, 캐시 안남게 처리하기
-categories: [Frontend]
+categories: [Frontend, Scripts]
 tags: [cache, javascript, import script]
 ---
 

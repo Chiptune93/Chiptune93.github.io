@@ -1,10 +1,10 @@
 ---
 title: Axios - Vuejs / React 환경에서 axios 모듈 get/post 통신 에러
-categories: [Error]
+categories: [Etc, Error]
 tags: [vuejs, react, axios, axios error]
 ---
 
-## 1. 프로젝트 환경
+### 1. 프로젝트 환경
 
 - html 베이스로 프론트에서 Vuejs 사용 중
 
@@ -12,7 +12,7 @@ tags: [vuejs, react, axios, axios error]
 
 - axios 라이브러리 버전 0.26.1
 
-## 2. 문제 상황
+### 2. 문제 상황
 
 - axios 를 이용하여 ajax 통신을 backend 와 진행.
 
@@ -42,7 +42,7 @@ axios 라이브러리 response 상황에서는 'Network Error' 라고만 나온�
 
 200 OK 를 무조건 리턴하는 URL 임에도 불구하고 Network Error 가 "IOS 앱(웹뷰사용)" 상황에서만 발생한다.
 
-## 3. 문제 해결 시도
+### 3. 문제 해결 시도
 
 Google 에 검색 시, 아래와 같이 검색했다.
 
@@ -56,7 +56,7 @@ IOS12 부터 지속적으로 발생한 문제임을 파악할 수 있다.
 
 axios 모듈 대신 문제가 있는 ajax 통신을 다른 라이브러리를 사용하거나, 직접 구현할 것을 권고 했다.
 
-## 4. 해결
+### 4. 해결
 
 ```js
 var xhr = new XMLHttpRequest();

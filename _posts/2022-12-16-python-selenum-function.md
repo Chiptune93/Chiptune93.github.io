@@ -1,10 +1,10 @@
 ---
 title: Python - Selenium Functions
-categories: [Python]
+categories: [Frontend, Python]
 tags: [Selenium, Webdriver, Python, 파이썬]
 ---
 
-# import
+## import
 - 셀레니움 내 다양한 모듈/함수 등을 포함시키는 방법
 
 ```python
@@ -17,22 +17,22 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 ```
 
-# Driver Load
+## Driver Load
 - 웹 드라이버를 로드함으로써, 웹 사이트에 접근 가능하게 한다.
 - 하기 예시는 크롬드라이버를 예로 사용하며 추가적인 옵션 또한 존재한다.
 
 ```python
-# 크롬 드라이버 설정
+## 크롬 드라이버 설정
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('headless') # 웹 페이지를 실제로 띄우지 않겠다.
 chrome_options.add_argument('--disable-gpu') # GPU를 사용하지 않겠다.
 chrome_options.add_argument('lang=ko_KR') # 언어 설정을 ko_KR로 사용하겠다.
 chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36") # 웹 에이전트 지정
 
-# Window
-# driver = webdriver.Chrome('C:\chromedriver.exe', chrome_options=chrome_options)
+## Window
+## driver = webdriver.Chrome('C:\chromedriver.exe', chrome_options=chrome_options)
 
-# Mac
+## Mac
 driver = webdriver.Chrome('/opt/homebrew/chromedriver', chrome_options=chrome_options)
 ```
 
@@ -49,18 +49,18 @@ print(now_url)
 driver.close()
 ```
 
-# Wait till Load Webpage(로딩 대기)
+## Wait till Load Webpage(로딩 대기)
 - 브라우저에서 요소를 로딩하는데 걸리는 시간이 있기 때문에, 요소가 전부 준비되기 까지 대기하는 과정
 
-## Implict wait (암묵적 대기)
+### Implict wait (암묵적 대기)
 - 찾으려는 요소가 로드 될 때까지 지정된 시간을 대기한다. 드라이버에 전역 설정으로 저장되며 기본값은 0이다.
 
 ```python
-# 10초 대기를 설정한다.
+## 10초 대기를 설정한다.
 driver.implicitly_wait(time_to_wait=10)
 ```
 
-## Explict wait (명시적 대기)
+### Explict wait (명시적 대기)
 - 대기 하는 조건을 사용하여, 해당 조건이 완료될 때까지 대기 한 후 완료되면 실행되도록 한다.
 
 ```python
@@ -102,29 +102,29 @@ element_located_selection_state_to_be|요소를 찾고, 요소가 선택된 상�
 alert_is_present|알림이 있는지 확인한다.
 
 
-# 요소 찾기(XPATH)
+## 요소 찾기(XPATH)
 
-## 요소 가져오는 방법
+### 요소 가져오는 방법
 
 - 웹 크롤링 시, 혹은 웹에서 요소를 찾을 때 사용하는 방법 중 Xpath 라는 것이 있다.
 - 요소를 다음과 같이 찾는 것 처럼 하나의 속성으로써 찾아올 수 있다.
 
 ```python
-# 클래스로 요소 찾기
+## 클래스로 요소 찾기
 elem = driver.find_element(By.CLASS_NAME, "class")
-# 아이디로 찾기
+## 아이디로 찾기
 elem = driver.find_element(By.ID, "id")
-# CSS에서 selector 지정하는 것 처럼 사용
+## CSS에서 selector 지정하는 것 처럼 사용
 elem = driver.find_element(By.CSS_SELECTOR, "p.content")
-# 링크에서 지정한 URL 로 찾기
+## 링크에서 지정한 URL 로 찾기
 elem = driver.find_element(By.LINK_TEXT, "link_text")
-# 태그 명으로 찾기
+## 태그 명으로 찾기
 elem = driver.find_element(By.TAG_NAME, "tag_name")
 ...
 ```
 
 
-## XPath 가져오기
+### XPath 가져오기
 - 이런 경로들을 구조만 보고도 알 수 있다면 바로 사용할 수 있겠지만 불행하게도 그렇게까지 복잡한 구조를 바로 인식할 만큼 우리는 똑똑하지 않아서 
 아래와 같은 기능을 이용해 간단히 XPath를 가져올 수 있다.
 
@@ -183,14 +183,14 @@ elem = driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/center/div/form[1
 
     [참고 링크](https://www.w3schools.com/xml/xpath_syntax.asp)
 
-# 키보드 입력
+## 키보드 입력
 
-## 키보드 값 전달 
+### 키보드 값 전달 
 
 - 어떤 요소를 선택 후, 키 값을 보낼 수 있다.
 
 ```python
-# 선택한 요소에 'test' 라는 값을 보냄
+## 선택한 요소에 'test' 라는 값을 보냄
 elem = driver.find_element(By.ID, "id")
 elem.send_keys('test')
 ```
@@ -272,14 +272,14 @@ class Keys(object):
     COMMAND = '\ue03d'
 ```
 
-## 입력 값 클리어하기
+### 입력 값 클리어하기
 - 입력된 값을 초기화 한다.
 
 ```python
 elem.clear()
 ```
 
-## 파일 업로드
+### 파일 업로드
 - 파일을 업로드한다.
 - 파일 업로드 요소(input)를 선택 후, 경로로 지정된 파일을 전송한다.
 
@@ -288,9 +288,9 @@ elem = driver.find_element(By.tag_name,'input')
 elem.send_keys(file_path)
 ```
 
-# 상호작용 하기
+## 상호작용 하기
 
-## 클릭하기
+### 클릭하기
 - 클릭 함수를 사용하여 요소를 클릭한다.
 
 ```python
@@ -298,37 +298,37 @@ elem = driver.find_element(By.ID,"login_btn")
 elem.click()
 ```
 
-## 옵션 선택 및 Submit
+### 옵션 선택 및 Submit
 
 - Select 함수를 import 하여 간단히 사용가능하다.
 
 ```python
 from selenium.webdriver.support.ui import Select
-# 셀렉트 요소 선택
+## 셀렉트 요소 선택
 select = Select(driver.find_element(By.NAME,'select_elem_name'))
 
-# 인덱스 번호로 선택
+## 인덱스 번호로 선택
 select.select_by_index(index=1)
-# 옵션명으로 선택
+## 옵션명으로 선택
 select.select_by_visible_text(text="option_text")
-# 값 내용으로 선택
+## 값 내용으로 선택
 select.select_by_value(value='1')
 
-# 인덱스 번호로 선택 해제
+## 인덱스 번호로 선택 해제
 select.deselect_by_index(index=1)
-# 옵션명으로 선택 해제
+## 옵션명으로 선택 해제
 select.deselect_by_visible_text(text="option_text")
-# 값 내용으로 선택 해제
+## 값 내용으로 선택 해제
 select.deselect_by_value(value='1')
 
-# 전부 해제
+## 전부 해제
 select.deselect_all()
 
-# 선택된 옵션 전체 리스트 얻기
+## 선택된 옵션 전체 리스트 얻기
 select.all_selected_options
-# 첫번째 선택된 옵션 가져오기
+## 첫번째 선택된 옵션 가져오기
 select.first_selected_option
-# 가능한 옵션 모두 보기
+## 가능한 옵션 모두 보기
 select.options
 ```
 
@@ -338,7 +338,7 @@ elem.find_element(By.TAG_NAME, "form")
 elem.submit()
 ```
 
-## 드래그 앤 드랍
+### 드래그 앤 드랍
 - ActionChains을 사용하여 source 요소에서 target 요소로 Drag & Drop을 실행한다.
 
 ```python
@@ -348,14 +348,14 @@ action_chains = ActionChains(driver)
 action_chains.drag_and_drop(source, target).perform()
 ```
 
-## Window, Frame 이동
+### Window, Frame 이동
 - 쉽게 말해 어떤 창 또는 프레임으로 포커싱을 옮긴다고 생각하면 된다.
 
 ```python
 driver.switch_to_frame('frame')
 driver.switch_to_window('window')
 
-# frame 내 서브 프레임으로도 이동 가능하다.
+## frame 내 서브 프레임으로도 이동 가능하다.
 driver.switch_to_frame('frame.0.child')
 ```
 
@@ -384,7 +384,7 @@ driver.switch_to_default_content()
 alert = driver.switch_to.alert
 ```
 
-## JavaScript 실행
+### JavaScript 실행
 - driver.execute_script() 함수를 실행할 수 있다.
 
 ```python
@@ -392,7 +392,7 @@ text = "test value"
 driver.execute_script("document.getElementsByName('id')[0].value=\'"+text+"\'")
 ```
 
-## 브라우저 창 다루기
+### 브라우저 창 다루기
 - 뒤로가기, 앞으로 가기
 - 브라우저는 뒤로가기(back)와 앞으로 가기(forward) 기능을 제공한다. 이를 selenium으로 구현이 가능하다.
 
@@ -401,7 +401,7 @@ driver.forward()
 driver.back()
 ```
 
-## 화면 이동(맨 밑으로 내려가기 등)
+### 화면 이동(맨 밑으로 내려가기 등)
 
 - 크롤링을 하다 보면 화면의 끝으로 내려가야 내용이 동적으로 추가되는 경우를 자주 볼 수 있다.
 - 이런 경우에는 웹페이지의 최하단으로 내려가는 코드를 실행할 필요가 있다.
@@ -421,19 +421,19 @@ elem = driver.find_element(By.ID, 'ID')
 ActionChains(driver).move_to_element(elem).perform()
 ```
 
-## 브라우저 최소화/최대화
+### 브라우저 최소화/최대화
 
 ```python
 driver.minimize_window()
 driver.maximize_window()
 ```
-## 스크린샷 저장
+### 스크린샷 저장
 
 ```python
 driver.save_screenshot('screen_shot.png')
 ```
 
-## Option(ChromeOption)
+### Option(ChromeOption)
 - 여러 옵션을 설정할 수 있다. 브라우저의 창 크기, 해당 기기의 정보 등을 설정할 수 있다.
 - 기본적인 사용법은 다음과 같다. 브라우저가 실행될 때 창 크기를 설정할 수 있다.
 
@@ -459,7 +459,7 @@ options.add_argument('--disable-blink-features=AutomationControlled')
 options.add_experimental_option('debuggerAddress', '127.0.0.1:9222')
 ```
 
-## ActionChains (마우스, 키보드 입력 등 연속 동작 실행)
+### ActionChains (마우스, 키보드 입력 등 연속 동작 실행)
 
 ```python
 from selenium.webdriver import ActionChains
@@ -469,7 +469,7 @@ hidden_submenu = driver.find_element_by_css_selector('.nav #submenu1')
 
 ActionChains(driver).move_to_element(menu).click(hidden_submenu).perform()
 
-# 위 한 줄은 아래와 같은 동작을 수행한다.
+## 위 한 줄은 아래와 같은 동작을 수행한다.
 actions = ActionChains(driver)
 actions.move_to_element(menu)
 actions.click(hidden_submenu)
@@ -481,7 +481,7 @@ actions.perform()
     - key_down, key_up 함수는 Ctrl 등의 키를 누를 때 쓰면 된다.
 
 ```python
-# Ctrl + C를 누른다.
+## Ctrl + C를 누른다.
 ActionChains(driver).key_down(Keys.CONTROL).send_keys('c').key_up(Keys.CONTROL).perform()
 ```
 
@@ -506,7 +506,7 @@ send_keys(*keys_to_send)	|키보드 입력을 현재 focused된 요소에 보낸
 send_keys_to_element(element, *keys_to_send)	|보드 입력을 주어진 요소에 보낸다.
 
 
-## 경고 창 다루기(alerts)
+### 경고 창 다루기(alerts)
 - 브라우저 얼럿 경고창을 무시하는 등의 처리를 할 수 있는 기능을 제공한다.
 - 아래 코드는 경고창에서 수락/거절을 누르거나, 경고창의 내용을 출력, 혹은 경고창에 특정 키 입력을 보낼 수 있다.
 
@@ -520,20 +520,20 @@ print(Alert(driver).text)
 Alert(driver).send_keys(keysToSend=Keys.ESCAPE)
 ```
 
-## 기타 기능
+### 기타 기능
 - Touch Actions: 마우스/키보드 입력과 비슷하게 chaining이 가능하다. 터치와 관련한 여러 기능을 제공한다. selenium.webdriver.common.touch_actions.TouchActions
 - Proxy: Proxy 기능을 사용할 수 있다. selenium.webdriver.common.proxy.Proxy
 - 쿠키(Cookies): 쿠키를 추가하거나 가져올 수 있다.
 
 ```python
-# Go to the correct domain
+## Go to the correct domain
 driver.get('http://www.example.com')
 
-# Now set the cookie. This one's valid for the entire domain
+## Now set the cookie. This one's valid for the entire domain
 cookie = {‘name’ : ‘foo’, ‘value’ : ‘bar’}
 driver.add_cookie(cookie)
 
-# And now output all the available cookies for the current URL
+## And now output all the available cookies for the current URL
 driver.get_cookies()
 ```
 

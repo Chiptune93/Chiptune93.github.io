@@ -1,11 +1,11 @@
 ---
 title: AWS Lambda - Dynamo DB / Postgre Access
-categories: [AWS]
+categories: [Cloud, AWS]
 tags: [AWS, Lambda, DynamoDB, Postgre]
 ---
 
 
-## 람다에서 다이나모 또는 Postgre 액세스
+### 람다에서 다이나모 또는 Postgre 액세스
 
 1. 람다에서 Postgre DB 작업 하기
 
@@ -26,7 +26,7 @@ tags: [AWS, Lambda, DynamoDB, Postgre]
     - [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
 
 
-### 예제 코드
+#### 예제 코드
 
 ```python
 import psycopg2
@@ -89,7 +89,7 @@ def lambda_handler(event, context):
         for page in page_iterator:
             results.extend(page['Items'])
 
-        print('###### dynamodb.query Total Itmes Count', len(results), ' #####')
+        print('######## dynamodb.query Total Itmes Count', len(results), ' ######')
         print(results)
 
         for result in results:

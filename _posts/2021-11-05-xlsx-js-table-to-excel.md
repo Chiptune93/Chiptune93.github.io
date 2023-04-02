@@ -1,25 +1,25 @@
 ---
 title: Javascript - xlsx-js-style 를 이용한 table 요소로 엑셀 파일 다운로드 시키기
-categories: [Frontend]
+categories: [Frontend, Scripts]
 tags: [xlsx-js, xlsx-js-style, table to excel]
 ---
 
 
 참고 : https://programmer.help/blogs/export-excel-using-js-xlsx-pure-front-end.html
 
-## 1. xlsx-js-style 에서 "xlsx.bundle.js" 파일 import
+### 1. xlsx-js-style 에서 "xlsx.bundle.js" 파일 import
 
 https://github.com/gitbrent/xlsx-js-style
 
 dist 폴더 내에서 해당 파일을 가져온다.
 
-## 2. "xlsx.extendscript.js" 파일 import
+### 2. "xlsx.extendscript.js" 파일 import
 
 https://www.cdnpkg.com/xlsx/file/xlsx.extendscript.js/?id=78603
 
 해당 파일은 XLSX 모듈을 확장하여 사용 가능하게 해준다.
 
-## 3. 해당 페이지에 import
+### 3. 해당 페이지에 import
 
 ```html
 <script type="text/javascript" src="/content/02comm/js/xlsx.bundle.js"></script>
@@ -33,9 +33,9 @@ xlsx-js 를 이용하여 엑셀 파일로 만드는 방식에는 JSON / ARRAY �
 
 ---
 
-## 4. 소스 작업
+### 4. 소스 작업
 
-### 1. 가장 기본적인 테이블 -> 엑셀 생성
+##### 1. 가장 기본적인 테이블 -> 엑셀 생성
 
 - html
 
@@ -88,7 +88,7 @@ function test1() {
 
 ---
 
-### 2. 테이블에 스타일 추가하기
+##### 2. 테이블에 스타일 추가하기
 
 여기서부터는 함수 내용만 변경됩니다.
 
@@ -167,13 +167,13 @@ function test2() {
 
 ---
 
-### 3. 이 부분에서 xlsx.extendscript.js 를 수정하게 됩니다.
+##### 3. 이 부분에서 xlsx.extendscript.js 를 수정하게 됩니다.
 
 테이블을 시트로 만드는 과정에서 몇가지 커스텀 과정을 진행합니다.
 
 - xlsx.extendscript.js 수정하기
 
-#### 1. XLSX 변수를 기존 변수와 겹치치 않고 사용하기 위해 변수명을 변경
+####### 1. XLSX 변수를 기존 변수와 겹치치 않고 사용하기 위해 변수명을 변경
 
 해당 파일 9160 라인 근처에 "var XLSX" 로 선언되는 변수가 있습니다.
 
@@ -181,7 +181,7 @@ function test2() {
 
 ![xlsx3](/assets/img/Frontend/JS/xlsx3.png)
 
-#### 2. parse_dom_table 함수 변경
+####### 2. parse_dom_table 함수 변경
 
 해당 함수는 테이블을 가져와 파싱하는 부분인데 옵션 파라미터를 받아 처리하기 위해 수정합니다.
 

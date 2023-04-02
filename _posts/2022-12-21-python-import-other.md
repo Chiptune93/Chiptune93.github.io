@@ -1,10 +1,10 @@
 ---
 title: Python - import other file
-categories: [Python]
+categories: [Frontend, Python]
 tags: [Python, 파이썬, import, from, from import]
 ---
 
-## 파이썬의 모듈/패키지 탐색 순서
+### 파이썬의 모듈/패키지 탐색 순서
 
 > sys.module -> built-in module -> sys.path
 
@@ -26,26 +26,26 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 위에 보이는 path를 기본적으로 순차 탐색 하며, 모듈/패키지가 있는지 확인 한다.
 
-## 파일 포함 시켜 사용하기
+### 파일 포함 시켜 사용하기
 
 - 파이썬에서 파일을 포함시키는 경우 및 방법은 다음과 같다.
 
 ```python
 import os, sys
 
-# 현재 모듈이 있는 디렉토리 경로
+## 현재 모듈이 있는 디렉토리 경로
 os.path.dirname(__file__)
 
-# 현재 모듈의 상위 디렉토리 경로
+## 현재 모듈의 상위 디렉토리 경로
 os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 
-# 현재 모듈의 2단계 상위 디렉토리 경로
+## 현재 모듈의 2단계 상위 디렉토리 경로
 os.path.dirname(os.path.abspath(os.path.dirname(os.path.abspath(os.path.dirname(__file__)))))
 
-# sys.path에 상위 디렉토리 추가
+## sys.path에 상위 디렉토리 추가
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
-# sys.path에 특정 디렉토리 추가
+## sys.path에 특정 디렉토리 추가
 sys.path.append('{dir}')
 ```
 
@@ -53,7 +53,7 @@ sys.path.append('{dir}')
 
 ```python
 import file # file.function() 으로 사용
-# 또는
+## 또는
 from file import function # function() 으로 사용
 ```
 
@@ -64,7 +64,7 @@ import sys
 sys.path.append('{dir}') # 이렇게 추가 후, 아래에서 임포트하여 사용한다.
 
 import file # file.function() 으로 사용
-# 또는
+## 또는
 from file import function # function() 으로 사용
 
 ```

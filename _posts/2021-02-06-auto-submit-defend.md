@@ -1,6 +1,6 @@
 ---
 title: JSP - Input text 항목 엔터 시, 자동 submit 막기.
-categories: [Frontend]
+categories: [Frontend, Scripts]
 tags: [jsp, auto submit]
 ---
 
@@ -15,7 +15,7 @@ tags: [jsp, auto submit]
 
 따라서, 해당 상황을 방지하기 위해서는 다음과 같은 방법이 있다.
 
-## 1. 엔터 입력 제어 - 키보드 입력의 엔터키를 판별하여 자바스크립트로 제어한다.
+### 1. 엔터 입력 제어 - 키보드 입력의 엔터키를 판별하여 자바스크립트로 제어한다.
 
 ```jsp
 <form name="textForm">
@@ -32,7 +32,7 @@ tags: [jsp, auto submit]
 </script>
 ```
 
-## 2. Form 태그에 onSubmit="return false;" 추가
+### 2. Form 태그에 onSubmit="return false;" 추가
 
 ```jsp
 <form name="textForm" onsubmit="return false;">
@@ -42,7 +42,7 @@ tags: [jsp, auto submit]
 </form>
 ```
 
-## 3. input 태그를 하나더 추가한다 - input type="hidden" 을 하나 더 둔다.
+### 3. input 태그를 하나더 추가한다 - input type="hidden" 을 하나 더 둔다.
 
 ```jsp
 <form name="textForm">

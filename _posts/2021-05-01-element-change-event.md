@@ -1,10 +1,10 @@
 ---
 title: jQuery - 실시간 요소 변경 탐지하기
-categories: [Frontend]
+categories: [Frontend, Scripts]
 tags: [Element Change, jQuery, event handler]
 ---
 
-## input 요소에 대한 실시간 변경을 탐지하여 원하는 내용을 실행하도록 하는 함수
+### input 요소에 대한 실시간 변경을 탐지하여 원하는 내용을 실행하도록 하는 함수
 
 ```js
 $(document).ready( function () {

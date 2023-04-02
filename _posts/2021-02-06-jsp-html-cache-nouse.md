@@ -1,10 +1,10 @@
 ---
 title: JSP/HTML - 페이지 캐시 미사용 설정
-categories: [Frontend]
+categories: [Frontend, Scripts]
 tags: [jsp, html, no cache, cache]
 ---
 
-## JSP
+### JSP
 
 JSP의 경우 페이지 상단에 아래 구문을 넣으면 캐쉬가 적용되지 않는다.
 
@@ -16,7 +16,7 @@ JSP의 경우 페이지 상단에 아래 구문을 넣으면 캐쉬가 적용되
 %>
 ```
 
-## HTML
+### HTML
 
 HTML의 경우 아래 구문을 <head> 태그 사이에 넣어주면 된다.
 

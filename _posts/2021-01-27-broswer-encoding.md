@@ -1,11 +1,11 @@
 ---
 title: ERR_INCOMPLETE_CHUNKED_ENCODING 200
-categories: [Etc]
+categories: [Etc, Issue & Info]
 tags: [encoding error, browser]
 ---
 
 
-## 크롬/엣지 ERR_INCOMPLETE_CHUNKED_ENCODING 200 에러
+### 크롬/엣지 ERR_INCOMPLETE_CHUNKED_ENCODING 200 에러
 
 `<img src="" />`처럼 태그안이 비어있는지 확인.
 

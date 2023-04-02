@@ -1,10 +1,10 @@
 ---
 title: MYSQL/ORACLE - 테이블 정의서 간단하게 뽑는 쿼리
-categories: [Database]
+categories: [Backend, Database]
 tags: [mysql, oracle, table, 테이블정의서]
 ---
 
-## MySQL
+### MySQL
 
 ```sql
 SELECT
@@ -31,7 +31,7 @@ ORDER BY
 	a.TABLE_NAME, b.ORDINAL_POSITION
 ```
 
-## Oracle
+### Oracle
 
 ```sql
 SELECT tab_columns.TABLE_NAME,

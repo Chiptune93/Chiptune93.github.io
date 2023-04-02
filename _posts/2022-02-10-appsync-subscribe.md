@@ -1,6 +1,6 @@
 ---
 title: App Sync - Amplify 를 이용한 App Sync Data Subscribe.
-categories: [AWS]
+categories: [Cloud, AWS]
 tags: [AWS, appsync, data Subscribe]
 ---
 
@@ -9,7 +9,7 @@ tags: [AWS, appsync, data Subscribe]
 
 [\* Amplify 실습링크](https://docs.amplify.aws/start/q/integration/js/)
 
-## 1. Amplify CLI 다운로드 및 설치 [링크](https://docs.amplify.aws/cli/start/install/)
+### 1. Amplify CLI 다운로드 및 설치 [링크](https://docs.amplify.aws/cli/start/install/)
 
 window 기준, cmd 혹은 powershell 에서 아래 링크를 실행.
 
@@ -17,7 +17,7 @@ window 기준, cmd 혹은 powershell 에서 아래 링크를 실행.
 curl -sL https://aws-amplify.github.io/amplify-cli/install-win -o install.cmd && install.cmd
 ```
 
-## 2. 프로젝트에 세팅하기
+### 2. 프로젝트에 세팅하기
 
 - 작업이 Spring Boot 프레임워크에서 이루어졌기 때문에 경로는 Boot 기준입니다.
 
@@ -58,7 +58,7 @@ Using default provider  awscloudformation
 
 저의 경우, AWS profile은 따로 C:\Users\{userName}\.aws 에 credential 파일로 저장되어 있습니다.
 
-## 3. App Sync 에 생성된 API 연결하기
+### 3. App Sync 에 생성된 API 연결하기
 
 AppSync에 접속하여 연결하고자 하는 API를 조회하면 다음과 같은 화면이 있습니다.
 
@@ -98,11 +98,11 @@ amplify configure codegen
 
 ![appsyncsub2](/assets/img/AWS/appsyncsub2.png)
 
-## 4. 데이터 가져오기
+### 4. 데이터 가져오기
 
 데이터 가져오는 방식은 Graph QL을 사용하는 것이며 다음 링크에서 관련 문서를 확인할 수 있습니다.
 
-### 1. Amplify.js 추가
+##### 1. Amplify.js 추가
 
 ```js
 <script
@@ -111,7 +111,7 @@ amplify configure codegen
 ></script>
 ```
 
-### 2. 소스 작성 ( js파일에 작성 후, html 에서 import 함 )
+##### 2. 소스 작성 ( js파일에 작성 후, html 에서 import 함 )
 
 ```js
 import awsconfig from './aws-exports.js';

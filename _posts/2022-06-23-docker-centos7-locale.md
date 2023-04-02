@@ -1,6 +1,6 @@
 ---
 title: Docker CentOS7 locale language ko_KR 설정
-categories: [Docker]
+categories: [Cloud, Docker]
 tags: [Docker, Centos7, locale, lang]
 ---
 
@@ -16,7 +16,7 @@ centos7 이미지
 
 https://hub.docker.com/_/centos
 
-## 해결
+### 해결
 
 - docker centos7 이미지 내 경로 중, /etc/yum.conf 파일 내 아래 구문 존재.
 
@@ -26,7 +26,7 @@ https://hub.docker.com/_/centos
 해당 라인을 주석 처리 하고 아래 라인을 실행.
 
 ```
-# 재설치
+## 재설치
 yum reinstall glibc-common
 ```
 

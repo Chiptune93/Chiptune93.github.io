@@ -1,10 +1,10 @@
 ---
 title: Spring Boot - Spring Boot 2.6.2 Interceptor 추가
-categories: [Spring]
+categories: [Backend, Spring]
 tags: [Interceptor, SpringBoot]
 ---
 
-## 1. Interceptor 생성
+### 1. Interceptor 생성
 
 ```java
 import javax.servlet.http.HttpServletRequest;
@@ -45,7 +45,7 @@ public class defaultInterceptor implements HandlerInterceptor {
 }
 ```
 
-## 2. 설정 적용하기
+### 2. 설정 적용하기
 
 ```java
 import com.docker.bootsample.interceptor.defaultInterceptor;

@@ -1,12 +1,12 @@
 ---
 title: SpringBoot - H2 Database CSV 데이터 Import 하기
-categories: [Spring]
+categories: [Backend, Spring]
 tags: [h2database, csv import, h2 csv]
 ---
 
 SpringBoot 2.7.2 , Java11 사용
 
-## 1. H2 Database 사용 설정
+### 1. H2 Database 사용 설정
 
 - build.gradle
 
@@ -41,7 +41,7 @@ spring:
       path: /h2-console
 ```
 
-## 2. CSV 파일 경로
+### 2. CSV 파일 경로
 
 ![h2csv1](/assets/img/Spring/h2csv1.png)
 
@@ -53,7 +53,7 @@ src/resources 밑에 schema.sql 이 존재한다고 가정 시, 해당 파일과
 
 ![h2csv2](/assets/img/Spring/h2csv2.png)
 
-## 3. Schema.sql 작성
+### 3. Schema.sql 작성
 
 예시) 데이터베이스 테이블 생성 하면서 데이터 밀어넣음.
 

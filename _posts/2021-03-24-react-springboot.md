@@ -1,6 +1,6 @@
 ---
 title: React - Spring boot + React 연계 프로젝트 생성하기
-categories: [Frontend]
+categories: [Frontend, Scripts]
 tags: [React, springboot]
 ---
 
@@ -9,7 +9,7 @@ tags: [React, springboot]
 
 [sundries-in-myidea.tistory.com/71﻿](sundries-in-myidea.tistory.com/71)
 
-# 1. 개발환경 세팅
+## 1. 개발환경 세팅
 
 - STS 4 설치.
 
@@ -21,7 +21,7 @@ tags: [React, springboot]
 
 - 본 글에서는 LTS 버전 설치.
 
-## 2. 프로젝트 생성
+### 2. 프로젝트 생성
 
 - Spring Initializer 에서 프로젝트 생성 및 다운로드
 
@@ -35,7 +35,7 @@ dependency 에는 Spring Web 만 추가.
 
 ![react-spring2](/assets/img/React/react-spring2.png)
 
-# 3. Spring Boot 샘플 페이지 작성
+## 3. Spring Boot 샘플 페이지 작성
 
 - Spring Boot 내 테스트용 컨트롤러 작성.
 
@@ -45,7 +45,7 @@ dependency 에는 Spring Web 만 추가.
 
 ![react-spring4](/assets/img/React/react-spring4.png)
 
-# 4. React 설치
+## 4. React 설치
 
 node.js 를 설치했다면 , cmd 창을 통해 workspace 경로로 가서 react 설치.
 
@@ -65,7 +65,7 @@ npx create-react-app {react프로젝트명}
 
 CROS 이슈를 해결하기 위해서는 front 쪽에서 proxy 설정을 잡아주어야 한다.
 
-# 5. Spring Boot 와 React 연동하기
+## 5. Spring Boot 와 React 연동하기
 
 - React 내 package.json 에 다음 구문 추가.
 
@@ -104,7 +104,7 @@ function App() {
 export default App;
 ```
 
-# 6. Spring Boot 와 React 앱을 함께 패키징 처리
+## 6. Spring Boot 와 React 앱을 함께 패키징 처리
 
 - spring boot 프로젝트 pom.xml 내 plugins 태그 내 다음 추가
 
@@ -163,7 +163,7 @@ mvnw clean install
 
 ![react-spring8](/assets/img/React/react-spring8.png)
 
-# 7. Spring Boot JAR 파일에 React Build 파일 포함 시키키
+## 7. Spring Boot JAR 파일에 React Build 파일 포함 시키키
 
 - Spring boot 프로젝트 내 pom.xml 의 plugins 태그 하위에 다음을 추가한다.
 
@@ -197,7 +197,7 @@ mvnw clean install
 mvnw clean install
 ```
 
-# 8. 완료!
+## 8. 완료!
 
 다 완료 되면, Spring boot 프로젝트 내 target 에 생성된 jar 파일을 실행하여 잘 돌아가는지 확인한다.
 

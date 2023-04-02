@@ -1,6 +1,6 @@
 ---
 title: Python - 구글 이미지 검색 크롤링하는 소스
-categories: [Python]
+categories: [Frontend, Python]
 tags: [Python, Google Crolling, Crolling]
 ---
 
@@ -27,14 +27,14 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import datetime
 
-# 저장할 이미지 폴더
+## 저장할 이미지 폴더
 path = "E:/"
 
-# 수용할 확장자
+## 수용할 확장자
 acceptExt = ['jpg','jpeg','png','gif','webp']
 
-# 크롬 드라이버 설정
-# (크롤링할 때 웹 페이지 띄우지 않음, gpu 사용 안함, 한글 지원, user-agent 헤더 추가)
+## 크롬 드라이버 설정
+## (크롤링할 때 웹 페이지 띄우지 않음, gpu 사용 안함, 한글 지원, user-agent 헤더 추가)
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('headless')
 chrome_options.add_argument('--disable-gpu')
@@ -44,24 +44,24 @@ chrome_options.add_argument(
 driver = webdriver.Chrome(
     'C:\chromedriver.exe', chrome_options=chrome_options)
 
-# 검색어 입력 받기
+## 검색어 입력 받기
 keyword = input('검색어를 입력하세요 ▶ ')
-# 최대 개수 입력 받기
+## 최대 개수 입력 받기
 imageCount = input('몇 개까지 가져오시겠습니까? (최대 1000장) ▶ ')
-# 개수 예외 처리
+## 개수 예외 처리
 if imageCount < 0 and imageCount > 1000 :
     imageCount = 1000
 
-# 구글 접속
+## 구글 접속
 driver.get('https://www.google.co.kr/imghp?hl=ko')
-# 검색어 요소 찾음
+## 검색어 요소 찾음
 elem = driver.find_element(By.NAME, "q")  # 구글 검색창 선택
-# 검색어 전달
+## 검색어 전달
 elem.send_keys(keyword)
-# 검색 시작
+## 검색 시작
 elem.send_keys(Keys.RETURN)
 
-# response 대기를 위한 2초 슬립
+## response 대기를 위한 2초 슬립
 sleep(2)
 
 last_height = driver.execute_script(
@@ -82,12 +82,12 @@ while True:
             break
     last_height = new_height
 
-# 이미지 요소 리스트 가져오기
+## 이미지 요소 리스트 가져오기
 imgs = driver.find_elements(By.CSS_SELECTOR, 'img.rg_i.Q4LuWd')
 
-# 이미지 다운로드 주소 담을 배열
+## 이미지 다운로드 주소 담을 배열
 links = []
-# 요소만큼 반복
+## 요소만큼 반복
 if len(imgs) > 0:
     for i, img in imgs:
         if i <= imageCount:

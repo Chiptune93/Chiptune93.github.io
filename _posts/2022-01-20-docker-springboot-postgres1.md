@@ -1,10 +1,10 @@
 ---
 title: Docker Spring boot + Postgresql (1)
-categories: [Docker]
+categories: [Cloud, Docker]
 tags: [docker, springboot, postgresql]
 ---
 
-## Docker 명령 참고
+### Docker 명령 참고
 
 - 조회
 
@@ -37,7 +37,7 @@ docker restart <container-id/container-name>
 docker attach <container-id/container-name>
 ```
 
-## Postgrelsql 12.9-alpine Docker run
+### Postgrelsql 12.9-alpine Docker run
 
 ```
 docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=<password> --name Postgresql postgres:12.9-alpine
@@ -114,7 +114,7 @@ INSERT INTO public.test_table ("name",value) VALUES
 
 DB준비 완료
 
-## Spring Boot 2.6.2 + jstl
+### Spring Boot 2.6.2 + jstl
 
 - build.gradle 설정
 
@@ -214,7 +214,7 @@ spring:
 
 sample 프로젝트
 
-## Docker Network 생성
+### Docker Network 생성
 
 ```
 docker create network boot-sample-network

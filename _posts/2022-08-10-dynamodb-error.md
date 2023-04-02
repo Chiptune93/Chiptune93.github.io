@@ -1,12 +1,12 @@
 ---
 title: DynamoDB - Attribute name is a reserved keyword
-categories: [Error]
+categories: [Etc, Error]
 tags: [AWS, DynamoDB]
 ---
 
 DynamoDB Java SDK 를 사용하여 Table 스캔 도중 해당 에러가 발생하였다.
 
-## 원인
+### 원인
 
 - Dynamo Scan/GetItem 등 쿼리 및 표현식 등에서 사용된 명칭(항목명 등)이 DynamoDB 예약어와 충돌하여 발생하는 문제.
 
@@ -18,7 +18,7 @@ DynamoDB Java SDK 를 사용하여 Table 스캔 도중 해당 에러가 발생�
 
 > 필터 변수인 :from :to 가 예약어와 겹쳐 발생한 문제.
 
-## 해결방법
+### 해결방법
 
 - 아래 링크의 예약어를 참고하여 최대한 겹치치 않게 작성한다.<br/>
 

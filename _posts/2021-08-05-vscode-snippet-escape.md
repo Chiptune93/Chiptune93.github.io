@@ -1,6 +1,6 @@
 ---
 title: VS Code - code snippet $ escape ( dollar sign )
-categories: [IDE]
+categories: [Etc, IDE]
 tags: [vscode, snippet, escape]
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: SpringBoot - Rest Api Sample 만들기 #2
-categories: [Spring]
+categories: [Backend, Spring]
 tags: [springboot, rest api, api, h2database]
 ---
 
-## API 에러 처리
+### API 에러 처리
 
 에러가 발생할 수 있는 상황부터 정의해보자
 
@@ -131,7 +131,7 @@ public class GlobalExceptionHandler extends RuntimeException {
 
 다음은, 로직 외 에러 상황에 대한 처리입니다.
 
-## DefaultErrorAttributes.class
+### DefaultErrorAttributes.class
 
 DefaultErrorAttributes 는 기본적으로 스프링 부트에서 에러 발생 시 리턴하는 객체를 컨트롤 할 수 있게 해주는 클래스입니다. 기본적으로 스프링 부트는 에러 발생 시, JSON 형태로 에러를 리턴하게 되는데 그 내부의 항목들을 해당 클래스를 통해 제어할 수 있습니다.
 

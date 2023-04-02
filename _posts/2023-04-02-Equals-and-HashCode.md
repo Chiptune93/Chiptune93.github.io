@@ -1,12 +1,12 @@
 ---
 title: Java equals() and hashCode()
-categories: [Java]
+categories: [Backend, Java]
 tags: [Java, equals, hashcode, java equals(), java hashcode()]
 ---
 
 
 
-# **hashCode() & equals()**
+## **hashCode() & equals()**
 hashCode() 메소드는 객체의 해시 코드를 반환하는 메소드이며, equals() 메소드는 두 객체가 동등한지 비교하는 메소드입니다. 이 두 메소드는 객체 동등성 비교를 위해 필수적으로 구현되어야 합니다.
 
 - hashCode() 는 객체가 매핑되는 해시 테이블에서 검색 속도를 높이기 위해 사용됩니다. 객체의 hashCode() 메소드는 동일한 객체에 대해 항상 같은 정수 값을 반환해야 하며, 동일한 객체가 아니라면 서로 다른 정수 값을 반환해야 합니다.
@@ -21,7 +21,7 @@ hashCode() 메소드는 객체의 해시 코드를 반환하는 메소드이며,
 
 마지막으로, hashCode()와 equals() 메소드는 서로 관련성이 있습니다. equals() 메소드가 참을 반환하면, 두 객체의 해시 코드는 같아야 합니다. 그렇지 않으면 동등하지 않은 객체가 동일한 해시 코드를 가질 수 있기 때문입니다.
 
-# **Example**
+## **Example**
 
 ```java
 public class Employee {
@@ -106,5 +106,5 @@ equals() 메소드는 객체의 클래스 타입과 id 필드 값을 비교하�
 
 이 예시 코드에서는 id 값을 통해 객체를 비교하여 동등성을 판단합니다. 만약 두 객체의 id 값이 같으면 같은 객체로 판단합니다.
 
-# 참고
+## 참고
 [Java hashCode() 및 equals() 메소드](https://howtodoinjava.com/java/basics/java-hashcode-equals-methods/)

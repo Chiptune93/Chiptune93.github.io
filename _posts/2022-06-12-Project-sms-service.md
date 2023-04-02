@@ -1,10 +1,10 @@
 ---
 title: 사내 SMS Api Service
-categories: [Project]
+categories: [Etc, Project]
 tags: [docker, springboot, Personal Project]
 ---
 
-# 1. 개요
+## 1. 개요
 
 최근 사내 SMS 서비스 개발에 대한 필요성이 생겨서 해당 작업을 맡아서 하게 되었다. 물론 혼자 하는 것은 아니지만, 전반적인 계획과 어떻게 구성할지에 대해서는 다같이 고민을 하고 있어서 여기에다가도 올리면서 작업해보려고 한다.
 
@@ -18,7 +18,7 @@ tags: [docker, springboot, Personal Project]
 
 구성 이외에도, 도커로 올릴 이미지 구성을 어떻게 할 지 또한 고민해봐야 하는 부분도 있어서 차근차근 진행해 볼 예정이다. 업무량도 많아서 제대로 진행 될리는 모르겠지만, 개인 프로젝트 겸 구성해보면 나중에 다른 작업에서도 참고가 되지 않을까 한다.
 
-# 2. docker base 이미지 구축하기
+## 2. docker base 이미지 구축하기
 
 SMS 서비스를 Docker 서버에 올릴 것이기 때문에 아래와 같이 구축 방향을 잡았다.
 
@@ -38,16 +38,16 @@ centos7 베이스 이미지 작업.
 docker pull 명령을 통해 이미지를 받고, sms 에이전트를 공유하여 서버에 세팅했다.
 
 ```
-# centos 이미지 pull
+## centos 이미지 pull
 $ docker pull centos:centos7
 
-# sms 에이전트 경로를 공유하여 파일을 옮길 수 있도록 running 한다
+## sms 에이전트 경로를 공유하여 파일을 옮길 수 있도록 running 한다
 $ docker run centos:centos7 -v {path}:/var/lib/smsagent --name centos7-with-agent
 
-# 공유 볼륨의 경우, 실제 경로에서 변경이 일어나거나 삭제되는 경우
-# 바로 컨테이너에 적용 되므로 실제 옮기는 용도로만 사용한다.
+## 공유 볼륨의 경우, 실제 경로에서 변경이 일어나거나 삭제되는 경우
+## 바로 컨테이너에 적용 되므로 실제 옮기는 용도로만 사용한다.
 
-# 도커 내부 접속
+## 도커 내부 접속
 $ docker exec -it centos7-with-agent /bin/bash
 > cd /var/lib/
 > cp -r smsagent /var/lib/smsAgent
@@ -56,16 +56,16 @@ $ docker exec -it centos7-with-agent /bin/bash
 버전관리를 위해 여기까지 작업한 OS 이미지를 이미지화 하였다.
 
 ```
-# 실행 중인 컨테이너 상태 그대로 다시 이미지화 하기
+## 실행 중인 컨테이너 상태 그대로 다시 이미지화 하기
 $ docker commit {container-name}
 sha256:6b2ec9b792e26a7c442176bd6c92b5061589d54d5a9f15a8831a89f38e2966e8
 
-# 이미지 리스트에서 방금 만든 이미지에 대해 태그 지정
+## 이미지 리스트에서 방금 만든 이미지에 대해 태그 지정
 $ docker images -a
 REPOSITORY              TAG       IMAGE ID       CREATED          SIZE
 <none>                  <none>    6b2ec9b792e2   20 seconds ago   209MB
 
-# 이미지 네임은 name:tag 형식으로 지정 및 다른 형식 가능.
+## 이미지 네임은 name:tag 형식으로 지정 및 다른 형식 가능.
 $ docker tag 6b2ec9b792e2 {image-name}
 ```
 
@@ -74,7 +74,7 @@ $ docker tag 6b2ec9b792e2 {image-name}
 올리기에 앞서 부트 환경에서 사용한 jdk 11을 해당 OS에 설치 한다.
 
 ```
-# JDK11 설치
+## JDK11 설치
 > yum install java-11-openjdk-devel.x86_64
 
 > java -version
@@ -89,10 +89,10 @@ EXPOSE 8080:8080 # 포트 설정
 ARG JAR_FILE=build/libs/sms.jar # 부트 프로젝트 jar 파일
 COPY ${JAR_FILE} sms.jar # 루트 경로로 옮김
 CMD /var/lib/lguplus/bin/uagent.sh start && java -jar /sms.jar # 에이전트 실행 및 프로젝트 실행
-#기본적으로 jar 파일 실행하여 돌리는 경우 아래와 같이 엔트리 포인트로
-#인수를 주었지만, 여기서는 에이전트를 실행한 후, 돌려야 하기 때문에
-#CMD를 사용했다.
-#ENTRYPOINT [ "java", "-jar", "/sms.jar" ]
+## 본적으로 jar 파일 실행하여 돌리는 경우 아래와 같이 엔트리 포인트로
+## 수를 주었지만, 여기서는 에이전트를 실행한 후, 돌려야 하기 때문에
+## MD를 사용했다.
+## NTRYPOINT [ "java", "-jar", "/sms.jar" ]
 ```
 
 dockerfile 준비가 끝났으면 해당 파일 기준으로 이미지를 빌드한다.
@@ -107,7 +107,7 @@ $ docker build -t sms-service:1.0 .(도커파일있는경로)
 
 작업 중, 해당 서비스가 급하게 필요하다는 요청을 받아서 반나절을 거의 여기에 신경을 썼던것 같다. 근데 막상 막히는 부분만 넘고나니 생각보다 작업한게 많이 없어서 조금 아쉽다.
 
-# 3. Swagger 를 활용한 API 가이드 공유
+## 3. Swagger 를 활용한 API 가이드 공유
 
 SMS 서비스 개발을 완료한 관계로 내부 공유 시에 문서 작성 및 기타 불편함을 덜기 위해 Swagger 로 공유하기로 하였다.
 

@@ -1,12 +1,12 @@
 ---
 title: User-Agent 로 접속한 사용자 브라우저 체크하기
-categories: [Java]
+categories: [Backend, Java]
 tags: [Java, User-Agent]
 ---
 
-## 유저 에이전트 체크하기
+### 유저 에이전트 체크하기
 
-### SourceCode
+##### SourceCode
 
 ```java
 public static String getAgent(HttpServletRequest request) {

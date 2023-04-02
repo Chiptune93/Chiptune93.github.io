@@ -1,6 +1,6 @@
 ---
 title: IOS - invalid Date 관련 문제
-categories: [Frontend]
+categories: [Frontend, Scripts]
 tags: [ios, invalid date, ios date]
 ---
 

@@ -1,13 +1,13 @@
 ---
 title: SpringBoot - Rest Api Sample 만들기 #1
-categories: [Spring]
+categories: [Backend, Spring]
 tags: [springboot, rest api, api, h2database]
 ---
 
 기존에 급하게 진행한 사내 SMS API 서비스를 만들고 나서, 정리도 할 겸 샘플로 REST API 샘플 프로젝트를 만들어보기로 했다.
 기본적인 버전 정보는 다음과 같다.
 
-## 1. 기본 프로젝트 세팅
+### 1. 기본 프로젝트 세팅
 
 JDK11
 Spring Boot 2.7.1
@@ -45,7 +45,7 @@ https://dololak.tistory.com/285
 
 실제 서비스에서는 MyBatis를 사용하는 만큼 샘플 프로젝트에서도 연동해보았다.
 
-## 2. h2 Database + MyBatis 연계 설정
+### 2. h2 Database + MyBatis 연계 설정
 
 우선 build.gradle에 아래의 라이브러리가 필요하다.
 
@@ -148,7 +148,7 @@ mybatis:
 
 각 폴더에 맞게 작성한 모습
 
-## 3. Boot Running 시, h2 database에 샘플 데이터 추가하기.
+### 3. Boot Running 시, h2 database에 샘플 데이터 추가하기.
 
 기본적으로 h2 database를 사용하게 되면, schema와 데이터를 어플리케이션 구동 시, 자동으로 찾아서 실행해준다.
 따라서, 해당 sql 파일을 작성하여 적절하게 놔두면 어플리케이션 구동 시, 알아서 읽어서 실행을 시켜준다.

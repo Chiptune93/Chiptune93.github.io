@@ -1,6 +1,6 @@
 ---
 title: ECR - Spring Boot + JSP 프로젝트 JIB로 ECR 업로드하기
-categories: [AWS]
+categories: [Cloud, AWS]
 tags: [AWS, ECR, JIB, ECR upload]
 ---
 
@@ -8,7 +8,7 @@ tags: [AWS, ECR, JIB, ECR upload]
 
 기존 프로젝트의 경우, 백단 요청만 받아서 처리하면 되기에 JAR파일로 묶어 Jib를 통해 ECR에 배포되는 형태를 가졌으나 이번에는 웹 리소스까지 포함된 전체 프로젝트를 배포하여 운영해야 하는 상황이었다.
 
-## JAR vs WAR
+### JAR vs WAR
 
 ![jibEcr1](/assets/img/AWS/jibecr1.jpeg)
 
@@ -21,13 +21,13 @@ tags: [AWS, ECR, JIB, ECR upload]
 
 참고 : https://pediaa.com/what-is-the-difference-between-jar-and-war-files/
 
-## Jib
+### Jib
 
 도커 데몬 없이 빌드 이미지를 빠르게 구성하여 원하는 레파지토리/레지스트리로 Push가 가능한 툴
 
 https://github.com/GoogleContainerTools/jib/blob/master/jib-gradle-plugin/README.md#extradirectories-object
 
-## Jib JAR / Jib WAR
+### Jib JAR / Jib WAR
 
 Jib 를 통해 ECR에 푸시하기로 하고, 이를 위해 jib를 세팅하였다.
 
@@ -41,7 +41,7 @@ https://github.com/GoogleContainerTools/jib/blob/master/jib-maven-plugin/README.
 
 https://github.com/GoogleContainerTools/jib/blob/master/jib-maven-plugin/README.md#extradirectories-object
 
-## JIB 배포 코드 작성
+### JIB 배포 코드 작성
 
 우선, AWS에 개발/데모/운영 3개의 환경으로 나뉘어있어 프로파일 적용을 하였고 이미지 태그를 현재 날짜로 주어 최소한의 구분이 가능토록 하였다. AWS CI/CD에서는 배포된 이미지에 큰 변경이 없으면 새로 빌드하여 배포하지 않기 때문에 최소한의 버전 구분이 필요하다
 
@@ -96,11 +96,11 @@ jib {
 		// Expose different port.
 		ports = ['8080']
 	}
-	println "#########################################################"
+	println "#######################################################################"
 	println "profile : " + profile
 	println "image name : " + image_name
 	println "tag : " + major_version + "." + getDate()
-	println "#########################################################"
+	println "#######################################################################"
 }
 ```
 
@@ -165,11 +165,11 @@ jib {
         ports = ['8080']
     }
 
-    println "#########################################################"
+    println "#######################################################################"
     println "profile : " + profile
     println "image name : " + image_name
     println "tag : " + major_version + "." + getDate()
-    println "#########################################################"
+    println "#######################################################################"
 
 }
 ```

@@ -1,6 +1,6 @@
 ---
 title: Spring/SpringBoot AOP 클래스 사용하기
-categories: [Spring]
+categories: [Backend, Spring]
 tags: [Spring, SpringBoot, AOP]
 ---
 
@@ -9,14 +9,14 @@ tags: [Spring, SpringBoot, AOP]
 
 따라서, 여기서는 기본적은 AOP 어드바이저를 등록하기 위해 어떤 설정을 해야하는지 살펴 볼 것이다.
 
-## Spring AOP
+### Spring AOP
 
 등록 방식은 크게 2가지로 나뉜다.
 
 - XML( 스키마 기반 방식 )
 - @AspectJ ( 어노테이션 기반 방식)
 
-## XML(스키마) 방식
+### XML(스키마) 방식
 
 제일 먼저 aspect 를 작성한다.
 
@@ -82,7 +82,7 @@ http://www.springframework.org/schema/aop/spring-aop-4.0.xsd" <- 추가됨.
 ```
 
 
-## @AspectJ 어노테이션 방식
+### @AspectJ 어노테이션 방식
 
 Spring AOP의 Runtime-weaving 으로 동작하는 방식.
 
@@ -90,7 +90,7 @@ Spring AOP의 Runtime-weaving 으로 동작하는 방식.
 
 Spring이 bean에 대해서 Aspect에 의해 advice를 받는지 판단하고 Proxy Object를 생성해주는 개념이다
 
-### AutoProxying 활성화
+##### AutoProxying 활성화
 
 Spring AOP에선 두 가지 방법을 통해 autoproxying 설정할 수 있다.
 
@@ -150,7 +150,7 @@ public class RunningTimeAspect {
 }
 ```
 
-## 마치며
+### 마치며
 
 아무래도 스키마 방식 보다는 어노테이션을 통한 관리가 좀 더 쉽게 느껴진다.
 

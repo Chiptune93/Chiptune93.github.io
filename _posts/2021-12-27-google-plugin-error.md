@@ -1,10 +1,10 @@
 ---
 title: In plugin 'com.google.cloud.tools.jib' type 'com.google.cloud.tools.jib.gradle.BuildImageTask' property 'jib.allowInsecureRegistries' of type boolean shouldn't be annotated with @Optional.
-categories: [Error]
+categories: [Etc, Error]
 tags: [google cloud error, jib error, jib]
 ---
 
-## 문제
+### 문제
 
 ```bash
 > Task :project_name:jib FAILED
@@ -42,10 +42,10 @@ BUILD FAILED in 2s
 7 actionable tasks: 1 executed, 6 up-to-date
 ```
 
-## 현상
+### 현상
 
 jib 플러그인을 통한 이미지 업로드 실행 중 발생한 에러
 
-## 해결
+### 해결
 
 jib 버전을 1.4.0 에서 1.8.0 으로 업그레이드. gradle 6.9 였을 때는 문제 없었는데, 7버전 대로 올라오면서 버전 호환이 안맞는 듯 하다.

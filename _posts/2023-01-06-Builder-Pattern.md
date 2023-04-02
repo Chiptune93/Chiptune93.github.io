@@ -1,11 +1,11 @@
 ---
 title: Builder Pattren
-categories: [Java]
+categories: [Backend, Java]
 tags: [Builder, Builder Pattern, Builder Annotation, Java]
 published: true
 ---
 
-# Builder 란?
+## Builder 란?
 
 객체를 생성하고 초기화 할 때, 직접 getter/setter 또는 매개변수를 통한 직접 생성을 하지 않고
 빌더를 통해 객체를 생성 또는 초기화 하는 방식
@@ -28,7 +28,7 @@ MyObject obj = new MyObject.Builder()
 
 ```
 
-# 왜 사용하나?
+## 왜 사용하나?
 
 영문 위키피디아에서는 빌더 패턴에 대한 장단점을 다음과 같이 안내하고 있다. (https://en.wikipedia.org/wiki/Builder_pattern)
 
@@ -50,7 +50,7 @@ MyObject obj = new MyObject.Builder()
 더 적합해 보인다.
 (주문,음식과 같은 비즈니스 로직 상 필요한 객체 보다는 데이터 소스, 웹 소켓 등 과 같은 기능적인 동작을 하는 객체)
 
-# @Builder
+## @Builder
 
 사실 기존 Java Bean 이나 일반 클래스 객체에서 빌더를 사용하려면 빌더를 객체마다 구현해주어야 사용이 가능하다.
 

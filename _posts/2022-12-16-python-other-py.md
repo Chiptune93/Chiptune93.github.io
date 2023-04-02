@@ -1,10 +1,10 @@
 ---
 title: Python - 다른 python 파일 포함 시키기
-categories: [Python]
+categories: [Frontend, Python]
 tags: [import python, other python function, Python, 파이썬]
 ---
 
-## 다른 파이썬 파일의 함수 포함시키기
+### 다른 파이썬 파일의 함수 포함시키기
 - function.py
 ```python
 import os

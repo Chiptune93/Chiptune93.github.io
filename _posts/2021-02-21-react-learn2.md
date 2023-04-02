@@ -1,12 +1,12 @@
 ---
 title: 2회차 - CSS 코딩 ~ 배포하기
-categories: [Frontend]
+categories: [Frontend, Scripts]
 tags: [React]
 ---
 
 ![react2-1](/assets/img/React/react2-1.png)
 
-## Task
+### Task
 
 1. 각 컴포넌트 별로 src 경로 아래에 작성. 이후 html > js > css 순으로 import 되어 구조를 이룸.
 

@@ -1,6 +1,6 @@
 ---
 title: React 학습 시작.
-categories: [Frontend]
+categories: [Frontend, Scripts]
 tags: [react]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Google Login API 연동하기(Web Service)
-categories: [Etc]
+categories: [Etc, Issue & Info]
 tags: [google, login api]
 ---
 
@@ -8,13 +8,13 @@ tags: [google, login api]
 
 * 2021.01.18 기준 작동 확인됨.
 
-# 1. 구글 API Console 접속
+## 1. 구글 API Console 접속
 
 - 라이브러리에 접속하여 Google+ API 사용 클릭.
 
 ![e1](/assets/img/Etc/e1.png)
 
-# 2. 사용자 인증 정보 만들기
+## 2. 사용자 인증 정보 만들기
 
 - 사용자 인증 정보 탭에서 상단의 '사용자 인증 정보 만들기' 클릭 후, OAuth Client ID 클릭.
 
@@ -30,7 +30,7 @@ tags: [google, login api]
 
 여기서, 클라이언트 ID 를 복사해놓는다.
 
-# 3. 서비스에 로그인 버튼 추가 및 작업
+## 3. 서비스에 로그인 버튼 추가 및 작업
 
 - 소스 헤더에 라이브러리 추가.
 

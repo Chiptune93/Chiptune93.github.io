@@ -1,6 +1,6 @@
 ---
 title: Docker Spring Boot + Postgresql (2)
-categories: [Docker]
+categories: [Cloud, Docker]
 tags: [docker, springboot, postgres]
 ---
 
@@ -10,7 +10,7 @@ tags: [docker, springboot, postgres]
 
 2. 스프링 부트 jsp 찾을 수 있게 수정
 
-## Spring Boot + JSP
+### Spring Boot + JSP
 
 1. spring boot jar 배포 환경에서 jsp 경로 문제 때문에 war배포로 임시 수정 (해결방법 찾을때 까지만)
 
@@ -30,7 +30,7 @@ Build 후 run command
 docker run -d -p 8080:8080 --network boot-sample-network --name Boot-Sample boot-sample
 ```
 
-## Postgresql Docker
+### Postgresql Docker
 
 1. 볼륨 바인딩에서 경로 바인딩으로 변경.
 
@@ -44,7 +44,7 @@ docker run -d -p 5432:5432 -e POSTGRES_PASSWORD='${password}' -w ${bind경로} -
 
 위 러닝 스크립트로 동일 Docker Network 상에서 실행 시 부트 프로젝트에서 데이터 바인딩까지 가능한 것을 확인.
 
-## Docker-compose.yml 변환 작업 진행
+### Docker-compose.yml 변환 작업 진행
 
 1. Postgresql 과 Spring Boot를 서비스로 묶어서 실행하기.
 
@@ -90,7 +90,7 @@ services:
     volumes:
       - ${bind-dir}:/var/lib/postgresql/data
 
-# Docker Network : 미리 생성된 네트워크 이름을 지정
+## Docker Network : 미리 생성된 네트워크 이름을 지정
 networks:
   default:
     external:

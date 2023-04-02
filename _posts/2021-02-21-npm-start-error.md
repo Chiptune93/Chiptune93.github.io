@@ -1,6 +1,6 @@
 ---
 title: npm 설치 후, start 시 에러 해결
-categories: [Error]
+categories: [Etc, Error]
 tags: [npm, npm start error]
 ---
 

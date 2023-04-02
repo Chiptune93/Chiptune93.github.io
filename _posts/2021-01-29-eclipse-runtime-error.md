@@ -1,6 +1,6 @@
 ---
 title: Eclipse - 이클립스 세팅 시, Java Runtime Error 해결방법
-categories: [IDE]
+categories: [Etc, IDE]
 tags: [ide, eclipse, runtime error]
 ---
 

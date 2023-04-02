@@ -1,10 +1,10 @@
 ---
 title: YouTube 검색 데이터 가져오기 - YouTube Data Api 연동
-categories: [Java]
+categories: [Backend, Java]
 tags: [Java, YouTube, YouTube API]
 ---
 
-## YouTube Data API
+### YouTube Data API
 
 유튜브 채널 검색에 대한 결과를 리스트로 가져오는 예제 코드입니다.
 <br/> 아래 소스에는 [검색어][더보기] 기능이 추가되어 해당 값들도 파라미터로 넘겨 받고 있습니다.
@@ -15,7 +15,7 @@ tags: [Java, YouTube, YouTube API]
 
 [developers.google.com/youtube/v3/docs/search/list?hl=ko](developers.google.com/youtube/v3/docs/search/list?hl=ko)
 
-## Source Cocde
+### Source Cocde
 
 ```java
 package src.lib.youtubeSearchApi;

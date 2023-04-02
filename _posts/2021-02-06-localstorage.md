@@ -1,6 +1,6 @@
 ---
 title: Javascript - localstorage 사용하기
-categories: [Frontend]
+categories: [Frontend, Scripts]
 tags: [localstorage, Javascript]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: VueJs - Datepicker 이벤트 관련 문제
-categories: [Frontend]
+categories: [Frontend, Scripts]
 tags: [vuejs, datepicker]
 ---
 

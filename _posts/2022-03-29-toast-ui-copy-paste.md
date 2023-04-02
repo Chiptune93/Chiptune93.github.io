@@ -1,6 +1,6 @@
 ---
 title: ToastUI Editor - 이미지 복사 붙여 넣기 시, 파일 업로드 및 UI처리
-categories: [Frontend]
+categories: [Frontend, Scripts]
 tags: [paste event handler, toastui editor, image paste]
 ---
 

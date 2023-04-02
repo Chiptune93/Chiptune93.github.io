@@ -1,6 +1,6 @@
 ---
 title: Docker Application build Python 에러 해결
-categories: [Docker]
+categories: [Cloud, Docker]
 tags: [Docker, python, docker build]
 ---
 

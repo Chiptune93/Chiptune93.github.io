@@ -1,12 +1,12 @@
 ---
 title: 1회차 - 처음 ~ JS 코딩하기
-categories: [Frontend]
+categories: [Frontend, Scripts]
 tags: [React]
 ---
 
 ![react1-1](/assets/img/React/react1-1.png)
 
-## Task
+### Task
 
 1. nodejs 설치.
 2. VS Code 설치. (에디터)

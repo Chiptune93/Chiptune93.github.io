@@ -1,6 +1,6 @@
 ---
 title: Javascript - Drag and Drop 간단하게 구현하기.
-categories: [Frontend]
+categories: [Frontend, Scripts]
 tags: [JS, Drag and Drop]
 ---
 
@@ -10,7 +10,7 @@ data-set 을 통해 데이터를 실제 이동 시키는 것이 아니라, 사�
 
 간단하게 구현한 예제입니다.
 
-## 1. 드래그 기능이 시작하는 요소 ( a태그 ) 에 아래와 같은 속성 부여
+### 1. 드래그 기능이 시작하는 요소 ( a태그 ) 에 아래와 같은 속성 부여
 
 ```html
 <a href="#" class="" draggable='true' ondragend="{functionName}";">드래그할 항목명</a>
@@ -20,7 +20,7 @@ data-set 을 통해 데이터를 실제 이동 시키는 것이 아니라, 사�
 
 - ondragend : 드래그가 "끝날때" 실행할 함수 설정
 
-## 2. 드래그한 요소를 받을 영역에 아래와 같은 속성 부여
+### 2. 드래그한 요소를 받을 영역에 아래와 같은 속성 부여
 
 ```html
 <div class="" ondragover="onDragOver(event);">...</div>

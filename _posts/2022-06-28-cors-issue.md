@@ -1,10 +1,10 @@
 ---
 title: SpringBoot - CORS 처리하기
-categories: [Spring]
+categories: [Backend, Spring]
 tags: [spring, springboot, cors]
 ---
 
-## 1. Global WebConfig
+### 1. Global WebConfig
 
 ```java
 import org.springframework.context.annotation.Configuration;
@@ -31,7 +31,7 @@ public class WebConfig implements WebMvcConfigurer {
 }
 ```
 
-## 2. Annotation
+### 2. Annotation
 
 동일한 방식으로 컨트롤러 전체 혹은 메소드에 적용 가능.
 

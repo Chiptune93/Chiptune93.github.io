@@ -1,17 +1,17 @@
 ---
 title: App Sync - Java 에서 AppSync Api Request 보내는 예제.
-categories: [AWS]
+categories: [Cloud, AWS]
 tags: [AWS, AppSync, api request]
 ---
 
-## 소스 주소
+### 소스 주소
 
 https://github.com/Chiptune93/Library/blob/main/AWS/AppSync/Java/AppSync.java
 
 참고
 https://www.baeldung.com/aws-appsync-spring
 
-## 소스 내용
+### 소스 내용
 
 ```java
 package package;

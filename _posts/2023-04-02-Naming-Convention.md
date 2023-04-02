@@ -1,10 +1,10 @@
 ---
 title: Java Naming Conventions & Naming
-categories: [Java]
+categories: [Backend, Java]
 tags: [Java, Java Naming Conventions]
 ---
 
-# **Java Naming Conventions**
+## **Java Naming Conventions**
 
 - 자바 네이밍 컨벤션
   - 패키지 클래스 등에 대한 네이밍 명명 규칙
@@ -44,7 +44,7 @@ tags: [Java, Java Naming Conventions]
       - static final int MAX_WIDTH = 999;
       - static final int GET_THE_CPU = 1;
 
-# **Google Java Code Convention**
+## **Google Java Code Convention**
 
 구글은 많은 개발자들이 사용하고 권장하는 자체 Java 코딩 규칙을 가지고 있습니다. 이러한 규칙은 일관성 있고 가독성이 좋으며 유지보수가 용이한 코드 작성을 돕기 위해 설계되었습니다. 구글 Java 코딩 규칙의 핵심 요소 중 일부는 다음과 같습니다:
 
@@ -91,7 +91,7 @@ tags: [Java, Java Naming Conventions]
   - 정수 상수 대신 열거형을 사용합니다.
   - synchronized 키워드 대신 java.util.concurrent 패키지를 선호합니다.
 
-# **좋은 변수명 짓기**
+## **좋은 변수명 짓기**
 
 1. 의도를 분명히 밝힌다
   - 따로 주석이 필요 없을 정도로
@@ -106,19 +106,19 @@ tags: [Java, Java Naming Conventions]
     ( fileUploadSuccess, ResponseOK ... )
   - not ~ 보다는 is ~ 를 사용한다. 단, 접두어가 없는 것이 더 이해하기 쉬울 수 있다.
 
-# **좋은 메소드 명 짓기**
+## **좋은 메소드 명 짓기**
 
-## 고려해야할 사항
+### 고려해야할 사항
 - 왜 존재하는 메소드인가?
 - 어떤 동작을 하는가?
 - 어떻게 사용하는가?
 
-## 명명 규칙 
+### 명명 규칙 
 - lowerCamelCase로 작성하기
   - toString()
   - fileUpload()
 
-## 자주 사용되는 동사
+### 자주 사용되는 동사
 - get/set
   - getter & setter 에 주로 사용됨
 - init 
@@ -137,6 +137,6 @@ tags: [Java, Java Naming Conventions]
 
 
 
-# 참고
+## 참고
 - [자바 작명소](https://velog.io/@bosl95/%EC%9E%90%EB%B0%94-%EC%9E%91%EB%AA%85%EC%86%8C#%EB%A9%94%EC%84%9C%EB%93%9C-%EC%9D%B4%EB%A6%84%EC%9C%BC%EB%A1%9C-%EC%9E%90%EC%A3%BC-%EC%82%AC%EC%9A%A9%EB%90%98%EB%8A%94-%EB%8F%99%EC%82%AC)
 - [GoogleJavaCodeStyle](https://google.github.io/styleguide/javaguide.html)

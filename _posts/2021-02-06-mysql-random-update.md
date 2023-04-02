@@ -1,6 +1,6 @@
 ---
 title: MYSQL - 특정 컬럼에 대해 일정 범위 내 랜덤 값 업데이트
-categories: [Database]
+categories: [Backend, Database]
 tags: [mysql, random]
 ---
 

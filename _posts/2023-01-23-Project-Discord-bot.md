@@ -1,10 +1,10 @@
 ---
 title: Notion Database를 활용한 Discord Bot
-categories: [Project]
+categories: [Etc, Project]
 tags: [Personal Project, Discord, Discord Bot, Notion, Notion API]
 ---
 
-# 프로젝트 개요
+## 프로젝트 개요
 디스코드 봇을 만들어보고자 하였다.
 다만, 기존의 많은 봇들은 외부 사이트에서 요청한 데이터를 보여 주는 형식을 주로 띄고 있다.
 예를 들면, 전적 검색 혹은 유튜브 재생 등 별도의 봇 데이터베이스를 활용하는 것은 많이 경험하지 못했다.
@@ -12,14 +12,14 @@ tags: [Personal Project, Discord, Discord Bot, Notion, Notion API]
 따라서, 자체 데이터베이스를 가지고 뭔가를 보여줄 수 있는 봇을 만들고자 하였다.
 현재 정리 용도로 활용하고 있는 노션(Notion) 에서 제공되는 API를 통해 노션에 정리된 데이터를 액세스 할 수 있다는 것을 알게되면서 이를 활용해 봇을 만들어보고자 하였다.
 
-## 사용기술
+### 사용기술
 
 크게 사용된 외부 API는 다음과 같다.
 
 1. Discord Bot API
 2. Notion API
 
-## 개발환경
+### 개발환경
 
 개발 환경은 다음과 같다.
 
@@ -28,7 +28,7 @@ tags: [Personal Project, Discord, Discord Bot, Notion, Notion API]
 3. VS Code
 
 
-# 디스코드 봇 개요
+## 디스코드 봇 개요
 
 만들고자 하는 봇은 이직 준비를 위한 과정에서 한가지 생각한 것이 있었다.
 물론 서비스 성은 거의 없지만 아래와 같다.
@@ -37,7 +37,7 @@ tags: [Personal Project, Discord, Discord Bot, Notion, Notion API]
 - 사용자는 명령어를 통해 봇에게 인터뷰 시작 및 다음, 중지와 같은 상호작용을 한다.
 - 봇은 이를 통해 인터뷰 문제를 제공하고, 답변을 제공하며 몇 개의 질의응답을 했는지 출력해준다.
 
-## 봇의 기능
+### 봇의 기능
 
 1. ! help 명령어를 통해 도움말을 제공한다.
 2. ! start 명령어를 통해 인터뷰를 시작한다
@@ -48,7 +48,7 @@ tags: [Personal Project, Discord, Discord Bot, Notion, Notion API]
 5. ! fin 명령어를 통해 인터뷰를 종료하고 결과를 조회한다.
     - 결과는 총 몇 문항이고, 몇개의 질의응답을 진행했는지 출력한다.
 
-## 봇 서비스 시 알고 있어야 하는 점
+### 봇 서비스 시 알고 있어야 하는 점
 
 디스코드 봇은 파이썬으로 코딩하면, 해당 파이썬 파일을 실행 하고 있어야만
 봇이 온라인 상태가 되며, 명령 및 기타 처리가 가능하다.
@@ -59,7 +59,7 @@ tags: [Personal Project, Discord, Discord Bot, Notion, Notion API]
 따라서, 해당 파이썬 파일을 상시로 실행하고 있어야 하는 서버가 필요하다.
 나의 경우, 홈 서버가 있어 해당 서버에 Docker를 통해 파일을 실행시켜놓고 서비스 할 생각이다.
 
-# 1차 개발 진행
+## 1차 개발 진행
 
 1차 개발 진행의 목표는 핵심 기능 개발이다.
 핵심 기능 개발의 목표는 다음과 같다.
@@ -77,13 +77,13 @@ tags: [Personal Project, Discord, Discord Bot, Notion, Notion API]
 
 2. [디스코드 채널에 메세지 전달하기](https://chiptune93.github.io/python/discord-bot-message/)
 
-## discord.py 를 통한 봇 만들기
+### discord.py 를 통한 봇 만들기
 
 처음에 진행할 때, 많이 사용하는 discord.py 라이브러리를 통한 개발을 진행했다.
 전체적인 코딩 스타일은 아래와 같았다.
 
 ```python
-# bot.py
+## bot.py
 import os
 
 import discord
@@ -222,7 +222,7 @@ client.run(TOKEN)
 
 그래서 다른 방법이 없나 찾아보던 도중 다른 방식이 있는 것을 알게 되었다.
 
-## bot command pattern
+### bot command pattern
 
 아래의 링크에서 도움을 얻었다.
 
@@ -233,7 +233,7 @@ client.run(TOKEN)
 해당 커맨드 패턴을 통해 개발하면 코드가 아래와 같이 편하게 변경된다.
 
 ```python
-# bot.py
+## bot.py
 import os
 
 import discord
@@ -244,13 +244,13 @@ import random
 import time
 
 intents = discord.Intents.all()
-# 사용자가 입력하는 명령어의 프리픽스를 설정한다.
-# 여기서 '! '가 되어있으면 사용자는 '! 명령어' 를 입력해야 봇이 반응한다.
+## 사용자가 입력하는 명령어의 프리픽스를 설정한다.
+## 여기서 '! '가 되어있으면 사용자는 '! 명령어' 를 입력해야 봇이 반응한다.
 prefix = "! "
-# 봇 초기화
+## 봇 초기화
 bot = commands.Bot(command_prefix=prefix, intents=intents)
-# 봇에는 기본적으로 헬프 명령어가 잡혀져 있어 따로 'help' 명령어를 구현하고자 한다면
-# 봇에서 제거를 해주어야 한다.
+## 봇에는 기본적으로 헬프 명령어가 잡혀져 있어 따로 'help' 명령어를 구현하고자 한다면
+## 봇에서 제거를 해주어야 한다.
 bot.remove_command('help')
 
 @bot.event
@@ -342,9 +342,9 @@ bot.run(os.getenv('DISCORD_BOT_TOKEN'))
 3. 요청에 따른 응답 보내기
 
 
-# 2차 개발 진행 및 마무리
+## 2차 개발 진행 및 마무리
 
-## 마무리 소스 정리 및 문서 작성
+### 마무리 소스 정리 및 문서 작성
 
 - [소스 전체 레파지토리](https://github.com/Chiptune93/Interview-Discord-Bot) 
 

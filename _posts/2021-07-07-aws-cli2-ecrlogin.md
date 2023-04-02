@@ -1,14 +1,14 @@
 ---
 title: AWS CLI 2.0 ECR get-login-password 인증 문제
-categories: [AWS]
+categories: [Cloud, AWS]
 tags: [AWS, ECR, ECR Login, get login password]
 ---
 
-## 문제
+### 문제
 
 AWS CLI 2.0 버전에서 aws ecr get-login-password 사용 시, 인증 구간에서 401 권한 없음 에러 발생.
 
-## 해결
+### 해결
 
 AWS CLI 계정이 MFA 인증 ( 구글 인증기 등 ) 을 사용 중이라면, 해당 인증 토큰 세션이 있어야 권한 에러가 발생하지 않음.
 

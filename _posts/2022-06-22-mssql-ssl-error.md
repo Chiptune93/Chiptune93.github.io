@@ -1,16 +1,16 @@
 ---
 title: MS-SQL - 드라이버가 SSL(Secure Sockets Layer) 암호화를 사용하여 SQL Sever로 보안 연결을 설정할 수 없습니다.
-categories: [Error]
+categories: [Etc, Error]
 tags: [mssql, mssql ssl, ssl error, pkix error]
 ---
 
-## 문제
+### 문제
 
 JDK 11 버전 이상 사용하는 프로젝트에서 MSSQL 연결 시도 시 아래의 메세지 출력.
 
 > 드라이버가 SSL(Secure Sockets Layer) 암호화를 사용하여 SQL Sever로 보안 연결을 설정할 수 없습니다. 오류: "PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target"
 
-## 원인
+### 원인
 
 jdk11 을 지원하는 mssql 드라이버 버전(10.2이상)부터 기본적으로 암호화를 사용하도록 변경됨.
 <br/> [관련 링크](https://docs.microsoft.com/en-us/sql/connect/jdbc/release-notes-for-the-jdbc-driver?view=sql-server-ver16)

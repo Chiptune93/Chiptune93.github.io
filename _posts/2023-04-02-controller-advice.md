@@ -1,12 +1,12 @@
 ---
 title: ControllerAdvice, ExceptionHandler Annotation
-categories: [Spring]
+categories: [Backend, Spring]
 tags: [Spring, SpringBoot, ControllerAdvice, ExceptionHandler]
 ---
 
-# **ControllerAdvice && ExceptionHandler**
+## **ControllerAdvice && ExceptionHandler**
 
-## @ExceptionHandler
+### @ExceptionHandler
 
 예를 들어, 서비스에서 발생하는 예외를 처리하기 위해 UserServiceException 클래스를 정의하고, UserController 클래스에서 이 예외를 처리하고자 할 때 다음과 같이 코드를 작성할 수 있습니다.
 
@@ -47,7 +47,7 @@ public class UserController {
 
 위의 예제에서는 @ExceptionHandler 어노테이션을 이용하여 UserServiceException을 처리하는 handleUserServiceExceptions 메서드를 정의하였습니다. 이렇게 각 컨트롤러에서 예외 처리를 정의하면 코드의 중복이 발생할 수 있습니다.
 
-## @ContollerAdvice
+### @ContollerAdvice
 Spring Framework에서는 @ControllerAdvice와 @ExceptionHandler 어노테이션을 이용하여 예외 처리를 분리하고 통합할 수 있습니다.
 
 @ControllerAdvice 어노테이션은 전역적으로 예외 처리를 담당하는 클래스를 정의할 때 사용됩니다. 즉, 해당 클래스에서 예외 발생 시 처리할 수 있습니다. 

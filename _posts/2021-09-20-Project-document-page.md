@@ -1,20 +1,20 @@
 ---
 title: Document Page
-categories: [Project]
+categories: [Etc, Project]
 tags: [spa, project]
 ---
 
-# 1. 개요
+## 1. 개요
 
-## 1. 필요성
+### 1. 필요성
 
 함수나, 기타 정리가 필요한 부분이 생겼을 때, 보통 문서나 스프레드 시트에 저장하는 것이 보통이었는데 이렇다 보니 체계적으로 정리가 되지 않을 뿐더러, 찾기가 힘들고 평소에 어떤 내용이 담겨져 있는지 확인이 불가능 하였다. 개인적인 용도나 혹은 사내에 공유하기 위한 API Developer Document 처럼 정리할 수 있는 서비스가 있으면 좋겠다고 생각하였다.
 
-## 2. 목적
+### 2. 목적
 
 목적은 필요성과 같은 맥락으로, 정리가 필요한 함수나 기타 클래스 등을 정리하여 빠르게 내부 인원에게 공유하거나 외부 인원에게 공유가 가능하도록 프로젝트 별 혹은 프레임워크 별로 정리된 문서를 작성 및 공유 하기 위함이다.
 
-## 3. 사용 기술 스택
+### 3. 사용 기술 스택
 
 - Front : HTML & Vue.js
 
@@ -22,7 +22,7 @@ tags: [spa, project]
 
 - DB : RDB ( MYSQL / ORACLE ) or etc.
 
-## 4. 서비스 구조 (초안)
+### 4. 서비스 구조 (초안)
 
 ![1-1](/assets/img/Project/1-1.png)
 
@@ -34,7 +34,7 @@ Spring Boot Framework 구성 시, 트랜잭션과 스프링 시큐리티 정도�
 
 위 개념을 가지고 접근해볼 생각이며, 화면설계 부터 차근차근 진행해볼 예정이다.
 
-# 2. 간단한 화면 설계
+## 2. 간단한 화면 설계
 
 간단하게 생각났던 아이디어 및 화면 내용을 간단하게 파워포인트로 설계해보았다.
 
@@ -60,7 +60,7 @@ Spring Boot Framework 구성 시, 트랜잭션과 스프링 시큐리티 정도�
 
 ![1-11](/assets/img/Project/1-11.png)
 
-# 3. Spring Boot 기반 프로젝트 진행
+## 3. Spring Boot 기반 프로젝트 진행
 
 프로젝트에 DB를 연동해야 해서, 고민을 해본 결과 ...
 
@@ -77,7 +77,7 @@ DB는 ORACLE 이며, 우선 ORACLE 로 연결 되는 부분을 확인 후에, MY
 
 DB 환경은 HikariCP를 이용하여 Oracle 과 Connection 을 맺고, log4j 를 통해 DB 로그를 출력하는 것으로 하였다. 그리고, DB mapper 연동은 MyBatis 를 통해 진행한다.
 
-## 1. 필요 Dependency 추가.
+### 1. 필요 Dependency 추가.
 
 ```gradle
 // https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter
@@ -92,11 +92,11 @@ implementation group: 'com.oracle.database.jdbc', name: 'ojdbc8', version: '21.1
 
 DB 커넥션을 위해서는 ojdbc 또한 필요하다. 버전마다 지원하는 JDK 버전이 다르니 확인이 필요하다.
 
-## 2. application.yml 작성
+### 2. application.yml 작성
 
 보통 프로젝트 생성 후에는 application.properties 로 되어있지만, 편의를 위해 yml 파일로 바꾸었다. 그대로 properties 로 진행해도 상관 없으나, 표기법이 다르다.
 
-# /resource/application.yml
+## /resource/application.yml
 
 ```yml
 spring:
@@ -115,25 +115,25 @@ spring:
 
 DB연결 정보를 작성한다.
 
-## 3. log4j properties 작성
+### 3. log4j properties 작성
 
 log4j 프로퍼티를 작성한다. 자세한 건 모르겠으나, 보통 이렇게 세팅하고 써서 그대로 가져왔다.
 
-# /resource/log4j. log4jdbc.log4j2.properties.yml
+## /resource/log4j. log4jdbc.log4j2.properties.yml
 
 ```yml
 log4jdbc.spylogdelegator.name = net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator
 log4jdbc.dump.sql.maxlinelength = 0
 
-#Disable - Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+## isable - Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
 log4jdbc.auto.load.popular.drivers = false
 ```
 
-## 4. logback 작성
+### 4. logback 작성
 
 로그를 어떤 형식으로 어떻게 출력할 것이며, 로그 레벨을 지정한다.
 
-# /resource/logback-spring.xml
+## /resource/logback-spring.xml
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -165,11 +165,11 @@ log4jdbc.auto.load.popular.drivers = false
 </configuration>
 ```
 
-## 5. mybatis config 작성
+### 5. mybatis config 작성
 
 Mybatis 설정을 작성한다. 필요한 옵션만 검색하여 작성하였다.
 
-# /resource/mybatis/mybatis-config.xml
+## /resource/mybatis/mybatis-config.xml
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -185,13 +185,13 @@ Mybatis 설정을 작성한다. 필요한 옵션만 검색하여 작성하였다
 </configuration>
 ```
 
-## 6. DB config java 파일 작성
+### 6. DB config java 파일 작성
 
 실제로 커넥션 시, 사용할 DataSource 와 Sql Session Template 을 사용하도록 작성한다.
 
 mapper 와 설정 파일 경로를 지정하여 불러오고 찾을 수 있도록 한다.
 
-# {package-dir}/config/DBconfig.java
+## {package-dir}/config/DBconfig.java
 
 ```java
 import javax.sql.DataSource;
@@ -248,7 +248,7 @@ public class DatabaseConfig {
 
 https://github.com/Chiptune93/Library/tree/main/Spring/QuickStart/SpringBoot/JDK11/Mybatis%2BHikariCP%2BOracle
 
-# 4. 프로젝트 완성 및 운영환경 결정
+## 4. 프로젝트 완성 및 운영환경 결정
 
 프로젝트 기능 구성을 끝내고, 퍼블 작업을 부탁했다. 생각보다 심플하게 나와서 화면 설계 만큼 복잡하게 구성하지 않아도 되었고
 
@@ -304,7 +304,7 @@ docker push api:1.0
 
 추가적으로, 이번 프로젝트를 운영에 올리면서 nginx를 올려서 여러개 프로젝트를 운영할 수 있게 하는 것을 내부에서 제안하셔서 그것도 고려해보게 되었다. 아마 다음번 개인 프로젝트를 진행하게 된다면 고려해보아야 겠다.
 
-# 5. 완료 및 공유
+## 5. 완료 및 공유
 
 https://github.com/Chiptune93/DocumentsPage
 

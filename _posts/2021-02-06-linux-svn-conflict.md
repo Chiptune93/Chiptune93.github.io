@@ -1,6 +1,6 @@
 ---
 title: Linux - Svn Conflict Option
-categories: [Etc]
+categories: [Etc, Issue & Info]
 tags: [Linux, Svn, conflict]
 ---
 

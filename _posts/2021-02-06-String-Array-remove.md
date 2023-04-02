@@ -1,6 +1,6 @@
 ---
 title: Javascript - String Array 내 빈 요소 제거하기
-categories: [category]
+categories: [Frontend, Scripts]
 tags: [tag]
 ---
 

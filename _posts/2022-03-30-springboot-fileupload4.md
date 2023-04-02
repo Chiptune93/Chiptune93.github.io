@@ -1,6 +1,6 @@
 ---
 title: Spring Boot - 파일 업로드 만들기 -4-
-categories: [Spring]
+categories: [Backend, Spring]
 tags: [fileupload, springboot, springboot fileupload]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: DynamoDB - 파티션 키/정렬 키/필터 정리
-categories: [AWS]
+categories: [Cloud, AWS]
 tags: [AWS, DynamoDB, DynamoDB Key]
 ---
 

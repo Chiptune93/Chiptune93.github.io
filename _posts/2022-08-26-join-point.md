@@ -1,11 +1,11 @@
 ---
 title: Spring AOP Joinpoint 와 ProceedingJoinPoint
-categories: [Spring]
+categories: [Backend, Spring]
 tags: [Spring, SpringBoot, AOP]
 ---
 
 
-## Joinpoint
+### Joinpoint
 
 joinpoint는 메서드 매개변수, 리턴 값, throw 된 예외 같은 조인 지점에서 사용할 수 있는 상태에 대한 액세스를 제공하는
 AspectJ 인터페이스 이다.
@@ -20,7 +20,7 @@ AspectJ 인터페이스 이다.
 - @AfterThrowing : 메소드가 "정상" 실행 후, 실행.
 - @AfterReturning : 메소드가 "예외" 발생 후, 실행.
 
-## Example For SpringBoot
+### Example For SpringBoot
 ```java
 @Aspect
 @Component
@@ -39,7 +39,7 @@ public class aop {
 }
 ```
 
-## ProceedingJoinPoint
+### ProceedingJoinPoint
 
 JoinPoint의 확장으로, proceed() 라는 메소드를 추가 사용할 수 있습니다.
 해당 메소드가 실행되게 되면, 다음 어드바이스 혹은 대상 메소드를 실행합니다.
@@ -47,7 +47,7 @@ JoinPoint의 확장으로, proceed() 라는 메소드를 추가 사용할 수 �
 코드의 흐름을 제어하고, 추가 호출을 진행할 지 여부를 결정할 수 있는 권한을 제공합니다.
 @Around 를 사용할 때 사용 가능합니다.
 
-## Example For SpringBoot
+### Example For SpringBoot
 ```java
 @Aspect
 @Component

@@ -1,10 +1,10 @@
 ---
 title: Notion API - Query Database (Simple)
-categories: [Etc]
+categories: [Etc, Issue & Info]
 tags: [Notion, Notion API]
 ---
 
-# Notion Database 생성
+## Notion Database 생성
 
 1. 디스코드 페이지에서 데이터베이스를 만들기
 ![이미지](/assets/img/Etc/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-01-23%20%EC%98%A4%EC%A0%84%201.56.04.png)
@@ -18,7 +18,7 @@ tags: [Notion, Notion API]
 4. 주소 표시창의 URL 데이터를 복사하여 가지고 있는다. (추후, 데이터베이스를 가져올 때 사용 됨)
 ![이미지4](/assets/img/Etc/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-01-23%20%EC%98%A4%EC%A0%84%201.57.33.png)
 
-# Notion Integrations 생성
+## Notion Integrations 생성
 
 1. https://www.notion.so/my-integrations 로 접속하여 인테그레이션을 조회한다.
 ![이미지5](/assets/img/Etc/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-01-23%20%EC%98%A4%EC%A0%84%202.03.36.png)
@@ -32,7 +32,7 @@ tags: [Notion, Notion API]
 4. API 키를 '표시' 버튼을 누르면 값이 나오는데 해당 값을 저장하여 가지고 있는다. (조회 시, 키 값 사용을 위함)
 ![이미지8](/assets/img/Etc/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-01-23%20%EC%98%A4%EC%A0%84%202.05.20.png)
 
-# Integration 과 Database를 연결
+## Integration 과 Database를 연결
 
 1. 데이터베이스 상세보기 화면에서 우측 상단의 더보기를 클릭하여 '연결 추가' 를 클릭해
 방금 생성한 인테그레이션을 조회 후, 클릭한다.
@@ -45,7 +45,7 @@ tags: [Notion, Notion API]
 해당 작업을 통해 인테그레이션이 데이터베이스에 접근 권한을 가짐으로써, 인테그레이션 API 키를 통해 해당 데이터베이스에 액세스 하고 자료를 조회할 수 있게 된다.
 ![이미지11](/assets/img/Etc/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-01-23%20%EC%98%A4%EC%A0%84%202.10.40.png)
 
-# request 를 통해 데이터 베이스의 데이터를 가져오기
+## request 를 통해 데이터 베이스의 데이터를 가져오기
 
 해당 데이터베이스의 데이터를 가져오는 샘플 코드는 파이썬을 통해 가져오는 방법을 사용한다.
 샘플 코드는 아래와 같다.
@@ -58,21 +58,21 @@ tags: [Notion, Notion API]
 ```python
 import requests
 
-# Intergration API Token
+## Intergration API Token
 t = '{아까 위에서 저장한 인테그레이션 토큰 값}'
-# Database query base url
+## Database query base url
 b = "https://api.notion.com/v1/databases/"
-# Database id
+## Database id
 d = "{데이터베이스 아이디}"
-# header
+## header
 header = {"Authorization": t, "Notion-Version": "2022-06-28"}
-# query 조건문
+## query 조건문
 query = {"filter": ""}
 
-# request 라이브러리로 요청.
+## request 라이브러리로 요청.
 response = requests.post(b + d + "/query", headers=header, data=query)
 print(response.json()["results"])
-# 결과 조회 및 파싱
+## 결과 조회 및 파싱
 dataLen = len(response.json()["results"])
 data = []
 
@@ -84,10 +84,10 @@ for q in response.json()["results"]:
     data.append(row)
 
 print("데이터 가져온 결과 -> ", data)
-# 데이터 가져온 결과 ->  [['테스트3', '태그', '테스트 용 데이터3'], ['테스트2', '태그', '테스트 용 데이터2'], ['테스트1', '태그', '테스트 용 데이터1']]
+## 데이터 가져온 결과 ->  [['테스트3', '태그', '테스트 용 데이터3'], ['테스트2', '태그', '테스트 용 데이터2'], ['테스트1', '태그', '테스트 용 데이터1']]
 ```
 
-# 가져온 데이터를 파싱하여 원하는 항목을 가져오기
+## 가져온 데이터를 파싱하여 원하는 항목을 가져오기
 
 테스트로 만든 데이터를 조회하였을 때 아래와 같은 구조를 띈다.
 물론 어떻게 만들었냐에 따라서 형식은 달라진다.

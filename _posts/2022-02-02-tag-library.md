@@ -1,17 +1,17 @@
 ---
 title: Spring Boot - Tag Library 사용하기
-categories: [Spring]
+categories: [Backend, Spring]
 tags: [tag library, SpringBoot]
 ---
 
-## 1. TagLibrary build.gradle 추가
+### 1. TagLibrary build.gradle 추가
 
 ```gradle
 // taglibs
 implementation group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.5'
 ```
 
-## 2. tld 설정 파일 추가
+### 2. tld 설정 파일 추가
 
 WEB-INF/tlds 폴더에 사용할 커스텀 태그 라이브러리 파일 생성
 
@@ -34,7 +34,7 @@ WEB-INF/tlds 폴더에 사용할 커스텀 태그 라이브러리 파일 생성
 </taglib>
 ```
 
-## 3. 사용예시
+### 3. 사용예시
 
 사용하고자 하는 jsp 파일 내부 상단에 선언하여 사용
 

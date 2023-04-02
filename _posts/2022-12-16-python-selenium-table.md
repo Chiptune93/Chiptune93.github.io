@@ -1,12 +1,12 @@
 ---
 title: Python - Selenium Table Parsing
-categories: [Python]
+categories: [Frontend, Python]
 tags: [Selenium, Table, Table Parsing, Python, 파이썬]
 ---
 
-# Selenium 라이브러리에서 테이블 파싱하기
+## Selenium 라이브러리에서 테이블 파싱하기
 
-## 테이블 구조 파악
+### 테이블 구조 파악
 
 - 다음과 같은 HTML 테이블이 있다고 가정
 
@@ -54,16 +54,16 @@ driver = webdriver.Chrome(
 driver.get(
     "https://www.geeksforgeeks.org/find_element_by_link_text-driver-method-selenium-python/")
 
-# 요소 로딩 대기
+## 요소 로딩 대기
 sleep(2)
   
-# row의 개수를 1 + 요소의 길이로 파악한다 -> 전체 개수
+## row의 개수를 1 + 요소의 길이로 파악한다 -> 전체 개수
 rows = 1+len(driver.find_elements(By.XPATH, "/html/body/div[3]/div[2]/div/div[1]/div/div/div/article/div[3]/div/table/tbody/tr"))
   
-# column의 개수는 1+ 요소의 길이로 파악한다 -> 전체 개수
+## column의 개수는 1+ 요소의 길이로 파악한다 -> 전체 개수
 cols = len(driver.find_elements(By.XPATH, "/html/body/div[3]/div[2]/div/div[1]/div/div/div/article/div[3]/div/table/tbody/tr[1]/td"))
   
-# 행과 열의 수로 2중 반복을 통해 요소의 값을 가져온다.
+## 행과 열의 수로 2중 반복을 통해 요소의 값을 가져온다.
 for r in range(2, rows+1):
     for p in range(1, cols+1):
         

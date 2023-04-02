@@ -1,6 +1,6 @@
 ---
 title: MYSQL - CSV 파일에서 데이터 가져오기 시, 설정
-categories: [Database]
+categories: [Backend, Database]
 tags: [mysql, csv data, csv data load]
 ---
 

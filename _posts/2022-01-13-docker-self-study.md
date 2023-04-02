@@ -1,11 +1,11 @@
 ---
 title: Docker 자습서 정리
-categories: [Docker]
+categories: [Cloud, Docker]
 tags: [Docker, MS docker self study]
 ---
 
 
-# 1부 : 시작
+## 1부 : 시작
 
 > 컨테이너?
 
@@ -25,7 +25,7 @@ docker run -d -p 80:80 docker/getting-started
 - -d : 백그라운드에서 분리 모드로 컨테이너를 실행.
 - -p : 호스트의 포트 80을 컨테이너 포트 80에 연결
 
-# 2부 : 애플리케이션
+## 2부 : 애플리케이션
 
 앱 컨테이너 이미지 빌드, 빌드를 위해선 Dockerfile 이란게 필요하다.
 
@@ -70,7 +70,7 @@ docker build -t getting-started .
 docker run -dp 3000:3000 getting-started
 ```
 
-# 3부 : 앱 업데이트
+## 3부 : 앱 업데이트
 
 CLI를 사용한 컨테이너 제거
 
@@ -83,7 +83,7 @@ docker ps
 > Docker Stop
 
 ```
-# Swap out <the-container-id> with the ID from docker ps
+## Swap out <the-container-id> with the ID from docker ps
 docker stop <the-container-id>
 ```
 
@@ -96,7 +96,7 @@ docker rm <the-container-id>
 docker rm 명령에 “force” 플래그를 추가하면 단일 명령으로 컨테이너를 중지하고 제거할 수 있습니다.
 예: docker rm -f <the-container-id>
 
-# 4부 : 앱 공유
+## 4부 : 앱 공유
 
 > 이미지 푸시 - Docker Hub
 
@@ -143,7 +143,7 @@ Play With Docker 라는 사이트에서 새로운 환경을 구성하여 테스�
 위 처럼 3000배지가 뜨면 running이 성공적으로 이루어 진 것. 이후 해당 배지 클릭을 통해 구동 중인 모습을 확인 가능하다.
 \*\* Apple M1 칩을 사용하는 모델의 경우 Docker 이미지 빌드 시, 해당 호스트의 환경인 linux/arm64/v8 로 빌드되게 된다. 따라서 위 사이트에서 이미지를 구동하기 위해서는 Docker build 명령 시 "--platform linux/amd64" 키워드를 추가하여 빌드하면 해당 환경으로 빌드된다.
 
-# 5부 : 데이터 유지
+## 5부 : 데이터 유지
 
 > 컨테이너 파일 시스템
 
@@ -185,7 +185,7 @@ Mountpoint가 디스크에서 데이터가 저장되는 실제 위치입니다.
 
 \*\* Docker Desktop에서 실행되는 동안 Docker Desktop의 볼륨 데이터에 직접 액세스 하는 Docker 명령은 실제로 머신의 작은 VM 내에서 실행됩니다. Mountpoint 디렉터리의 실제 내용을 확인하려면 먼저 VM 내부에 액세스해야 합니다. WSL 2에서는 WSL 2 배포판 내에 있으며, 파일 탐색기를 통해 액세스할 수 있습니다.
 
-# 6부 : 바인드 탑재 사용
+## 6부 : 바인드 탑재 사용
 
 바인드 탑재 를 사용하면 호스트의 탑재 지점을 정확하게 제어할 수 있습니다. 이 유형은 데이터 유지뿐 아니라 컨테이너에 추가 데이터를 제공하는 데에도 사용됩니다. 애플리케이션 작업 시 바인드 탑재를 사용하여 소스 코드를 컨테이너에 탑재하면 변경 내용을 즉시 확인할 수 있으며, 컨테이너가 코드 변경을 확인하고 응답하게 할 수 있습니다.
 
@@ -222,7 +222,7 @@ docker run -dp 3000:3000 -w /app -v ${PWD}:/app node:12-alpine sh -c "apk add --
 
 6. 새로운 볼륨은 컨테이너로 내용을 미리 채울 수 있다.
 
-# 7부 : 다중 컨테이너 앱
+## 7부 : 다중 컨테이너 앱
 
 > 컨테이너 네트워킹
 
@@ -294,7 +294,7 @@ docker run -dp 3000:3000 \
 
 앱 러닝 후, 접속하여 몇개의 아이템을 저장합니다. 이후, 다시 MySQL을 실행하여 데이터 베이스를 확인하면 todo에서 입력한 데이터들이 저장되는 것을 확인할 수 있습니다.
 
-# 8부 : Docker Compose 사용
+## 8부 : Docker Compose 사용
 
 Docker Compose는 다중 컨테이너 애플리케이션을 정의하고 공유할 수 있도록 개발된 도구입니다. Compose에서 서비스를 정의하는 YAML 파일을 만들고, 단일 명령을 사용하여 모두 실행하거나 모두 종료할 수 있습니다.
 
@@ -313,10 +313,10 @@ docker-compose version
 프로젝트 루트에 docker-compose.yml 이라는 파일 생성하여 다음과 같이 지정
 
 ```yml
-# 스키마 버전 정의. 최신을 사용하는 것이 가장 좋다.
+## 스키마 버전 정의. 최신을 사용하는 것이 가장 좋다.
 version: "3.7"
 
-# 서비스 목록 정의
+## 서비스 목록 정의
 services:
   # 앱 서비스 정의
   app:
@@ -399,7 +399,7 @@ vscode에서 docker 확장을 보면 스택 확인이 가능하다.
 
 모두 종료할 준비가 되었으면 docker-compose down을 실행하거나 VS Code Docker 확장의 컨테이너 목록에서 애플리케이션을 마우스 오른쪽 단추로 클릭하고 Compose 종료 를 선택합니다. 컨테이너가 중지되고 네트워크가 제거됩니다.
 
-# 9부 : 이미지 계층화
+## 9부 : 이미지 계층화
 
 > 이미지 계층 확인
 
@@ -419,7 +419,7 @@ Dockerfile의 각 명령이 계층이 되는것 임을 확인 했으니, 계층�
 FROM node:12-alpine
 RUN apk add --no-cache python2 g++ make
 WORKDIR /app
-# 종속성 카피
+## 종속성 카피
 COPY package.json yarn.lock ./
  COPY . .
 RUN apk --no-cache --virtual build-dependencies add \
@@ -439,14 +439,14 @@ CMD ["node", "src/index.js"]
 Maven/Tomcat 예제
 
 ```dockerfile
-# 첫번째 단계. 빌드단계에서만 JDK 필요, 여기서 수행.
+## 첫번째 단계. 빌드단계에서만 JDK 필요, 여기서 수행.
 FROM maven AS build
 WORKDIR /app
 COPY . .
 RUN mvn package
 
-# 두번째 단계. 빌드된 결과물을 톰캣 디렉터리로 복사.
-# 이 단계가 마지막이므로, 최종 빌드되는 이미지는 이 단계의 결과물임.
+## 두번째 단계. 빌드된 결과물을 톰캣 디렉터리로 복사.
+## 이 단계가 마지막이므로, 최종 빌드되는 이미지는 이 단계의 결과물임.
 FROM tomcat
 COPY --from=build /app/target/file.war /usr/local/tomcat/webapps
 ```
@@ -454,7 +454,7 @@ COPY --from=build /app/target/file.war /usr/local/tomcat/webapps
 React 예제
 
 ```dockerfile
-# 첫번째 단계. 이 단계에서 빌드 수행
+## 첫번째 단계. 이 단계에서 빌드 수행
 FROM node:12 AS build
 WORKDIR /app
 COPY package* yarn.lock ./
@@ -463,14 +463,14 @@ COPY public ./public
 COPY src ./src
 RUN yarn run build
 
-# 두번째 단계. 이 단계에서 nginx에 빌드된 결과물을 옮김.
+## 두번째 단계. 이 단계에서 nginx에 빌드된 결과물을 옮김.
 FROM nginx:alpine
 COPY --from=build /app/build /usr/share/nginx/html
 ```
 
 즉, 빌드 단계에만 필요한 도구들을 전부 이미지에 포함시키지 않고, 빌드 수행 후 이미지에는 포함 시키지 않아 이미지의 용량을 크게 줄일 수 있다. 위 두가지 예제로 보면, 빌드 후의 결과물만 WAS에 옮기고 이미지를 생성하여 이미지 크기를 크게 줄인 것을 알 수 있다.
 
-# 10부 : 클라우드에 배포
+## 10부 : 클라우드에 배포
 
 클라우드에 배포하기 위해서는 클라우드 컨텍스트가 필요. 현재까지 사용한 것은 기본 docker 컨텍스트임.
 

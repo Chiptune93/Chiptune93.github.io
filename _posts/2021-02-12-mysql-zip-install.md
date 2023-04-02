@@ -1,18 +1,18 @@
 ---
 title: MySQL - mysql-8.0.23-winx64.zip 설치 및 실행하기
-categories: [Database]
+categories: [Backend, Database]
 tags: [mysql, mysql install, mysql zip install]
 ---
 
-## 1. MYSQL COMMUNITY SERVER ZIP 파일 다운로드
+### 1. MYSQL COMMUNITY SERVER ZIP 파일 다운로드
 
 [dev.mysql.com/downloads/mysql/](dev.mysql.com/downloads/mysql/)
 
-## 2. 다운받은 파일을 적당한 경로에 압축 해제 ( 이하 "경로" )
+### 2. 다운받은 파일을 적당한 경로에 압축 해제 ( 이하 "경로" )
 
 ![mysqlzip1](/assets/img/Database/mysqlzip1.png)
 
-## 3. cmd 창을 관리자 권한 실행 후, 설치 실행
+### 3. cmd 창을 관리자 권한 실행 후, 설치 실행
 
 ![mysqlzip2](/assets/img/Database/mysqlzip2.png)
 
@@ -30,7 +30,7 @@ tags: [mysql, mysql install, mysql zip install]
 
 ![mysqlzip3](/assets/img/Database/mysqlzip3.png)
 
-## 4. mysql 서비스 실행 후, root 접속 및 비밀번호 변경
+### 4. mysql 서비스 실행 후, root 접속 및 비밀번호 변경
 
 임시비밀번호는 말그대로 임시이기 때문에 접속 후, root 패스워드를 변경해야 함.
 
@@ -42,7 +42,7 @@ alter user 'root'@'localhost' identified by '변경할비밀번호';
 
 를 통해 비밀번호 변경.
 
-## 5. 서비스 시작 및 종료 배치파일 생성
+### 5. 서비스 시작 및 종료 배치파일 생성
 
 아래는 내 환경 기준의 배치파일 명령어.
 

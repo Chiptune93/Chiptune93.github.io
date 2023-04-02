@@ -1,6 +1,6 @@
 ---
 title: 구글 로그인 API 연동 시, 에러 발생 및 해결(Web Service)
-categories: [Error]
+categories: [Etc, Error]
 tags: [Error, Google Login Api]
 ---
 
@@ -9,7 +9,7 @@ tags: [Error, Google Login Api]
 
 기존 연동 글 : lucete-stellae.tistory.com/5?category=905216
 
-## 1. 로그인과 회원가입 분리 상황에서의 구글 로그인 버튼
+### 1. 로그인과 회원가입 분리 상황에서의 구글 로그인 버튼
 
 위 글과 구글 API 문서에서 제공하는 예제를 구성하는 경우, 한 페이지에 로그인 버튼 및 로그아웃 버튼이 동시에 존재하게 됩니다.
 
@@ -106,7 +106,7 @@ function onSuccess(googleUser) {
 
 이렇게 되면 중복 호출 문제 뿐만 아니라 로그인 후, 로그아웃도 서비스에서만 로그아웃 시키면 끝나게 됩니다.
 
-## 2. gapi Cannot read Property 'style' of null
+### 2. gapi Cannot read Property 'style' of null
 
 제일 삽질 많이한 문제로써 버튼을 2개이상 만드니 동작을 아예 안하는 문제가 생겼습니다.
 
@@ -127,7 +127,7 @@ function onSuccess(googleUser) {
 
 아래는 제가 사용한 코드입니다.
 
-### 로그인 페이지 html
+##### 로그인 페이지 html
 
 ```js
 <script src="https://apis.google.com/js/platform.js?onload=renderButtonLogin" async defer></script>
@@ -172,7 +172,7 @@ function onSuccess(googleUser) {
 <!-- 로그인 버튼 -->
 ```
 
-### 회원가입 페이지 html
+##### 회원가입 페이지 html
 
 ```js
 <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>

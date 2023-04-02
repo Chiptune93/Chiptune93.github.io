@@ -1,6 +1,6 @@
 ---
 title: Spring Multi DataSource - Read / Write Dynamic DataSource
-categories: [Spring]
+categories: [Backend, Spring]
 tags: [spring, datasource, dynamic datasouce]
 ---
 
@@ -11,7 +11,7 @@ AWS 사용 중, READ 와 READ/WRITE DB가 분리되면서, 현재 사용중인 1
 https://taes-k.github.io/2020/03/11/sprinig-master-slave-dynamic-routing-datasource/
 https://mudchobo.github.io/posts/spring-boot-jpa-master-slave
 
-## 1. SQLConfig.java
+### 1. SQLConfig.java
 
 ```java
 package com.test;
@@ -106,7 +106,7 @@ public class PostgreSQLConfig {
 
 - DependsOn : 스프링 순환 오류 발생 시, 의존성 순서를 지정하여 순환 오류가 발생하지 않도록 명시, DependsOn 뒤에 오는 Name 을 갖는 빈 주입 후, 다음 순서로 주입되게끔 함.
 
-## 2. RoutingDataSource.java
+### 2. RoutingDataSource.java
 
 ```java
 package com.test.config;
@@ -135,7 +135,7 @@ public class PostgreSQLRoutingDataSource extends AbstractRoutingDataSource {
 }
 ```
 
-## 3. application.yml
+### 3. application.yml
 
 ```yml
 
