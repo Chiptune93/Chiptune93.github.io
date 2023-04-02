@@ -1,18 +1,11 @@
 ---
-layout: post
 title: Java this vs this()
-description: >
-  자바 this 메소드의 활용방법
-
-hide_last_modified: true
+author: Chiptune93
+date: 2023-04-02 13:23:30
 categories: [Java]
 tags: [Java, this, this(), constructor]
-published: true
+pin: false
 ---
-
-- Table of Contents
-{:toc .large-only}
-
 
 # **this vs this()**
 
