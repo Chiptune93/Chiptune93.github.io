@@ -110,16 +110,6 @@
 
   <script src="{{ site.data.assets[origin].jquery.js | relative_url }}"></script>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N6KPDZJCZT"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-N6KPDZJCZT');
-  </script>
-
   {% unless site.theme_mode %}
     {% include mode-toggle.html %}
   {% endunless %}
