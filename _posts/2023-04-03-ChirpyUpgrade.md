@@ -1,5 +1,5 @@
 ---
-title: Java this vs this()
+title: Chirpy Theme 적용 시, 참고사항
 categories: [Etc, Issue & Info]
 tags: [jekyll, chirpy, chirpy theme]
 ---
