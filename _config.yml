@@ -150,7 +150,9 @@ defaults:
   - scope:
       path: _drafts
     values:
-      comments: false
+      layout: post
+      comments: false    # Enable comments in posts.
+      toc: true  
   - scope:
       path: ""
       type: tabs # see `site.collections`

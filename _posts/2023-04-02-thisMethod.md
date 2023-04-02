@@ -2,6 +2,9 @@
 title: Java this vs this()
 categories: [Java]
 tags: [Java, this, this(), constructor]
+toc: true
+toc_sticky: true
+toc_label: 목차
 ---
 
 # this vs this()
