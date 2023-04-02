@@ -1,17 +1,8 @@
 ---
-
 title: Python - 업무 자동화 팁
-description: >
-    파이썬을 이용한 업무 자동화 관련 포스트 공유
-
 categories: [Python]
 tags: [Python, 파이썬, 업무자동화]
 ---
-
-
-
-
-
 
 # 파이썬 업무 자동화 관련 포스트 공유
 

@@ -1,14 +1,8 @@
 ---
-
 title: Spring Boot Gradle - Hikari CP MAX Connection Pool 설정하기
-description: >
-  [Spring Boot Gradle] Hikari CP MAX Connection Pool 설정하기
-
-
 categories: [Spring]
 tags: [SpringBoot, Gradle, Hikari, Connection Pool]
 ---
-
 
 
 기존 DataSource 가 Hikari CP 기본으로 사용 중, Max Connection Pool 설정이 필요하게 되어 설정 시도를 함.

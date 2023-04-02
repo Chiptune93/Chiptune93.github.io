@@ -1,15 +1,8 @@
 ---
-
 title: Document Page
-description: >
-  Document Page - Personal Project
-
-
 categories: [Project]
 tags: [spa, project]
 ---
-
-
 
 # 1. 개요
 

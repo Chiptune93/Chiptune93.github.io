@@ -1,14 +1,8 @@
 ---
-
 title: Spring Boot - Application Context 사용하기
-description: >
-  [Spring Boot] Application Context 사용하기
-
-
 categories: [Spring]
 tags: [applicationContext, SpringBoot]
 ---
-
 
 
 ## Application Context

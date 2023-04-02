@@ -1,16 +1,8 @@
 ---
-
 title: Python - import other file
-description: >
-  파이썬에서 다른 파일을 임포트 하는 방법
-
 categories: [Python]
 tags: [Python, 파이썬, import, from, from import]
 ---
-
-
-
-
 
 ## 파이썬의 모듈/패키지 탐색 순서
 

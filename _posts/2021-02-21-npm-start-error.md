@@ -1,15 +1,8 @@
 ---
-
 title: npm 설치 후, start 시 에러 해결
-description: >
-  npm 설치 후, start 시 에러 해결
-
-
 categories: [Error]
 tags: [npm, npm start error]
 ---
-
-
 
 ```
 npm missing file 'package.json'

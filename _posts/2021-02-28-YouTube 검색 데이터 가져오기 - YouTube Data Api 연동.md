@@ -1,15 +1,8 @@
 ---
-
 title: YouTube 검색 데이터 가져오기 - YouTube Data Api 연동
-description: >
-  YouTube 검색 데이터 가져오기 - YouTube Data Api 연동
-
-
 categories: [Java]
 tags: [Java, YouTube, YouTube API]
 ---
-
-
 
 ## YouTube Data API
 

@@ -1,15 +1,8 @@
 ---
-
 title: postgreSQL - pg lock 조회 및 해제
-description: >
-  [postgreSQL] pg lock 조회 및 해제
-
-
 categories: [Database]
 tags: [postgres, postgreSQL, pg lock]
 ---
-
-
 
 ## 1. LOCK 조회
 

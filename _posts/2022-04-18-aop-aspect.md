@@ -1,15 +1,8 @@
 ---
-
 title: AOP - AOP Aspect 를 이용한 로그 처리 하기
-description: >
-  [AOP] AOP Aspect 를 이용한 로그 처리 하기
-
-
 categories: [Spring]
 tags: [spring, spring aop]
 ---
-
-
 
 ## AOP 및 구성요소 간단 설명
 

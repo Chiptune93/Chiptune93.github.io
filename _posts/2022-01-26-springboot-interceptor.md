@@ -1,15 +1,8 @@
 ---
-
 title: Spring Boot - Spring Boot 2.6.2 Interceptor 추가
-description: >
-  [Spring Boot] Spring Boot 2.6.2 Interceptor 추가
-
-
 categories: [Spring]
 tags: [Interceptor, SpringBoot]
 ---
-
-
 
 ## 1. Interceptor 생성
 

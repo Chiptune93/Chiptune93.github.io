@@ -1,15 +1,8 @@
 ---
-
 title: Spring Boot - Tag Library 사용하기
-description: >
-  [Spring Boot] Tag Library 사용하기
-
-
 categories: [Spring]
 tags: [tag library, SpringBoot]
 ---
-
-
 
 ## 1. TagLibrary build.gradle 추가
 

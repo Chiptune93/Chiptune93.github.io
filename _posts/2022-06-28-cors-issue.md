@@ -1,15 +1,8 @@
 ---
-
 title: SpringBoot - CORS 처리하기
-description: >
-  [SpringBoot] CORS 처리하기
-
-
 categories: [Spring]
 tags: [spring, springboot, cors]
 ---
-
-
 
 ## 1. Global WebConfig
 

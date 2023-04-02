@@ -1,14 +1,8 @@
 ---
-
 title: Docker Spring Boot + Postgresql (3)
-description: >
-  [실습] Docker Spring Boot + Postgresql (3)
-
-
 categories: [Docker]
 tags: [docker, springboot, postgres]
 ---
-
 
 
 개선사항 진행

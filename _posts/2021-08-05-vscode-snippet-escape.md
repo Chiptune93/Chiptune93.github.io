@@ -1,15 +1,8 @@
 ---
-
 title: VS Code - code snippet $ escape ( dollar sign )
-description: >
-  [VS Code] code snippet $ escape ( dollar sign )
-
-
 categories: [IDE]
 tags: [vscode, snippet, escape]
 ---
-
-
 
 VS Code snippet 에서 $ 표시가 필요할 때.
 

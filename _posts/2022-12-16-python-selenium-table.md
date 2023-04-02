@@ -1,15 +1,8 @@
 ---
-
 title: Python - Selenium Table Parsing
-description: >
-  파이썬 셀레니움을 이용한 테이블 파싱하는 방법
-
 categories: [Python]
 tags: [Selenium, Table, Table Parsing, Python, 파이썬]
 ---
-
-
-
 
 # Selenium 라이브러리에서 테이블 파싱하기
 

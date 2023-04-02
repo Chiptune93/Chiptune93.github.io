@@ -1,15 +1,8 @@
 ---
-
 title: java.lang.NoSuchMethodError - org.apache.log4j.Logger
-description: >
-  java.lang.NoSuchMethodError :org.apache.log4j.Logger
-
-
 categories: [Error]
 tags: [NoSuchMethodError, apache log4j]
 ---
-
-
 
 ## NoSuchMethodError : java.lang.NoSuchMethodError: org.apache.log4j.Logger
 

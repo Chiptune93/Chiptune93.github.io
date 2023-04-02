@@ -1,15 +1,8 @@
 ---
-
 title: MS-SQL - 드라이버가 SSL(Secure Sockets Layer) 암호화를 사용하여 SQL Sever로 보안 연결을 설정할 수 없습니다.
-description: >
-  [MS-SQL] 드라이버가 SSL(Secure Sockets Layer) 암호화를 사용하여 SQL Sever로 보안 연결을 설정할 수 없습니다. 오류: "PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid c..
-
-
 categories: [Error]
 tags: [mssql, mssql ssl, ssl error, pkix error]
 ---
-
-
 
 ## 문제
 

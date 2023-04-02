@@ -1,15 +1,8 @@
 ---
-
 title: Python - URL Encoding
-description: >
-  파이썬을 이용한 URL Encoding
-
 categories: [Python]
 tags: [URL Encoding, urllib, Python, 파이썬]
 ---
-
-
-
 
 # URL 인코딩
 

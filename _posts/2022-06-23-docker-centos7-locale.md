@@ -1,15 +1,8 @@
 ---
-
 title: Docker CentOS7 locale language ko_KR 설정
-description: >
-  [Docker CentOS7] CentOS7 locale language ko_KR 설정
-
-
 categories: [Docker]
 tags: [Docker, Centos7, locale, lang]
 ---
-
-
 
 docker에서 centos7 이미지를 받아 작업 진행 중 발생한 상황에 대한 기록이다.
 

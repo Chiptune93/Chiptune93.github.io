@@ -1,15 +1,8 @@
 ---
-
 title: Apple M1 Docker Build Error
-description: >
-  Apple M1 Docker Build Error
-
-
 categories: [Error]
 tags: [apple m1, apple docker, docker error, m1 docker error]
 ---
-
-
 
 ## 문제
 

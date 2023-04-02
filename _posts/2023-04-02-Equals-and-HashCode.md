@@ -1,13 +1,7 @@
 ---
-
 title: Java equals() and hashCode()
-description: >
-  자바 equals() 메소드와 hashCode() 를 이용한 비교 방법
-
-
 categories: [Java]
 tags: [Java, equals, hashcode, java equals(), java hashcode()]
-published: true
 ---
 
 

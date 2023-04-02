@@ -1,15 +1,8 @@
 ---
-
 title: VS Code Main Class Not Found Exception 해결
-description: >
-  VS Code Main Class Not Found Exception 해결
-
-
 categories: [Error]
 tags: [VsCode, Main Class Not Found]
 ---
-
-
 
 ## 문제
 

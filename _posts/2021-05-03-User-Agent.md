@@ -1,15 +1,8 @@
 ---
-
 title: User-Agent 로 접속한 사용자 브라우저 체크하기
-description: >
-  User-Agent 로 접속한 사용자 브라우저 체크하기
-
-
 categories: [Java]
 tags: [Java, User-Agent]
 ---
-
-
 
 ## 유저 에이전트 체크하기
 

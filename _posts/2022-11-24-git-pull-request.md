@@ -1,15 +1,8 @@
 ---
-
 title: Git - Pull Request(PR)
-description: >
-  Git - Pull Request(PR)
-
-
 categories: [Git]
 tags: [git, PR, Pull Request]
 ---
-
-
 
 참고 : [Git 입문](https://backlog.com/git-tutorial/kr/)
 

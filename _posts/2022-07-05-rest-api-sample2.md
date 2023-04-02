@@ -1,15 +1,8 @@
 ---
-
 title: SpringBoot - Rest Api Sample 만들기 #2
-description: >
-  [SpringBoot] Rest Api Sample 만들기 #2
-
-
 categories: [Spring]
 tags: [springboot, rest api, api, h2database]
 ---
-
-
 
 ## API 에러 처리
 

@@ -1,16 +1,8 @@
 ---
-
 title: AWS Lambda - Lambda 내부에서 다른 람다 함수 호출하기
-description: >
-    AWS Lambda 내부에서 다른 Lambda 함수 호출을 알아봅니다.
-
-
 categories: [AWS]
 tags: [AWS, Lambda, Functions]
 ---
-
-
-
 
 ## Lambda 에서 다른 Lambda 호출하기
 

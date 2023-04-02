@@ -1,15 +1,8 @@
 ---
-
 title: ECR - Spring Boot + JSP 프로젝트 JIB로 ECR 업로드하기
-description: >
-  [ECR] Spring Boot + JSP 프로젝트 JIB로 ECR 업로드하기
-
-
 categories: [AWS]
 tags: [AWS, ECR, JIB, ECR upload]
 ---
-
-
 
 기존 작업은 보통 RESTful API 형태로 구성이 된 서비스를 주로 jib로 올렸었지만, 기존 MPA 서비스와 동일한 Spring Boot 프로젝트를 ECR에 업로드해야할 일이 생겼다.
 

@@ -1,16 +1,8 @@
 ---
-
 title: Notion Database를 활용한 Discord Bot
-description: >
-  노션 데이터베이스를 활용한 디스코드 봇을 만드는 과정을 기술합니다.
-
-
 categories: [Project]
 tags: [Personal Project, Discord, Discord Bot, Notion, Notion API]
 ---
-
-
-
 
 # 프로젝트 개요
 디스코드 봇을 만들어보고자 하였다.

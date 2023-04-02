@@ -1,15 +1,8 @@
 ---
-
 title: 사내 SMS Api Service
-description: >
-  사내 SMS Api Service
-
-
 categories: [Project]
 tags: [docker, springboot, Personal Project]
 ---
-
-
 
 # 1. 개요
 

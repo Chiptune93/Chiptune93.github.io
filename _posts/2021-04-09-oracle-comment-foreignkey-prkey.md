@@ -1,15 +1,8 @@
 ---
-
 title: ORACLE - COMMENT, FOREIGN KEY, PRIMARY KEY 설정
-description: >
-  [ORACLE] COMMENT, FOREIGN KEY, PRIMARY KEY 설정
-
-
 categories: [Database]
 tags: [oracle, comment, foreign key, primary key]
 ---
-
-
 
 ```sql
 -- 테이블 Comment 설정

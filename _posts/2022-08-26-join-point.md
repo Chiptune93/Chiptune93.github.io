@@ -1,14 +1,8 @@
 ---
-
 title: Spring AOP Joinpoint 와 ProceedingJoinPoint
-description: >
-  스프링에서 Joinpoint와 ProceedingJoinPoint의 차이
-
-
 categories: [Spring]
 tags: [Spring, SpringBoot, AOP]
 ---
-
 
 
 ## Joinpoint

@@ -1,15 +1,8 @@
 ---
-
 title: Inno Setup 5,6 Korean
-description: >
-  Inno Setup 5버전 및 6버전 한국어 번역본 적용 및 공유
-
-
 categories: [Etc]
 tags: [Innosetup, Inno Setup Korean, Korean]
 ---
-
-
 
 # InnoSetup 한국어 사용하기
 

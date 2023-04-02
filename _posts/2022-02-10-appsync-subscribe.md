@@ -1,15 +1,8 @@
 ---
-
 title: App Sync - Amplify 를 이용한 App Sync Data Subscribe.
-description: >
-  [App Sync] Amplify 를 이용한 App Sync Data Subscribe.
-
-
 categories: [AWS]
 tags: [AWS, appsync, data Subscribe]
 ---
-
-
 
 해당 예제는 DynamoDB 테이블을 Data Subscribe 하는 App Sync 예제 입니다.
 2022년 2월 10일 기준으로 동작 확인 및 작성되었습니다.

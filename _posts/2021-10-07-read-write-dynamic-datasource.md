@@ -1,15 +1,8 @@
 ---
-
 title: Spring Multi DataSource - Read / Write Dynamic DataSource
-description: >
-  [ Spring Multi DataSource ] Read / Write Dynamic DataSource
-
-
 categories: [Spring]
 tags: [spring, datasource, dynamic datasouce]
 ---
-
-
 
 AWS 사용 중, READ 와 READ/WRITE DB가 분리되면서, 현재 사용중인 1개의 DataSource 를 분리하여 READ전용 ds 와 READ/WRITE 전용 ds 를 구분하여 사용해야 하는 상황이 되었다.
 

@@ -1,15 +1,8 @@
 ---
-
 title: IOS - invalid Date 관련 문제
-description: >
-  [ IOS ] invalid Date 관련 문제
-
-
 categories: [Frontend]
 tags: [ios, invalid date, ios date]
 ---
-
-
 
 최근 IOS 모바일 앱 WebView 상황에서 invalid Date 문제를 겪게 되었다.
 

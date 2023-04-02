@@ -1,16 +1,8 @@
 ---
-
 title: Java Early Return 을 이용한 리팩토링
-description: >
-  자바 Early Return 을 이용한 리팩토링 가이드
-
-
 categories: [Java]
 tags: [Java, Early Return]
-published: true
 ---
-
-
 
 # **early return**
 - 조건문에서 리턴을 이용하여 중첩 구문을 줄이고 가독성을 높이는 리팩토링 기법 중 하나입니다.

@@ -1,16 +1,8 @@
 ---
-
 title: Java Naming Conventions & Naming
-description: >
-  자바 네이밍 컨벤션에 관한 글 
-
-
 categories: [Java]
 tags: [Java, Java Naming Conventions]
-published: true
 ---
-
-
 
 # **Java Naming Conventions**
 

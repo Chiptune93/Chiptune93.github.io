@@ -1,15 +1,8 @@
 ---
-
 title: SpringBoot 2.7+ CORS 이슈 및 해결방법
-description: >
-  SpringBoot 2.7+ CORS 이슈 및 해결방법
-
-
 categories: [Error]
 tags: [springboot, cors]
 ---
-
-
 
 간단하게 만든 API 서버를 테스트 하기 위해 로컬에서 돌리던 도중 해당 이슈를 만났다.
 

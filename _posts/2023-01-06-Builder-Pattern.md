@@ -1,16 +1,9 @@
 ---
-
 title: Builder Pattren
-description: >
-  Java Builder Pattern 에 대한 내용 정리입니다.
-
-
 categories: [Java]
 tags: [Builder, Builder Pattern, Builder Annotation, Java]
 published: true
 ---
-
-
 
 # Builder 란?
 

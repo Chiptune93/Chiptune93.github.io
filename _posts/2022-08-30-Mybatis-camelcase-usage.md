@@ -1,15 +1,8 @@
 ---
-
 title: MyBatis Camel Case Configure
-description: >
-    스프링에서 myBatis Camel Case 옵션 사용 시 주의할 점.
-
-
 categories: [Spring]
 tags: [Spring, SpringBoot, AOP]
 ---
-
-
 
 ## MyBatis의 CamelCase 옵션.
 

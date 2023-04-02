@@ -1,15 +1,8 @@
 ---
-
 title: Spring - Driver net.sf.log4jdbc.sql.jdbcapi.DriverSpy claims to not accept jdbcUrl
-description: >
-  [Spring] Driver net.sf.log4jdbc.sql.jdbcapi.DriverSpy claims to not accept jdbcUrl
-
-
 categories: [Error]
 tags: [Spring, log4jdbc error, DriverSpy not Accept jdbc url, jdbc url error]
 ---
-
-
 
 ## 문제
 

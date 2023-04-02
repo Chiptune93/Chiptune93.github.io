@@ -1,15 +1,8 @@
 ---
-
 title: React 학습 시작.
-description: >
-  React 학습 시작.
-
-
 categories: [Frontend]
 tags: [react]
 ---
-
-
 
 ![jerry](/assets/img/jerry.gif)
 

@@ -1,15 +1,8 @@
 ---
-
 title: DynamoDB - Attribute name is a reserved keyword
-description: >
-  Attribute name is a reserved keyword
-
-
 categories: [Error]
 tags: [AWS, DynamoDB]
 ---
-
-
 
 DynamoDB Java SDK 를 사용하여 Table 스캔 도중 해당 에러가 발생하였다.
 

@@ -1,15 +1,8 @@
 ---
-
 title: 2회차 - CSS 코딩 ~ 배포하기
-description: >
-  [인프런:생활코딩 - REACT] 2회차 : CSS 코딩 ~ 배포하기
-
-
 categories: [Frontend]
 tags: [React]
 ---
-
-
 
 ![react2-1](/assets/img/React/react2-1.png)
 

@@ -1,15 +1,8 @@
 ---
-
 title: Axios - Vuejs / React 환경에서 axios 모듈 get/post 통신 에러
-description: >
-  [Axios] Vuejs / React 환경에서 axios 모듈 get/post 통신 에러
-
-
 categories: [Error]
 tags: [vuejs, react, axios, axios error]
 ---
-
-
 
 ## 1. 프로젝트 환경
 

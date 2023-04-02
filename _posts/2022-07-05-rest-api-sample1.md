@@ -1,15 +1,8 @@
 ---
-
 title: SpringBoot - Rest Api Sample 만들기 #1
-description: >
-  [SpringBoot] Rest Api Sample 만들기 #1
-
-
 categories: [Spring]
 tags: [springboot, rest api, api, h2database]
 ---
-
-
 
 기존에 급하게 진행한 사내 SMS API 서비스를 만들고 나서, 정리도 할 겸 샘플로 REST API 샘플 프로젝트를 만들어보기로 했다.
 기본적인 버전 정보는 다음과 같다.

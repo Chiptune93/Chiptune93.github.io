@@ -1,15 +1,8 @@
 ---
-
 title: Python - 웹 사이트 IMG 태그 소스 파일 가져오기
-description: >
-  웹 사이트 IMG 태그 소스 파일 가져오기
-
-
 categories: [Python]
 tags: [python, img, web img, crolling]
 ---
-
-
 
 실습 겸, 테스트로 특정 웹 페이지 내에 특정 영역을 입력받아
 

@@ -1,14 +1,8 @@
 ---
-
 title: React - Spring boot + React 연계 프로젝트 생성하기
-description: >
-  Spring boot + React 연계 프로젝트 생성하기
-
-
 categories: [Frontend]
 tags: [React, springboot]
 ---
-
 
 
 본 게시글은 다음 링크 게시글 참조를 통해 시도한 결과를 공유하는 글입니다 :D

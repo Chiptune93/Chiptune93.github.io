@@ -1,15 +1,8 @@
 ---
-
 title: Python - cmd에서 테이블 형태 표현하기
-description: >
-  파이썬에서 콘솔에 테이블 형태로 데이터를 보여주는 라이브러리 소개.
-
 categories: [Python]
 tags: [Python, 파이썬, cmd, cmd line table, cmd table, 콘솔, 콘솔 테이블]
 ---
-
-
-
 
 # 파이썬 환경 cmd(console)에서 테이블 형태 표현하기
 

@@ -1,16 +1,8 @@
 ---
-
 title: Python - Selenium 설치(웹크롤링)
-description: >
-    파이썬 셀리니움을 사용하여 웹 크롤링 세팅하는 방법을 기술합니다.
-
-
 categories: [Python]
 tags: [Selenium, Webdriver, Python]
 ---
-
-
-
 
 ## Selenium 설치
 

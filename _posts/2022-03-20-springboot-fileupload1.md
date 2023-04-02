@@ -1,15 +1,8 @@
 ---
-
 title: Spring Boot - 파일 업로드 만들기 -1-
-description: >
-    [Spring Boot] 파일 업로드 만들기 -1-
-
-
 categories: [Spring]
 tags: [fileupload, SpringBoot, springboot fileupload]
 ---
-
-
 
 ## 작업환경
 늘 사용하지만, 직접 만들어 보지는 못했던 파일 업로드 만들기를 해 볼 생각이다.

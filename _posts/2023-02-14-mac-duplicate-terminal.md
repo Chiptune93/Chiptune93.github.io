@@ -1,18 +1,8 @@
 ---
-
 title: Mac Ventura Duplicate Terminal.app
-description: >
-  M1 Mac Ventura OS 에서 intel 터미널을 활용하는 방법 소개
-
-
 categories: [Etc]
 tags: [Innosetup, Inno Setup Korean, Korean]
 ---
-
-
-
-
-
 
 # 개요
 

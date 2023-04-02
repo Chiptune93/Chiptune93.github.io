@@ -1,14 +1,8 @@
 ---
-
 title: Docker 자습서 정리
-description: >
-  MS : Docker 자습서 정리
-
-
 categories: [Docker]
 tags: [Docker, MS docker self study]
 ---
-
 
 
 # 1부 : 시작

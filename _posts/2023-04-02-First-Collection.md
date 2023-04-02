@@ -1,17 +1,9 @@
 ---
-
 title: Java First Class Collection
-description: >
-  자바 일급 콜렉션을 사용하는 방법 및 의미
-
-
 categories: [Java]
 tags: [Java, 일급 컬렉션, java first class collection]
 published: true
 ---
-
-
-
 
 # **자바 일급 콜렉션(First Class Collection)**
 

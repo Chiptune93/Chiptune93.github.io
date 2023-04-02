@@ -1,17 +1,8 @@
 ---
-
 title: Java Exception
-description: >
-  자바 예외처리 및 작성 방법
-
-
 categories: [Java]
 tags: [Java, Java Exception]
-published: true
 ---
-
-
-
 
 # **예외 처리 시, 팁**
 
