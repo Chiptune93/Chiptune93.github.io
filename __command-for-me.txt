@@ -1,0 +1,20 @@
+
+# 환경 세팅 
+
+1. brew install ruby
+
+2. vi ~/.zchrc
+
+if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
+
+3. restart cmd and chk PATH
+
+echo $PATH
+
+4. bundle install
+
+5. bundle exec jekyll serve (로컬 구동)
+(새환경에서 구동시, 루비 등 환경 설치 후 bundler install 실행 후 위 명령 실행)
