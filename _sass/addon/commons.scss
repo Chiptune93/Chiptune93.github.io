@@ -722,6 +722,7 @@ $sidebar-display: 'sidebar-display';
   z-index: 99;
   //background: var(--sidebar-bg);
   background: url('/assets/img/sidebar-bg.png');
+  background-size: cover;
   background-position: center;
 
   /* Hide scrollbar for Chrome, Safari and Opera */
