@@ -26,7 +26,7 @@ description: >- # used by seo meta and the atom feed
   Java Developer's Tech Blog & Exp Storage.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: "https://chiptune93.github.io/"
+url: "https://chiptune93.github.io"
 
 github:
   username: Chiptune93 # change to your github username
@@ -152,7 +152,7 @@ defaults:
     values:
       layout: post
       comments: false    # Enable comments in posts.
-      toc: true  
+      toc: true
   - scope:
       path: ""
       type: tabs # see `site.collections`
