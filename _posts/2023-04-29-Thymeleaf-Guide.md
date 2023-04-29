@@ -16,39 +16,39 @@ tags: [thymeleaf, springboot, spring]
 ### 표준 표현식
 
 - 간단한 표현
-  - 변수 표현식: ${...}
-  - 선택 변수 표현식: *{...}
-  - 메시지 표현: #{...}
-  - 링크 URL 표현식: @{...}
-  - 조각 표현: ~{...}
+  - 변수 표현식: `${...}`
+  - 선택 변수 표현식: `*{...}`
+  - 메시지 표현: `#{...}`
+  - 링크 URL 표현식: `@{...}`
+  - 조각 표현: `~{...}`
 
 - 리터럴
-  - 텍스트 리터럴: 'one text', 'Another one!',…
-  - 숫자 리터럴: 0, 34, 3.0, 12.3,…
-  - 부울 리터럴: true,false
-  - 널 리터럴: null
-  - 리터럴 토큰: one, sometext, main,…
+  - 텍스트 리터럴: `'one text', 'Another one!',…`
+  - 숫자 리터럴: `0, 34, 3.0, 12.3,…`
+  - 부울 리터럴: `true,false`
+  - 널 리터럴: `null`
+  - 리터럴 토큰: `one, sometext, main,…`
 
 - 텍스트 작업:
-  - 문자열 연결: +
-  - 리터럴 대체: |The name is ${name}|
+  - 문자열 연결: `+`
+  - 리터럴 대체: `|The name is ${name}|`
 
 - 산술 연산:
-  - 이항 연산자: +, -, *, /,%
-  - 빼기 기호(단항 연산자): -
+  - 이항 연산자: `+, -, *, /,%`
+  - 빼기 기호(단항 연산자): `-`
 
 - 부울 연산:
-  - 이진 연산자: and,or
-  - 부울 부정(단항 연산자): !,not
+  - 이진 연산자: `and,or`
+  - 부울 부정(단항 연산자): `!,not`
 
 - 비교와 평등:
-  - 비교기: >, <, >=, <=( gt, lt, ge, le)
-  - 같음 연산자: ==, !=( eq, ne)
+  - 비교기: `>, <, >=, <=( gt, lt, ge, le)`
+  - 같음 연산자: `==, !=( eq, ne)`
 
 - 조건 연산자:
-  - if :(if) ? (then)
-  - if-then-else:(if) ? (then) : (else)
-  - 기본:(value) ?: (defaultvalue)
+  - if : `(if) ? (then)`
+  - if-then-else: `(if) ? (then) : (else)`
+  - 기본: `(value) ?: (defaultvalue)`
 
 ### 메세지
 
@@ -75,26 +75,31 @@ tags: [thymeleaf, springboot, spring]
 ### th: 표현식
 
 - `th:text`: 텍스트 값을 출력하는 표현식
+
 ```html
 <p th:text="${user.name}">Name</p>
 ```
 
 - `th:utext`: HTML 인코딩되지 않은 텍스트를 출력하는 표현식
+
 ```html
 <p th:utext="${user.description}">Description</p>
 ```
 
 - `th:if`: 조건을 검사하여 해당 요소를 표시할지 여부를 결정하는 표현식
+
 ```html
 <p th:if="${user.admin}">Admin</p>
 ```
 
 - `th:unless`: th:if와 반대로 작동하며, 조건이 거짓일 때 해당 요소를 표시하는 표현식
+
 ```html
 <p th:unless="${user.admin}">Not an Admin</p>
 ```
 
 - `th:switch`: 다중 분기 처리를 위한 표현식
+
 ```html
 <div th:switch="${user.role}">
     <p th:case="'ADMIN'">Admin</p>
@@ -105,6 +110,7 @@ tags: [thymeleaf, springboot, spring]
 ```
 
 - `th:each`: 반복문을 처리하는 표현식
+
 ```html
 <ul>
     <li th:each="product : ${products}" th:text="${product.name}"></li>
@@ -112,6 +118,7 @@ tags: [thymeleaf, springboot, spring]
 ```
 
 - `th:with`: 변수를 생성하거나 값에 대한 별칭을 지정하는 표현식
+
 ```html
 <div th:with="discount=${product.price * 0.1}">
     <p th:text="'Discount: ' + ${discount}"></p>
@@ -119,6 +126,7 @@ tags: [thymeleaf, springboot, spring]
 ```
 
 - `th:attr`: HTML 요소에 속성을 추가하는 표현식
+
 ```html
 <a th:attr="href=@{/products/{id}(id=${product.id})}, title=${product.name}">
     <img th:src="@{/images/product.png}" />
@@ -126,11 +134,13 @@ tags: [thymeleaf, springboot, spring]
 ```
 
 - `th:href`: 링크 URL을 생성하는 표현식
+
 ```html
 <a th:href="@{/products/{id}(id=${product.id})}">Product Detail</a>
 ```
 
 - `th:src`: 이미지나 스크립트 등의 소스 URL을 생성하는 표현식
+
 ```html
 <img th:src="@{/images/product.png}" />
 ```
