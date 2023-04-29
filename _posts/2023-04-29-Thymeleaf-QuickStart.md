@@ -153,12 +153,12 @@ templates 폴더 하위에 있는 html 파일들은 static 폴더 하위의 정�
       <th>가입일</th>
       </thead>
       <tbody>
-      <tr th:each="item : ${users}">
+        <tr th:each="item : ${users}">
           <td th:text="${item.userId}">Item Id</td>
           <td th:text="${item.userName}">Item Name</td>
           <td th:text="${item.userAge}">Item Age</td>
           <td th:text="${item.userJoinDate}">Item joinDate</td>
-      </tr>
+        </tr>
       </tbody>
   </table>
   </body>
@@ -168,4 +168,5 @@ templates 폴더 하위에 있는 html 파일들은 static 폴더 하위의 정�
 
 ### 5. 예제 프로젝트 다운로드
 
-https://github.com/Chiptune93/springboot-examples/tree/thymeleaf
+- [Github Example](https://github.com/Chiptune93/springboot-examples/tree/thymeleaf)
+- [Thymeleaf Official](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#introducing-thymeleaf)
