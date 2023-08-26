@@ -1,80 +1,12 @@
-# The primary author of this blog.
-# Must be the same as `author` in `_config.yml`.
-# Change `author1` to your shortname.
-author1:
-  name:                Donkyu Lim
-  email:               eoen012@gmail.com
+## Template › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#setting-author-url
+# -------------------------------------
+# {author_id}:
+#   name: {full name}
+#   twitter: {twitter_of_author}
+#   url: {homepage_of_author}
+# -------------------------------------
 
-  # Used at the bottom of each page and at the top of the `about` layout
-  # Markdown enabled, can use multiple paragraphs (enabled by `|`)
-  about:             |
-    2018년 IPP 일학습병행제로 개발을 시작해, 현재까지 웹 백엔드 개발자로 일하고 있습니다.
-    <br/> 다른 개발자를 위한 내부 서비스 개발 및 문서화 공유에 신경을 많이 쓰는 편입니다.
-    <br/> 새로운 일을 찾아 나서는 것을 좋아합니다.
-
-  # This photo will be used in the about section
-  picture:
-    path:            /assets/img/logo.png
-    # srcset is optional, but can be used to provide higher res versions for retina displays
-    srcset:
-      1x:            /assets/img/logo.png
-      2x:            /assets/img/logo.png
-
-  # Social media icons in sidebar
-  # Comment/uncommet to show/hide
-  # Rearrange to change the order in which they appear
-  social:
-    # twitter:         <username>
-    github:          Chiptune93
-    email:           eoen012@gmail.com
-    # rss:             https://<url>/feed.xml
-    # facebook:        <username>
-    # google:          <number>
-    # vk:              <username>
-    # youtube:         <string_string_string>
-    # vimeo:           <username>
-    # vine:            <username>
-    # spotify:         <user>/<number>
-    # soundcloud:      <username>
-    # lastfm:          <username>
-    # instagram:       <username>
-    # flickr:          <string@string>
-    # 500px:           <username>
-    # dribbble:        <username>
-    # behance:         <username>
-    # deviantart:      <username>
-    # ello:            <username>
-    # twitch:          <username>
-    # steam:           <number>
-    # reddit:          <username>
-    # tumblr:          <username>
-    # pinterest:       <username>
-    # foursquare:      <number>
-    # yelp:            <string>
-    # stackoverflow:   <number/username>
-    # npm:             <username>
-    # hackernews:      <username>
-    # trello:          <firstnamelastname>
-    # linkedin:        <firstname-lastname-string>
-    # xing:            <firstname_lastname_counter>
-    # blogger:         <number>
-    # delicious:       <username>
-    # stumbleupon:     <username>
-    # paypal:          <username>
-    # download:        <url>
-    # keybase          <username>
-
-# Another author (optional)
-# author2:
-#   name:              <firtname> <lastname>
-#   email:             <mail@domain.tld>
-#   about:             |
-#     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-#     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-#     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-#     Open `_data/authors.yml` to edit this text.
-
-#   picture:           https://placehold.it/128x128
-#   twitter:           <username>
-#   github:            <username>
+Chiptune93:
+  name: Chiptune93 Chung
+  twitter: 
+  url: https://github.com/Chiptune93/
