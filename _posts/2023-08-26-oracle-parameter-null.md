@@ -4,6 +4,7 @@ categories: [Backend, Database]
 tags: [where, parameter is null, 검색조건, 검색조건이 NULL 일 때, oracle, NVL]
 ---
 
+
 # 데이터베이스 검색조건이 NULL 일 때
 
 SQL 쿼리 작성 중, 조건 절에서 검색조건이 없을 때 해당 구문을 타지 않게 하는 방법에 대해서 설명합니다.
