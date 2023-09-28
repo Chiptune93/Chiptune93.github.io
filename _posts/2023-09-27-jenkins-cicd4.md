@@ -1,7 +1,7 @@
 ---
 title: 4. 실습 구상하기
 categories: [Project, Jenkins CI/CD]
-tags: [Personal Project, Jenkins, pipeline, blueocean]
+tags: [Personal Project, Jenkins, pipeline, blueocean, cicd]
 ---
 
 구현 목표 1

@@ -1,7 +1,7 @@
 ---
 title: 3. Jenkins CI/CD 실습 환경 구성
 categories: [Project, Jenkins CI/CD]
-tags: [Personal Project, Jenkins, pipeline, blueocean]
+tags: [Personal Project, Jenkins, pipeline, blueocean, cicd]
 ---
 
 ## Jenkins 서버 구성

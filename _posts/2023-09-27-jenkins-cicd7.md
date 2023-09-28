@@ -1,7 +1,7 @@
 ---
 title: 7. Jenkins와 Github 연동
 categories: [Project, Jenkins CI/CD]
-tags: [Personal Project, Jenkins, pipeline, blueocean, jenkins docker, jenkins github]
+tags: [Personal Project, Jenkins, pipeline, blueocean, jenkins docker, jenkins github, cicd, github jenkins, git jenkins]
 ---
 
 ## Github 에서 액세스 토큰 생성

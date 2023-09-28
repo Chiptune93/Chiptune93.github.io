@@ -1,7 +1,7 @@
 ---
 title: 6. 서버에 Docker Jenkins 구동하기
 categories: [Project, Jenkins CI/CD]
-tags: [Personal Project, Jenkins, pipeline, blueocean, jenkins docker]
+tags: [Personal Project, Jenkins, pipeline, blueocean, jenkins docker, cicd]
 ---
 
 ## Jenkins 폴더 생성 및 Docker 올릴 준비

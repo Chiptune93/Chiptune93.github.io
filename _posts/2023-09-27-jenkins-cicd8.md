@@ -1,7 +1,7 @@
 ---
 title: 8. CI - Springboot Project 빌드하기
 categories: [Project, Jenkins CI/CD]
-tags: [Personal Project, Jenkins, pipeline, blueocean, jenkins docker, jenkins github]
+tags: [Personal Project, Jenkins, pipeline, blueocean, jenkins docker, jenkins github, cicd, jenkins project, jenkins git hook, git webhook]
 ---
 
 ## Jenkins 프로젝트 생성

@@ -1,7 +1,7 @@
 ---
 title: 10. CI - Git Push 시, 자동 Jenkins 빌드 수행하기
 categories: [Project, Jenkins CI/CD]
-tags: [Personal Project, Jenkins, pipeline, blueocean, jenkins docker, jenkins github]
+tags: [Personal Project, Jenkins, pipeline, blueocean, jenkins docker, jenkins github, cicd, auto build, jenkins auto build, git webhook, jenkins gitwebhook]
 ---
 
 ## Github Repository에 Webhooks 추가하기

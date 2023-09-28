@@ -1,7 +1,7 @@
 ---
 title: 11. CD - Jenkins Docker 이미지 빌드 및 자동 배포
 categories: [Project, Jenkins CI/CD]
-tags: [Personal Project, Jenkins, pipeline, blueocean, jenkins docker, jenkins github]
+tags: [Personal Project, Jenkins, pipeline, blueocean, jenkins docker, jenkins github, cicd, jenkins docker deploy, jenkins pipeline, pipeline auto build]
 ---
 
 

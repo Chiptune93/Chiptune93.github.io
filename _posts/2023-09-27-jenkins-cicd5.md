@@ -1,7 +1,7 @@
 ---
 title: 5. 로컬에서 Jenkins 실습
 categories: [Project, Jenkins CI/CD]
-tags: [Personal Project, Jenkins, pipeline, blueocean]
+tags: [Personal Project, Jenkins, pipeline, blueocean, cicd]
 ---
 
 ## 젠킨스에서 프로젝트 생성

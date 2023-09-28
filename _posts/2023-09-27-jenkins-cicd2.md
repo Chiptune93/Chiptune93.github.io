@@ -1,7 +1,7 @@
 ---
 title: 2. Jenkins CI/CD 사전학습
 categories: [Project, Jenkins CI/CD]
-tags: [Personal Project, Jenkins, pipeline, blueocean]
+tags: [Personal Project, Jenkins, pipeline, blueocean, cicd]
 ---
 
 CI/CD란 무엇인가?

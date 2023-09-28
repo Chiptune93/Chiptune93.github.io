@@ -1,7 +1,7 @@
 ---
 title: 12. Python Bot Jenkins 자동화 배포 구축
 categories: [Project, Jenkins CI/CD]
-tags: [Personal Project, Jenkins, pipeline, blueocean, jenkins docker, jenkins github]
+tags: [Personal Project, Jenkins, pipeline, blueocean, jenkins docker, jenkins github, cicd, python jenkins, python jenkins pipeline]
 ---
 
 

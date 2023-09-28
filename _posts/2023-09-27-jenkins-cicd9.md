@@ -1,7 +1,7 @@
 ---
 title: 9. CD - 빌드 후, 배포하기
 categories: [Project, Jenkins CI/CD]
-tags: [Personal Project, Jenkins, pipeline, blueocean, jenkins docker, jenkins github]
+tags: [Personal Project, Jenkins, pipeline, blueocean, jenkins docker, jenkins github, cicd, jenkins plugin]
 ---
 
 ## 플러그인 설치 및 설정하기
