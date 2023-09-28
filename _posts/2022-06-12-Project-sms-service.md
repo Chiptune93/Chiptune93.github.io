@@ -1,6 +1,6 @@
 ---
 title: 사내 SMS Api Service
-categories: [Etc, Project]
+categories: [Project, SMS API Service]
 tags: [docker, springboot, Personal Project]
 ---
 

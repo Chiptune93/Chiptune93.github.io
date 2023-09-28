@@ -1,6 +1,6 @@
 ---
 title: Document Page
-categories: [Etc, Project]
+categories: [Project, DocumentPage]
 tags: [spa, project]
 ---
 

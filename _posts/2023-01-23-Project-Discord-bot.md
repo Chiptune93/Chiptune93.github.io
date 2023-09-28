@@ -1,6 +1,6 @@
 ---
 title: Notion Database를 활용한 Discord Bot
-categories: [Etc, Project]
+categories: [Project, Discord Interview Bot]
 tags: [Personal Project, Discord, Discord Bot, Notion, Notion API]
 ---
 

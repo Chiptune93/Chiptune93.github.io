@@ -1,6 +1,6 @@
 ---
 title: Discord Remind Bot
-categories: [Etc, Project]
+categories: [Project, Discord Reminder Bot]
 tags: [Personal Project, Discord, Discord Bot, Notion, Notion API]
 ---
 
