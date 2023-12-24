@@ -1,5 +1,5 @@
 ---
-title: 커스텀 객체 리스트를 중복 없이 합치는 방법
+title: Kotlin 기본 내용 정리 
 categories: [Backend, Kotlin]
 tags: [kotlin, Kotlin In Action, 코틀린, 코틀린 인 액션]
 ---
