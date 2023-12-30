@@ -97,7 +97,7 @@ tags: [DesignPattern, 디자인 패턴]
 
 ### 구조
 
-![Untitled](../assets/img/designPattern/Untitled.png)
+![Untitled](/assets/img/designPattern/Untitled.png)
 
 - 추상 구성 요소로 돌아가는 코드에 해당 패턴을 적용해야 한다.
 - 추상 클래스를 상속받는 데코레이터 클래스를 만들고 데코레이터에서 상속받은 객체의 행동에 작업을 추가하여 구현 한다.
@@ -191,7 +191,7 @@ tags: [DesignPattern, 디자인 패턴]
 
 ### 구현 방법
 
-![Untitled](../assets/img/designPattern/Untitled1.png)
+![Untitled](/assets/img/designPattern/Untitled1.png)
 
 1. 커맨드 인터페이스를 생성한다.
 2. 해당 인터페이스를 구현하는 구상 커맨드 클래스를 생성한다.
@@ -212,7 +212,7 @@ tags: [DesignPattern, 디자인 패턴]
 
 ### 구현 방법
 
-![Untitled](../assets/img/designPattern/Untitled2.png)
+![Untitled](/assets/img/designPattern/Untitled2.png)
 
 1. 타겟 인터페이스를 구현하는 어댑터를 생성한다.
 2. 수신 객체(파라미터)는 기존 클래스이며, 어댑터가 감싸는 형태로 구현된다.
@@ -232,7 +232,7 @@ tags: [DesignPattern, 디자인 패턴]
 
 ### 구현 방법
 
-![Untitled](../assets/img/designPattern/Untitled3.png)
+![Untitled](/assets/img/designPattern/Untitled3.png)
 
 - 자바에서는 다중 상속이 불가능해서 사용 못한다.
 1. 타겟과 어댑티 클래스를 둘 다 **상속**받는 어탭터를 생성한다.
@@ -249,7 +249,7 @@ tags: [DesignPattern, 디자인 패턴]
 
 ### 구현 방법
 
-![Untitled](../assets/img/designPattern/Untitled4.png)
+![Untitled](/assets/img/designPattern/Untitled4.png)
 
 1. 퍼사드 클래스에는 사용하고자 하는 서브 시스템의 모든 구성요소가 인스턴스 변수로 가지고 있어야 한다.
 2. 퍼사드의 생성자에 서브시스템 구성 요소의 레퍼런스가 전달된다.(구성 서브 시스템 전부)
@@ -285,7 +285,7 @@ tags: [DesignPattern, 디자인 패턴]
 
 ### 구현 방법
 
-![Untitled](../assets/img/designPattern/Untitled5.png)
+![Untitled](/assets/img/designPattern/Untitled5.png)
 
 1. 추상 클래스를 선언하고 알고리즘을 수행할 메소드를 선언한다.(final void)
 2. 해당 메소드 내에는 알고리즘에서 공통적으로 수행하는 메소드가 정의되어 있다.
@@ -322,7 +322,7 @@ tags: [DesignPattern, 디자인 패턴]
 
 ### 구현 방법
 
-![Untitled](../assets/img/designPattern/Untitled6.png)
+![Untitled](/assets/img/designPattern/Untitled6.png)
 
 1. 서로 다른 객체를 통합하는 인터페이스를 만든다.
 2. 해당 인터페이스에서는 자신을 구현하는 객체의 컬렉션에 접근하여 요소를 제공하는 "반복자" 객체를 제공하여야 한다.
@@ -337,7 +337,7 @@ tags: [DesignPattern, 디자인 패턴]
 
 ### 기본 개념
 
-![Untitled](../assets/img/designPattern/Untitled7.png)
+![Untitled](/assets/img/designPattern/Untitled7.png)
 
 - 객체를 트리구조로 구성하여 부분-전체 계층 구조를 구현한다.
 - 클라이언트에서 개별 객체와 복합 객체를 똑같은 방법으로 다룰 수 있게 한다.
@@ -356,7 +356,7 @@ tags: [DesignPattern, 디자인 패턴]
 
 ### 기본 개념
 
-![Untitled](../assets/img/designPattern/Untitled8.png)
+![Untitled](/assets/img/designPattern/Untitled8.png)
 
 - 객체의 내부 상태가 바뀜에 따라 객체의 행동을 바꿀 수 있다.
 - 객체의 클래스과 바뀌는 것과 같은 결과를 얻을 수 있다.
@@ -395,7 +395,7 @@ tags: [DesignPattern, 디자인 패턴]
 
 ### 기본 개념
 
-![Untitled](../assets/img/designPattern/Untitled9.png)
+![Untitled](/assets/img/designPattern/Untitled9.png)
 
 - 특정 객체로의 접근을 제어하는 객체를 제공한다.
 - 예를 들면, 원격 객체/보안이 중요한 객체/생성하기 힘든 객체 등에 대해 접근하는 객체를 제공한다.
@@ -432,7 +432,7 @@ tags: [DesignPattern, 디자인 패턴]
 
 ### 기본 개념
 
-![Untitled](../assets/img/designPattern/Untitled10.png)
+![Untitled](/assets/img/designPattern/Untitled10.png)
 
 - M(모델) : 옵저버 패턴을 통해 의존성을 낮추면서, 자신의 상태가 변경됨을 알린다.
     - 보통, 데이터 객체 또는 뷰에서 표현을 위한 객체 등이 구성된다.
@@ -447,7 +447,7 @@ tags: [DesignPattern, 디자인 패턴]
 > 
 - 반복적으로 생길 수 있는 하나의 문제를 해결하기 위해 2개 이상의 패턴을 결합해서 사용한다.
 
-![Untitled](../assets/img/designPattern/Untitled11.png)
+![Untitled](/assets/img/designPattern/Untitled11.png)
 
 ### 핵심 요소
 
