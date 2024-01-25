@@ -510,7 +510,7 @@ class MultiDataSourceTest {
 
 ### 테스트 결과 확인
 
-![kopring-1.png](..%2Fassets%2Fimg%2Fkopring%2Fkopring-1.png)
+![kopring-1.png](../assets/img/kopring/kopring-1.png)
 
 테스트가 정상적으로 성공했다.
 
