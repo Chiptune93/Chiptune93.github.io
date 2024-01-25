@@ -523,5 +523,5 @@ class MultiDataSourceTest {
 
 - [데이터 소스 생성 가이드](https://docs.spring.io/spring-boot/docs/current/reference/html/data.html#data.sql.datasource)
 - [데이터 액세스 가이드](https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto.data-access)
-- [Spring JPA – Multiple Databases | Baeldung](https://www.baeldung.com/spring-data-jpa-multiple-databases)
+- [Spring JPA – Multiple Databases](https://www.baeldung.com/spring-data-jpa-multiple-databases)
 - [Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto.data-access.configure-two-datasources) 
