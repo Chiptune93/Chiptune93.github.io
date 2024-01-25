@@ -45,9 +45,11 @@ SpringBoot 에서 데이터 소스를 생성할 때, 기본적으로 참조되�
 
 Spring Boot는 URL에서 대부분의 데이터베이스에 대한 JDBC 드라이버 클래스를 추론할 수 있습니다. 특정 클래스를 지정해야 하는 경우 spring.datasource.driver-class-name속성을 사용할 수 있습니다.
 
-build.gradle.kts
+추가된 의존성은 아래를 참고 해주세요.
 
-```kts
+### build.gradle.kts
+
+```kotlin
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
