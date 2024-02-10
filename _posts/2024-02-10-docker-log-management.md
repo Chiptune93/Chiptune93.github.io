@@ -1,5 +1,5 @@
 ---
-title: Yaml Value to List Object
+title: Docker 로그 관리
 categories: [Backend, Docker]
 tags: [docker, docker log, 도커, 도커 로그]
 ---

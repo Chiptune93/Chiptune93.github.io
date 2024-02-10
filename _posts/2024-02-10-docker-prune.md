@@ -1,5 +1,5 @@
 ---
-title: Yaml Value to List Object
+title: Docker 리소스 정리
 categories: [Backend, Docker]
 tags: [docker, docker prune, prune]
 ---
