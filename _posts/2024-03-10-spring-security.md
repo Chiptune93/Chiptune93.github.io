@@ -8,7 +8,7 @@ tags: [SpringSecurity, SecurityFilter]
 
 참고 : [https://docs.spring.io/spring-security/reference/servlet/architecture.html](https://docs.spring.io/spring-security/reference/servlet/architecture.html)
 
-![Files](../assets/img/Spring/springsecurity1.png)
+![Files](/assets/img/Spring/springsecurity1.png)
 
 ## 필터 체인 내의 필터 동작 순서
 
